@@ -34,17 +34,23 @@ The folder contains one visible workbook, `BSR_Appdirect_2023_Update...xlsx`, an
 
 ### BRD
 
-- 25 pages; cover version 0.7.
-- Revision table includes v0.1 (13 Oct 2026) and v0.2 (23 Oct 2026).
+- 25 pages in Word Online after pagination completed; title page displays Version 0.1.
+- The previously reviewed revision table shows v0.1 (13 Oct 2026) and v0.2 (23 Oct 2026). The title-page version and revision entries therefore need reconciliation; do not treat the earlier note of cover version 0.7 as verified.
+- The document includes authoring guidance: it distinguishes the indication/elaboration phases, asks the business owner to complete/update sections 1.1–1.7, and describes section 1.8 for high-level processes/use cases and Chapter 2 for functional and non-functional requirements. It says system-specific requirements belong in the Solution Overview and that blue italic helper text/green bold italic ownership markings are drafting aids. These are document instructions, not Atlas requirements.
 - It covers the CZ-local integration of Group ServiceHub and Atlas as a customer portal.
 - Scope details and project dependencies are described in the BRD. The user identified the Atlas CZ Launch Architecture Board as the binding source for overall project scope.
 - The BRD does not specify the technical DXL CZ token negotiation and downstream header propagation.
 
 ### Use Case Specification
 
-- 51 pages and 12 use cases; document v0.1, updated 14 Oct 2026.
+- Word Online pagination settles at 51 pages and 13,171 words; the title page says document version 0.1, last update 14 Oct 2026, business owner Dalibor Lukeš, and author Martin Dostál.
+- The title page links the BRD and Managed Services Operating Model and RACI Matrix as related documents.
+- The contents list UC001–UC012: sales, first subscription enablement, M365 upgrade/downgrade, ServiceHub access, service visibility, digital and assisted support, termination, support-request visibility/update, and managed-service onboarding.
 - UC005 describes a user accessing ServiceHub with customer relationship, role, CRM/customer context obtained from DXL.
 - It describes authentication and customer/role context at use-case level. It does not provide the technical DXL CZ token exchange, token format, API contract, or downstream header handling.
+- Further inspection of UC005 confirms that ServiceHub uses DXL role data to limit customer-specific content to eligible ONSC/WSC administrative roles and uses DXL-returned CRM IDs to establish and switch the active customer context. Switching CRM ID refreshes the managed-service experience for the newly selected context.
+- UC005 exception paths say: unsuccessful Vodafone Identity authentication must stop the flow before requesting customer/role data from DXL; missing eligible role or no available CRM ID yields generic ServiceHub content with no active customer context; unavailable DXL data yields a generic/unavailable outcome; if a selected CRM ID is no longer returned as available, the active context is not changed to that unavailable ID and the customer selector is refreshed.
+- This is useful behavior-level evidence for blue-layer identity/context services and access rules, but still does not define the user's required CZ-specific token exchange or forwarding of the returned token in subsequent DXL request headers.
 
 ### Traceability Decomposition workbook
 
