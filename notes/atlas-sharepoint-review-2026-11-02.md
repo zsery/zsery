@@ -50,10 +50,12 @@ The folder contains one visible workbook, `BSR_Appdirect_2023_Update...xlsx`, an
 
 - One worksheet (`Traceability`), 26 visible data rows.
 - Columns connect customer journey and description to UC ID/name/description, process ID/name/description, value stream, capability, and sub-capability.
-- Customer journeys represented: Buy Atlas, Upgrade M365 to Atlas, Access and View Atlas, Get Support for Atlas, and Downgrade Atlas to M365.
+- Six customer journeys are represented: Buy Atlas (C101), Upgrade M365 to Atlas (C102), Access and View Atlas (C103), Get Support for Atlas (C104), Downgrade Atlas to M365 (C105), and Terminate Atlas Service (C106).
+- The rows cover UC001–UC012 and processes P01–P10. Several rows repeat the same journey/use case/process to assign multiple capabilities or sub-capabilities; these are traceability relationships, not 26 distinct use cases or processes.
 - Value streams include Sell, Build, and Run.
 - Capabilities include Product & Pricing Management, Service Onboarding, Exception Handling, Channel & Entry Management, Identity & Access Management, Service Visibility, Support Management, and Service Offboarding.
-- Sub-capabilities include Marketplace Company Identifier/Data Readiness, Atlas Subscription Readiness, Managed Service Onboarding, Data Consistency, Entry Points and Navigation, Authorization Input Readiness, Customer Context Input Readiness, Atlas Service Data Availability, Channel Handling, Routing & Forwarding, Assisted Support, Escalation Handling, Support Request Visibility/Update, and Termination Handling.
+- Sub-capabilities include Commercial Offer Enablement, Contract Agreement, Terms & Conditions, Customer Technical Specification, Marketplace Company Identification Readiness, Marketplace Company Data Readiness, Atlas Subscription Readiness, Managed Service Onboarding, Product Definition, Data Consistency, Entry Points and Navigation, Authorization Input Management, Customer Context Input Readiness, Atlas Service Data Availability, Channel Handling, Routing & Forwarding, Assisted Support, Escalation Handling, Support Request Visibility, Support Request Update, and Termination Handling.
+- The worksheet has no FREQ or SREQ identifier column. It provides a business traceability spine (journey → UC → process → capability → sub-capability), but does not itself establish a requirement-ID crosswalk or approval status for capabilities.
 
 ### Marketplace BSR / AppDirect workbook
 
@@ -67,7 +69,7 @@ The folder contains one visible workbook, `BSR_Appdirect_2023_Update...xlsx`, an
 
 ### Business layer (yellow in the user's model)
 
-The Traceability workbook is the strongest direct input for the business layer. It provides a trace from customer journeys through use cases and business processes to value streams, capabilities, and sub-capabilities. It can seed capability and process views and help trace business requirements to UC IDs.
+The Traceability workbook is the strongest direct input for the business layer. It provides a trace from six customer journeys through 12 use cases and ten processes to value streams, capabilities, and sub-capabilities. It can seed capability and process views and support a later requirements-to-UC crosswalk, but cannot supply FREQ/SREQ links on its own because no requirement IDs are present in this worksheet.
 
 ### Application layer (blue in the user's model)
 
