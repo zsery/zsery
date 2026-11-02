@@ -85,9 +85,11 @@ BRD and Use Cases provide application context and interactions for ServiceHub, A
 
 The Marketplace workbook assesses AppDirect as a third-party SaaS product. It is not an inventory or deployment description of Atlas/ServiceHub and should not be used to assert their physical components or hosting controls.
 
-## User-provided design constraint (not established by these documents)
+## User-provided design constraints (not established by these documents)
 
 The user stated that SSO is part of Atlas MVP: the user authenticates at ServiceHub; ServiceHub negotiates a token with DXL CZ using a CZ-specific call; it then places the returned token in headers for subsequent DXL calls to VFCZ. This is a required design constraint from the user, but the reviewed BRD and Use Case Specification do not document its technical sequence or contract.
+
+The user also established these identity and customer-hierarchy rules for the architecture: a VFID and its subscriber map 1:1; TMF691 carries the holding's parent–child structure; VFID must not be mapped to email because email is not consistent. Treat these as authoritative user-provided rules when reviewing the EA identity/account model and customer matching. Do not replace them with an email-based association.
 
 ## Follow-up items for the architecture review
 
