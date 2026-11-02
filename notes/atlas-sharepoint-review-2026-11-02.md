@@ -92,3 +92,34 @@ The user stated that SSO is part of Atlas MVP: the user authenticates at Service
 ## Read-only and provenance note
 
 No cell values were entered during this review. Spreadsheet navigation consisted of switching worksheets and scrolling. During one return to the Marketplace SharePoint listing, its workbook showed a recent `Modified: About a minute ago` timestamp attributed to the signed-in account. The initiator and cause were not established; do not infer from the screenshot alone that content changed or that the timestamp was caused by navigation.
+
+## Additional local architecture inputs reviewed
+
+The following are files already present in the user's `zsery/zsery` repository. They are separate from the three SharePoint tabs above and are not treated as newly approved requirements.
+
+### `Book1.xlsx`
+
+Read-only inventory of the workbook:
+
+- 10 worksheets: Cover, `_Enums`, Functionalities, Interfaces, FREQ mapping, EAM App, Siebel EA Export, SREQ Aplikační role, Sheet1, and TA139Arch.
+- Functionalities has 955 data rows; Interfaces 54; FREQ mapping 219; SREQ Aplikační role 219; EAM App 555; Siebel EA Export 111.
+- FREQ mapping's `Výsledek` values are: 107 `SHODA`, 103 `CHYBÍ V SO`, 6 `CHYBÍ V EXCELU`, 2 `ROZPOR TEXTU`, and 1 `ČÁSTEČNÁ SHODA`. These are the workbook's mapping assessments; they do not by themselves establish approval or current scope.
+- The SREQ role sheet records a functionality link for 192 rows, 17 rows with no functionality carrying the same SREQ, 9 links marked for mismatch verification, and 1 marked for correction. It says a change is not evidenced for 215 rows, while 2 are identified as explicitly new elements and 2 as confirmed decisions. This is a useful warning against interpreting every target application responsibility as a change to that application.
+- The interface catalog includes `IF_SH_03` (ServiceHub authentication/SSO, OIDC/OAuth2), `IF_IDAAS_01` (OIDC/OAuth2 Authorization Code Flow, shared code, and a DXL token-exchange reference), and `IF_DXL_01` (DXL customer identity/profile/authorization, TMF691 UserInfo/userAssets, REST/OAuth2). These references align with the user's stated MVP SSO direction at a high level. They do not specify the exact CZ token-exchange endpoint/contract or the downstream HTTP-header propagation rule.
+- Marketplace/Siebel mapping includes CRM ID and V2/V4 segment handling, lookup/unavailability, manual correction, and a rule that a later Siebel lookup should not automatically overwrite saved Marketplace values. These are workbook-stated behaviors and need reconciliation against the latest Martin source and approved requirements before being treated as current.
+- The `Sheet1` and `TA139Arch` tabs contain TA-139 business-analysis and architecture material. Statuses such as `TO CONFIRM`, `TO DESIGN`, `TO MODEL`, and `OPEN` are present. Treat the assumptions and target data-foundation design as working analysis, not confirmed Atlas project scope.
+
+### `Atlas.7z` / `Atlas.xml`
+
+- The archive contains one file, `Atlas.xml` (about 112 MB uncompressed; archive timestamp 1 Nov 2026 15:59:46).
+- The XML declares a Sparx Enterprise Architect XMI 2.1 export and includes ArchiMate profile declarations. A streaming scan found extensive UML/ArchiMate content, including business-capability, application, integration, data-domain, technology, BPMN, data-model, and sequence-diagram package names. Examples include AppDirect data model and sequence diagrams, IDaaS OAuth2/OIDC, SNOW data model, TMF API model packages, and application/enterprise architecture packages.
+- This establishes that the archive is a substantial EA model export; it does not establish that every model element or relationship has been validated. Detailed model review remains a separate step.
+
+## Current evidence gaps for the broader architecture work
+
+1. Confirm the authoritative current Martin Dostál requirements workbook/version and reconcile its FREQ/SREQ rows to `Book1.xlsx` and the SharePoint Traceability Decomposition.
+2. Verify which of the 103 `CHYBÍ V SO` mappings are genuinely absent from the current, binding Solution Overview and which are mapping/version artifacts.
+3. Resolve the two `ROZPOR TEXTU` cases and the single partial match in the workbook, including the ONSC/WSC rule for role/eligibility-controlled ServiceHub entry visibility.
+4. For SSO, obtain the CZ DXL token-exchange API contract, token audience/claims/expiry, error behavior, and downstream header propagation details before drawing the sequence as a confirmed design.
+5. Review the EA XMI element/relationship IDs and model packages against the business traceability and application-interface catalog; the current scan only inventories structure and selected names.
+6. For Marketplace-to-Siebel customer matching, confirm authoritative CRM ID/CA ID semantics, V2/V4 source and update rules, manual override ownership, reconciliation reports, mismatch handling, and behavior when Siebel is unavailable. The reviewed Marketplace BSR does not answer these business/data-lifecycle questions.
