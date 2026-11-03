@@ -13,7 +13,7 @@ for line in manifest.splitlines():
  assert hashlib.sha256((bundle/rel).read_bytes()).hexdigest()==digest,rel
 archive=root/'outputs/Atlas_predani_po_oprave_Book1_2026-11-03.zip'
 with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
- for p in [repo/'Atlas.7z',repo/'Book1.xlsx',*files,bundle/'SHA256SUMS.txt']:
+ for p in [repo/'AGENTS.md',repo/'Atlas.7z',repo/'Book1.xlsx',*files,bundle/'SHA256SUMS.txt']:
   z.write(p,p.relative_to(repo).as_posix())
 with zipfile.ZipFile(archive) as z:
  assert z.testzip() is None

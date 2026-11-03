@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-03",
+  "canonicalWorkbookSha256": "10998f6652bcea8f0bdc357cd092663bed5334d21bf9db0255470a969fc786a2",
+  "verifiedWorkbookUnchanged": true,
+  "pendingCodeSeparateAndCopiedExactly": true,
+  "restoreWorkspace": "Executed into new local folder; 53 files copied and hash-verified. No builders run.",
+  "sshWrapper": "C# source compiled using installed .NET Framework; public pinned host copied outside repo. No private credential copied. New transport on another PC untested.",
+  "skill": "Frontmatter and required field/naming/description/placeholder checks passed; portable copy read back and compared byte-identical.",
+  "officialSkillQuickValidator": "Attempted, unavailable because bundled Python lacks PyYAML; default Windows python alias also unavailable. Independent plain frontmatter checks performed; no dependency installed.",
+  "pendingPythonSyntax": "ast.parse passed",
+  "pendingJavaScriptSyntax": "node --check passed",
+  "privateKeyOrDumpBundled": false,
+  "scope": "Recorded decisions and available working evidence, not full raw chat or complete primary SharePoint sources."
+}

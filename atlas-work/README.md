@@ -1,5 +1,7 @@
 # ServiceHub + Atlas CZ — pracovní podklady
 
+**Pokračování jiným agentem: [START_HERE.md](START_HERE.md).** Startovní prompt, poslední stav, skills, připojení a obnovení layoutu.
+
 Stav k 3. 11. 2026. Pro pokračování na jiném PC nejprve otevřít [Předání práce](PREDANI_2026-11-03.md). Obsahuje instrukce uživatele, známé zdroje, větve GitHubu, omezení dosavadního průzkumu a přesný nedokončený stav. Původní [stav z 1. 11.](outputs/Stav_prace_2026-11-01.md) je historický podklad.
 
 ## Nové podklady pro navázání
@@ -39,3 +41,10 @@ Původní `Book1.xlsx` a `Atlas.7z` v kořeni repozitáře tato dodávka neměn�
 Podklady jsou uloženy na větvi `codex/atlas-stav-2026-11-01`, protože stávající workflow na `main` spouští nasazení do OpenShiftu. Tato dodávka je uložení dokumentace a pracovních výstupů.
 
 - [Kontrola business vrstvy EA a návazností](outputs/ea-revize/EA_business_revize_2026-11-03.md) a [crosswalk 21 původních UC s GUID](outputs/ea-revize/EA_UC_obsahovy_crosswalk_2026-11-03.csv). Nové UC číslování není totožná identita. XMI a SO zatím nezměněny.
+
+## Poslední rozpracování pro předání
+
+- [TMF691 – nové přímé technické ověření](outputs/DXL_TMF691_overeni_2026-11-03.md).
+- [TMF629 – ověřené GET a customer mapping části](outputs/DXL_TMF629_overeni_2026-11-03.md), s přesným rozsahem nedokončeného čtení.
+- [Nespuštěný DXL builder](pending/book1-dxl-update/README.md), oddělený od ověřeného XLSX.
+- [GitHub transport a příkazy](instructions/github-access.md), [reprodukce](instructions/reproduction.md), [přenosný skill](instructions/skills/follow-explicit-scope/SKILL.md) a [repo instrukce](AGENTS.md).
