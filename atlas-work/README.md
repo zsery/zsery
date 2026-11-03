@@ -4,14 +4,15 @@ Stav k 3. 11. 2026. Pro pokračování na jiném PC nejprve otevřít [Předán�
 
 ## Nové podklady pro navázání
 
+- [AKTUÁLNÍ Book1 v03](outputs/Book1_2026-11-03/Book1_Atlas_konsolidovany_2026-11-03.xlsx) a [přesný stav opravy a kontrol](outputs/Book1_2026-11-03/Stav_Book1_2026-11-03.md). Sloučení dvou starších revizí je dokončené; úplná business baseline, EA a SO zůstávají nedokončené.
 - [Předání práce a instrukce](PREDANI_2026-11-03.md).
 - [SharePoint průzkum z 2. 11. a opravená pravidla VFID USER](notes/atlas-sharepoint-review-2026-11-02.md), převzato z větve `codex/atlas-sharepoint-review`, commit `c58e2b922916b6004973ce1dcb303b97fc123925`.
-- [Book1 s pravidly identity z 2. 11.](outputs/Book1_Solution_2026-11-02/Book1_Atlas_MVP_revize_2026-11-02.xlsx). Pozor: vznikl ze starší první revize a postrádá tři nové listy v02 a externí link part. Nepřepisovat jím v02; nejprve kontrolovaně sloučit změny.
+- [Historický Book1 s pravidly identity z 2. 11.](outputs/Book1_Solution_2026-11-02/Book1_Atlas_MVP_revize_2026-11-02.xlsx). Vznikl ze starší první revize a postrádá tři listy v02 a externí link part. Jeho věcné změny jsou již sloučené do aktuální v03; nepoužívat jej jako základ další práce.
 - [Přenositelná pravidla explicitního scope](instructions/follow-explicit-scope.md).
 - [Analýza pádu Outlooku](outputs/outlook-crash-analysis-20261102.md). Příčina není definitivně určena a oprava není hotová; dump není v repozitáři.
 - `reproduction/`: vybrané původní skripty a kontrolní výsledky pro dohledání změn. Obsahují lokální cesty; před spuštěním ověřit. Neobsahují deploy key.
 
-## Aktuální práce
+## Podklady z 1. listopadu (historie)
 
 - [Stav práce a další kroky](outputs/Stav_prace_2026-11-01.md).
 - [Book1 — pracovní verze 02](outputs/book1-v02/Book1_Atlas_pracovni_v02_2026-11-01.xlsx): Postup revize, Business a FREQ, EA SREQ a původní záložky s doplněnou kontrolou EA ID/GUID. Pracovní evidence, nikoli dokončená nejnovější business baseline.
@@ -26,7 +27,7 @@ Stav k 3. 11. 2026. Pro pokračování na jiném PC nejprve otevřít [Předán�
 - [OneDrive podklady](outputs/onedrive-servicehub-pruzkum.md).
 - [Průzkum dokumentace](outputs/servicehub-pruzkum-podkladu.md).
 
-Další poznámky v `outputs/` zachovávají historii průzkumu. Mohou obsahovat později překonané závěry; pro současný stav má přednost Předání práce z 3. 11. Rozšířeným základem zůstává Book1 v02; pravidla přidaná do oddělené revize z 2. 11. je třeba do něj sloučit. Složka `outputs/book1-revize/` obsahuje starší revizi. Copilot odpovědi a jejich rozbory nejsou kanonickým zdrojem požadavků; evidované opravy a omezení je nutné respektovat.
+Další poznámky v `outputs/` zachovávají historii průzkumu. Mohou obsahovat později překonané závěry; pro současný stav má přednost aktualizované Předání práce z 3. 11. a Stav_Book1 u v03. Aktuálním základem je výhradně konsolidovaná v03. Starší sešity jsou ponechané pro dohledání historie. Copilot odpovědi a jejich rozbory nejsou kanonickým zdrojem požadavků; evidované opravy a omezení je nutné respektovat.
 
 ## Dohodnutý postup
 

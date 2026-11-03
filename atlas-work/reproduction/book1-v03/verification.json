@@ -1,0 +1,51 @@
+{
+  "meaningfulIdentityCells": 23,
+  "excludedEamRecalculationValues": 608,
+  "changedCells": 702,
+  "changedSheets": [
+    "Functionalities",
+    "Interfaces",
+    "FREQ mapping",
+    "SREQ Aplikační role",
+    "Revize MVP",
+    "Cover",
+    "Postup revize",
+    "Business a FREQ",
+    "EA SREQ"
+  ],
+  "businessTextMatches": {
+    "no_id": 5,
+    "exact": 138,
+    "text_conflict": 14,
+    "extended_text": 2
+  },
+  "output": "C:\\Users\\zsery\\Documents\\Codex\\2026-10-31\\jse\\outputs\\Book1_2026-11-03\\Book1_Atlas_konsolidovany_2026-11-03.xlsx",
+  "sha256": "ecbeb0354899de6891c7062c08ae02112db70a9d94bfeb551bd817ca4e6462dd",
+  "sheets": [
+    "Cover",
+    "Postup revize",
+    "Business a FREQ",
+    "EA SREQ",
+    "_Enums",
+    "Functionalities",
+    "Interfaces",
+    "FREQ mapping",
+    "EAM App",
+    "Siebel EA Export",
+    "SREQ Aplikační role",
+    "Sheet1",
+    "TA139Arch",
+    "Revize MVP"
+  ],
+  "preservedUnchangedCells": 33809,
+  "newAuthoredCells": 73,
+  "originalFormulasPreserved": 1878,
+  "nativeTablePartsPreserved": 7,
+  "externalLinkPartsPreserved": 2,
+  "unchangedPackageParts": 35,
+  "preExistingFormulaErrors": [
+    "EAM App!F459: #VALUE!"
+  ],
+  "unintendedChanges": 0,
+  "nativeExcelRecalculation": "Not performed; no new formulas added; existing formula text/cache preserved byte-for-byte."
+}

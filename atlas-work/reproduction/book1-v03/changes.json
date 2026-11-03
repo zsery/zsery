@@ -1,0 +1,2843 @@
+{
+  "operations": {
+    "Functionalities": {
+      "K315": "49: VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.\nUser identity key: VFID sub ↔ ONSC/WSC user is 1:1; email is not the mapping key.",
+      "L315": "Přenesené posouzení SREQ; samotná sémantická shoda funkce vyžaduje EA.  Rule supplied by user 2026-11-02."
+    },
+    "Interfaces": {
+      "J4": "Odlišit tokenové rozhraní CZ DXL od business customer/role/context API; IDaaS autentizace a subscription eligibility mají jiné odpovědnosti. Přesné kontrakty neověřeny.\nVFID sub ↔ odpovídající ONSC user nebo WSC user: 1:1. E-mail je atribut, nikoli párovací klíč. TMF691 nese holding parent–child strukturou.",
+      "K4": "U1 — UC005, s. 19–21; T1; U2 — výslovné pravidlo uživatele, 2026-11-02",
+      "J12": "Oddělit CZ vstupní data, Group selector/eligibility a vyloučený portálový handover/automatický Siebel prefill. Provider, consumer a payload ověřit proti EA/API.\nONSC user ↔ VFID sub: 1:1. E-mail není párovací klíč. Holding je v TMF691 zachycen parent–child strukturou.",
+      "K12": "M1 — MVP Requirements, MVP Functional Decomposition; B1 — závazný Board scope; potvrzen uživatelem; U2 — výslovné pravidlo uživatele, 2026-11-02",
+      "J17": "Identity lookup nezaměňovat s autentizací a business autorizací.\nVFID sub je identifikátor pro 1:1 vazbu na odpovídající ONSC/WSC user. E-mail je atribut, ne párovací klíč.",
+      "K17": "U1 — UC005, s. 19–21; U2 — výslovné pravidlo uživatele, 2026-11-02",
+      "J18": "Původní katalog zachován; přítomnost rozhraní v Book1 sama nepotvrzuje jeho aktuální Atlas scope. EA export dostupný; detailní shoda rozhraní neověřena\nWSC user ↔ VFID sub: 1:1. E-mail není párovací klíč. Holding je v TMF691 zachycen parent–child strukturou.",
+      "K18": "B1 — závazný Board scope; potvrzen uživatelem; U2 — výslovné pravidlo uživatele, 2026-11-02"
+    },
+    "FREQ mapping": {
+      "L49": "VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.\nIdentity rule: VFID sub ↔ ONSC/WSC user is 1:1; email is not the mapping key.",
+      "N49": "U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13; U2 — výslovné pravidlo uživatele, 2026-11-02",
+      "W102": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 14.",
+      "W140": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 15.",
+      "W141": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 16.",
+      "W157": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 12.",
+      "W174": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 13.",
+      "W204": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 17.",
+      "W205": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 18.",
+      "W206": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 19.",
+      "W207": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 20.",
+      "W210": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 9.",
+      "W211": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 10.",
+      "W212": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 11.",
+      "W213": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 21.",
+      "W214": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 22."
+    },
+    "SREQ Aplikační role": {
+      "M49": "VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.\nVFID sub ↔ ONSC/WSC user: 1:1. E-mail není párovací klíč.",
+      "N49": "FREQ mapping!49; U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13; U2 — výslovné pravidlo uživatele, 2026-11-02",
+      "W102": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 14.",
+      "W140": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 15.",
+      "W141": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 16.",
+      "W157": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 12.",
+      "W174": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 13.",
+      "W204": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 17.",
+      "W205": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 18.",
+      "W206": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 19.",
+      "W207": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 20.",
+      "W210": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 9.",
+      "W211": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 10.",
+      "W212": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 11.",
+      "W213": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 21.",
+      "W214": "Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.\nROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 22."
+    },
+    "Revize MVP": {
+      "A20": "U2 — identita",
+      "B20": "VFID sub ↔ ONSC user / WSC user je vždy 1:1.",
+      "C20": "Výslovné pravidlo uživatele, 2026-11-02. Použít stabilní VFID sub; e-mail není konzistentní a nesmí být párovacím klíčem. Termín „subscriber“ není použit.",
+      "A21": "U2 — holding",
+      "B21": "TMF691 nese holding jako strukturu parent–child.",
+      "C21": "Výslovné pravidlo uživatele, 2026-11-02. Udržet strukturu holdingů; nevydávat ji za mapování user identity.",
+      "A22": "U2 — hranice interpretace",
+      "B22": "Vazba user identity a holding hierarchie jsou dvě různé věci.",
+      "C22": "VFID sub ↔ ONSC/WSC user 1:1; parent–child je struktura holdingů v TMF691. Detaily kardinality holdingů a konkrétního payloadu musí potvrdit API kontrakt.",
+      "B1": "2026-11-03",
+      "C1": "Konsolidovaná pracovní revize v03; úplná aktuální BRD/FREQ/SREQ baseline není ověřena.",
+      "A23": "Konsolidace v03",
+      "B23": "Sloučena rozšířená v02 a všech 23 věcných změn z 2.11.",
+      "C23": "14 listů zachováno; EAM App, vzorce, tabulky, externí odkazy a GUID se nepřebírají z poškozené exportní větve.",
+      "A24": "Rozsah dostupných zdrojů",
+      "B24": "Zapracována uložená pozorování BRD, UC005, traceability a Marketplace BSR z 2.11.",
+      "C24": "Úplné nové primární dokumenty zde nejsou. Verze BRD a úplnost všech FREQ nejsou potvrzené.",
+      "A25": "FREQ/SREQ vazby",
+      "B25": "Přímá textová shoda je odlišena od stejného ID s jiným textem.",
+      "C25": "Reference na řádek Book1 není schválení ani nová EA vazba.",
+      "A26": "EA a SO",
+      "B26": "Atlas.xml a Word SO v této konsolidaci nebyly změněny.",
+      "C26": "Nedokončené odborné kroky jsou v Postup revize; žádný výstup není označen za schválenou baseline."
+    },
+    "Cover": {
+      "A13": "Book1, konsolidovaná verze 03",
+      "B13": "3. 11. 2026. Sloučena rozšířená v02, pravidla identity z 2.11. a uložená pozorování SharePointu.",
+      "A14": "Dokončeno v této verzi",
+      "B14": "Jedna pracovní verze se 14 listy. Přeneseno všech 23 věcných změn z 2.11.; původní EAM, vzorce, tabulky a externí vazby zachovány.",
+      "A15": "Stav business baseline",
+      "B15": "NEUZAVŘENA: úplný aktuální BRD/UC a všechny Martinovy požadavky nebyly obsahově ověřeny. Tato verze není potvrzením úplné schválené baseline.",
+      "A16": "Business a FREQ",
+      "B16": "159 EA FREQ záznamů a 6 analytických vstupů UC005. Přesná textová shoda a rozpory vůči Book1 jsou evidovány u řádků.",
+      "A17": "Pravidla uživatele",
+      "B17": "VFID sub a odpovídající ONSC/WSC user 1:1; email není párovací klíč. TMF691: holding parent–child.",
+      "A18": "Co zůstává otevřené",
+      "B18": "Kanonické FREQ/verze a capability vazby; technický DXL token kontrakt; Marketplace/Siebel opravy dat; aktuálnost všech SREQ.",
+      "A19": "EA a SO",
+      "B19": "Atlas.xml nebyl změněn a Word SO nebyl aktualizován. Připravená evidence není důkazem hotové změny modelu nebo dokumentu."
+    },
+    "Postup revize": {
+      "A2": "BOOK1, KONSOLIDOVANÁ VERZE 03",
+      "B2": "3. 11. 2026",
+      "C2": "Sloučena v02 a všech 23 věcných změn identity z 2.11.; doplněny uložené poznatky SharePointu.",
+      "D2": "KONSOLIDACE DOKONČENA. Úplná business baseline, EA změny a SO zůstávají neuzavřené.",
+      "A6": "Rozsah v03",
+      "B9": "PR25_0837_ServiceHub_Atlas_BRD.docx: titul 0.1; historie uvádí 0.2 z 23.10.; 25 stran.",
+      "C9": "B2; notes/atlas-sharepoint-review-2026-11-02.md. Dřívější tvrzení verze 0.7 není ověřené.",
+      "D9": "OTEVŘENO: sjednotit titul a revizní historii, potvrdit poslední vydání a dokončit čtení.",
+      "D8": "Záznam z 2.11.: 51 stran, 13 171 slov, titul 0.1 / 14.10. Detailněji UC005; všech 12 UC není zvalidováno.",
+      "D16": "DOPLNĚNO: převzaty doložené výklady UC005 a přesné textové vazby. Kanonické FREQ a schválení jsou stále otevřené.",
+      "B33": "Sloučení v02 a identity; textové porovnání FREQ; workbookové reference do EA SREQ; doplnění pozorování ze 2.11.",
+      "C33": "Srovnání první revize, v02 a sešitu z 2.11.; uložené poznámky z VDI.",
+      "A35": "U2, identita uživatele",
+      "B35": "VFID sub a odpovídající ONSC user / WSC user jsou vždy 1:1. E-mail není párovací klíč.",
+      "C35": "Výslovné pravidlo uživatele, 2.11.2026.",
+      "D35": "ZAPRACOVÁNO: Interfaces, Functionalities, FREQ mapping, SREQ Aplikační role, EA SREQ a Revize MVP.",
+      "A36": "U2, holding",
+      "B36": "TMF691 nese holding jako strukturu parent–child.",
+      "C36": "Výslovné pravidlo uživatele, 2.11.2026.",
+      "D36": "ZAPRACOVÁNO jako pravidlo; konkrétní payload a další kardinality čekají na API kontrakt.",
+      "A37": "Zdroje, TR1",
+      "B37": "PR25_0837_ServiceHub_Atlas_Traceability_Decomposition.xlsx, list Traceability.",
+      "C37": "Pozorování 2.11.: 26 datových řádků, C101–C106, UC001–012, P01–P10, Sell/Build/Run.",
+      "D37": "Zdroj business traceability nemá FREQ/SREQ ID. Úplný řádkový přepis není uložen; nevytvářet vazby z pouhého seznamu capability.",
+      "A38": "Zdroje, bezpečnost Marketplace",
+      "B38": "BSR_Appdirect_2023_Update...xlsx; 16 listů.",
+      "C38": "Pozorování 2.11.: baseline 2.6 z 1.4.2019, AppDirect aktualizace 2023.",
+      "D38": "Historický supplier assessment; odpovědi nejsou aktuální Atlas/ServiceHub bezpečnostní požadavky.",
+      "A39": "UC005, chybové větve",
+      "B39": "Neúspěšná autentizace zastaví tok před DXL; bez role/CRM ID obecný obsah; nedostupné DXL obecný/nedostupný výsledek.",
+      "C39": "U1; uložený detail UC005 z 2.11.",
+      "D39": "DOPLNĚNO v Business a FREQ. Nezaměňovat s UC006 subscription eligibility.",
+      "A40": "UC005, neplatný výběr",
+      "B40": "CRM ID, které už není dostupné, se nesmí aktivovat; selector se obnoví.",
+      "C40": "U1; uložený detail UC005 z 2.11.",
+      "D40": "DOPLNĚNO. Priorita počáteční automatické volby zůstává nedoložená.",
+      "A41": "Model, capability a BPMN",
+      "B41": "V projektové větvi nebyl inventurou nalezen explicitní ArchiMate Capability; business procesy a BPMN existují.",
+      "C41": "E1; poznámky 2.11.",
+      "D41": "Modelové typy a vazby vyžadují kontrolu. Absence Capability není absence celé business vrstvy.",
+      "A42": "Rozpor, CHM identifikátory",
+      "B42": "EA a Book1 mají u CHM-06–19 rozdílné texty/pořadí.",
+      "C42": "E1, původní Book1 a poznámky 2.11.",
+      "D42": "Rozpory jsou uvedeny u příslušných Business a FREQ řádků. Neslučovat jen podle ID.",
+      "A43": "Rozpor, SREQ-CRM-09",
+      "B43": "EA jej popisuje jako assisted-ticket email configuration; Book1 jej používá pro lead-create.",
+      "C43": "E1 a původní mapování Book1.",
+      "D43": "OTEVŘENO: zdrojový rozpor není tímto sloučením rozhodnut.",
+      "A44": "Konsolidace, EAM App",
+      "B44": "Ve větvi z 2.11. se oproti jejímu vstupu změnilo 608 hodnot EAM App po přepočtu.",
+      "C44": "Třícestná kontrola OOXML.",
+      "D44": "Tyto nesouvisející změny nejsou přeneseny. EAM App a původní vzorce/cache jsou zachovány z v02.",
+      "A45": "Původní chyba sešitu",
+      "B45": "EAM App!F459 obsahuje původní chybu #VALUE!.",
+      "C45": "Zachovaný původní sešit a v02.",
+      "D45": "Není novou chybou této konsolidace. Nebyla skryta ani nahrazena nulou.",
+      "A46": "Stav zdrojů",
+      "B46": "V podkladech jsou inventarizované, ale ne zcela přečtené dokumenty a podsložky.",
+      "C46": "SharePoint/OneDrive poznámky 1.–2.11.",
+      "D46": "NEDOKONČENO: úplný hloubkový průzkum a ověření nejnovějších verzí.",
+      "A47": "Marketplace/Siebel, otevřený návrh",
+      "B47": "Reporty V2/V4, klíče CRM/CA/BA/BAN/company UUID, master atributů a způsob opravy.",
+      "C47": "Zadání uživatele; dosud neověřený provozní postup.",
+      "D47": "NEDOKONČENO: žádný/mnoho matchů, duplicity a již spárovaný zákazník s rozdílnými daty."
+    },
+    "Business a FREQ": {
+      "J161": "Uživatel se autentizuje přes VFID. Při selhání tok končí před požadavkem na customer/role data z DXL.",
+      "O161": "U1, UC005 s.19–21; notes/atlas-sharepoint-review-2026-11-02.md. Zaznamenaná revize 0.1 / 14.10.; nejnovější vydání musí být potvrzeno.",
+      "Q161": "VÝKLAD DOPLNĚN. Kanonické FREQ ID a business/capability vazby nejsou potvrzené.",
+      "J162": "ServiceHub získá přes DXL vztahy uživatele, role a dostupná CRM ID pro customer-specific obsah. Přesný API kontrakt není doložen.",
+      "O162": "U1, UC005 s.19–21; notes/atlas-sharepoint-review-2026-11-02.md. Zaznamenaná revize 0.1 / 14.10.; nejnovější vydání musí být potvrzeno.",
+      "Q162": "VÝKLAD DOPLNĚN. Kanonické FREQ ID a business/capability vazby nejsou potvrzené.",
+      "J163": "Specifický obsah je dostupný pro příslušné ONSC/WSC administrativní role a dostupný CRM kontext. Bez role nebo CRM ID se zobrazí obecný obsah. To není UC006 subscription eligibility.",
+      "O163": "U1, UC005 s.19–21; notes/atlas-sharepoint-review-2026-11-02.md. Zaznamenaná revize 0.1 / 14.10.; nejnovější vydání musí být potvrzeno.",
+      "Q163": "VÝKLAD DOPLNĚN. Kanonické FREQ ID a business/capability vazby nejsou potvrzené.",
+      "J164": "Automaticky se zvolí jedno dostupné CRM ID. Priorita této volby není v přečteném podkladu doložena.",
+      "O164": "U1, UC005 s.19–21; notes/atlas-sharepoint-review-2026-11-02.md. Zaznamenaná revize 0.1 / 14.10.; nejnovější vydání musí být potvrzeno.",
+      "Q164": "VÝKLAD DOPLNĚN. Kanonické FREQ ID a business/capability vazby nejsou potvrzené.",
+      "J165": "Customer Selector umožní přepnout dostupné CRM ID a obnoví obsah pro nový kontext. Nedostupné vybrané CRM ID se neaktivuje a selector se obnoví.",
+      "O165": "U1, UC005 s.19–21; notes/atlas-sharepoint-review-2026-11-02.md. Zaznamenaná revize 0.1 / 14.10.; nejnovější vydání musí být potvrzeno.",
+      "Q165": "VÝKLAD DOPLNĚN. Kanonické FREQ ID a business/capability vazby nejsou potvrzené.",
+      "J166": "Bez příslušné role či CRM ID se použije obecný obsah bez aktivního customer kontextu. Při nedostupných datech DXL se použije obecný/nedostupný výsledek; konkrétní technické chyby musí určit kontrakt.",
+      "O166": "U1, UC005 s.19–21; notes/atlas-sharepoint-review-2026-11-02.md. Zaznamenaná revize 0.1 / 14.10.; nejnovější vydání musí být potvrzeno.",
+      "Q166": "VÝKLAD DOPLNĚN. Kanonické FREQ ID a business/capability vazby nejsou potvrzené.",
+      "P2": "Název EA začíná -REQ místo F-REQ; ID není automaticky opraveno. EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.\nV Book1 FREQ mapping není odpovídající přesné ID; porovnat zdrojové znění a verzi.",
+      "P3": "Název EA začíná -REQ místo F-REQ; ID není automaticky opraveno. EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.\nV Book1 FREQ mapping není odpovídající přesné ID; porovnat zdrojové znění a verzi.",
+      "J4": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nONSC/WSC entrypointy, navigace, návrat a předání/konzumace portálového kontextu nejsou současný MVP scope. Historii zachovat. Nezaměňovat za povinné SSO a token pro CZ DXL.",
+      "O4": "FREQ mapping, řádky 95:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD — standalone scope\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q4": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J5": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nONSC/WSC entrypointy, navigace, návrat a předání/konzumace portálového kontextu nejsou současný MVP scope. Historii zachovat. Nezaměňovat za povinné SSO a token pro CZ DXL.",
+      "O5": "FREQ mapping, řádky 98:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD — standalone scope\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q5": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J6": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nONSC/WSC entrypointy, navigace, návrat a předání/konzumace portálového kontextu nejsou současný MVP scope. Historii zachovat. Nezaměňovat za povinné SSO a token pro CZ DXL.",
+      "O6": "FREQ mapping, řádky 99:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD — standalone scope\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q6": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J7": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nONSC/WSC entrypointy, navigace, návrat a předání/konzumace portálového kontextu nejsou současný MVP scope. Historii zachovat. Nezaměňovat za povinné SSO a token pro CZ DXL.",
+      "O7": "FREQ mapping, řádky 100:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD — standalone scope\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q7": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J8": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nVstup přes samostatnou URL ServiceHub s VFID SSO; CZ zajistí lokální integrační/datové závislosti a E2E akceptaci.",
+      "O8": "FREQ mapping, řádky 203:\nB1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition — ř. 10\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q8": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "P9": "EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.\nStejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 210. Návrh nebyl automaticky přiřazen.",
+      "Q9": "ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.",
+      "P10": "EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.\nStejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 211. Návrh nebyl automaticky přiřazen.",
+      "Q10": "ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.",
+      "P11": "EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.\nStejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 212. Návrh nebyl automaticky přiřazen.",
+      "Q11": "ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.",
+      "P12": "EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.\nStejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 157. Návrh nebyl automaticky přiřazen.",
+      "Q12": "ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.",
+      "P13": "EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.\nStejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 174. Návrh nebyl automaticky přiřazen.",
+      "Q13": "ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.",
+      "P14": "EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.\nStejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 102. Návrh nebyl automaticky přiřazen.",
+      "Q14": "ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.",
+      "P15": "EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.\nStejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 140. Návrh nebyl automaticky přiřazen.",
+      "Q15": "ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.",
+      "P16": "EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.\nStejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 141. Návrh nebyl automaticky přiřazen.",
+      "Q16": "ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.",
+      "P17": "EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.\nStejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 204. Návrh nebyl automaticky přiřazen.",
+      "Q17": "ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.",
+      "P18": "EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.\nStejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 205. Návrh nebyl automaticky přiřazen.",
+      "Q18": "ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.",
+      "P19": "EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.\nStejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 206. Návrh nebyl automaticky přiřazen.",
+      "Q19": "ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.",
+      "P20": "EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.\nStejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 207. Návrh nebyl automaticky přiřazen.",
+      "Q20": "ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.",
+      "P21": "EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.\nStejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 213. Návrh nebyl automaticky přiřazen.",
+      "Q21": "ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.",
+      "P22": "EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.\nStejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 214. Návrh nebyl automaticky přiřazen.",
+      "Q22": "ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.",
+      "J23": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nSamostatný ServiceHub s VFID přihlášením. SH specifickým voláním vyjedná token s CZ DXL a vloží obdržený token do hlaviček dalších volání VFCZ DXL. Přesný endpoint, grant, formát tokenu/hlavičky, expirace a chyby nejsou ověřeny.",
+      "O23": "FREQ mapping, řádky 147:\nB1 — závazný Board scope; potvrzen uživatelem; T1 — uživatel: technický záměr SSO\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q23": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J24": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nSamostatný ServiceHub s VFID přihlášením. SH specifickým voláním vyjedná token s CZ DXL a vloží obdržený token do hlaviček dalších volání VFCZ DXL. Přesný endpoint, grant, formát tokenu/hlavičky, expirace a chyby nejsou ověřeny.",
+      "O24": "FREQ mapping, řádky 148:\nB1 — závazný Board scope; potvrzen uživatelem; T1 — uživatel: technický záměr SSO\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q24": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J25": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nSamostatný ServiceHub s VFID přihlášením. SH specifickým voláním vyjedná token s CZ DXL a vloží obdržený token do hlaviček dalších volání VFCZ DXL. Přesný endpoint, grant, formát tokenu/hlavičky, expirace a chyby nejsou ověřeny.",
+      "O25": "FREQ mapping, řádky 149, 165:\nB1 — závazný Board scope; potvrzen uživatelem; T1 — uživatel: technický záměr SSO\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q25": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J26": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nSamostatný ServiceHub s VFID přihlášením. SH specifickým voláním vyjedná token s CZ DXL a vloží obdržený token do hlaviček dalších volání VFCZ DXL. Přesný endpoint, grant, formát tokenu/hlavičky, expirace a chyby nejsou ověřeny.",
+      "O26": "FREQ mapping, řádky 150:\nB1 — závazný Board scope; potvrzen uživatelem; T1 — uživatel: technický záměr SSO\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q26": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J27": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nSamostatný ServiceHub s VFID přihlášením. SH specifickým voláním vyjedná token s CZ DXL a vloží obdržený token do hlaviček dalších volání VFCZ DXL. Přesný endpoint, grant, formát tokenu/hlavičky, expirace a chyby nejsou ověřeny.",
+      "O27": "FREQ mapping, řádky 151:\nB1 — závazný Board scope; potvrzen uživatelem; T1 — uživatel: technický záměr SSO\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q27": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J28": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O28": "FREQ mapping, řádky 103:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q28": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J29": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O29": "FREQ mapping, řádky 104:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q29": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J30": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O30": "FREQ mapping, řádky 105:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q30": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J31": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O31": "FREQ mapping, řádky 106:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q31": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J32": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O32": "FREQ mapping, řádky 107:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q32": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J33": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O33": "FREQ mapping, řádky 108:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q33": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J34": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O34": "FREQ mapping, řádky 109:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q34": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J35": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O35": "FREQ mapping, řádky 110:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q35": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J36": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O36": "FREQ mapping, řádky 111:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q36": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J37": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O37": "FREQ mapping, řádky 112:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q37": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J38": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O38": "FREQ mapping, řádky 113:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q38": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J39": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O39": "FREQ mapping, řádky 114:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q39": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J40": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O40": "FREQ mapping, řádky 115:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q40": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J41": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O41": "FREQ mapping, řádky 116:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q41": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J42": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O42": "FREQ mapping, řádky 117:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q42": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J43": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nPůvodní text zachován; přesný detail, odpovědnost a aktuální zdroj požadavku je nutné ověřit.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.\nIdentity rule: VFID sub ↔ ONSC/WSC user is 1:1; email is not the mapping key.\nZajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.\nIDaaS autentizace sama nepotvrzuje přístup k Atlas. Eligibility vyhodnocuje SH/Group ze zákaznických a subscription vstupů; rozdělit autentizaci a business autorizaci.",
+      "O43": "FREQ mapping, řádky 2, 22, 49, 52, 96, 152, 166, 169:\nM1 — MVP Requirements, MVP Functional Decomposition\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13; U2 — výslovné pravidlo uživatele, 2026-11-02\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q43": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J44": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O44": "FREQ mapping, řádky 23, 51, 153, 170:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q44": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J45": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nPůvodní text zachován; přesný detail, odpovědnost a aktuální zdroj požadavku je nutné ověřit.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O45": "FREQ mapping, řádky 3, 24, 154, 171:\nM1 — MVP Requirements, MVP Functional Decomposition\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q45": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J46": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nPůvodní text zachován; přesný detail, odpovědnost a aktuální zdroj požadavku je nutné ověřit.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O46": "FREQ mapping, řádky 5, 25, 155, 172:\nM1 — MVP Requirements, MVP Functional Decomposition\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q46": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J47": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nPůvodní text zachován; přesný detail, odpovědnost a aktuální zdroj požadavku je nutné ověřit.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O47": "FREQ mapping, řádky 4, 26, 156, 173:\nM1 — MVP Requirements, MVP Functional Decomposition\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q47": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J48": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O48": "FREQ mapping, řádky 118, 178:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q48": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J49": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O49": "FREQ mapping, řádky 119, 179:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q49": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J50": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O50": "FREQ mapping, řádky 120, 180:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q50": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J51": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O51": "FREQ mapping, řádky 121, 181:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q51": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J52": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nDostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.",
+      "O52": "FREQ mapping, řádky 93, 184:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q52": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J53": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nDostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.\nOddělit autentizaci, admin oprávnění, přípustný zákaznický kontext a dostupnost Atlas subscription. UC005 nepotvrzuje všechny produktové podmínky UC006; ověřit přesná pravidla a chybové stavy.",
+      "O53": "FREQ mapping, řádky 53, 122:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11, 17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q53": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J54": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nDostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.",
+      "O54": "FREQ mapping, řádky 94, 182:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q54": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J55": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nDostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.",
+      "O55": "FREQ mapping, řádky 183:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q55": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J56": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nOddělit autentizaci, admin oprávnění, přípustný zákaznický kontext a dostupnost Atlas subscription. UC005 nepotvrzuje všechny produktové podmínky UC006; ověřit přesná pravidla a chybové stavy.",
+      "O56": "FREQ mapping, řádky 124:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11, 17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q56": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J57": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nOddělit autentizaci, admin oprávnění, přípustný zákaznický kontext a dostupnost Atlas subscription. UC005 nepotvrzuje všechny produktové podmínky UC006; ověřit přesná pravidla a chybové stavy.",
+      "O57": "FREQ mapping, řádky 125:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11, 17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q57": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J58": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nOddělit autentizaci, admin oprávnění, přípustný zákaznický kontext a dostupnost Atlas subscription. UC005 nepotvrzuje všechny produktové podmínky UC006; ověřit přesná pravidla a chybové stavy.",
+      "O58": "FREQ mapping, řádky 126:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11, 17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q58": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J59": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nOddělit autentizaci, admin oprávnění, přípustný zákaznický kontext a dostupnost Atlas subscription. UC005 nepotvrzuje všechny produktové podmínky UC006; ověřit přesná pravidla a chybové stavy.",
+      "O59": "FREQ mapping, řádky 127:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11, 17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q59": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J60": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nOddělit autentizaci, admin oprávnění, přípustný zákaznický kontext a dostupnost Atlas subscription. UC005 nepotvrzuje všechny produktové podmínky UC006; ověřit přesná pravidla a chybové stavy.",
+      "O60": "FREQ mapping, řádky 128:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11, 17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q60": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J61": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nPůvodní text zachován; přesný detail, odpovědnost a aktuální zdroj požadavku je nutné ověřit.\nONSC/WSC entrypointy, navigace, návrat a předání/konzumace portálového kontextu nejsou současný MVP scope. Historii zachovat. Nezaměňovat za povinné SSO a token pro CZ DXL.",
+      "O61": "FREQ mapping, řádky 97, 219, 220:\nM1 — MVP Requirements, MVP Functional Decomposition\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD — standalone scope\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q61": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J62": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nPodpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.",
+      "O62": "FREQ mapping, řádky 187:\nB1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q62": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J63": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nPodpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.",
+      "O63": "FREQ mapping, řádky 188:\nB1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q63": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J64": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nPodpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.",
+      "O64": "FREQ mapping, řádky 189:\nB1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q64": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J65": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nPodpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.",
+      "O65": "FREQ mapping, řádky 131, 190:\nB1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q65": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J66": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nPodpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.",
+      "O66": "FREQ mapping, řádky 132, 191:\nB1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q66": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J67": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nPodpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.",
+      "O67": "FREQ mapping, řádky 133, 192:\nB1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q67": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J68": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nPodpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.",
+      "O68": "FREQ mapping, řádky 134, 193:\nB1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q68": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J69": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nVFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.",
+      "O69": "FREQ mapping, řádky 158:\nU1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q69": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "P70": "EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.\nEA text obsahuje znění FREQ z Book1 a navíc vložený NFR. Před převodem oddělit jednotlivá tvrzení a ověřit jejich scope.",
+      "Q70": "ROZŠÍŘENÝ TEXT EA S NFR; neprovádět automatické rozdělení ani schválení.",
+      "J71": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nPodpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.",
+      "O71": "FREQ mapping, řádky 135, 194:\nB1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q71": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J72": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nPodpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.",
+      "O72": "FREQ mapping, řádky 136, 195:\nB1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q72": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J73": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nPodpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.",
+      "O73": "FREQ mapping, řádky 137:\nB1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q73": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J74": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O74": "FREQ mapping, řádky 27:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q74": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J75": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O75": "FREQ mapping, řádky 28:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q75": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J76": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O76": "FREQ mapping, řádky 29:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q76": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J77": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O77": "FREQ mapping, řádky 30:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q77": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J78": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O78": "FREQ mapping, řádky 31:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q78": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J79": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O79": "FREQ mapping, řádky 32:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q79": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J80": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O80": "FREQ mapping, řádky 33:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q80": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J81": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O81": "FREQ mapping, řádky 34:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q81": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J82": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O82": "FREQ mapping, řádky 35:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q82": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J83": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O83": "FREQ mapping, řádky 36:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q83": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J84": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O84": "FREQ mapping, řádky 37:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q84": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J85": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O85": "FREQ mapping, řádky 38:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q85": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J86": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O86": "FREQ mapping, řádky 39:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q86": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J87": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O87": "FREQ mapping, řádky 40:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q87": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J88": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O88": "FREQ mapping, řádky 42:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q88": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J89": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O89": "FREQ mapping, řádky 43:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q89": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J90": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O90": "FREQ mapping, řádky 44:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q90": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J91": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O91": "FREQ mapping, řádky 45:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q91": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J92": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O92": "FREQ mapping, řádky 46:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q92": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J93": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O93": "FREQ mapping, řádky 47:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q93": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "P94": "EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.\nEA text obsahuje znění FREQ z Book1 a navíc vložený NFR. Před převodem oddělit jednotlivá tvrzení a ověřit jejich scope.",
+      "Q94": "ROZŠÍŘENÝ TEXT EA S NFR; neprovádět automatické rozdělení ani schválení.",
+      "J95": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O95": "FREQ mapping, řádky 6:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q95": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J96": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O96": "FREQ mapping, řádky 7:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q96": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J97": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O97": "FREQ mapping, řádky 8:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q97": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J98": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O98": "FREQ mapping, řádky 9:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q98": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J99": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O99": "FREQ mapping, řádky 10:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q99": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J100": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O100": "FREQ mapping, řádky 11:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q100": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J101": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O101": "FREQ mapping, řádky 12:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q101": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J102": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O102": "FREQ mapping, řádky 13:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q102": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J103": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O103": "FREQ mapping, řádky 14:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q103": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J104": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O104": "FREQ mapping, řádky 15:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q104": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J105": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O105": "FREQ mapping, řádky 16:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q105": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J106": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O106": "FREQ mapping, řádky 17:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q106": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J107": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O107": "FREQ mapping, řádky 18:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q107": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J108": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O108": "FREQ mapping, řádky 19:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q108": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J109": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMarketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.",
+      "O109": "FREQ mapping, řádky 20:\nB1 — závazný Board scope; potvrzen uživatelem; CZ BRD\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q109": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "P110": "EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.\nV Book1 FREQ mapping není odpovídající přesné ID; porovnat zdrojové znění a verzi.",
+      "P111": "EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.\nV Book1 FREQ mapping není odpovídající přesné ID; porovnat zdrojové znění a verzi.",
+      "J112": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nZajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.",
+      "O112": "FREQ mapping, řádky 55:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q112": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J113": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nZajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.",
+      "O113": "FREQ mapping, řádky 56:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q113": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J114": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nZajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.",
+      "O114": "FREQ mapping, řádky 57:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q114": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J115": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nZajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.",
+      "O115": "FREQ mapping, řádky 58:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q115": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J116": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nZajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.",
+      "O116": "FREQ mapping, řádky 59:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q116": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J117": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nZajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.",
+      "O117": "FREQ mapping, řádky 60:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q117": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J118": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nZajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.",
+      "O118": "FREQ mapping, řádky 61:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q118": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J119": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nZajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.",
+      "O119": "FREQ mapping, řádky 62:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q119": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J120": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nZajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.",
+      "O120": "FREQ mapping, řádky 63:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q120": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "P121": "EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.\nV Book1 FREQ mapping není odpovídající přesné ID; porovnat zdrojové znění a verzi.",
+      "J122": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMinimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.",
+      "O122": "FREQ mapping, řádky 21:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q122": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J123": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMinimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.",
+      "O123": "FREQ mapping, řádky 64:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q123": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J124": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMinimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.",
+      "O124": "FREQ mapping, řádky 65:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q124": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J125": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMinimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.",
+      "O125": "FREQ mapping, řádky 66:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q125": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J126": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMinimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.",
+      "O126": "FREQ mapping, řádky 67:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q126": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J127": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMinimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.",
+      "O127": "FREQ mapping, řádky 68:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q127": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J128": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMinimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.",
+      "O128": "FREQ mapping, řádky 69:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q128": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J129": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMinimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.",
+      "O129": "FREQ mapping, řádky 70:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q129": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J130": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMinimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.",
+      "O130": "FREQ mapping, řádky 71:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q130": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J131": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMinimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.",
+      "O131": "FREQ mapping, řádky 72:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q131": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J132": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMinimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.",
+      "O132": "FREQ mapping, řádky 73:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q132": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J133": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMinimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.",
+      "O133": "FREQ mapping, řádky 74:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q133": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J134": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMinimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.",
+      "O134": "FREQ mapping, řádky 75:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q134": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J135": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nMinimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.",
+      "O135": "FREQ mapping, řádky 76:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q135": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J136": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nOvěřit pravidla VFID/email/admin identity a jejich realizaci pro manuální onboarding. Nedovozovat automatizaci ani detail role jen ze starého řádku.",
+      "O136": "FREQ mapping, řádky 77:\nB1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q136": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J137": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nOvěřit pravidla VFID/email/admin identity a jejich realizaci pro manuální onboarding. Nedovozovat automatizaci ani detail role jen ze starého řádku.",
+      "O137": "FREQ mapping, řádky 78:\nB1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q137": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J138": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nOvěřit pravidla VFID/email/admin identity a jejich realizaci pro manuální onboarding. Nedovozovat automatizaci ani detail role jen ze starého řádku.",
+      "O138": "FREQ mapping, řádky 79:\nB1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q138": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J139": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nOvěřit pravidla VFID/email/admin identity a jejich realizaci pro manuální onboarding. Nedovozovat automatizaci ani detail role jen ze starého řádku.",
+      "O139": "FREQ mapping, řádky 80:\nB1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q139": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J140": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nOvěřit pravidla VFID/email/admin identity a jejich realizaci pro manuální onboarding. Nedovozovat automatizaci ani detail role jen ze starého řádku.",
+      "O140": "FREQ mapping, řádky 81:\nB1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q140": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J141": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nOvěřit pravidla VFID/email/admin identity a jejich realizaci pro manuální onboarding. Nedovozovat automatizaci ani detail role jen ze starého řádku.",
+      "O141": "FREQ mapping, řádky 82:\nB1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q141": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J142": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nOvěřit pravidla VFID/email/admin identity a jejich realizaci pro manuální onboarding. Nedovozovat automatizaci ani detail role jen ze starého řádku.",
+      "O142": "FREQ mapping, řádky 83:\nB1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q142": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J143": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nOvěřit pravidla VFID/email/admin identity a jejich realizaci pro manuální onboarding. Nedovozovat automatizaci ani detail role jen ze starého řádku.",
+      "O143": "FREQ mapping, řádky 84:\nB1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q143": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J144": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nDostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.",
+      "O144": "FREQ mapping, řádky 85:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q144": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J145": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nDostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.",
+      "O145": "FREQ mapping, řádky 86:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q145": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J146": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nDostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.",
+      "O146": "FREQ mapping, řádky 87:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q146": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J147": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nDostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.",
+      "O147": "FREQ mapping, řádky 88:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q147": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J148": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nDostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.",
+      "O148": "FREQ mapping, řádky 89:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q148": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J149": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nDostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.",
+      "O149": "FREQ mapping, řádky 90:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q149": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J150": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nDostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.",
+      "O150": "FREQ mapping, řádky 91:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q150": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J151": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nDostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.",
+      "O151": "FREQ mapping, řádky 92:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q151": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J152": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nPodpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.",
+      "O152": "FREQ mapping, řádky 163:\nB1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q152": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J153": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nZajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.",
+      "O153": "FREQ mapping, řádky 164:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q153": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J154": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nDostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.",
+      "O154": "FREQ mapping, řádky 196:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q154": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J155": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nDostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.",
+      "O155": "FREQ mapping, řádky 197:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q155": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J156": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nDostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.",
+      "O156": "FREQ mapping, řádky 198:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q156": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J157": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nDostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.",
+      "O157": "FREQ mapping, řádky 199:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q157": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J158": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nDostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.",
+      "O158": "FREQ mapping, řádky 200:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q158": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J159": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nDostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.",
+      "O159": "FREQ mapping, řádky 201:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q159": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.",
+      "J160": "PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.\nDostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.",
+      "O160": "FREQ mapping, řádky 202:\nM1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17\nÚplnost a poslední vydání primárního zdroje neověřeny.",
+      "Q160": "TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené."
+    },
+    "EA SREQ": {
+      "J1": "FREQ reference v Book1 / stav ověření",
+      "J6": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!2: F-REQ-IAM-21",
+      "J7": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!3: F-REQ-IAM-23",
+      "J8": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!4: F-REQ-IAM-25",
+      "J9": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!5: F-REQ-IAM-24",
+      "J10": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!178: F-REQ-IAM-26",
+      "J11": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!179: F-REQ-IAM-27",
+      "J12": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!180: F-REQ-IAM-28",
+      "J13": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!181: F-REQ-IAM-29",
+      "J14": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!6: F-REQ-MKT-23",
+      "L14": "ROZPOR: EA popisuje assisted-ticket email configuration, Book1 lead-create. Ověřit zdroj a verzi; stejné ID není potvrzení shody.",
+      "J15": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!7: F-REQ-MKT-24",
+      "J16": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!8: F-REQ-MKT-25",
+      "J19": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!165: F-REQ-IAM-03",
+      "J22": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!49: F-REQ-IAM-21",
+      "L22": "U2, pravidlo uživatele 2.11.: VFID sub a odpovídající ONSC/WSC user 1:1; email není párovací klíč. Toto upřesnění nemění původní EA text v D.",
+      "J23": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!166: F-REQ-IAM-21",
+      "J27": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!167: NFR-03",
+      "J28": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!168: NFR-03",
+      "J29": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!50: NFR-01",
+      "J31": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!52: F-REQ-IAM-21",
+      "J32": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!184: F-REQ-IAM-30",
+      "J33": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!53: F-REQ-IAM-31",
+      "J34": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!182: F-REQ-IAM-32",
+      "J35": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!183: F-REQ-IAM-33",
+      "J36": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!185: F-REQ-IAM-34; F-REQ-IAM-35; F-REQ-IAM-36; F-REQ-IAM-37; F-REQ-IAM-38",
+      "J37": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!186: F-REQ-IAM-34; F-REQ-IAM-35; F-REQ-IAM-36; F-REQ-IAM-37; F-REQ-IAM-38",
+      "J38": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!54: F-REQ-ONB-01; F-REQ-ONB-02; F-REQ-ONB-03; F-REQ-ONB-13",
+      "J41": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!175: ",
+      "J43": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!95: F-REQ-CHM-01",
+      "J44": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!96: F-REQ-IAM-21",
+      "J45": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!97: F-REQ-IAM-39",
+      "J46": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!98: F-REQ-CHM-02",
+      "J47": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!99: F-REQ-CHM-03",
+      "J48": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!100: F-REQ-CHM-04",
+      "J49": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!103: F-REQ-IAM-06",
+      "J50": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!104: F-REQ-IAM-07",
+      "J51": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!105: F-REQ-IAM-08",
+      "J52": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!106: F-REQ-IAM-09",
+      "J53": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!107: F-REQ-IAM-10",
+      "J54": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!108: F-REQ-IAM-11",
+      "J55": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!109: F-REQ-IAM-12",
+      "J56": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!110: F-REQ-IAM-13",
+      "J57": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!111: F-REQ-IAM-14",
+      "J58": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!112: F-REQ-IAM-15",
+      "J59": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!113: F-REQ-IAM-16",
+      "J60": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!114: F-REQ-IAM-17",
+      "J61": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!115: F-REQ-IAM-18",
+      "J62": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!116: F-REQ-IAM-19",
+      "J63": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!117: F-REQ-IAM-20",
+      "J64": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!118: F-REQ-IAM-26",
+      "J65": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!119: F-REQ-IAM-27",
+      "J66": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!120: F-REQ-IAM-28",
+      "J67": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!121: F-REQ-IAM-29",
+      "J68": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!122: F-REQ-IAM-31",
+      "J69": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!123: F-REQ-IAM-30; F-REQ-IAM-32; F-REQ-IAM-33",
+      "J70": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!124: F-REQ-IAM-34",
+      "J71": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!125: F-REQ-IAM-35",
+      "J72": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!126: F-REQ-IAM-36",
+      "J73": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!127: F-REQ-IAM-37",
+      "J74": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!128: F-REQ-IAM-38",
+      "J75": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!129: F-REQ-IAM-40; F-REQ-IAM-42",
+      "J76": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!130: F-REQ-IAM-41; F-REQ-IAM-42",
+      "J77": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!131: F-REQ-IAM-43",
+      "J78": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!132: F-REQ-IAM-44",
+      "J79": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!133: F-REQ-IAM-45",
+      "J80": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!134: F-REQ-IAM-46",
+      "J81": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!135: F-REQ-IAM-49",
+      "J82": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!136: F-REQ-IAM-50",
+      "J83": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!137: F-REQ-IAM-51",
+      "J84": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!177: F-REQ-CHM-01; F-REQ-CHM-02; F-REQ-CHM-03; F-REQ-CHM-04",
+      "J85": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!138: F-REQ-CHM-24",
+      "J87": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!176: ",
+      "J90": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!139: NFR-01",
+      "J91": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!187: F-REQ-IAM-40",
+      "J92": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!188: F-REQ-IAM-41",
+      "J93": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!189: F-REQ-IAM-42",
+      "J94": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!190: F-REQ-IAM-43",
+      "J95": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!191: F-REQ-IAM-44",
+      "J96": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!192: F-REQ-IAM-45",
+      "J97": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!193: F-REQ-IAM-46",
+      "J98": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!158: F-REQ-IAM-47",
+      "J99": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!159: F-REQ-IAM-48",
+      "J100": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!194: F-REQ-IAM-49",
+      "J101": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!195: F-REQ-IAM-50",
+      "J104": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!160: NFR-03",
+      "J105": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!161: NFR-03",
+      "J106": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!162: NFR-03",
+      "J111": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!27: F-REQ-MKT-01",
+      "J112": "WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.\nFREQ mapping!28: F-REQ-MKT-02"
+    }
+  },
+  "reasons": {
+    "Functionalities!K315": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "Functionalities!L315": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "Interfaces!J4": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "Interfaces!K4": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "Interfaces!J12": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "Interfaces!K12": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "Interfaces!J17": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "Interfaces!K17": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "Interfaces!J18": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "Interfaces!K18": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "FREQ mapping!L49": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "FREQ mapping!N49": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "SREQ Aplikační role!M49": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "SREQ Aplikační role!N49": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "Revize MVP!A20": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "Revize MVP!B20": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "Revize MVP!C20": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "Revize MVP!A21": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "Revize MVP!B21": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "Revize MVP!C21": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "Revize MVP!A22": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "Revize MVP!B22": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "Revize MVP!C22": "Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02.",
+    "Cover!A13": "Aktuální čitelný stav celé dodávky.",
+    "Cover!B13": "Aktuální čitelný stav celé dodávky.",
+    "Cover!A14": "Aktuální čitelný stav celé dodávky.",
+    "Cover!B14": "Aktuální čitelný stav celé dodávky.",
+    "Cover!A15": "Aktuální čitelný stav celé dodávky.",
+    "Cover!B15": "Aktuální čitelný stav celé dodávky.",
+    "Cover!A16": "Aktuální čitelný stav celé dodávky.",
+    "Cover!B16": "Aktuální čitelný stav celé dodávky.",
+    "Cover!A17": "Aktuální čitelný stav celé dodávky.",
+    "Cover!B17": "Aktuální čitelný stav celé dodávky.",
+    "Cover!A18": "Aktuální čitelný stav celé dodávky.",
+    "Cover!B18": "Aktuální čitelný stav celé dodávky.",
+    "Cover!A19": "Aktuální čitelný stav celé dodávky.",
+    "Cover!B19": "Aktuální čitelný stav celé dodávky.",
+    "Postup revize!A2": "Aktualizace stavu.",
+    "Postup revize!B2": "Datum konsolidace.",
+    "Postup revize!C2": "Aktualizace stavu.",
+    "Postup revize!D2": "Oddělení dokončené konsolidace od nedokončené odborné revize.",
+    "Postup revize!A6": "Aktualizace verze.",
+    "Postup revize!B9": "Uložená pozorování SharePointu 2.11.",
+    "Postup revize!C9": "Oprava evidence revize BRD.",
+    "Postup revize!D9": "Pravdivý stav zdroje.",
+    "Postup revize!D8": "Záznam rozsahu skutečného čtení.",
+    "Postup revize!D16": "Zpřesnění postupu.",
+    "Postup revize!B33": "Popis provedených změn.",
+    "Postup revize!C33": "Provenance.",
+    "Postup revize!A35": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!B35": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!C35": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!D35": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!A36": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!B36": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!C36": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!D36": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!A37": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!B37": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!C37": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!D37": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!A38": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!B38": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!C38": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!D38": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!A39": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!B39": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!C39": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!D39": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!A40": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!B40": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!C40": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!D40": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!A41": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!B41": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!C41": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!D41": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!A42": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!B42": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!C42": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!D42": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!A43": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!B43": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!C43": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!D43": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!A44": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!B44": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!C44": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!D44": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!A45": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!B45": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!C45": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!D45": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!A46": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!B46": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!C46": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!D46": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!A47": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!B47": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!C47": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Postup revize!D47": "Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.",
+    "Revize MVP!B1": "Datum konsolidace.",
+    "Revize MVP!C1": "Pravdivý status.",
+    "Revize MVP!A23": "Průhledný záznam konsolidace a zbývající práce.",
+    "Revize MVP!B23": "Průhledný záznam konsolidace a zbývající práce.",
+    "Revize MVP!C23": "Průhledný záznam konsolidace a zbývající práce.",
+    "Revize MVP!A24": "Průhledný záznam konsolidace a zbývající práce.",
+    "Revize MVP!B24": "Průhledný záznam konsolidace a zbývající práce.",
+    "Revize MVP!C24": "Průhledný záznam konsolidace a zbývající práce.",
+    "Revize MVP!A25": "Průhledný záznam konsolidace a zbývající práce.",
+    "Revize MVP!B25": "Průhledný záznam konsolidace a zbývající práce.",
+    "Revize MVP!C25": "Průhledný záznam konsolidace a zbývající práce.",
+    "Revize MVP!A26": "Průhledný záznam konsolidace a zbývající práce.",
+    "Revize MVP!B26": "Průhledný záznam konsolidace a zbývající práce.",
+    "Revize MVP!C26": "Průhledný záznam konsolidace a zbývající práce.",
+    "Business a FREQ!J161": "Parafráze UC005 z uložené přímé kontroly 1.–2.11.; bez přidělení nového FREQ ID.",
+    "Business a FREQ!O161": "Rozsah skutečně přečteného zdroje.",
+    "Business a FREQ!Q161": "Nezaměňovat vyplnění s approval.",
+    "Business a FREQ!J162": "Parafráze UC005 z uložené přímé kontroly 1.–2.11.; bez přidělení nového FREQ ID.",
+    "Business a FREQ!O162": "Rozsah skutečně přečteného zdroje.",
+    "Business a FREQ!Q162": "Nezaměňovat vyplnění s approval.",
+    "Business a FREQ!J163": "Parafráze UC005 z uložené přímé kontroly 1.–2.11.; bez přidělení nového FREQ ID.",
+    "Business a FREQ!O163": "Rozsah skutečně přečteného zdroje.",
+    "Business a FREQ!Q163": "Nezaměňovat vyplnění s approval.",
+    "Business a FREQ!J164": "Parafráze UC005 z uložené přímé kontroly 1.–2.11.; bez přidělení nového FREQ ID.",
+    "Business a FREQ!O164": "Rozsah skutečně přečteného zdroje.",
+    "Business a FREQ!Q164": "Nezaměňovat vyplnění s approval.",
+    "Business a FREQ!J165": "Parafráze UC005 z uložené přímé kontroly 1.–2.11.; bez přidělení nového FREQ ID.",
+    "Business a FREQ!O165": "Rozsah skutečně přečteného zdroje.",
+    "Business a FREQ!Q165": "Nezaměňovat vyplnění s approval.",
+    "Business a FREQ!J166": "Parafráze UC005 z uložené přímé kontroly 1.–2.11.; bez přidělení nového FREQ ID.",
+    "Business a FREQ!O166": "Rozsah skutečně přečteného zdroje.",
+    "Business a FREQ!Q166": "Nezaměňovat vyplnění s approval.",
+    "Business a FREQ!P2": "Úplná kontrola existujících řádků, bez domýšlení nahrazení.",
+    "Business a FREQ!P3": "Úplná kontrola existujících řádků, bez domýšlení nahrazení.",
+    "Business a FREQ!J4": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O4": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q4": "Výsledek textového porovnání.",
+    "Business a FREQ!J5": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O5": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q5": "Výsledek textového porovnání.",
+    "Business a FREQ!J6": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O6": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q6": "Výsledek textového porovnání.",
+    "Business a FREQ!J7": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O7": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q7": "Výsledek textového porovnání.",
+    "Business a FREQ!J8": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O8": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q8": "Výsledek textového porovnání.",
+    "Business a FREQ!P9": "Řízené odmítnutí nesprávného spojení podle ID.",
+    "Business a FREQ!Q9": "Zřetelný status rozporu.",
+    "Business a FREQ!P10": "Řízené odmítnutí nesprávného spojení podle ID.",
+    "Business a FREQ!Q10": "Zřetelný status rozporu.",
+    "Business a FREQ!P11": "Řízené odmítnutí nesprávného spojení podle ID.",
+    "Business a FREQ!Q11": "Zřetelný status rozporu.",
+    "Business a FREQ!P12": "Řízené odmítnutí nesprávného spojení podle ID.",
+    "Business a FREQ!Q12": "Zřetelný status rozporu.",
+    "Business a FREQ!P13": "Řízené odmítnutí nesprávného spojení podle ID.",
+    "Business a FREQ!Q13": "Zřetelný status rozporu.",
+    "Business a FREQ!P14": "Řízené odmítnutí nesprávného spojení podle ID.",
+    "Business a FREQ!Q14": "Zřetelný status rozporu.",
+    "Business a FREQ!P15": "Řízené odmítnutí nesprávného spojení podle ID.",
+    "Business a FREQ!Q15": "Zřetelný status rozporu.",
+    "Business a FREQ!P16": "Řízené odmítnutí nesprávného spojení podle ID.",
+    "Business a FREQ!Q16": "Zřetelný status rozporu.",
+    "Business a FREQ!P17": "Řízené odmítnutí nesprávného spojení podle ID.",
+    "Business a FREQ!Q17": "Zřetelný status rozporu.",
+    "Business a FREQ!P18": "Řízené odmítnutí nesprávného spojení podle ID.",
+    "Business a FREQ!Q18": "Zřetelný status rozporu.",
+    "Business a FREQ!P19": "Řízené odmítnutí nesprávného spojení podle ID.",
+    "Business a FREQ!Q19": "Zřetelný status rozporu.",
+    "Business a FREQ!P20": "Řízené odmítnutí nesprávného spojení podle ID.",
+    "Business a FREQ!Q20": "Zřetelný status rozporu.",
+    "Business a FREQ!P21": "Řízené odmítnutí nesprávného spojení podle ID.",
+    "Business a FREQ!Q21": "Zřetelný status rozporu.",
+    "Business a FREQ!P22": "Řízené odmítnutí nesprávného spojení podle ID.",
+    "Business a FREQ!Q22": "Zřetelný status rozporu.",
+    "Business a FREQ!J23": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O23": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q23": "Výsledek textového porovnání.",
+    "Business a FREQ!J24": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O24": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q24": "Výsledek textového porovnání.",
+    "Business a FREQ!J25": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O25": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q25": "Výsledek textového porovnání.",
+    "Business a FREQ!J26": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O26": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q26": "Výsledek textového porovnání.",
+    "Business a FREQ!J27": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O27": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q27": "Výsledek textového porovnání.",
+    "Business a FREQ!J28": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O28": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q28": "Výsledek textového porovnání.",
+    "Business a FREQ!J29": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O29": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q29": "Výsledek textového porovnání.",
+    "Business a FREQ!J30": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O30": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q30": "Výsledek textového porovnání.",
+    "Business a FREQ!J31": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O31": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q31": "Výsledek textového porovnání.",
+    "Business a FREQ!J32": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O32": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q32": "Výsledek textového porovnání.",
+    "Business a FREQ!J33": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O33": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q33": "Výsledek textového porovnání.",
+    "Business a FREQ!J34": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O34": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q34": "Výsledek textového porovnání.",
+    "Business a FREQ!J35": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O35": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q35": "Výsledek textového porovnání.",
+    "Business a FREQ!J36": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O36": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q36": "Výsledek textového porovnání.",
+    "Business a FREQ!J37": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O37": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q37": "Výsledek textového porovnání.",
+    "Business a FREQ!J38": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O38": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q38": "Výsledek textového porovnání.",
+    "Business a FREQ!J39": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O39": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q39": "Výsledek textového porovnání.",
+    "Business a FREQ!J40": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O40": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q40": "Výsledek textového porovnání.",
+    "Business a FREQ!J41": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O41": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q41": "Výsledek textového porovnání.",
+    "Business a FREQ!J42": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O42": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q42": "Výsledek textového porovnání.",
+    "Business a FREQ!J43": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O43": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q43": "Výsledek textového porovnání.",
+    "Business a FREQ!J44": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O44": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q44": "Výsledek textového porovnání.",
+    "Business a FREQ!J45": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O45": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q45": "Výsledek textového porovnání.",
+    "Business a FREQ!J46": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O46": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q46": "Výsledek textového porovnání.",
+    "Business a FREQ!J47": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O47": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q47": "Výsledek textového porovnání.",
+    "Business a FREQ!J48": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O48": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q48": "Výsledek textového porovnání.",
+    "Business a FREQ!J49": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O49": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q49": "Výsledek textového porovnání.",
+    "Business a FREQ!J50": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O50": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q50": "Výsledek textového porovnání.",
+    "Business a FREQ!J51": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O51": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q51": "Výsledek textového porovnání.",
+    "Business a FREQ!J52": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O52": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q52": "Výsledek textového porovnání.",
+    "Business a FREQ!J53": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O53": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q53": "Výsledek textového porovnání.",
+    "Business a FREQ!J54": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O54": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q54": "Výsledek textového porovnání.",
+    "Business a FREQ!J55": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O55": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q55": "Výsledek textového porovnání.",
+    "Business a FREQ!J56": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O56": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q56": "Výsledek textového porovnání.",
+    "Business a FREQ!J57": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O57": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q57": "Výsledek textového porovnání.",
+    "Business a FREQ!J58": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O58": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q58": "Výsledek textového porovnání.",
+    "Business a FREQ!J59": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O59": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q59": "Výsledek textového porovnání.",
+    "Business a FREQ!J60": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O60": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q60": "Výsledek textového porovnání.",
+    "Business a FREQ!J61": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O61": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q61": "Výsledek textového porovnání.",
+    "Business a FREQ!J62": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O62": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q62": "Výsledek textového porovnání.",
+    "Business a FREQ!J63": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O63": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q63": "Výsledek textového porovnání.",
+    "Business a FREQ!J64": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O64": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q64": "Výsledek textového porovnání.",
+    "Business a FREQ!J65": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O65": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q65": "Výsledek textového porovnání.",
+    "Business a FREQ!J66": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O66": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q66": "Výsledek textového porovnání.",
+    "Business a FREQ!J67": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O67": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q67": "Výsledek textového porovnání.",
+    "Business a FREQ!J68": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O68": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q68": "Výsledek textového porovnání.",
+    "Business a FREQ!J69": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O69": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q69": "Výsledek textového porovnání.",
+    "Business a FREQ!P70": "Odlišit rozšířenou dokumentaci od změněného významu stejného FREQ ID.",
+    "Business a FREQ!Q70": "Přesný druh rozdílu.",
+    "Business a FREQ!J71": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O71": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q71": "Výsledek textového porovnání.",
+    "Business a FREQ!J72": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O72": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q72": "Výsledek textového porovnání.",
+    "Business a FREQ!J73": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O73": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q73": "Výsledek textového porovnání.",
+    "Business a FREQ!J74": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O74": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q74": "Výsledek textového porovnání.",
+    "Business a FREQ!J75": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O75": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q75": "Výsledek textového porovnání.",
+    "Business a FREQ!J76": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O76": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q76": "Výsledek textového porovnání.",
+    "Business a FREQ!J77": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O77": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q77": "Výsledek textového porovnání.",
+    "Business a FREQ!J78": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O78": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q78": "Výsledek textového porovnání.",
+    "Business a FREQ!J79": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O79": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q79": "Výsledek textového porovnání.",
+    "Business a FREQ!J80": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O80": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q80": "Výsledek textového porovnání.",
+    "Business a FREQ!J81": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O81": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q81": "Výsledek textového porovnání.",
+    "Business a FREQ!J82": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O82": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q82": "Výsledek textového porovnání.",
+    "Business a FREQ!J83": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O83": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q83": "Výsledek textového porovnání.",
+    "Business a FREQ!J84": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O84": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q84": "Výsledek textového porovnání.",
+    "Business a FREQ!J85": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O85": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q85": "Výsledek textového porovnání.",
+    "Business a FREQ!J86": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O86": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q86": "Výsledek textového porovnání.",
+    "Business a FREQ!J87": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O87": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q87": "Výsledek textového porovnání.",
+    "Business a FREQ!J88": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O88": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q88": "Výsledek textového porovnání.",
+    "Business a FREQ!J89": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O89": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q89": "Výsledek textového porovnání.",
+    "Business a FREQ!J90": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O90": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q90": "Výsledek textového porovnání.",
+    "Business a FREQ!J91": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O91": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q91": "Výsledek textového porovnání.",
+    "Business a FREQ!J92": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O92": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q92": "Výsledek textového porovnání.",
+    "Business a FREQ!J93": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O93": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q93": "Výsledek textového porovnání.",
+    "Business a FREQ!P94": "Odlišit rozšířenou dokumentaci od změněného významu stejného FREQ ID.",
+    "Business a FREQ!Q94": "Přesný druh rozdílu.",
+    "Business a FREQ!J95": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O95": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q95": "Výsledek textového porovnání.",
+    "Business a FREQ!J96": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O96": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q96": "Výsledek textového porovnání.",
+    "Business a FREQ!J97": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O97": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q97": "Výsledek textového porovnání.",
+    "Business a FREQ!J98": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O98": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q98": "Výsledek textového porovnání.",
+    "Business a FREQ!J99": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O99": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q99": "Výsledek textového porovnání.",
+    "Business a FREQ!J100": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O100": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q100": "Výsledek textového porovnání.",
+    "Business a FREQ!J101": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O101": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q101": "Výsledek textového porovnání.",
+    "Business a FREQ!J102": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O102": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q102": "Výsledek textového porovnání.",
+    "Business a FREQ!J103": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O103": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q103": "Výsledek textového porovnání.",
+    "Business a FREQ!J104": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O104": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q104": "Výsledek textového porovnání.",
+    "Business a FREQ!J105": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O105": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q105": "Výsledek textového porovnání.",
+    "Business a FREQ!J106": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O106": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q106": "Výsledek textového porovnání.",
+    "Business a FREQ!J107": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O107": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q107": "Výsledek textového porovnání.",
+    "Business a FREQ!J108": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O108": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q108": "Výsledek textového porovnání.",
+    "Business a FREQ!J109": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O109": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q109": "Výsledek textového porovnání.",
+    "Business a FREQ!P110": "Úplná kontrola existujících řádků, bez domýšlení nahrazení.",
+    "Business a FREQ!P111": "Úplná kontrola existujících řádků, bez domýšlení nahrazení.",
+    "Business a FREQ!J112": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O112": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q112": "Výsledek textového porovnání.",
+    "Business a FREQ!J113": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O113": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q113": "Výsledek textového porovnání.",
+    "Business a FREQ!J114": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O114": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q114": "Výsledek textového porovnání.",
+    "Business a FREQ!J115": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O115": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q115": "Výsledek textového porovnání.",
+    "Business a FREQ!J116": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O116": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q116": "Výsledek textového porovnání.",
+    "Business a FREQ!J117": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O117": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q117": "Výsledek textového porovnání.",
+    "Business a FREQ!J118": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O118": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q118": "Výsledek textového porovnání.",
+    "Business a FREQ!J119": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O119": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q119": "Výsledek textového porovnání.",
+    "Business a FREQ!J120": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O120": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q120": "Výsledek textového porovnání.",
+    "Business a FREQ!P121": "Úplná kontrola existujících řádků, bez domýšlení nahrazení.",
+    "Business a FREQ!J122": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O122": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q122": "Výsledek textového porovnání.",
+    "Business a FREQ!J123": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O123": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q123": "Výsledek textového porovnání.",
+    "Business a FREQ!J124": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O124": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q124": "Výsledek textového porovnání.",
+    "Business a FREQ!J125": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O125": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q125": "Výsledek textového porovnání.",
+    "Business a FREQ!J126": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O126": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q126": "Výsledek textového porovnání.",
+    "Business a FREQ!J127": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O127": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q127": "Výsledek textového porovnání.",
+    "Business a FREQ!J128": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O128": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q128": "Výsledek textového porovnání.",
+    "Business a FREQ!J129": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O129": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q129": "Výsledek textového porovnání.",
+    "Business a FREQ!J130": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O130": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q130": "Výsledek textového porovnání.",
+    "Business a FREQ!J131": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O131": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q131": "Výsledek textového porovnání.",
+    "Business a FREQ!J132": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O132": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q132": "Výsledek textového porovnání.",
+    "Business a FREQ!J133": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O133": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q133": "Výsledek textového porovnání.",
+    "Business a FREQ!J134": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O134": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q134": "Výsledek textového porovnání.",
+    "Business a FREQ!J135": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O135": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q135": "Výsledek textového porovnání.",
+    "Business a FREQ!J136": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O136": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q136": "Výsledek textového porovnání.",
+    "Business a FREQ!J137": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O137": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q137": "Výsledek textového porovnání.",
+    "Business a FREQ!J138": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O138": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q138": "Výsledek textového porovnání.",
+    "Business a FREQ!J139": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O139": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q139": "Výsledek textového porovnání.",
+    "Business a FREQ!J140": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O140": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q140": "Výsledek textového porovnání.",
+    "Business a FREQ!J141": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O141": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q141": "Výsledek textového porovnání.",
+    "Business a FREQ!J142": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O142": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q142": "Výsledek textového porovnání.",
+    "Business a FREQ!J143": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O143": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q143": "Výsledek textového porovnání.",
+    "Business a FREQ!J144": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O144": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q144": "Výsledek textového porovnání.",
+    "Business a FREQ!J145": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O145": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q145": "Výsledek textového porovnání.",
+    "Business a FREQ!J146": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O146": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q146": "Výsledek textového porovnání.",
+    "Business a FREQ!J147": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O147": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q147": "Výsledek textového porovnání.",
+    "Business a FREQ!J148": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O148": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q148": "Výsledek textového porovnání.",
+    "Business a FREQ!J149": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O149": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q149": "Výsledek textového porovnání.",
+    "Business a FREQ!J150": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O150": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q150": "Výsledek textového porovnání.",
+    "Business a FREQ!J151": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O151": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q151": "Výsledek textového porovnání.",
+    "Business a FREQ!J152": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O152": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q152": "Výsledek textového porovnání.",
+    "Business a FREQ!J153": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O153": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q153": "Výsledek textového porovnání.",
+    "Business a FREQ!J154": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O154": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q154": "Výsledek textového porovnání.",
+    "Business a FREQ!J155": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O155": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q155": "Výsledek textového porovnání.",
+    "Business a FREQ!J156": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O156": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q156": "Výsledek textového porovnání.",
+    "Business a FREQ!J157": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O157": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q157": "Výsledek textového porovnání.",
+    "Business a FREQ!J158": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O158": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q158": "Výsledek textového porovnání.",
+    "Business a FREQ!J159": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O159": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q159": "Výsledek textového porovnání.",
+    "Business a FREQ!J160": "Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení.",
+    "Business a FREQ!O160": "Dohledatelná pracovní evidence.",
+    "Business a FREQ!Q160": "Výsledek textového porovnání.",
+    "EA SREQ!J1": "Rozlišit existenci workbookové reference od potvrzené vazby.",
+    "EA SREQ!J6": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J7": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J8": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J9": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J10": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J11": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J12": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J13": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J14": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!L14": "Známý sémantický konflikt.",
+    "EA SREQ!J15": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J16": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J19": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J22": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!L22": "Doplnění identity přímo k příslušnému modelovému SREQ.",
+    "EA SREQ!J23": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J27": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J28": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J29": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J31": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J32": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J33": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J34": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J35": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J36": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J37": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J38": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J41": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J43": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J44": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J45": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J46": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J47": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J48": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J49": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J50": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J51": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J52": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J53": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J54": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J55": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J56": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J57": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J58": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J59": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J60": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J61": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J62": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J63": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J64": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J65": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J66": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J67": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J68": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J69": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J70": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J71": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J72": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J73": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J74": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J75": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J76": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J77": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J78": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J79": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J80": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J81": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J82": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J83": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J84": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J85": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J87": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J90": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J91": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J92": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J93": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J94": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J95": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J96": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J97": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J98": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J99": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J100": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J101": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J104": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J105": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J106": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J111": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "EA SREQ!J112": "Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba.",
+    "FREQ mapping!W102": "Provázání řádkového konfliktu.",
+    "SREQ Aplikační role!W102": "Propagace známého konfliktu pouze při shodě aplikace a SREQ.",
+    "FREQ mapping!W140": "Provázání řádkového konfliktu.",
+    "SREQ Aplikační role!W140": "Propagace známého konfliktu pouze při shodě aplikace a SREQ.",
+    "FREQ mapping!W141": "Provázání řádkového konfliktu.",
+    "SREQ Aplikační role!W141": "Propagace známého konfliktu pouze při shodě aplikace a SREQ.",
+    "FREQ mapping!W157": "Provázání řádkového konfliktu.",
+    "SREQ Aplikační role!W157": "Propagace známého konfliktu pouze při shodě aplikace a SREQ.",
+    "FREQ mapping!W174": "Provázání řádkového konfliktu.",
+    "SREQ Aplikační role!W174": "Propagace známého konfliktu pouze při shodě aplikace a SREQ.",
+    "FREQ mapping!W204": "Provázání řádkového konfliktu.",
+    "SREQ Aplikační role!W204": "Propagace známého konfliktu pouze při shodě aplikace a SREQ.",
+    "FREQ mapping!W205": "Provázání řádkového konfliktu.",
+    "SREQ Aplikační role!W205": "Propagace známého konfliktu pouze při shodě aplikace a SREQ.",
+    "FREQ mapping!W206": "Provázání řádkového konfliktu.",
+    "SREQ Aplikační role!W206": "Propagace známého konfliktu pouze při shodě aplikace a SREQ.",
+    "FREQ mapping!W207": "Provázání řádkového konfliktu.",
+    "SREQ Aplikační role!W207": "Propagace známého konfliktu pouze při shodě aplikace a SREQ.",
+    "FREQ mapping!W210": "Provázání řádkového konfliktu.",
+    "SREQ Aplikační role!W210": "Propagace známého konfliktu pouze při shodě aplikace a SREQ.",
+    "FREQ mapping!W211": "Provázání řádkového konfliktu.",
+    "SREQ Aplikační role!W211": "Propagace známého konfliktu pouze při shodě aplikace a SREQ.",
+    "FREQ mapping!W212": "Provázání řádkového konfliktu.",
+    "SREQ Aplikační role!W212": "Propagace známého konfliktu pouze při shodě aplikace a SREQ.",
+    "FREQ mapping!W213": "Provázání řádkového konfliktu.",
+    "SREQ Aplikační role!W213": "Propagace známého konfliktu pouze při shodě aplikace a SREQ.",
+    "FREQ mapping!W214": "Provázání řádkového konfliktu.",
+    "SREQ Aplikační role!W214": "Propagace známého konfliktu pouze při shodě aplikace a SREQ."
+  },
+  "identityCells": [
+    [
+      "Functionalities",
+      "K315"
+    ],
+    [
+      "Functionalities",
+      "L315"
+    ],
+    [
+      "Interfaces",
+      "J4"
+    ],
+    [
+      "Interfaces",
+      "K4"
+    ],
+    [
+      "Interfaces",
+      "J12"
+    ],
+    [
+      "Interfaces",
+      "K12"
+    ],
+    [
+      "Interfaces",
+      "J17"
+    ],
+    [
+      "Interfaces",
+      "K17"
+    ],
+    [
+      "Interfaces",
+      "J18"
+    ],
+    [
+      "Interfaces",
+      "K18"
+    ],
+    [
+      "FREQ mapping",
+      "L49"
+    ],
+    [
+      "FREQ mapping",
+      "N49"
+    ],
+    [
+      "SREQ Aplikační role",
+      "M49"
+    ],
+    [
+      "SREQ Aplikační role",
+      "N49"
+    ],
+    [
+      "Revize MVP",
+      "A20"
+    ],
+    [
+      "Revize MVP",
+      "B20"
+    ],
+    [
+      "Revize MVP",
+      "C20"
+    ],
+    [
+      "Revize MVP",
+      "A21"
+    ],
+    [
+      "Revize MVP",
+      "B21"
+    ],
+    [
+      "Revize MVP",
+      "C21"
+    ],
+    [
+      "Revize MVP",
+      "A22"
+    ],
+    [
+      "Revize MVP",
+      "B22"
+    ],
+    [
+      "Revize MVP",
+      "C22"
+    ]
+  ],
+  "crosswalk": [
+    {
+      "businessRow": 2,
+      "id": "-REQ-MKT-15",
+      "state": "no_id",
+      "mappingRows": []
+    },
+    {
+      "businessRow": 3,
+      "id": "-REQ-ONB-01",
+      "state": "no_id",
+      "mappingRows": []
+    },
+    {
+      "businessRow": 4,
+      "id": "F-REQ-CHM-01",
+      "state": "exact",
+      "mappingRows": [
+        95
+      ]
+    },
+    {
+      "businessRow": 5,
+      "id": "F-REQ-CHM-02",
+      "state": "exact",
+      "mappingRows": [
+        98
+      ]
+    },
+    {
+      "businessRow": 6,
+      "id": "F-REQ-CHM-03",
+      "state": "exact",
+      "mappingRows": [
+        99
+      ]
+    },
+    {
+      "businessRow": 7,
+      "id": "F-REQ-CHM-04",
+      "state": "exact",
+      "mappingRows": [
+        100
+      ]
+    },
+    {
+      "businessRow": 8,
+      "id": "F-REQ-CHM-05",
+      "state": "exact",
+      "mappingRows": [
+        203
+      ]
+    },
+    {
+      "businessRow": 9,
+      "id": "F-REQ-CHM-06",
+      "state": "text_conflict",
+      "mappingRows": [
+        210
+      ]
+    },
+    {
+      "businessRow": 10,
+      "id": "F-REQ-CHM-07",
+      "state": "text_conflict",
+      "mappingRows": [
+        211
+      ]
+    },
+    {
+      "businessRow": 11,
+      "id": "F-REQ-CHM-08",
+      "state": "text_conflict",
+      "mappingRows": [
+        212
+      ]
+    },
+    {
+      "businessRow": 12,
+      "id": "F-REQ-CHM-09",
+      "state": "text_conflict",
+      "mappingRows": [
+        157
+      ]
+    },
+    {
+      "businessRow": 13,
+      "id": "F-REQ-CHM-10",
+      "state": "text_conflict",
+      "mappingRows": [
+        174
+      ]
+    },
+    {
+      "businessRow": 14,
+      "id": "F-REQ-CHM-11",
+      "state": "text_conflict",
+      "mappingRows": [
+        102
+      ]
+    },
+    {
+      "businessRow": 15,
+      "id": "F-REQ-CHM-12",
+      "state": "text_conflict",
+      "mappingRows": [
+        140
+      ]
+    },
+    {
+      "businessRow": 16,
+      "id": "F-REQ-CHM-13",
+      "state": "text_conflict",
+      "mappingRows": [
+        141
+      ]
+    },
+    {
+      "businessRow": 17,
+      "id": "F-REQ-CHM-14",
+      "state": "text_conflict",
+      "mappingRows": [
+        204
+      ]
+    },
+    {
+      "businessRow": 18,
+      "id": "F-REQ-CHM-15",
+      "state": "text_conflict",
+      "mappingRows": [
+        205
+      ]
+    },
+    {
+      "businessRow": 19,
+      "id": "F-REQ-CHM-16",
+      "state": "text_conflict",
+      "mappingRows": [
+        206
+      ]
+    },
+    {
+      "businessRow": 20,
+      "id": "F-REQ-CHM-17",
+      "state": "text_conflict",
+      "mappingRows": [
+        207
+      ]
+    },
+    {
+      "businessRow": 21,
+      "id": "F-REQ-CHM-18",
+      "state": "text_conflict",
+      "mappingRows": [
+        213
+      ]
+    },
+    {
+      "businessRow": 22,
+      "id": "F-REQ-CHM-19",
+      "state": "text_conflict",
+      "mappingRows": [
+        214
+      ]
+    },
+    {
+      "businessRow": 23,
+      "id": "F-REQ-IAM-01",
+      "state": "exact",
+      "mappingRows": [
+        147
+      ]
+    },
+    {
+      "businessRow": 24,
+      "id": "F-REQ-IAM-02",
+      "state": "exact",
+      "mappingRows": [
+        148
+      ]
+    },
+    {
+      "businessRow": 25,
+      "id": "F-REQ-IAM-03",
+      "state": "exact",
+      "mappingRows": [
+        149,
+        165
+      ]
+    },
+    {
+      "businessRow": 26,
+      "id": "F-REQ-IAM-04",
+      "state": "exact",
+      "mappingRows": [
+        150
+      ]
+    },
+    {
+      "businessRow": 27,
+      "id": "F-REQ-IAM-05",
+      "state": "exact",
+      "mappingRows": [
+        151
+      ]
+    },
+    {
+      "businessRow": 28,
+      "id": "F-REQ-IAM-06",
+      "state": "exact",
+      "mappingRows": [
+        103
+      ]
+    },
+    {
+      "businessRow": 29,
+      "id": "F-REQ-IAM-07",
+      "state": "exact",
+      "mappingRows": [
+        104
+      ]
+    },
+    {
+      "businessRow": 30,
+      "id": "F-REQ-IAM-08",
+      "state": "exact",
+      "mappingRows": [
+        105
+      ]
+    },
+    {
+      "businessRow": 31,
+      "id": "F-REQ-IAM-09",
+      "state": "exact",
+      "mappingRows": [
+        106
+      ]
+    },
+    {
+      "businessRow": 32,
+      "id": "F-REQ-IAM-10",
+      "state": "exact",
+      "mappingRows": [
+        107
+      ]
+    },
+    {
+      "businessRow": 33,
+      "id": "F-REQ-IAM-11",
+      "state": "exact",
+      "mappingRows": [
+        108
+      ]
+    },
+    {
+      "businessRow": 34,
+      "id": "F-REQ-IAM-12",
+      "state": "exact",
+      "mappingRows": [
+        109
+      ]
+    },
+    {
+      "businessRow": 35,
+      "id": "F-REQ-IAM-13",
+      "state": "exact",
+      "mappingRows": [
+        110
+      ]
+    },
+    {
+      "businessRow": 36,
+      "id": "F-REQ-IAM-14",
+      "state": "exact",
+      "mappingRows": [
+        111
+      ]
+    },
+    {
+      "businessRow": 37,
+      "id": "F-REQ-IAM-15",
+      "state": "exact",
+      "mappingRows": [
+        112
+      ]
+    },
+    {
+      "businessRow": 38,
+      "id": "F-REQ-IAM-16",
+      "state": "exact",
+      "mappingRows": [
+        113
+      ]
+    },
+    {
+      "businessRow": 39,
+      "id": "F-REQ-IAM-17",
+      "state": "exact",
+      "mappingRows": [
+        114
+      ]
+    },
+    {
+      "businessRow": 40,
+      "id": "F-REQ-IAM-18",
+      "state": "exact",
+      "mappingRows": [
+        115
+      ]
+    },
+    {
+      "businessRow": 41,
+      "id": "F-REQ-IAM-19",
+      "state": "exact",
+      "mappingRows": [
+        116
+      ]
+    },
+    {
+      "businessRow": 42,
+      "id": "F-REQ-IAM-20",
+      "state": "exact",
+      "mappingRows": [
+        117
+      ]
+    },
+    {
+      "businessRow": 43,
+      "id": "F-REQ-IAM-21",
+      "state": "exact",
+      "mappingRows": [
+        2,
+        22,
+        49,
+        52,
+        96,
+        152,
+        166,
+        169
+      ]
+    },
+    {
+      "businessRow": 44,
+      "id": "F-REQ-IAM-22",
+      "state": "exact",
+      "mappingRows": [
+        23,
+        51,
+        153,
+        170
+      ]
+    },
+    {
+      "businessRow": 45,
+      "id": "F-REQ-IAM-23",
+      "state": "exact",
+      "mappingRows": [
+        3,
+        24,
+        154,
+        171
+      ]
+    },
+    {
+      "businessRow": 46,
+      "id": "F-REQ-IAM-24",
+      "state": "exact",
+      "mappingRows": [
+        5,
+        25,
+        155,
+        172
+      ]
+    },
+    {
+      "businessRow": 47,
+      "id": "F-REQ-IAM-25",
+      "state": "exact",
+      "mappingRows": [
+        4,
+        26,
+        156,
+        173
+      ]
+    },
+    {
+      "businessRow": 48,
+      "id": "F-REQ-IAM-26",
+      "state": "exact",
+      "mappingRows": [
+        118,
+        178
+      ]
+    },
+    {
+      "businessRow": 49,
+      "id": "F-REQ-IAM-27",
+      "state": "exact",
+      "mappingRows": [
+        119,
+        179
+      ]
+    },
+    {
+      "businessRow": 50,
+      "id": "F-REQ-IAM-28",
+      "state": "exact",
+      "mappingRows": [
+        120,
+        180
+      ]
+    },
+    {
+      "businessRow": 51,
+      "id": "F-REQ-IAM-29",
+      "state": "exact",
+      "mappingRows": [
+        121,
+        181
+      ]
+    },
+    {
+      "businessRow": 52,
+      "id": "F-REQ-IAM-30",
+      "state": "exact",
+      "mappingRows": [
+        93,
+        184
+      ]
+    },
+    {
+      "businessRow": 53,
+      "id": "F-REQ-IAM-31",
+      "state": "exact",
+      "mappingRows": [
+        53,
+        122
+      ]
+    },
+    {
+      "businessRow": 54,
+      "id": "F-REQ-IAM-32",
+      "state": "exact",
+      "mappingRows": [
+        94,
+        182
+      ]
+    },
+    {
+      "businessRow": 55,
+      "id": "F-REQ-IAM-33",
+      "state": "exact",
+      "mappingRows": [
+        183
+      ]
+    },
+    {
+      "businessRow": 56,
+      "id": "F-REQ-IAM-34",
+      "state": "exact",
+      "mappingRows": [
+        124
+      ]
+    },
+    {
+      "businessRow": 57,
+      "id": "F-REQ-IAM-35",
+      "state": "exact",
+      "mappingRows": [
+        125
+      ]
+    },
+    {
+      "businessRow": 58,
+      "id": "F-REQ-IAM-36",
+      "state": "exact",
+      "mappingRows": [
+        126
+      ]
+    },
+    {
+      "businessRow": 59,
+      "id": "F-REQ-IAM-37",
+      "state": "exact",
+      "mappingRows": [
+        127
+      ]
+    },
+    {
+      "businessRow": 60,
+      "id": "F-REQ-IAM-38",
+      "state": "exact",
+      "mappingRows": [
+        128
+      ]
+    },
+    {
+      "businessRow": 61,
+      "id": "F-REQ-IAM-39",
+      "state": "exact",
+      "mappingRows": [
+        97,
+        219,
+        220
+      ]
+    },
+    {
+      "businessRow": 62,
+      "id": "F-REQ-IAM-40",
+      "state": "exact",
+      "mappingRows": [
+        187
+      ]
+    },
+    {
+      "businessRow": 63,
+      "id": "F-REQ-IAM-41",
+      "state": "exact",
+      "mappingRows": [
+        188
+      ]
+    },
+    {
+      "businessRow": 64,
+      "id": "F-REQ-IAM-42",
+      "state": "exact",
+      "mappingRows": [
+        189
+      ]
+    },
+    {
+      "businessRow": 65,
+      "id": "F-REQ-IAM-43",
+      "state": "exact",
+      "mappingRows": [
+        131,
+        190
+      ]
+    },
+    {
+      "businessRow": 66,
+      "id": "F-REQ-IAM-44",
+      "state": "exact",
+      "mappingRows": [
+        132,
+        191
+      ]
+    },
+    {
+      "businessRow": 67,
+      "id": "F-REQ-IAM-45",
+      "state": "exact",
+      "mappingRows": [
+        133,
+        192
+      ]
+    },
+    {
+      "businessRow": 68,
+      "id": "F-REQ-IAM-46",
+      "state": "exact",
+      "mappingRows": [
+        134,
+        193
+      ]
+    },
+    {
+      "businessRow": 69,
+      "id": "F-REQ-IAM-47",
+      "state": "exact",
+      "mappingRows": [
+        158
+      ]
+    },
+    {
+      "businessRow": 70,
+      "id": "F-REQ-IAM-48",
+      "state": "extended_text",
+      "mappingRows": [
+        159
+      ]
+    },
+    {
+      "businessRow": 71,
+      "id": "F-REQ-IAM-49",
+      "state": "exact",
+      "mappingRows": [
+        135,
+        194
+      ]
+    },
+    {
+      "businessRow": 72,
+      "id": "F-REQ-IAM-50",
+      "state": "exact",
+      "mappingRows": [
+        136,
+        195
+      ]
+    },
+    {
+      "businessRow": 73,
+      "id": "F-REQ-IAM-51",
+      "state": "exact",
+      "mappingRows": [
+        137
+      ]
+    },
+    {
+      "businessRow": 74,
+      "id": "F-REQ-MKT-01",
+      "state": "exact",
+      "mappingRows": [
+        27
+      ]
+    },
+    {
+      "businessRow": 75,
+      "id": "F-REQ-MKT-02",
+      "state": "exact",
+      "mappingRows": [
+        28
+      ]
+    },
+    {
+      "businessRow": 76,
+      "id": "F-REQ-MKT-03",
+      "state": "exact",
+      "mappingRows": [
+        29
+      ]
+    },
+    {
+      "businessRow": 77,
+      "id": "F-REQ-MKT-04",
+      "state": "exact",
+      "mappingRows": [
+        30
+      ]
+    },
+    {
+      "businessRow": 78,
+      "id": "F-REQ-MKT-05",
+      "state": "exact",
+      "mappingRows": [
+        31
+      ]
+    },
+    {
+      "businessRow": 79,
+      "id": "F-REQ-MKT-06",
+      "state": "exact",
+      "mappingRows": [
+        32
+      ]
+    },
+    {
+      "businessRow": 80,
+      "id": "F-REQ-MKT-07",
+      "state": "exact",
+      "mappingRows": [
+        33
+      ]
+    },
+    {
+      "businessRow": 81,
+      "id": "F-REQ-MKT-08",
+      "state": "exact",
+      "mappingRows": [
+        34
+      ]
+    },
+    {
+      "businessRow": 82,
+      "id": "F-REQ-MKT-09",
+      "state": "exact",
+      "mappingRows": [
+        35
+      ]
+    },
+    {
+      "businessRow": 83,
+      "id": "F-REQ-MKT-10",
+      "state": "exact",
+      "mappingRows": [
+        36
+      ]
+    },
+    {
+      "businessRow": 84,
+      "id": "F-REQ-MKT-11",
+      "state": "exact",
+      "mappingRows": [
+        37
+      ]
+    },
+    {
+      "businessRow": 85,
+      "id": "F-REQ-MKT-12",
+      "state": "exact",
+      "mappingRows": [
+        38
+      ]
+    },
+    {
+      "businessRow": 86,
+      "id": "F-REQ-MKT-13",
+      "state": "exact",
+      "mappingRows": [
+        39
+      ]
+    },
+    {
+      "businessRow": 87,
+      "id": "F-REQ-MKT-14",
+      "state": "exact",
+      "mappingRows": [
+        40
+      ]
+    },
+    {
+      "businessRow": 88,
+      "id": "F-REQ-MKT-16",
+      "state": "exact",
+      "mappingRows": [
+        42
+      ]
+    },
+    {
+      "businessRow": 89,
+      "id": "F-REQ-MKT-17",
+      "state": "exact",
+      "mappingRows": [
+        43
+      ]
+    },
+    {
+      "businessRow": 90,
+      "id": "F-REQ-MKT-18",
+      "state": "exact",
+      "mappingRows": [
+        44
+      ]
+    },
+    {
+      "businessRow": 91,
+      "id": "F-REQ-MKT-19",
+      "state": "exact",
+      "mappingRows": [
+        45
+      ]
+    },
+    {
+      "businessRow": 92,
+      "id": "F-REQ-MKT-20",
+      "state": "exact",
+      "mappingRows": [
+        46
+      ]
+    },
+    {
+      "businessRow": 93,
+      "id": "F-REQ-MKT-21",
+      "state": "exact",
+      "mappingRows": [
+        47
+      ]
+    },
+    {
+      "businessRow": 94,
+      "id": "F-REQ-MKT-22",
+      "state": "extended_text",
+      "mappingRows": [
+        48
+      ]
+    },
+    {
+      "businessRow": 95,
+      "id": "F-REQ-MKT-23",
+      "state": "exact",
+      "mappingRows": [
+        6
+      ]
+    },
+    {
+      "businessRow": 96,
+      "id": "F-REQ-MKT-24",
+      "state": "exact",
+      "mappingRows": [
+        7
+      ]
+    },
+    {
+      "businessRow": 97,
+      "id": "F-REQ-MKT-25",
+      "state": "exact",
+      "mappingRows": [
+        8
+      ]
+    },
+    {
+      "businessRow": 98,
+      "id": "F-REQ-MKT-26",
+      "state": "exact",
+      "mappingRows": [
+        9
+      ]
+    },
+    {
+      "businessRow": 99,
+      "id": "F-REQ-MKT-27",
+      "state": "exact",
+      "mappingRows": [
+        10
+      ]
+    },
+    {
+      "businessRow": 100,
+      "id": "F-REQ-MKT-28",
+      "state": "exact",
+      "mappingRows": [
+        11
+      ]
+    },
+    {
+      "businessRow": 101,
+      "id": "F-REQ-MKT-29",
+      "state": "exact",
+      "mappingRows": [
+        12
+      ]
+    },
+    {
+      "businessRow": 102,
+      "id": "F-REQ-MKT-30",
+      "state": "exact",
+      "mappingRows": [
+        13
+      ]
+    },
+    {
+      "businessRow": 103,
+      "id": "F-REQ-MKT-31",
+      "state": "exact",
+      "mappingRows": [
+        14
+      ]
+    },
+    {
+      "businessRow": 104,
+      "id": "F-REQ-MKT-32",
+      "state": "exact",
+      "mappingRows": [
+        15
+      ]
+    },
+    {
+      "businessRow": 105,
+      "id": "F-REQ-MKT-33",
+      "state": "exact",
+      "mappingRows": [
+        16
+      ]
+    },
+    {
+      "businessRow": 106,
+      "id": "F-REQ-MKT-34",
+      "state": "exact",
+      "mappingRows": [
+        17
+      ]
+    },
+    {
+      "businessRow": 107,
+      "id": "F-REQ-MKT-35",
+      "state": "exact",
+      "mappingRows": [
+        18
+      ]
+    },
+    {
+      "businessRow": 108,
+      "id": "F-REQ-MKT-36",
+      "state": "exact",
+      "mappingRows": [
+        19
+      ]
+    },
+    {
+      "businessRow": 109,
+      "id": "F-REQ-MKT-37",
+      "state": "exact",
+      "mappingRows": [
+        20
+      ]
+    },
+    {
+      "businessRow": 110,
+      "id": "F-REQ-ONB-02",
+      "state": "no_id",
+      "mappingRows": []
+    },
+    {
+      "businessRow": 111,
+      "id": "F-REQ-ONB-03",
+      "state": "no_id",
+      "mappingRows": []
+    },
+    {
+      "businessRow": 112,
+      "id": "F-REQ-ONB-04",
+      "state": "exact",
+      "mappingRows": [
+        55
+      ]
+    },
+    {
+      "businessRow": 113,
+      "id": "F-REQ-ONB-05",
+      "state": "exact",
+      "mappingRows": [
+        56
+      ]
+    },
+    {
+      "businessRow": 114,
+      "id": "F-REQ-ONB-06",
+      "state": "exact",
+      "mappingRows": [
+        57
+      ]
+    },
+    {
+      "businessRow": 115,
+      "id": "F-REQ-ONB-07",
+      "state": "exact",
+      "mappingRows": [
+        58
+      ]
+    },
+    {
+      "businessRow": 116,
+      "id": "F-REQ-ONB-08",
+      "state": "exact",
+      "mappingRows": [
+        59
+      ]
+    },
+    {
+      "businessRow": 117,
+      "id": "F-REQ-ONB-09",
+      "state": "exact",
+      "mappingRows": [
+        60
+      ]
+    },
+    {
+      "businessRow": 118,
+      "id": "F-REQ-ONB-10",
+      "state": "exact",
+      "mappingRows": [
+        61
+      ]
+    },
+    {
+      "businessRow": 119,
+      "id": "F-REQ-ONB-11",
+      "state": "exact",
+      "mappingRows": [
+        62
+      ]
+    },
+    {
+      "businessRow": 120,
+      "id": "F-REQ-ONB-12",
+      "state": "exact",
+      "mappingRows": [
+        63
+      ]
+    },
+    {
+      "businessRow": 121,
+      "id": "F-REQ-ONB-13",
+      "state": "no_id",
+      "mappingRows": []
+    },
+    {
+      "businessRow": 122,
+      "id": "F-REQ-ONB-14",
+      "state": "exact",
+      "mappingRows": [
+        21
+      ]
+    },
+    {
+      "businessRow": 123,
+      "id": "F-REQ-ONB-15",
+      "state": "exact",
+      "mappingRows": [
+        64
+      ]
+    },
+    {
+      "businessRow": 124,
+      "id": "F-REQ-ONB-16",
+      "state": "exact",
+      "mappingRows": [
+        65
+      ]
+    },
+    {
+      "businessRow": 125,
+      "id": "F-REQ-ONB-17",
+      "state": "exact",
+      "mappingRows": [
+        66
+      ]
+    },
+    {
+      "businessRow": 126,
+      "id": "F-REQ-ONB-18",
+      "state": "exact",
+      "mappingRows": [
+        67
+      ]
+    },
+    {
+      "businessRow": 127,
+      "id": "F-REQ-ONB-19",
+      "state": "exact",
+      "mappingRows": [
+        68
+      ]
+    },
+    {
+      "businessRow": 128,
+      "id": "F-REQ-ONB-20",
+      "state": "exact",
+      "mappingRows": [
+        69
+      ]
+    },
+    {
+      "businessRow": 129,
+      "id": "F-REQ-ONB-21",
+      "state": "exact",
+      "mappingRows": [
+        70
+      ]
+    },
+    {
+      "businessRow": 130,
+      "id": "F-REQ-ONB-22",
+      "state": "exact",
+      "mappingRows": [
+        71
+      ]
+    },
+    {
+      "businessRow": 131,
+      "id": "F-REQ-ONB-23",
+      "state": "exact",
+      "mappingRows": [
+        72
+      ]
+    },
+    {
+      "businessRow": 132,
+      "id": "F-REQ-ONB-24",
+      "state": "exact",
+      "mappingRows": [
+        73
+      ]
+    },
+    {
+      "businessRow": 133,
+      "id": "F-REQ-ONB-25",
+      "state": "exact",
+      "mappingRows": [
+        74
+      ]
+    },
+    {
+      "businessRow": 134,
+      "id": "F-REQ-ONB-26",
+      "state": "exact",
+      "mappingRows": [
+        75
+      ]
+    },
+    {
+      "businessRow": 135,
+      "id": "F-REQ-ONB-27",
+      "state": "exact",
+      "mappingRows": [
+        76
+      ]
+    },
+    {
+      "businessRow": 136,
+      "id": "F-REQ-ONB-28",
+      "state": "exact",
+      "mappingRows": [
+        77
+      ]
+    },
+    {
+      "businessRow": 137,
+      "id": "F-REQ-ONB-29",
+      "state": "exact",
+      "mappingRows": [
+        78
+      ]
+    },
+    {
+      "businessRow": 138,
+      "id": "F-REQ-ONB-30",
+      "state": "exact",
+      "mappingRows": [
+        79
+      ]
+    },
+    {
+      "businessRow": 139,
+      "id": "F-REQ-ONB-31",
+      "state": "exact",
+      "mappingRows": [
+        80
+      ]
+    },
+    {
+      "businessRow": 140,
+      "id": "F-REQ-ONB-32",
+      "state": "exact",
+      "mappingRows": [
+        81
+      ]
+    },
+    {
+      "businessRow": 141,
+      "id": "F-REQ-ONB-33",
+      "state": "exact",
+      "mappingRows": [
+        82
+      ]
+    },
+    {
+      "businessRow": 142,
+      "id": "F-REQ-ONB-34",
+      "state": "exact",
+      "mappingRows": [
+        83
+      ]
+    },
+    {
+      "businessRow": 143,
+      "id": "F-REQ-ONB-35",
+      "state": "exact",
+      "mappingRows": [
+        84
+      ]
+    },
+    {
+      "businessRow": 144,
+      "id": "F-REQ-ONB-36",
+      "state": "exact",
+      "mappingRows": [
+        85
+      ]
+    },
+    {
+      "businessRow": 145,
+      "id": "F-REQ-ONB-37",
+      "state": "exact",
+      "mappingRows": [
+        86
+      ]
+    },
+    {
+      "businessRow": 146,
+      "id": "F-REQ-ONB-38",
+      "state": "exact",
+      "mappingRows": [
+        87
+      ]
+    },
+    {
+      "businessRow": 147,
+      "id": "F-REQ-ONB-39",
+      "state": "exact",
+      "mappingRows": [
+        88
+      ]
+    },
+    {
+      "businessRow": 148,
+      "id": "F-REQ-ONB-40",
+      "state": "exact",
+      "mappingRows": [
+        89
+      ]
+    },
+    {
+      "businessRow": 149,
+      "id": "F-REQ-ONB-41",
+      "state": "exact",
+      "mappingRows": [
+        90
+      ]
+    },
+    {
+      "businessRow": 150,
+      "id": "F-REQ-ONB-42",
+      "state": "exact",
+      "mappingRows": [
+        91
+      ]
+    },
+    {
+      "businessRow": 151,
+      "id": "F-REQ-ONB-43",
+      "state": "exact",
+      "mappingRows": [
+        92
+      ]
+    },
+    {
+      "businessRow": 152,
+      "id": "F-REQ-ONB-44",
+      "state": "exact",
+      "mappingRows": [
+        163
+      ]
+    },
+    {
+      "businessRow": 153,
+      "id": "F-REQ-ONB-45",
+      "state": "exact",
+      "mappingRows": [
+        164
+      ]
+    },
+    {
+      "businessRow": 154,
+      "id": "F-REQ-PPM-01",
+      "state": "exact",
+      "mappingRows": [
+        196
+      ]
+    },
+    {
+      "businessRow": 155,
+      "id": "F-REQ-PPM-02",
+      "state": "exact",
+      "mappingRows": [
+        197
+      ]
+    },
+    {
+      "businessRow": 156,
+      "id": "F-REQ-PPM-03",
+      "state": "exact",
+      "mappingRows": [
+        198
+      ]
+    },
+    {
+      "businessRow": 157,
+      "id": "F-REQ-PPM-04",
+      "state": "exact",
+      "mappingRows": [
+        199
+      ]
+    },
+    {
+      "businessRow": 158,
+      "id": "F-REQ-PPM-05",
+      "state": "exact",
+      "mappingRows": [
+        200
+      ]
+    },
+    {
+      "businessRow": 159,
+      "id": "F-REQ-PPM-06",
+      "state": "exact",
+      "mappingRows": [
+        201
+      ]
+    },
+    {
+      "businessRow": 160,
+      "id": "F-REQ-PPM-07",
+      "state": "exact",
+      "mappingRows": [
+        202
+      ]
+    }
+  ],
+  "summary": {
+    "meaningfulIdentityCells": 23,
+    "excludedEamRecalculationValues": 608,
+    "changedCells": 702,
+    "changedSheets": [
+      "Functionalities",
+      "Interfaces",
+      "FREQ mapping",
+      "SREQ Aplikační role",
+      "Revize MVP",
+      "Cover",
+      "Postup revize",
+      "Business a FREQ",
+      "EA SREQ"
+    ],
+    "businessTextMatches": {
+      "no_id": 5,
+      "exact": 138,
+      "text_conflict": 14,
+      "extended_text": 2
+    }
+  }
+}

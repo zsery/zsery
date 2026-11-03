@@ -1,0 +1,1289 @@
+﻿List;Bunka;Predchozi hodnota v02;Nova hodnota v03;Duvod
+Functionalities;K315;"49: VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"49: VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.
+User identity key: VFID sub ↔ ONSC/WSC user is 1:1; email is not the mapping key.";"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+Functionalities;L315;"Přenesené posouzení SREQ; samotná sémantická shoda funkce vyžaduje EA. ";"Přenesené posouzení SREQ; samotná sémantická shoda funkce vyžaduje EA.  Rule supplied by user 2026-11-02.";"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+Interfaces;J4;"Odlišit tokenové rozhraní CZ DXL od business customer/role/context API; IDaaS autentizace a subscription eligibility mají jiné odpovědnosti. Přesné kontrakty neověřeny.";"Odlišit tokenové rozhraní CZ DXL od business customer/role/context API; IDaaS autentizace a subscription eligibility mají jiné odpovědnosti. Přesné kontrakty neověřeny.
+VFID sub ↔ odpovídající ONSC user nebo WSC user: 1:1. E-mail je atribut, nikoli párovací klíč. TMF691 nese holding parent–child strukturou.";"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+Interfaces;K4;"U1 — UC005, s. 19–21; T1";"U1 — UC005, s. 19–21; T1; U2 — výslovné pravidlo uživatele, 2026-11-02";"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+Interfaces;J12;Oddělit CZ vstupní data, Group selector/eligibility a vyloučený portálový handover/automatický Siebel prefill. Provider, consumer a payload ověřit proti EA/API.;"Oddělit CZ vstupní data, Group selector/eligibility a vyloučený portálový handover/automatický Siebel prefill. Provider, consumer a payload ověřit proti EA/API.
+ONSC user ↔ VFID sub: 1:1. E-mail není párovací klíč. Holding je v TMF691 zachycen parent–child strukturou.";"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+Interfaces;K12;"M1 — MVP Requirements, MVP Functional Decomposition; B1 — závazný Board scope; potvrzen uživatelem";"M1 — MVP Requirements, MVP Functional Decomposition; B1 — závazný Board scope; potvrzen uživatelem; U2 — výslovné pravidlo uživatele, 2026-11-02";"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+Interfaces;J17;Identity lookup nezaměňovat s autentizací a business autorizací.;"Identity lookup nezaměňovat s autentizací a business autorizací.
+VFID sub je identifikátor pro 1:1 vazbu na odpovídající ONSC/WSC user. E-mail je atribut, ne párovací klíč.";"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+Interfaces;K17;U1 — UC005, s. 19–21;"U1 — UC005, s. 19–21; U2 — výslovné pravidlo uživatele, 2026-11-02";"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+Interfaces;J18;"Původní katalog zachován; přítomnost rozhraní v Book1 sama nepotvrzuje jeho aktuální Atlas scope. EA export dostupný; detailní shoda rozhraní neověřena";"Původní katalog zachován; přítomnost rozhraní v Book1 sama nepotvrzuje jeho aktuální Atlas scope. EA export dostupný; detailní shoda rozhraní neověřena
+WSC user ↔ VFID sub: 1:1. E-mail není párovací klíč. Holding je v TMF691 zachycen parent–child strukturou.";"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+Interfaces;K18;"B1 — závazný Board scope; potvrzen uživatelem";"B1 — závazný Board scope; potvrzen uživatelem; U2 — výslovné pravidlo uživatele, 2026-11-02";"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+FREQ mapping;L49;"VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.
+Identity rule: VFID sub ↔ ONSC/WSC user is 1:1; email is not the mapping key.";"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+FREQ mapping;N49;"U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13";"U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13; U2 — výslovné pravidlo uživatele, 2026-11-02";"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+FREQ mapping;W102;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 14.";Provázání řádkového konfliktu.
+FREQ mapping;W140;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 15.";Provázání řádkového konfliktu.
+FREQ mapping;W141;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 16.";Provázání řádkového konfliktu.
+FREQ mapping;W157;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 12.";Provázání řádkového konfliktu.
+FREQ mapping;W174;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 13.";Provázání řádkového konfliktu.
+FREQ mapping;W204;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 17.";Provázání řádkového konfliktu.
+FREQ mapping;W205;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 18.";Provázání řádkového konfliktu.
+FREQ mapping;W206;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 19.";Provázání řádkového konfliktu.
+FREQ mapping;W207;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 20.";Provázání řádkového konfliktu.
+FREQ mapping;W210;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 9.";Provázání řádkového konfliktu.
+FREQ mapping;W211;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 10.";Provázání řádkového konfliktu.
+FREQ mapping;W212;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 11.";Provázání řádkového konfliktu.
+FREQ mapping;W213;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 21.";Provázání řádkového konfliktu.
+FREQ mapping;W214;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 22.";Provázání řádkového konfliktu.
+SREQ Aplikační role;M49;"VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.
+VFID sub ↔ ONSC/WSC user: 1:1. E-mail není párovací klíč.";"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+SREQ Aplikační role;N49;"FREQ mapping!49; U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13";"FREQ mapping!49; U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13; U2 — výslovné pravidlo uživatele, 2026-11-02";"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+SREQ Aplikační role;W102;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 14.";Propagace známého konfliktu pouze při shodě aplikace a SREQ.
+SREQ Aplikační role;W140;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 15.";Propagace známého konfliktu pouze při shodě aplikace a SREQ.
+SREQ Aplikační role;W141;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 16.";Propagace známého konfliktu pouze při shodě aplikace a SREQ.
+SREQ Aplikační role;W157;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 12.";Propagace známého konfliktu pouze při shodě aplikace a SREQ.
+SREQ Aplikační role;W174;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 13.";Propagace známého konfliktu pouze při shodě aplikace a SREQ.
+SREQ Aplikační role;W204;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 17.";Propagace známého konfliktu pouze při shodě aplikace a SREQ.
+SREQ Aplikační role;W205;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 18.";Propagace známého konfliktu pouze při shodě aplikace a SREQ.
+SREQ Aplikační role;W206;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 19.";Propagace známého konfliktu pouze při shodě aplikace a SREQ.
+SREQ Aplikační role;W207;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 20.";Propagace známého konfliktu pouze při shodě aplikace a SREQ.
+SREQ Aplikační role;W210;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 9.";Propagace známého konfliktu pouze při shodě aplikace a SREQ.
+SREQ Aplikační role;W211;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 10.";Propagace známého konfliktu pouze při shodě aplikace a SREQ.
+SREQ Aplikační role;W212;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 11.";Propagace známého konfliktu pouze při shodě aplikace a SREQ.
+SREQ Aplikační role;W213;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 21.";Propagace známého konfliktu pouze při shodě aplikace a SREQ.
+SREQ Aplikační role;W214;Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.;"Ověřit nejnovější business text, FREQ vazbu a odpovědnost Group/CZ.
+ROZPOR FREQ ID/TEXTU proti EA; Business a FREQ řádky 22.";Propagace známého konfliktu pouze při shodě aplikace a SREQ.
+Revize MVP;A20;;U2 — identita;"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+Revize MVP;B20;;VFID sub ↔ ONSC user / WSC user je vždy 1:1.;"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+Revize MVP;C20;;"Výslovné pravidlo uživatele, 2026-11-02. Použít stabilní VFID sub; e-mail není konzistentní a nesmí být párovacím klíčem. Termín „subscriber“ není použit.";"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+Revize MVP;A21;;U2 — holding;"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+Revize MVP;B21;;TMF691 nese holding jako strukturu parent–child.;"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+Revize MVP;C21;;"Výslovné pravidlo uživatele, 2026-11-02. Udržet strukturu holdingů; nevydávat ji za mapování user identity.";"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+Revize MVP;A22;;U2 — hranice interpretace;"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+Revize MVP;B22;;Vazba user identity a holding hierarchie jsou dvě různé věci.;"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+Revize MVP;C22;;"VFID sub ↔ ONSC/WSC user 1:1; parent–child je struktura holdingů v TMF691. Detaily kardinality holdingů a konkrétního payloadu musí potvrdit API kontrakt.";"Přenos věcné změny z 2.11.; třícestné sloučení proti první revizi a v02."
+Revize MVP;B1;2026-11-01;2026-11-03;Datum konsolidace.
+Revize MVP;C1;"Pracovní revize proti závaznému scope; není schválená úplná BRD/EA baseline.";"Konsolidovaná pracovní revize v03; úplná aktuální BRD/FREQ/SREQ baseline není ověřena.";Pravdivý status.
+Revize MVP;A23;;Konsolidace v03;Průhledný záznam konsolidace a zbývající práce.
+Revize MVP;B23;;Sloučena rozšířená v02 a všech 23 věcných změn z 2.11.;Průhledný záznam konsolidace a zbývající práce.
+Revize MVP;C23;;"14 listů zachováno; EAM App, vzorce, tabulky, externí odkazy a GUID se nepřebírají z poškozené exportní větve.";Průhledný záznam konsolidace a zbývající práce.
+Revize MVP;A24;;Rozsah dostupných zdrojů;Průhledný záznam konsolidace a zbývající práce.
+Revize MVP;B24;;Zapracována uložená pozorování BRD, UC005, traceability a Marketplace BSR z 2.11.;Průhledný záznam konsolidace a zbývající práce.
+Revize MVP;C24;;Úplné nové primární dokumenty zde nejsou. Verze BRD a úplnost všech FREQ nejsou potvrzené.;Průhledný záznam konsolidace a zbývající práce.
+Revize MVP;A25;;FREQ/SREQ vazby;Průhledný záznam konsolidace a zbývající práce.
+Revize MVP;B25;;Přímá textová shoda je odlišena od stejného ID s jiným textem.;Průhledný záznam konsolidace a zbývající práce.
+Revize MVP;C25;;Reference na řádek Book1 není schválení ani nová EA vazba.;Průhledný záznam konsolidace a zbývající práce.
+Revize MVP;A26;;EA a SO;Průhledný záznam konsolidace a zbývající práce.
+Revize MVP;B26;;Atlas.xml a Word SO v této konsolidaci nebyly změněny.;Průhledný záznam konsolidace a zbývající práce.
+Revize MVP;C26;;"Nedokončené odborné kroky jsou v Postup revize; žádný výstup není označen za schválenou baseline.";Průhledný záznam konsolidace a zbývající práce.
+Cover;A13;Pracovní verze 02 — 1.11.2026;Book1, konsolidovaná verze 03;Aktuální čitelný stav celé dodávky.
+Cover;B13;"Začni listem Postup revize; navazuje Business a FREQ.";3. 11. 2026. Sloučena rozšířená v02, pravidla identity z 2.11. a uložená pozorování SharePointu.;Aktuální čitelný stav celé dodávky.
+Cover;A14;Stav;Dokončeno v této verzi;Aktuální čitelný stav celé dodávky.
+Cover;B14;"EA export načten; business baseline se ověřuje z posledních podkladů Martina Dostála v rámci závazného MVP.";"Jedna pracovní verze se 14 listy. Přeneseno všech 23 věcných změn z 2.11.; původní EAM, vzorce, tabulky a externí vazby zachovány.";Aktuální čitelný stav celé dodávky.
+Cover;A15;Originál;Stav business baseline;Aktuální čitelný stav celé dodávky.
+Cover;B15;"Zdrojové Book1 a Atlas.xml beze změny; historické sloupce a ID zachovány.";NEUZAVŘENA: úplný aktuální BRD/UC a všechny Martinovy požadavky nebyly obsahově ověřeny. Tato verze není potvrzením úplné schválené baseline.;Aktuální čitelný stav celé dodávky.
+Cover;A16;Postup revize;Business a FREQ;Aktuální čitelný stav celé dodávky.
+Cover;B16;Zdroje, scope, kroky a otevřená rozhodnutí.;159 EA FREQ záznamů a 6 analytických vstupů UC005. Přesná textová shoda a rozpory vůči Book1 jsou evidovány u řádků.;Aktuální čitelný stav celé dodávky.
+Cover;A17;Business a FREQ;Pravidla uživatele;Aktuální čitelný stav celé dodávky.
+Cover;B17;"159 modelových FREQ záznamů + 6 UC005 analytických vstupů; čekají na sjednocení s aktuální analýzou.";"VFID sub a odpovídající ONSC/WSC user 1:1; email není párovací klíč. TMF691: holding parent–child.";Aktuální čitelný stav celé dodávky.
+Cover;A18;EA SREQ;Co zůstává otevřené;Aktuální čitelný stav celé dodávky.
+Cover;B18;111 modelových SREQ prvků, jejich GUID a přímé aplikační vazby.;"Kanonické FREQ/verze a capability vazby; technický DXL token kontrakt; Marketplace/Siebel opravy dat; aktuálnost všech SREQ.";Aktuální čitelný stav celé dodávky.
+Cover;A19;Cílový výstup;EA a SO;Aktuální čitelný stav celé dodávky.
+Cover;B19;Potvrzená business → application traceability, aktualizovaný EA model a následně SO Word.;Atlas.xml nebyl změněn a Word SO nebyl aktualizován. Připravená evidence není důkazem hotové změny modelu nebo dokumentu.;Aktuální čitelný stav celé dodávky.
+Postup revize;A2;BOOK1 — PRACOVNÍ VERZE 02;BOOK1, KONSOLIDOVANÁ VERZE 03;Aktualizace stavu.
+Postup revize;B2;1. 11. 2026;3. 11. 2026;Datum konsolidace.
+Postup revize;C2;Přechod na business-first postup a připojení Atlas.xml;"Sloučena v02 a všech 23 věcných změn identity z 2.11.; doplněny uložené poznatky SharePointu.";Aktualizace stavu.
+Postup revize;D2;"Pracovní evidence; není schválená baseline.";KONSOLIDACE DOKONČENA. Úplná business baseline, EA změny a SO zůstávají neuzavřené.;Oddělení dokončené konsolidace od nedokončené odborné revize.
+Postup revize;A6;Rozsah v02;Rozsah v03;Aktualizace verze.
+Postup revize;B9;"PR25_0837_ServiceHub_Atlas_BRD.docx; v knihovně změna 23.10.2026";"PR25_0837_ServiceHub_Atlas_BRD.docx: titul 0.1; historie uvádí 0.2 z 23.10.; 25 stran.";Uložená pozorování SharePointu 2.11.
+Postup revize;C9;"Relevantní části přímo čteny; interní aktuální revize nepotvrzena";"B2; notes/atlas-sharepoint-review-2026-11-02.md. Dřívější tvrzení verze 0.7 není ověřené.";Oprava evidence revize BRD.
+Postup revize;D9;Ověřit poslední verzi a úplný obsah před potvrzením business baseline.;OTEVŘENO: sjednotit titul a revizní historii, potvrdit poslední vydání a dokončit čtení.;Pravdivý stav zdroje.
+Postup revize;D8;"Přečtené části nejsou kontrolou celé specifikace; prověřit poslední revizi u zdroje.";"Záznam z 2.11.: 51 stran, 13 171 slov, titul 0.1 / 14.10. Detailněji UC005; všech 12 UC není zvalidováno.";Záznam rozsahu skutečného čtení.
+Postup revize;D16;"ZALOŽENO — import EA a šest doložených UC005 vstupů; většina čeká na analýzu.";DOPLNĚNO: převzaty doložené výklady UC005 a přesné textové vazby. Kanonické FREQ a schválení jsou stále otevřené.;Zpřesnění postupu.
+Postup revize;B33;Přidány business/FREQ a EA SREQ evidence, řízení postupu a kontrola ID v existujících mapováních;"Sloučení v02 a identity; textové porovnání FREQ; workbookové reference do EA SREQ; doplnění pozorování ze 2.11.";Popis provedených změn.
+Postup revize;C33;v02 oproti pracovní revizi z 1.11.2026;"Srovnání první revize, v02 a sešitu z 2.11.; uložené poznámky z VDI.";Provenance.
+Postup revize;A35;;U2, identita uživatele;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;B35;;VFID sub a odpovídající ONSC user / WSC user jsou vždy 1:1. E-mail není párovací klíč.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;C35;;Výslovné pravidlo uživatele, 2.11.2026.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;D35;;ZAPRACOVÁNO: Interfaces, Functionalities, FREQ mapping, SREQ Aplikační role, EA SREQ a Revize MVP.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;A36;;U2, holding;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;B36;;TMF691 nese holding jako strukturu parent–child.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;C36;;Výslovné pravidlo uživatele, 2.11.2026.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;D36;;"ZAPRACOVÁNO jako pravidlo; konkrétní payload a další kardinality čekají na API kontrakt.";Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;A37;;Zdroje, TR1;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;B37;;PR25_0837_ServiceHub_Atlas_Traceability_Decomposition.xlsx, list Traceability.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;C37;;Pozorování 2.11.: 26 datových řádků, C101–C106, UC001–012, P01–P10, Sell/Build/Run.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;D37;;"Zdroj business traceability nemá FREQ/SREQ ID. Úplný řádkový přepis není uložen; nevytvářet vazby z pouhého seznamu capability.";Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;A38;;Zdroje, bezpečnost Marketplace;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;B38;;"BSR_Appdirect_2023_Update...xlsx; 16 listů.";Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;C38;;Pozorování 2.11.: baseline 2.6 z 1.4.2019, AppDirect aktualizace 2023.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;D38;;"Historický supplier assessment; odpovědi nejsou aktuální Atlas/ServiceHub bezpečnostní požadavky.";Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;A39;;UC005, chybové větve;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;B39;;"Neúspěšná autentizace zastaví tok před DXL; bez role/CRM ID obecný obsah; nedostupné DXL obecný/nedostupný výsledek.";Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;C39;;"U1; uložený detail UC005 z 2.11.";Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;D39;;DOPLNĚNO v Business a FREQ. Nezaměňovat s UC006 subscription eligibility.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;A40;;UC005, neplatný výběr;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;B40;;"CRM ID, které už není dostupné, se nesmí aktivovat; selector se obnoví.";Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;C40;;"U1; uložený detail UC005 z 2.11.";Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;D40;;DOPLNĚNO. Priorita počáteční automatické volby zůstává nedoložená.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;A41;;Model, capability a BPMN;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;B41;;"V projektové větvi nebyl inventurou nalezen explicitní ArchiMate Capability; business procesy a BPMN existují.";Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;C41;;"E1; poznámky 2.11.";Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;D41;;Modelové typy a vazby vyžadují kontrolu. Absence Capability není absence celé business vrstvy.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;A42;;Rozpor, CHM identifikátory;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;B42;;EA a Book1 mají u CHM-06–19 rozdílné texty/pořadí.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;C42;;E1, původní Book1 a poznámky 2.11.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;D42;;Rozpory jsou uvedeny u příslušných Business a FREQ řádků. Neslučovat jen podle ID.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;A43;;Rozpor, SREQ-CRM-09;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;B43;;"EA jej popisuje jako assisted-ticket email configuration; Book1 jej používá pro lead-create.";Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;C43;;E1 a původní mapování Book1.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;D43;;OTEVŘENO: zdrojový rozpor není tímto sloučením rozhodnut.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;A44;;Konsolidace, EAM App;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;B44;;Ve větvi z 2.11. se oproti jejímu vstupu změnilo 608 hodnot EAM App po přepočtu.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;C44;;Třícestná kontrola OOXML.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;D44;;Tyto nesouvisející změny nejsou přeneseny. EAM App a původní vzorce/cache jsou zachovány z v02.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;A45;;Původní chyba sešitu;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;B45;;EAM App!F459 obsahuje původní chybu #VALUE!.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;C45;;Zachovaný původní sešit a v02.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;D45;;Není novou chybou této konsolidace. Nebyla skryta ani nahrazena nulou.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;A46;;Stav zdrojů;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;B46;;V podkladech jsou inventarizované, ale ne zcela přečtené dokumenty a podsložky.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;C46;;SharePoint/OneDrive poznámky 1.–2.11.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;D46;;NEDOKONČENO: úplný hloubkový průzkum a ověření nejnovějších verzí.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;A47;;Marketplace/Siebel, otevřený návrh;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;B47;;Reporty V2/V4, klíče CRM/CA/BA/BAN/company UUID, master atributů a způsob opravy.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;C47;;"Zadání uživatele; dosud neověřený provozní postup.";Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Postup revize;D47;;NEDOKONČENO: žádný/mnoho matchů, duplicity a již spárovaný zákazník s rozdílnými daty.;Doplnění dochovaných zdrojů, pravidel a neuzavřených bodů.
+Business a FREQ;J161;;Uživatel se autentizuje přes VFID. Při selhání tok končí před požadavkem na customer/role data z DXL.;"Parafráze UC005 z uložené přímé kontroly 1.–2.11.; bez přidělení nového FREQ ID."
+Business a FREQ;O161;;"U1, UC005 s.19–21; notes/atlas-sharepoint-review-2026-11-02.md. Zaznamenaná revize 0.1 / 14.10.; nejnovější vydání musí být potvrzeno.";Rozsah skutečně přečteného zdroje.
+Business a FREQ;Q161;ČEKÁ — dohledat kanonické FREQ a business vazby;VÝKLAD DOPLNĚN. Kanonické FREQ ID a business/capability vazby nejsou potvrzené.;Nezaměňovat vyplnění s approval.
+Business a FREQ;J162;;ServiceHub získá přes DXL vztahy uživatele, role a dostupná CRM ID pro customer-specific obsah. Přesný API kontrakt není doložen.;"Parafráze UC005 z uložené přímé kontroly 1.–2.11.; bez přidělení nového FREQ ID."
+Business a FREQ;O162;;"U1, UC005 s.19–21; notes/atlas-sharepoint-review-2026-11-02.md. Zaznamenaná revize 0.1 / 14.10.; nejnovější vydání musí být potvrzeno.";Rozsah skutečně přečteného zdroje.
+Business a FREQ;Q162;ČEKÁ — dohledat kanonické FREQ a business vazby;VÝKLAD DOPLNĚN. Kanonické FREQ ID a business/capability vazby nejsou potvrzené.;Nezaměňovat vyplnění s approval.
+Business a FREQ;J163;;Specifický obsah je dostupný pro příslušné ONSC/WSC administrativní role a dostupný CRM kontext. Bez role nebo CRM ID se zobrazí obecný obsah. To není UC006 subscription eligibility.;"Parafráze UC005 z uložené přímé kontroly 1.–2.11.; bez přidělení nového FREQ ID."
+Business a FREQ;O163;;"U1, UC005 s.19–21; notes/atlas-sharepoint-review-2026-11-02.md. Zaznamenaná revize 0.1 / 14.10.; nejnovější vydání musí být potvrzeno.";Rozsah skutečně přečteného zdroje.
+Business a FREQ;Q163;ČEKÁ — dohledat kanonické FREQ a business vazby;VÝKLAD DOPLNĚN. Kanonické FREQ ID a business/capability vazby nejsou potvrzené.;Nezaměňovat vyplnění s approval.
+Business a FREQ;J164;;Automaticky se zvolí jedno dostupné CRM ID. Priorita této volby není v přečteném podkladu doložena.;"Parafráze UC005 z uložené přímé kontroly 1.–2.11.; bez přidělení nového FREQ ID."
+Business a FREQ;O164;;"U1, UC005 s.19–21; notes/atlas-sharepoint-review-2026-11-02.md. Zaznamenaná revize 0.1 / 14.10.; nejnovější vydání musí být potvrzeno.";Rozsah skutečně přečteného zdroje.
+Business a FREQ;Q164;ČEKÁ — dohledat kanonické FREQ a business vazby;VÝKLAD DOPLNĚN. Kanonické FREQ ID a business/capability vazby nejsou potvrzené.;Nezaměňovat vyplnění s approval.
+Business a FREQ;J165;;Customer Selector umožní přepnout dostupné CRM ID a obnoví obsah pro nový kontext. Nedostupné vybrané CRM ID se neaktivuje a selector se obnoví.;"Parafráze UC005 z uložené přímé kontroly 1.–2.11.; bez přidělení nového FREQ ID."
+Business a FREQ;O165;;"U1, UC005 s.19–21; notes/atlas-sharepoint-review-2026-11-02.md. Zaznamenaná revize 0.1 / 14.10.; nejnovější vydání musí být potvrzeno.";Rozsah skutečně přečteného zdroje.
+Business a FREQ;Q165;ČEKÁ — dohledat kanonické FREQ a business vazby;VÝKLAD DOPLNĚN. Kanonické FREQ ID a business/capability vazby nejsou potvrzené.;Nezaměňovat vyplnění s approval.
+Business a FREQ;J166;;"Bez příslušné role či CRM ID se použije obecný obsah bez aktivního customer kontextu. Při nedostupných datech DXL se použije obecný/nedostupný výsledek; konkrétní technické chyby musí určit kontrakt.";"Parafráze UC005 z uložené přímé kontroly 1.–2.11.; bez přidělení nového FREQ ID."
+Business a FREQ;O166;;"U1, UC005 s.19–21; notes/atlas-sharepoint-review-2026-11-02.md. Zaznamenaná revize 0.1 / 14.10.; nejnovější vydání musí být potvrzeno.";Rozsah skutečně přečteného zdroje.
+Business a FREQ;Q166;ČEKÁ — dohledat kanonické FREQ a business vazby;VÝKLAD DOPLNĚN. Kanonické FREQ ID a business/capability vazby nejsou potvrzené.;Nezaměňovat vyplnění s approval.
+Business a FREQ;P2;"Název EA začíná -REQ místo F-REQ; ID není automaticky opraveno. EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.";"Název EA začíná -REQ místo F-REQ; ID není automaticky opraveno. EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.
+V Book1 FREQ mapping není odpovídající přesné ID; porovnat zdrojové znění a verzi.";Úplná kontrola existujících řádků, bez domýšlení nahrazení.
+Business a FREQ;P3;"Název EA začíná -REQ místo F-REQ; ID není automaticky opraveno. EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.";"Název EA začíná -REQ místo F-REQ; ID není automaticky opraveno. EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.
+V Book1 FREQ mapping není odpovídající přesné ID; porovnat zdrojové znění a verzi.";Úplná kontrola existujících řádků, bez domýšlení nahrazení.
+Business a FREQ;J4;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+ONSC/WSC entrypointy, navigace, návrat a předání/konzumace portálového kontextu nejsou současný MVP scope. Historii zachovat. Nezaměňovat za povinné SSO a token pro CZ DXL.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O4;;"FREQ mapping, řádky 95:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD — standalone scope
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q4;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J5;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+ONSC/WSC entrypointy, navigace, návrat a předání/konzumace portálového kontextu nejsou současný MVP scope. Historii zachovat. Nezaměňovat za povinné SSO a token pro CZ DXL.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O5;;"FREQ mapping, řádky 98:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD — standalone scope
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q5;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J6;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+ONSC/WSC entrypointy, navigace, návrat a předání/konzumace portálového kontextu nejsou současný MVP scope. Historii zachovat. Nezaměňovat za povinné SSO a token pro CZ DXL.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O6;;"FREQ mapping, řádky 99:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD — standalone scope
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q6;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J7;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+ONSC/WSC entrypointy, navigace, návrat a předání/konzumace portálového kontextu nejsou současný MVP scope. Historii zachovat. Nezaměňovat za povinné SSO a token pro CZ DXL.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O7;;"FREQ mapping, řádky 100:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD — standalone scope
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q7;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J8;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Vstup přes samostatnou URL ServiceHub s VFID SSO; CZ zajistí lokální integrační/datové závislosti a E2E akceptaci.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O8;;"FREQ mapping, řádky 203:
+B1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition — ř. 10
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q8;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;P9;"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.";"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.
+Stejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 210. Návrh nebyl automaticky přiřazen.";Řízené odmítnutí nesprávného spojení podle ID.
+Business a FREQ;Q9;ČEKÁ — ověřit analýzu → scope → business vazby;"ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.";Zřetelný status rozporu.
+Business a FREQ;P10;"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.";"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.
+Stejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 211. Návrh nebyl automaticky přiřazen.";Řízené odmítnutí nesprávného spojení podle ID.
+Business a FREQ;Q10;ČEKÁ — ověřit analýzu → scope → business vazby;"ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.";Zřetelný status rozporu.
+Business a FREQ;P11;"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.";"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.
+Stejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 212. Návrh nebyl automaticky přiřazen.";Řízené odmítnutí nesprávného spojení podle ID.
+Business a FREQ;Q11;ČEKÁ — ověřit analýzu → scope → business vazby;"ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.";Zřetelný status rozporu.
+Business a FREQ;P12;"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.";"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.
+Stejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 157. Návrh nebyl automaticky přiřazen.";Řízené odmítnutí nesprávného spojení podle ID.
+Business a FREQ;Q12;ČEKÁ — ověřit analýzu → scope → business vazby;"ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.";Zřetelný status rozporu.
+Business a FREQ;P13;"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.";"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.
+Stejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 174. Návrh nebyl automaticky přiřazen.";Řízené odmítnutí nesprávného spojení podle ID.
+Business a FREQ;Q13;ČEKÁ — ověřit analýzu → scope → business vazby;"ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.";Zřetelný status rozporu.
+Business a FREQ;P14;"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.";"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.
+Stejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 102. Návrh nebyl automaticky přiřazen.";Řízené odmítnutí nesprávného spojení podle ID.
+Business a FREQ;Q14;ČEKÁ — ověřit analýzu → scope → business vazby;"ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.";Zřetelný status rozporu.
+Business a FREQ;P15;"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.";"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.
+Stejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 140. Návrh nebyl automaticky přiřazen.";Řízené odmítnutí nesprávného spojení podle ID.
+Business a FREQ;Q15;ČEKÁ — ověřit analýzu → scope → business vazby;"ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.";Zřetelný status rozporu.
+Business a FREQ;P16;"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.";"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.
+Stejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 141. Návrh nebyl automaticky přiřazen.";Řízené odmítnutí nesprávného spojení podle ID.
+Business a FREQ;Q16;ČEKÁ — ověřit analýzu → scope → business vazby;"ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.";Zřetelný status rozporu.
+Business a FREQ;P17;"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.";"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.
+Stejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 204. Návrh nebyl automaticky přiřazen.";Řízené odmítnutí nesprávného spojení podle ID.
+Business a FREQ;Q17;ČEKÁ — ověřit analýzu → scope → business vazby;"ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.";Zřetelný status rozporu.
+Business a FREQ;P18;"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.";"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.
+Stejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 205. Návrh nebyl automaticky přiřazen.";Řízené odmítnutí nesprávného spojení podle ID.
+Business a FREQ;Q18;ČEKÁ — ověřit analýzu → scope → business vazby;"ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.";Zřetelný status rozporu.
+Business a FREQ;P19;"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.";"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.
+Stejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 206. Návrh nebyl automaticky přiřazen.";Řízené odmítnutí nesprávného spojení podle ID.
+Business a FREQ;Q19;ČEKÁ — ověřit analýzu → scope → business vazby;"ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.";Zřetelný status rozporu.
+Business a FREQ;P20;"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.";"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny. Portálový entrypoint/navigaci/handover ověřit vůči B1; nenahrazovat tím SSO.
+Stejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 207. Návrh nebyl automaticky přiřazen.";Řízené odmítnutí nesprávného spojení podle ID.
+Business a FREQ;Q20;ČEKÁ — ověřit analýzu → scope → business vazby;"ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.";Zřetelný status rozporu.
+Business a FREQ;P21;"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.";"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.
+Stejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 213. Návrh nebyl automaticky přiřazen.";Řízené odmítnutí nesprávného spojení podle ID.
+Business a FREQ;Q21;ČEKÁ — ověřit analýzu → scope → business vazby;"ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.";Zřetelný status rozporu.
+Business a FREQ;P22;"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.";"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.
+Stejné FREQ ID v Book1, ale jiný zdrojový text; FREQ mapping řádky 214. Návrh nebyl automaticky přiřazen.";Řízené odmítnutí nesprávného spojení podle ID.
+Business a FREQ;Q22;ČEKÁ — ověřit analýzu → scope → business vazby;"ROZPOR ID/TEXTU; ověřit verzi a kanonický význam před propojením.";Zřetelný status rozporu.
+Business a FREQ;J23;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Samostatný ServiceHub s VFID přihlášením. SH specifickým voláním vyjedná token s CZ DXL a vloží obdržený token do hlaviček dalších volání VFCZ DXL. Přesný endpoint, grant, formát tokenu/hlavičky, expirace a chyby nejsou ověřeny.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O23;;"FREQ mapping, řádky 147:
+B1 — závazný Board scope; potvrzen uživatelem; T1 — uživatel: technický záměr SSO
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q23;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J24;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Samostatný ServiceHub s VFID přihlášením. SH specifickým voláním vyjedná token s CZ DXL a vloží obdržený token do hlaviček dalších volání VFCZ DXL. Přesný endpoint, grant, formát tokenu/hlavičky, expirace a chyby nejsou ověřeny.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O24;;"FREQ mapping, řádky 148:
+B1 — závazný Board scope; potvrzen uživatelem; T1 — uživatel: technický záměr SSO
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q24;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J25;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Samostatný ServiceHub s VFID přihlášením. SH specifickým voláním vyjedná token s CZ DXL a vloží obdržený token do hlaviček dalších volání VFCZ DXL. Přesný endpoint, grant, formát tokenu/hlavičky, expirace a chyby nejsou ověřeny.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O25;;"FREQ mapping, řádky 149, 165:
+B1 — závazný Board scope; potvrzen uživatelem; T1 — uživatel: technický záměr SSO
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q25;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J26;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Samostatný ServiceHub s VFID přihlášením. SH specifickým voláním vyjedná token s CZ DXL a vloží obdržený token do hlaviček dalších volání VFCZ DXL. Přesný endpoint, grant, formát tokenu/hlavičky, expirace a chyby nejsou ověřeny.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O26;;"FREQ mapping, řádky 150:
+B1 — závazný Board scope; potvrzen uživatelem; T1 — uživatel: technický záměr SSO
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q26;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J27;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Samostatný ServiceHub s VFID přihlášením. SH specifickým voláním vyjedná token s CZ DXL a vloží obdržený token do hlaviček dalších volání VFCZ DXL. Přesný endpoint, grant, formát tokenu/hlavičky, expirace a chyby nejsou ověřeny.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O27;;"FREQ mapping, řádky 151:
+B1 — závazný Board scope; potvrzen uživatelem; T1 — uživatel: technický záměr SSO
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q27;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J28;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O28;;"FREQ mapping, řádky 103:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q28;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J29;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O29;;"FREQ mapping, řádky 104:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q29;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J30;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O30;;"FREQ mapping, řádky 105:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q30;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J31;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O31;;"FREQ mapping, řádky 106:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q31;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J32;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O32;;"FREQ mapping, řádky 107:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q32;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J33;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O33;;"FREQ mapping, řádky 108:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q33;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J34;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O34;;"FREQ mapping, řádky 109:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q34;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J35;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O35;;"FREQ mapping, řádky 110:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q35;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J36;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O36;;"FREQ mapping, řádky 111:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q36;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J37;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O37;;"FREQ mapping, řádky 112:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q37;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J38;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O38;;"FREQ mapping, řádky 113:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q38;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J39;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O39;;"FREQ mapping, řádky 114:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q39;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J40;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O40;;"FREQ mapping, řádky 115:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q40;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J41;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O41;;"FREQ mapping, řádky 116:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q41;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J42;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O42;;"FREQ mapping, řádky 117:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q42;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J43;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Původní text zachován; přesný detail, odpovědnost a aktuální zdroj požadavku je nutné ověřit.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.
+Identity rule: VFID sub ↔ ONSC/WSC user is 1:1; email is not the mapping key.
+Zajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.
+IDaaS autentizace sama nepotvrzuje přístup k Atlas. Eligibility vyhodnocuje SH/Group ze zákaznických a subscription vstupů; rozdělit autentizaci a business autorizaci.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O43;;"FREQ mapping, řádky 2, 22, 49, 52, 96, 152, 166, 169:
+M1 — MVP Requirements, MVP Functional Decomposition
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13; U2 — výslovné pravidlo uživatele, 2026-11-02
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q43;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J44;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O44;;"FREQ mapping, řádky 23, 51, 153, 170:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q44;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J45;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Původní text zachován; přesný detail, odpovědnost a aktuální zdroj požadavku je nutné ověřit.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O45;;"FREQ mapping, řádky 3, 24, 154, 171:
+M1 — MVP Requirements, MVP Functional Decomposition
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q45;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J46;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Původní text zachován; přesný detail, odpovědnost a aktuální zdroj požadavku je nutné ověřit.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O46;;"FREQ mapping, řádky 5, 25, 155, 172:
+M1 — MVP Requirements, MVP Functional Decomposition
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q46;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J47;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Původní text zachován; přesný detail, odpovědnost a aktuální zdroj požadavku je nutné ověřit.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O47;;"FREQ mapping, řádky 4, 26, 156, 173:
+M1 — MVP Requirements, MVP Functional Decomposition
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q47;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J48;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O48;;"FREQ mapping, řádky 118, 178:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q48;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J49;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O49;;"FREQ mapping, řádky 119, 179:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q49;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J50;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O50;;"FREQ mapping, řádky 120, 180:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q50;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J51;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O51;;"FREQ mapping, řádky 121, 181:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q51;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J52;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Dostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O52;;"FREQ mapping, řádky 93, 184:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q52;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J53;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Dostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.
+Oddělit autentizaci, admin oprávnění, přípustný zákaznický kontext a dostupnost Atlas subscription. UC005 nepotvrzuje všechny produktové podmínky UC006; ověřit přesná pravidla a chybové stavy.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O53;;"FREQ mapping, řádky 53, 122:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11, 17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q53;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J54;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Dostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O54;;"FREQ mapping, řádky 94, 182:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q54;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J55;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Dostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O55;;"FREQ mapping, řádky 183:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q55;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J56;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Oddělit autentizaci, admin oprávnění, přípustný zákaznický kontext a dostupnost Atlas subscription. UC005 nepotvrzuje všechny produktové podmínky UC006; ověřit přesná pravidla a chybové stavy.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O56;;"FREQ mapping, řádky 124:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11, 17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q56;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J57;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Oddělit autentizaci, admin oprávnění, přípustný zákaznický kontext a dostupnost Atlas subscription. UC005 nepotvrzuje všechny produktové podmínky UC006; ověřit přesná pravidla a chybové stavy.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O57;;"FREQ mapping, řádky 125:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11, 17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q57;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J58;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Oddělit autentizaci, admin oprávnění, přípustný zákaznický kontext a dostupnost Atlas subscription. UC005 nepotvrzuje všechny produktové podmínky UC006; ověřit přesná pravidla a chybové stavy.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O58;;"FREQ mapping, řádky 126:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11, 17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q58;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J59;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Oddělit autentizaci, admin oprávnění, přípustný zákaznický kontext a dostupnost Atlas subscription. UC005 nepotvrzuje všechny produktové podmínky UC006; ověřit přesná pravidla a chybové stavy.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O59;;"FREQ mapping, řádky 127:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11, 17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q59;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J60;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Oddělit autentizaci, admin oprávnění, přípustný zákaznický kontext a dostupnost Atlas subscription. UC005 nepotvrzuje všechny produktové podmínky UC006; ověřit přesná pravidla a chybové stavy.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O60;;"FREQ mapping, řádky 128:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11, 17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q60;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J61;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Původní text zachován; přesný detail, odpovědnost a aktuální zdroj požadavku je nutné ověřit.
+ONSC/WSC entrypointy, navigace, návrat a předání/konzumace portálového kontextu nejsou současný MVP scope. Historii zachovat. Nezaměňovat za povinné SSO a token pro CZ DXL.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O61;;"FREQ mapping, řádky 97, 219, 220:
+M1 — MVP Requirements, MVP Functional Decomposition
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD — standalone scope
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q61;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J62;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Podpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O62;;"FREQ mapping, řádky 187:
+B1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q62;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J63;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Podpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O63;;"FREQ mapping, řádky 188:
+B1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q63;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J64;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Podpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O64;;"FREQ mapping, řádky 189:
+B1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q64;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J65;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Podpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O65;;"FREQ mapping, řádky 131, 190:
+B1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q65;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J66;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Podpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O66;;"FREQ mapping, řádky 132, 191:
+B1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q66;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J67;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Podpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O67;;"FREQ mapping, řádky 133, 192:
+B1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q67;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J68;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Podpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O68;;"FREQ mapping, řádky 134, 193:
+B1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q68;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J69;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+VFID autentizace; přes DXL získat vztahy uživatele, admin role a přípustná CRM ID. Zpřístupnit specifický obsah oprávněnému adminovi; bez admin role obecná stránka. Výběr a přepnutí kontextu vlastní Group, CZ poskytuje vstupy. Role ze zdrojů ONSC/WSC nejsou portálový handover.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O69;;"FREQ mapping, řádky 158:
+U1 — UC005, s. 19–21; M1 — MVP Requirements, MVP Functional Decomposition — ř. 11–13
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q69;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;P70;"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.";"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.
+EA text obsahuje znění FREQ z Book1 a navíc vložený NFR. Před převodem oddělit jednotlivá tvrzení a ověřit jejich scope.";Odlišit rozšířenou dokumentaci od změněného významu stejného FREQ ID.
+Business a FREQ;Q70;ČEKÁ — ověřit analýzu → scope → business vazby;"ROZŠÍŘENÝ TEXT EA S NFR; neprovádět automatické rozdělení ani schválení.";Přesný druh rozdílu.
+Business a FREQ;J71;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Podpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O71;;"FREQ mapping, řádky 135, 194:
+B1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q71;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J72;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Podpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O72;;"FREQ mapping, řádky 136, 195:
+B1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q72;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J73;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Podpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O73;;"FREQ mapping, řádky 137:
+B1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q73;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J74;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O74;;"FREQ mapping, řádky 27:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q74;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J75;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O75;;"FREQ mapping, řádky 28:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q75;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J76;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O76;;"FREQ mapping, řádky 29:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q76;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J77;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O77;;"FREQ mapping, řádky 30:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q77;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J78;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O78;;"FREQ mapping, řádky 31:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q78;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J79;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O79;;"FREQ mapping, řádky 32:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q79;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J80;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O80;;"FREQ mapping, řádky 33:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q80;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J81;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O81;;"FREQ mapping, řádky 34:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q81;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J82;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O82;;"FREQ mapping, řádky 35:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q82;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J83;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O83;;"FREQ mapping, řádky 36:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q83;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J84;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O84;;"FREQ mapping, řádky 37:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q84;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J85;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O85;;"FREQ mapping, řádky 38:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q85;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J86;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O86;;"FREQ mapping, řádky 39:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q86;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J87;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O87;;"FREQ mapping, řádky 40:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q87;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J88;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O88;;"FREQ mapping, řádky 42:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q88;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J89;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O89;;"FREQ mapping, řádky 43:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q89;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J90;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O90;;"FREQ mapping, řádky 44:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q90;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J91;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O91;;"FREQ mapping, řádky 45:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q91;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J92;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O92;;"FREQ mapping, řádky 46:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q92;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J93;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O93;;"FREQ mapping, řádky 47:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q93;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;P94;"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.";"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.
+EA text obsahuje znění FREQ z Book1 a navíc vložený NFR. Před převodem oddělit jednotlivá tvrzení a ověřit jejich scope.";Odlišit rozšířenou dokumentaci od změněného významu stejného FREQ ID.
+Business a FREQ;Q94;ČEKÁ — ověřit analýzu → scope → business vazby;"ROZŠÍŘENÝ TEXT EA S NFR; neprovádět automatické rozdělení ani schválení.";Přesný druh rozdílu.
+Business a FREQ;J95;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O95;;"FREQ mapping, řádky 6:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q95;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J96;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O96;;"FREQ mapping, řádky 7:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q96;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J97;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O97;;"FREQ mapping, řádky 8:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q97;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J98;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O98;;"FREQ mapping, řádky 9:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q98;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J99;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O99;;"FREQ mapping, řádky 10:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q99;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J100;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O100;;"FREQ mapping, řádky 11:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q100;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J101;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O101;;"FREQ mapping, řádky 12:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q101;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J102;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O102;;"FREQ mapping, řádky 13:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q102;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J103;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O103;;"FREQ mapping, řádky 14:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q103;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J104;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O104;;"FREQ mapping, řádky 15:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q104;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J105;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O105;;"FREQ mapping, řádky 16:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q105;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J106;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O106;;"FREQ mapping, řádky 17:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q106;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J107;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O107;;"FREQ mapping, řádky 18:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q107;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J108;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O108;;"FREQ mapping, řádky 19:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q108;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J109;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Marketingový/leadový požadavek není automaticky potvrzenou součástí Atlas MVP; ověřit platnost v aktuálním CZ BRD.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O109;;"FREQ mapping, řádky 20:
+B1 — závazný Board scope; potvrzen uživatelem; CZ BRD
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q109;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;P110;"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.";"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.
+V Book1 FREQ mapping není odpovídající přesné ID; porovnat zdrojové znění a verzi.";Úplná kontrola existujících řádků, bez domýšlení nahrazení.
+Business a FREQ;P111;"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.";"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.
+V Book1 FREQ mapping není odpovídající přesné ID; porovnat zdrojové znění a verzi.";Úplná kontrola existujících řádků, bez domýšlení nahrazení.
+Business a FREQ;J112;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Zajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O112;;"FREQ mapping, řádky 55:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q112;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J113;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Zajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O113;;"FREQ mapping, řádky 56:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q113;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J114;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Zajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O114;;"FREQ mapping, řádky 57:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q114;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J115;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Zajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O115;;"FREQ mapping, řádky 58:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q115;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J116;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Zajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O116;;"FREQ mapping, řádky 59:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q116;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J117;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Zajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O117;;"FREQ mapping, řádky 60:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q117;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J118;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Zajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O118;;"FREQ mapping, řádky 61:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q118;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J119;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Zajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O119;;"FREQ mapping, řádky 62:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q119;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J120;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Zajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O120;;"FREQ mapping, řádky 63:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q120;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;P121;"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.";"EA text je vstupní inventura; aktuálnost a schválení business požadavku neověřeny.
+V Book1 FREQ mapping není odpovídající přesné ID; porovnat zdrojové znění a verzi.";Úplná kontrola existujících řádků, bez domýšlení nahrazení.
+Business a FREQ;J122;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Minimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O122;;"FREQ mapping, řádky 21:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q122;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J123;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Minimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O123;;"FREQ mapping, řádky 64:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q123;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J124;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Minimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O124;;"FREQ mapping, řádky 65:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q124;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J125;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Minimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O125;;"FREQ mapping, řádky 66:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q125;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J126;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Minimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O126;;"FREQ mapping, řádky 67:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q126;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J127;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Minimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O127;;"FREQ mapping, řádky 68:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q127;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J128;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Minimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O128;;"FREQ mapping, řádky 69:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q128;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J129;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Minimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O129;;"FREQ mapping, řádky 70:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q129;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J130;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Minimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O130;;"FREQ mapping, řádky 71:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q130;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J131;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Minimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O131;;"FREQ mapping, řádky 72:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q131;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J132;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Minimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O132;;"FREQ mapping, řádky 73:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q132;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J133;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Minimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O133;;"FREQ mapping, řádky 74:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q133;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J134;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Minimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O134;;"FREQ mapping, řádky 75:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q134;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J135;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Minimum zákaznických dat zůstává potřebné. Automatický Siebel lookup/prefill/population není v MVP bez opětovného potvrzení. Oddělit jej od ruční údržby a datové připravenosti.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O135;;"FREQ mapping, řádky 76:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14–15
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q135;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J136;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Ověřit pravidla VFID/email/admin identity a jejich realizaci pro manuální onboarding. Nedovozovat automatizaci ani detail role jen ze starého řádku.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O136;;"FREQ mapping, řádky 77:
+B1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q136;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J137;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Ověřit pravidla VFID/email/admin identity a jejich realizaci pro manuální onboarding. Nedovozovat automatizaci ani detail role jen ze starého řádku.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O137;;"FREQ mapping, řádky 78:
+B1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q137;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J138;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Ověřit pravidla VFID/email/admin identity a jejich realizaci pro manuální onboarding. Nedovozovat automatizaci ani detail role jen ze starého řádku.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O138;;"FREQ mapping, řádky 79:
+B1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q138;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J139;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Ověřit pravidla VFID/email/admin identity a jejich realizaci pro manuální onboarding. Nedovozovat automatizaci ani detail role jen ze starého řádku.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O139;;"FREQ mapping, řádky 80:
+B1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q139;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J140;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Ověřit pravidla VFID/email/admin identity a jejich realizaci pro manuální onboarding. Nedovozovat automatizaci ani detail role jen ze starého řádku.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O140;;"FREQ mapping, řádky 81:
+B1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q140;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J141;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Ověřit pravidla VFID/email/admin identity a jejich realizaci pro manuální onboarding. Nedovozovat automatizaci ani detail role jen ze starého řádku.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O141;;"FREQ mapping, řádky 82:
+B1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q141;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J142;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Ověřit pravidla VFID/email/admin identity a jejich realizaci pro manuální onboarding. Nedovozovat automatizaci ani detail role jen ze starého řádku.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O142;;"FREQ mapping, řádky 83:
+B1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q142;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J143;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Ověřit pravidla VFID/email/admin identity a jejich realizaci pro manuální onboarding. Nedovozovat automatizaci ani detail role jen ze starého řádku.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O143;;"FREQ mapping, řádky 84:
+B1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q143;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J144;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Dostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O144;;"FREQ mapping, řádky 85:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q144;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J145;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Dostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O145;;"FREQ mapping, řádky 86:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q145;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J146;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Dostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O146;;"FREQ mapping, řádky 87:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q146;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J147;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Dostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O147;;"FREQ mapping, řádky 88:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q147;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J148;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Dostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O148;;"FREQ mapping, řádky 89:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q148;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J149;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Dostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O149;;"FREQ mapping, řádky 90:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q149;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J150;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Dostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O150;;"FREQ mapping, řádky 91:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q150;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J151;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Dostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O151;;"FREQ mapping, řádky 92:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q151;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J152;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Podpora a ticket operace v povoleném company kontextu zůstávají MVP. V4 onboarding je manuální. Oddělit admin eligibility od detailních funkčních oprávnění; RBAC a hranice company ověřit podle kontraktu.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O152;;"FREQ mapping, řádky 163:
+B1 — závazný Board scope; potvrzen uživatelem; M1 — MVP Requirements, MVP Functional Decomposition
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q152;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J153;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Zajistit minimální validní zákaznický identifikátor a konzistentní vazbu company → zákazník; konkrétní validace a editovací role ověřit. Nezaměňovat CRM ID, CA, BA a company UUID.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O153;;"FREQ mapping, řádky 164:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 14; B1 — závazný Board scope; potvrzen uživatelem
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q153;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J154;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Dostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O154;;"FREQ mapping, řádky 196:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q154;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J155;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Dostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O155;;"FREQ mapping, řádky 197:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q155;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J156;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Dostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O156;;"FREQ mapping, řádky 198:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q156;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J157;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Dostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O157;;"FREQ mapping, řádky 199:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q157;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J158;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Dostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O158;;"FREQ mapping, řádky 200:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q158;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J159;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Dostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O159;;"FREQ mapping, řádky 201:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q159;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+Business a FREQ;J160;;"PRACOVNÍ VÝKLAD Z MAPOVÁNÍ; schválení neověřeno.
+Dostupnost produktu/subscription a konzistence company/CRM ID jsou vstupy E2E. Group vlastní platformní implementaci; stav ACTIVE, pořadí aktivace a event kontrakty vyžadují ověření.";"Shoda FREQ ID i normalizovaného zdrojového textu; přenesen pracovní návrh, nikoli schválení."
+Business a FREQ;O160;;"FREQ mapping, řádky 202:
+M1 — MVP Requirements, MVP Functional Decomposition — ř. 16–17
+Úplnost a poslední vydání primárního zdroje neověřeny.";Dohledatelná pracovní evidence.
+Business a FREQ;Q160;ČEKÁ — ověřit analýzu → scope → business vazby;"TEXT A ID SHODNÉ S BOOK1; aktuální schválení, capability a obsahová shoda SREQ zůstávají otevřené.";Výsledek textového porovnání.
+EA SREQ;J1;Potvrzené FREQ / zdroj;FREQ reference v Book1 / stav ověření;Rozlišit existenci workbookové reference od potvrzené vazby.
+EA SREQ;J6;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!2: F-REQ-IAM-21";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J7;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!3: F-REQ-IAM-23";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J8;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!4: F-REQ-IAM-25";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J9;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!5: F-REQ-IAM-24";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J10;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!178: F-REQ-IAM-26";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J11;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!179: F-REQ-IAM-27";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J12;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!180: F-REQ-IAM-28";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J13;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!181: F-REQ-IAM-29";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J14;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!6: F-REQ-MKT-23";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;L14;;"ROZPOR: EA popisuje assisted-ticket email configuration, Book1 lead-create. Ověřit zdroj a verzi; stejné ID není potvrzení shody.";Známý sémantický konflikt.
+EA SREQ;J15;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!7: F-REQ-MKT-24";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J16;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!8: F-REQ-MKT-25";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J19;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!165: F-REQ-IAM-03";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J22;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!49: F-REQ-IAM-21";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;L22;;"U2, pravidlo uživatele 2.11.: VFID sub a odpovídající ONSC/WSC user 1:1; email není párovací klíč. Toto upřesnění nemění původní EA text v D.";Doplnění identity přímo k příslušnému modelovému SREQ.
+EA SREQ;J23;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!166: F-REQ-IAM-21";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J27;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!167: NFR-03";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J28;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!168: NFR-03";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J29;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!50: NFR-01";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J31;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!52: F-REQ-IAM-21";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J32;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!184: F-REQ-IAM-30";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J33;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!53: F-REQ-IAM-31";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J34;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!182: F-REQ-IAM-32";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J35;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!183: F-REQ-IAM-33";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J36;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!185: F-REQ-IAM-34; F-REQ-IAM-35; F-REQ-IAM-36; F-REQ-IAM-37; F-REQ-IAM-38";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J37;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!186: F-REQ-IAM-34; F-REQ-IAM-35; F-REQ-IAM-36; F-REQ-IAM-37; F-REQ-IAM-38";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J38;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!54: F-REQ-ONB-01; F-REQ-ONB-02; F-REQ-ONB-03; F-REQ-ONB-13";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J41;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!175: ";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J43;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!95: F-REQ-CHM-01";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J44;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!96: F-REQ-IAM-21";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J45;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!97: F-REQ-IAM-39";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J46;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!98: F-REQ-CHM-02";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J47;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!99: F-REQ-CHM-03";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J48;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!100: F-REQ-CHM-04";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J49;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!103: F-REQ-IAM-06";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J50;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!104: F-REQ-IAM-07";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J51;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!105: F-REQ-IAM-08";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J52;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!106: F-REQ-IAM-09";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J53;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!107: F-REQ-IAM-10";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J54;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!108: F-REQ-IAM-11";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J55;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!109: F-REQ-IAM-12";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J56;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!110: F-REQ-IAM-13";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J57;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!111: F-REQ-IAM-14";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J58;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!112: F-REQ-IAM-15";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J59;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!113: F-REQ-IAM-16";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J60;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!114: F-REQ-IAM-17";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J61;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!115: F-REQ-IAM-18";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J62;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!116: F-REQ-IAM-19";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J63;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!117: F-REQ-IAM-20";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J64;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!118: F-REQ-IAM-26";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J65;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!119: F-REQ-IAM-27";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J66;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!120: F-REQ-IAM-28";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J67;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!121: F-REQ-IAM-29";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J68;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!122: F-REQ-IAM-31";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J69;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!123: F-REQ-IAM-30; F-REQ-IAM-32; F-REQ-IAM-33";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J70;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!124: F-REQ-IAM-34";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J71;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!125: F-REQ-IAM-35";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J72;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!126: F-REQ-IAM-36";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J73;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!127: F-REQ-IAM-37";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J74;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!128: F-REQ-IAM-38";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J75;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!129: F-REQ-IAM-40; F-REQ-IAM-42";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J76;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!130: F-REQ-IAM-41; F-REQ-IAM-42";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J77;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!131: F-REQ-IAM-43";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J78;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!132: F-REQ-IAM-44";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J79;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!133: F-REQ-IAM-45";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J80;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!134: F-REQ-IAM-46";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J81;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!135: F-REQ-IAM-49";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J82;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!136: F-REQ-IAM-50";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J83;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!137: F-REQ-IAM-51";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J84;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!177: F-REQ-CHM-01; F-REQ-CHM-02; F-REQ-CHM-03; F-REQ-CHM-04";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J85;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!138: F-REQ-CHM-24";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J87;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!176: ";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J90;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!139: NFR-01";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J91;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!187: F-REQ-IAM-40";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J92;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!188: F-REQ-IAM-41";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J93;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!189: F-REQ-IAM-42";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J94;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!190: F-REQ-IAM-43";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J95;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!191: F-REQ-IAM-44";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J96;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!192: F-REQ-IAM-45";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J97;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!193: F-REQ-IAM-46";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J98;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!158: F-REQ-IAM-47";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J99;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!159: F-REQ-IAM-48";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J100;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!194: F-REQ-IAM-49";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J101;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!195: F-REQ-IAM-50";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J104;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!160: NFR-03";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J105;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!161: NFR-03";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J106;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!162: NFR-03";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J111;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!27: F-REQ-MKT-01";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
+EA SREQ;J112;;"WORKBOOKOVÁ REFERENCE; význam/scope nepotvrzeny.
+FREQ mapping!28: F-REQ-MKT-02";"Přesná EA GUID reference z existujícího v02 mapování; není nová EA vazba."
