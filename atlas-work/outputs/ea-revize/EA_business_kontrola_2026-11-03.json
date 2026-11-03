@@ -1,0 +1,29 @@
+{
+  "xmlSha256": "dcc42289f422c120105d791725bb27549238cc8c106812ac1ad36582c1a3861c",
+  "projectElements": 2093,
+  "projectDiagrams": 55,
+  "projectBusinessUseCases": 21,
+  "projectExplicitArchiMateCapabilities": 0,
+  "allExplicitArchiMateCapabilities": 6,
+  "projectApplicationFunctions": 228,
+  "projectTouchingConnectors": 1527,
+  "realizationConnectors": 228,
+  "realizationEndpointTypes": {
+    "ArchiMate_ApplicationFunction -> ArchiMate_Requirement": 228
+  },
+  "freqIncidentConnectors": 0,
+  "externalDiagramElementTypes": {
+    "uml:Sequence": 10,
+    "uml:Class": 44,
+    "uml:ProxyConnector": 5,
+    "uml:Boundary": 2,
+    "ArchiMate_ApplicationComponent": 23,
+    "uml:Note": 2,
+    "uml:Text": 2,
+    "enumeration": 2,
+    "uml:Actor": 3,
+    "uml:Enumeration": 1
+  },
+  "ucCoreCrossReferences": 0,
+  "limitations": "Observed XMI export/index, not live EA. Semantic correspondence proposals are not identity equivalence, approved requirements, or XMI edits."
+}

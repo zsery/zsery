@@ -1,0 +1,740 @@
+{
+  "constraints": [
+    {
+      "id": "EAID_ED57DB28_4C7C_4b46_A447_543047400916",
+      "name": "AD-01",
+      "type": "uml:Class",
+      "model": {
+        "package": "EAPK_7019D9CF_1DDC_436b_A2CA_6FB8F8F0563E",
+        "tpos": "0",
+        "ea_localid": "18592",
+        "ea_eleType": "element"
+      },
+      "properties": {
+        "documentation": "ServiceHub is the customer-facing digital layer for Atlas managed service visibility and support interaction.",
+        "isSpecification": "false",
+        "sType": "Class",
+        "nType": "0",
+        "alias": "Customer-facing digital layer",
+        "scope": "public",
+        "stereotype": "ArchiMate_Constraint",
+        "isRoot": "false",
+        "isLeaf": "false",
+        "isAbstract": "false",
+        "isActive": "false"
+      },
+      "project": {
+        "author": "SeryZ",
+        "version": "1.0",
+        "phase": "1.0",
+        "created": "2026-07-03 08:12:11",
+        "modified": "2026-11-01 15:29:05",
+        "complexity": "1",
+        "status": "Proposed"
+      },
+      "documentation": {},
+      "tags": [],
+      "xrefs": "<xrefs xmlns:xmi=\"http://schema.omg.org/spec/XMI/2.1\" xmlns:uml=\"http://schema.omg.org/spec/UML/2.1\" xmlns:GML=\"http://www.sparxsystems.com/profiles/GML/1.0\" xmlns:thecustomprofile=\"http://www.sparxsystems.com/profiles/thecustomprofile/1.0\" xmlns:BPMN1.1=\"http://www.sparxsystems.com/profiles/BPMN1.1/1.5\" xmlns:StandardProfileL2=\"http://www.omg.org/spec/UML/20110701/StandardProfileL2.xmi\" xmlns:EAUML=\"http://www.sparxsystems.com/profiles/EAUML/1.0\" xmlns:sysml=\"http://www.omg.org/spec/SysML/20080501/SysML-profile\" xmlns:ArchiMate3=\"http://www.sparxsystems.com/profiles/ArchiMate3/1.0\" xmlns:DFD=\"http://www.sparxsystems.com/profiles/DFD/1.1\" xmlns:DMN1.1=\"http://www.sparxsystems.com/profiles/DMN1.1/1.0\" xmlns:BPMN2.0=\"http://www.sparxsystems.com/profiles/BPMN2.0/1.5\" value=\"$XREFPROP=$XID={66988002-1A2E-44ad-AC81-62A158A58481}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=ArchiMate_Constraint;FQName=ArchiMate3::ArchiMate_Constraint;@ENDSTEREO;$DES;$CLT={ED57DB28-4C7C-4b46-A447-543047400916}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={4E2DD473-8BB9-41b0-A1E1-15CA6CA36915}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=_HideUmlLinks@ENDNAME;@TYPE=string@ENDTYPE;@VALU=True@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;@PROP=@NAME=_defaultDiagramType@ENDNAME;@TYPE=string@ENDTYPE;@VALU=ArchiMate3::Motivation@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={ED57DB28-4C7C-4b46-A447-543047400916}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;\"/>\n\t\t\t\t",
+      "path": "//90_Sandbox/Zdeněk Šerý sandbox/01_07_2026_ServiceHub_Atlas_CZ_PR25_0837/90.1 Business layer/VFCZ/Constraints/AD-01"
+    },
+    {
+      "id": "EAID_D9B354CD_C458_4e36_8399_B2F2A72A4314",
+      "name": "AD-02",
+      "type": "uml:Class",
+      "model": {
+        "package": "EAPK_7019D9CF_1DDC_436b_A2CA_6FB8F8F0563E",
+        "tpos": "0",
+        "ea_localid": "18593",
+        "ea_eleType": "element"
+      },
+      "properties": {
+        "documentation": "VFID / Vodafone Identity / IDaaS is mandatory for ServiceHub access.\n\nTech debt: VFID-related technical debt: identity alignment and onboarding dependencies must be resolved for the target ServiceHub access model.",
+        "isSpecification": "false",
+        "sType": "Class",
+        "nType": "0",
+        "alias": "Authentication",
+        "scope": "public",
+        "stereotype": "ArchiMate_Constraint",
+        "isRoot": "false",
+        "isLeaf": "false",
+        "isAbstract": "false",
+        "isActive": "false"
+      },
+      "project": {
+        "author": "SeryZ",
+        "version": "1.0",
+        "phase": "1.0",
+        "created": "2026-07-03 08:12:12",
+        "modified": "2026-11-01 15:29:05",
+        "complexity": "1",
+        "status": "Proposed"
+      },
+      "documentation": {},
+      "tags": [],
+      "xrefs": "<xrefs xmlns:xmi=\"http://schema.omg.org/spec/XMI/2.1\" xmlns:uml=\"http://schema.omg.org/spec/UML/2.1\" xmlns:GML=\"http://www.sparxsystems.com/profiles/GML/1.0\" xmlns:thecustomprofile=\"http://www.sparxsystems.com/profiles/thecustomprofile/1.0\" xmlns:BPMN1.1=\"http://www.sparxsystems.com/profiles/BPMN1.1/1.5\" xmlns:StandardProfileL2=\"http://www.omg.org/spec/UML/20110701/StandardProfileL2.xmi\" xmlns:EAUML=\"http://www.sparxsystems.com/profiles/EAUML/1.0\" xmlns:sysml=\"http://www.omg.org/spec/SysML/20080501/SysML-profile\" xmlns:ArchiMate3=\"http://www.sparxsystems.com/profiles/ArchiMate3/1.0\" xmlns:DFD=\"http://www.sparxsystems.com/profiles/DFD/1.1\" xmlns:DMN1.1=\"http://www.sparxsystems.com/profiles/DMN1.1/1.0\" xmlns:BPMN2.0=\"http://www.sparxsystems.com/profiles/BPMN2.0/1.5\" value=\"$XREFPROP=$XID={491D1411-7842-4c59-8E1F-DAFBA86DB09B}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=ArchiMate_Constraint;FQName=ArchiMate3::ArchiMate_Constraint;@ENDSTEREO;$DES;$CLT={D9B354CD-C458-4e36-8399-B2F2A72A4314}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={B82FEFB0-7A88-4cd0-9767-1914B54FE189}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=_HideUmlLinks@ENDNAME;@TYPE=string@ENDTYPE;@VALU=True@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;@PROP=@NAME=_defaultDiagramType@ENDNAME;@TYPE=string@ENDTYPE;@VALU=ArchiMate3::Motivation@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={D9B354CD-C458-4e36-8399-B2F2A72A4314}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;\"/>\n\t\t\t\t",
+      "path": "//90_Sandbox/Zdeněk Šerý sandbox/01_07_2026_ServiceHub_Atlas_CZ_PR25_0837/90.1 Business layer/VFCZ/Constraints/AD-02"
+    },
+    {
+      "id": "EAID_722FF8F7_1BD9_425e_A2E6_185C970D73EB",
+      "name": "AD-03",
+      "type": "uml:Class",
+      "model": {
+        "package": "EAPK_7019D9CF_1DDC_436b_A2CA_6FB8F8F0563E",
+        "tpos": "0",
+        "ea_localid": "18594",
+        "ea_eleType": "element"
+      },
+      "properties": {
+        "documentation": "Marketplace is used as subscription and company-product source for Atlas service visibility.\n\nTech debt: Technical debt: ONSC / WSC remain sources for user identities and roles, while CRM remains the source for customer data; target identity, role and customer-context alignment must be resolved.",
+        "isSpecification": "false",
+        "sType": "Class",
+        "nType": "0",
+        "alias": "Subscription data",
+        "scope": "public",
+        "stereotype": "ArchiMate_Constraint",
+        "isRoot": "false",
+        "isLeaf": "false",
+        "isAbstract": "false",
+        "isActive": "false"
+      },
+      "project": {
+        "author": "SeryZ",
+        "version": "1.0",
+        "phase": "1.0",
+        "created": "2026-07-03 08:12:12",
+        "modified": "2026-11-01 15:29:05",
+        "complexity": "1",
+        "status": "Proposed"
+      },
+      "documentation": {},
+      "tags": [],
+      "xrefs": "<xrefs xmlns:xmi=\"http://schema.omg.org/spec/XMI/2.1\" xmlns:uml=\"http://schema.omg.org/spec/UML/2.1\" xmlns:GML=\"http://www.sparxsystems.com/profiles/GML/1.0\" xmlns:thecustomprofile=\"http://www.sparxsystems.com/profiles/thecustomprofile/1.0\" xmlns:BPMN1.1=\"http://www.sparxsystems.com/profiles/BPMN1.1/1.5\" xmlns:StandardProfileL2=\"http://www.omg.org/spec/UML/20110701/StandardProfileL2.xmi\" xmlns:EAUML=\"http://www.sparxsystems.com/profiles/EAUML/1.0\" xmlns:sysml=\"http://www.omg.org/spec/SysML/20080501/SysML-profile\" xmlns:ArchiMate3=\"http://www.sparxsystems.com/profiles/ArchiMate3/1.0\" xmlns:DFD=\"http://www.sparxsystems.com/profiles/DFD/1.1\" xmlns:DMN1.1=\"http://www.sparxsystems.com/profiles/DMN1.1/1.0\" xmlns:BPMN2.0=\"http://www.sparxsystems.com/profiles/BPMN2.0/1.5\" value=\"$XREFPROP=$XID={DC5B4223-BD2E-48de-A18D-45129977A92E}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=ArchiMate_Constraint;FQName=ArchiMate3::ArchiMate_Constraint;@ENDSTEREO;$DES;$CLT={722FF8F7-1BD9-425e-A2E6-185C970D73EB}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={3BE6AC41-076C-4b70-ADBE-A280AF2080C6}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=_HideUmlLinks@ENDNAME;@TYPE=string@ENDTYPE;@VALU=True@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;@PROP=@NAME=_defaultDiagramType@ENDNAME;@TYPE=string@ENDTYPE;@VALU=ArchiMate3::Motivation@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={722FF8F7-1BD9-425e-A2E6-185C970D73EB}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;\"/>\n\t\t\t\t",
+      "path": "//90_Sandbox/Zdeněk Šerý sandbox/01_07_2026_ServiceHub_Atlas_CZ_PR25_0837/90.1 Business layer/VFCZ/Constraints/AD-03"
+    },
+    {
+      "id": "EAID_E0E4D53B_A619_4ab9_AD4D_F98ADDCF4940",
+      "name": "AD-04",
+      "type": "uml:Class",
+      "model": {
+        "package": "EAPK_7019D9CF_1DDC_436b_A2CA_6FB8F8F0563E",
+        "tpos": "0",
+        "ea_localid": "18595",
+        "ea_eleType": "element"
+      },
+      "properties": {
+        "documentation": "SNOW EVE is the system of record for Atlas-relevant case / ticket lifecycle.",
+        "isSpecification": "false",
+        "sType": "Class",
+        "nType": "0",
+        "alias": "Ticketing",
+        "scope": "public",
+        "stereotype": "ArchiMate_Constraint",
+        "isRoot": "false",
+        "isLeaf": "false",
+        "isAbstract": "false",
+        "isActive": "false"
+      },
+      "project": {
+        "author": "SeryZ",
+        "version": "1.0",
+        "phase": "1.0",
+        "created": "2026-07-03 08:12:13",
+        "modified": "2026-11-01 15:29:05",
+        "complexity": "1",
+        "status": "Proposed"
+      },
+      "documentation": {},
+      "tags": [],
+      "xrefs": "<xrefs xmlns:xmi=\"http://schema.omg.org/spec/XMI/2.1\" xmlns:uml=\"http://schema.omg.org/spec/UML/2.1\" xmlns:GML=\"http://www.sparxsystems.com/profiles/GML/1.0\" xmlns:thecustomprofile=\"http://www.sparxsystems.com/profiles/thecustomprofile/1.0\" xmlns:BPMN1.1=\"http://www.sparxsystems.com/profiles/BPMN1.1/1.5\" xmlns:StandardProfileL2=\"http://www.omg.org/spec/UML/20110701/StandardProfileL2.xmi\" xmlns:EAUML=\"http://www.sparxsystems.com/profiles/EAUML/1.0\" xmlns:sysml=\"http://www.omg.org/spec/SysML/20080501/SysML-profile\" xmlns:ArchiMate3=\"http://www.sparxsystems.com/profiles/ArchiMate3/1.0\" xmlns:DFD=\"http://www.sparxsystems.com/profiles/DFD/1.1\" xmlns:DMN1.1=\"http://www.sparxsystems.com/profiles/DMN1.1/1.0\" xmlns:BPMN2.0=\"http://www.sparxsystems.com/profiles/BPMN2.0/1.5\" value=\"$XREFPROP=$XID={760780F8-BD98-4437-8EF1-39C39DE5B88E}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=ArchiMate_Constraint;FQName=ArchiMate3::ArchiMate_Constraint;@ENDSTEREO;$DES;$CLT={E0E4D53B-A619-4ab9-AD4D-F98ADDCF4940}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={F155ACFA-3966-433f-8694-F2914406C261}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=_HideUmlLinks@ENDNAME;@TYPE=string@ENDTYPE;@VALU=True@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;@PROP=@NAME=_defaultDiagramType@ENDNAME;@TYPE=string@ENDTYPE;@VALU=ArchiMate3::Motivation@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={E0E4D53B-A619-4ab9-AD4D-F98ADDCF4940}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;\"/>\n\t\t\t\t",
+      "path": "//90_Sandbox/Zdeněk Šerý sandbox/01_07_2026_ServiceHub_Atlas_CZ_PR25_0837/90.1 Business layer/VFCZ/Constraints/AD-04"
+    },
+    {
+      "id": "EAID_35449BC8_E7BE_40ad_B153_58589875C696",
+      "name": "AD-05",
+      "type": "uml:Class",
+      "model": {
+        "package": "EAPK_7019D9CF_1DDC_436b_A2CA_6FB8F8F0563E",
+        "tpos": "0",
+        "ea_localid": "18596",
+        "ea_eleType": "element"
+      },
+      "properties": {
+        "documentation": "ONSC, WSC and direct URL are treated as technical entry channels to the same ServiceHub access flow. For CZ MVP, ServiceHub entry must be available from both V2 OneNet and V4 Self-care portal paths with consistent static ServiceHub content. Dynamic menu rendering applies only where required by the local portal implementation.",
+        "isSpecification": "false",
+        "sType": "Class",
+        "nType": "0",
+        "alias": "Access channels",
+        "scope": "public",
+        "stereotype": "ArchiMate_Constraint",
+        "isRoot": "false",
+        "isLeaf": "false",
+        "isAbstract": "false",
+        "isActive": "false"
+      },
+      "project": {
+        "author": "SeryZ",
+        "version": "1.0",
+        "phase": "1.0",
+        "created": "2026-07-03 08:12:14",
+        "modified": "2026-11-01 15:29:05",
+        "complexity": "1",
+        "status": "Proposed"
+      },
+      "documentation": {},
+      "tags": [],
+      "xrefs": "<xrefs xmlns:xmi=\"http://schema.omg.org/spec/XMI/2.1\" xmlns:uml=\"http://schema.omg.org/spec/UML/2.1\" xmlns:GML=\"http://www.sparxsystems.com/profiles/GML/1.0\" xmlns:thecustomprofile=\"http://www.sparxsystems.com/profiles/thecustomprofile/1.0\" xmlns:BPMN1.1=\"http://www.sparxsystems.com/profiles/BPMN1.1/1.5\" xmlns:StandardProfileL2=\"http://www.omg.org/spec/UML/20110701/StandardProfileL2.xmi\" xmlns:EAUML=\"http://www.sparxsystems.com/profiles/EAUML/1.0\" xmlns:sysml=\"http://www.omg.org/spec/SysML/20080501/SysML-profile\" xmlns:ArchiMate3=\"http://www.sparxsystems.com/profiles/ArchiMate3/1.0\" xmlns:DFD=\"http://www.sparxsystems.com/profiles/DFD/1.1\" xmlns:DMN1.1=\"http://www.sparxsystems.com/profiles/DMN1.1/1.0\" xmlns:BPMN2.0=\"http://www.sparxsystems.com/profiles/BPMN2.0/1.5\" value=\"$XREFPROP=$XID={15D662BF-F2A0-4f08-9793-7760F722078F}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=ArchiMate_Constraint;FQName=ArchiMate3::ArchiMate_Constraint;@ENDSTEREO;$DES;$CLT={35449BC8-E7BE-40ad-B153-58589875C696}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={AA5D18C9-75E7-491d-9E4E-792080CD96A4}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=_HideUmlLinks@ENDNAME;@TYPE=string@ENDTYPE;@VALU=True@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;@PROP=@NAME=_defaultDiagramType@ENDNAME;@TYPE=string@ENDTYPE;@VALU=ArchiMate3::Motivation@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={35449BC8-E7BE-40ad-B153-58589875C696}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;\"/>\n\t\t\t\t",
+      "path": "//90_Sandbox/Zdeněk Šerý sandbox/01_07_2026_ServiceHub_Atlas_CZ_PR25_0837/90.1 Business layer/VFCZ/Constraints/AD-05"
+    },
+    {
+      "id": "EAID_C3BBD673_50BF_4a8a_9B58_CC69B285E7BF",
+      "name": "AD-06",
+      "type": "uml:Class",
+      "model": {
+        "package": "EAPK_7019D9CF_1DDC_436b_A2CA_6FB8F8F0563E",
+        "tpos": "0",
+        "ea_localid": "18597",
+        "ea_eleType": "element"
+      },
+      "properties": {
+        "documentation": "No purchase / license modification and no Service Desk access to ServiceHub on behalf of customer in MVP.",
+        "isSpecification": "false",
+        "sType": "Class",
+        "nType": "0",
+        "alias": "MVP scope",
+        "scope": "public",
+        "stereotype": "ArchiMate_Constraint",
+        "isRoot": "false",
+        "isLeaf": "false",
+        "isAbstract": "false",
+        "isActive": "false"
+      },
+      "project": {
+        "author": "SeryZ",
+        "version": "1.0",
+        "phase": "1.0",
+        "created": "2026-07-03 08:12:14",
+        "modified": "2026-11-01 15:29:05",
+        "complexity": "1",
+        "status": "Proposed"
+      },
+      "documentation": {},
+      "tags": [],
+      "xrefs": "<xrefs xmlns:xmi=\"http://schema.omg.org/spec/XMI/2.1\" xmlns:uml=\"http://schema.omg.org/spec/UML/2.1\" xmlns:GML=\"http://www.sparxsystems.com/profiles/GML/1.0\" xmlns:thecustomprofile=\"http://www.sparxsystems.com/profiles/thecustomprofile/1.0\" xmlns:BPMN1.1=\"http://www.sparxsystems.com/profiles/BPMN1.1/1.5\" xmlns:StandardProfileL2=\"http://www.omg.org/spec/UML/20110701/StandardProfileL2.xmi\" xmlns:EAUML=\"http://www.sparxsystems.com/profiles/EAUML/1.0\" xmlns:sysml=\"http://www.omg.org/spec/SysML/20080501/SysML-profile\" xmlns:ArchiMate3=\"http://www.sparxsystems.com/profiles/ArchiMate3/1.0\" xmlns:DFD=\"http://www.sparxsystems.com/profiles/DFD/1.1\" xmlns:DMN1.1=\"http://www.sparxsystems.com/profiles/DMN1.1/1.0\" xmlns:BPMN2.0=\"http://www.sparxsystems.com/profiles/BPMN2.0/1.5\" value=\"$XREFPROP=$XID={B7C8B17A-0065-4e5e-8B5F-86C8DF576056}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=ArchiMate_Constraint;FQName=ArchiMate3::ArchiMate_Constraint;@ENDSTEREO;$DES;$CLT={C3BBD673-50BF-4a8a-9B58-CC69B285E7BF}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={AA305C77-CF7F-44cf-B203-AA4D2D9947F2}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=_HideUmlLinks@ENDNAME;@TYPE=string@ENDTYPE;@VALU=True@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;@PROP=@NAME=_defaultDiagramType@ENDNAME;@TYPE=string@ENDTYPE;@VALU=ArchiMate3::Motivation@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={C3BBD673-50BF-4a8a-9B58-CC69B285E7BF}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;\"/>\n\t\t\t\t",
+      "path": "//90_Sandbox/Zdeněk Šerý sandbox/01_07_2026_ServiceHub_Atlas_CZ_PR25_0837/90.1 Business layer/VFCZ/Constraints/AD-06"
+    },
+    {
+      "id": "EAID_436FF5E3_7559_4a74_845F_38498981CD3F",
+      "name": "AD-07",
+      "type": "uml:Class",
+      "model": {
+        "package": "EAPK_7019D9CF_1DDC_436b_A2CA_6FB8F8F0563E",
+        "tpos": "0",
+        "ea_localid": "18598",
+        "ea_eleType": "element"
+      },
+      "properties": {
+        "documentation": "V4 Atlas customers and their administrators must be represented and maintained in SNOW if they are expected to create, view or close Atlas-related tickets via ServiceHub. The baseline model in this SO is Atlas-filtered lifecycle propagation. The alternative decision option is full V4 Business customer/admin population in SNOW without active Atlas product filtering. The final option, owning project and implementation scope must be confirmed.\n\nTech debt: Scope ownership and implementation responsibility for V4 customer/admin onboarding and lifecycle propagation to SNOW remain open. If full V4 population is selected, additional design is required for data volume, customers without active service, lifecycle dependency conflict, privacy controls and active/passive status in SNOW.",
+        "isSpecification": "false",
+        "sType": "Class",
+        "nType": "0",
+        "alias": "V4 customer and admin presence in SNOW",
+        "scope": "public",
+        "stereotype": "ArchiMate_Constraint",
+        "isRoot": "false",
+        "isLeaf": "false",
+        "isAbstract": "false",
+        "isActive": "false"
+      },
+      "project": {
+        "author": "SeryZ",
+        "version": "1.0",
+        "phase": "1.0",
+        "created": "2026-07-03 08:12:15",
+        "modified": "2026-11-01 15:29:05",
+        "complexity": "1",
+        "status": "Proposed"
+      },
+      "documentation": {},
+      "tags": [],
+      "xrefs": "<xrefs xmlns:xmi=\"http://schema.omg.org/spec/XMI/2.1\" xmlns:uml=\"http://schema.omg.org/spec/UML/2.1\" xmlns:GML=\"http://www.sparxsystems.com/profiles/GML/1.0\" xmlns:thecustomprofile=\"http://www.sparxsystems.com/profiles/thecustomprofile/1.0\" xmlns:BPMN1.1=\"http://www.sparxsystems.com/profiles/BPMN1.1/1.5\" xmlns:StandardProfileL2=\"http://www.omg.org/spec/UML/20110701/StandardProfileL2.xmi\" xmlns:EAUML=\"http://www.sparxsystems.com/profiles/EAUML/1.0\" xmlns:sysml=\"http://www.omg.org/spec/SysML/20080501/SysML-profile\" xmlns:ArchiMate3=\"http://www.sparxsystems.com/profiles/ArchiMate3/1.0\" xmlns:DFD=\"http://www.sparxsystems.com/profiles/DFD/1.1\" xmlns:DMN1.1=\"http://www.sparxsystems.com/profiles/DMN1.1/1.0\" xmlns:BPMN2.0=\"http://www.sparxsystems.com/profiles/BPMN2.0/1.5\" value=\"$XREFPROP=$XID={58664C1B-0E09-4439-AE97-6B2F01D19F18}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=ArchiMate_Constraint;FQName=ArchiMate3::ArchiMate_Constraint;@ENDSTEREO;$DES;$CLT={436FF5E3-7559-4a74-845F-38498981CD3F}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={738FD90B-1544-4c26-A95F-918130DF646B}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=_HideUmlLinks@ENDNAME;@TYPE=string@ENDTYPE;@VALU=True@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;@PROP=@NAME=_defaultDiagramType@ENDNAME;@TYPE=string@ENDTYPE;@VALU=ArchiMate3::Motivation@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={436FF5E3-7559-4a74-845F-38498981CD3F}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;\"/>\n\t\t\t\t",
+      "path": "//90_Sandbox/Zdeněk Šerý sandbox/01_07_2026_ServiceHub_Atlas_CZ_PR25_0837/90.1 Business layer/VFCZ/Constraints/AD-07"
+    },
+    {
+      "id": "EAID_213C4D3B_E083_43c1_B676_5AA96D557C0A",
+      "name": "AD-08",
+      "type": "uml:Class",
+      "model": {
+        "package": "EAPK_7019D9CF_1DDC_436b_A2CA_6FB8F8F0563E",
+        "tpos": "0",
+        "ea_localid": "18599",
+        "ea_eleType": "element"
+      },
+      "properties": {
+        "documentation": "ServiceHub requires a user-info / customer-context lookup after VFID authentication. The standard DXL/API behaviour supports V4 without the additional parameter, while V2 requires an additional parameter that causes significant performance degradation and may also affect shared WSC/ONSC channels. For Drop 1 / MVP, V2 access may need to be constrained to Atlas-relevant customers as a short-term mitigation. This protects WSC/ONSC stability but may reduce customer adoption and increase load on assisted channels. Full V2 enablement is expected in a later drop and should be owned and traced under the SNOW / ServiceNow-for-Business related delivery stream, unless another owner is formally confirmed. SNOW V2 backend readiness does not automatically imply ServiceHub V2 customer-facing visibility.\n\nTech debt: Strategic DXL/API optimization is required to support V2 and V4 without the additional parameter and without performance degradation. Current estimate from source material is high effort and outside MVP timeline. Ownership, funding and prioritization must be confirmed.",
+        "isSpecification": "false",
+        "sType": "Class",
+        "nType": "0",
+        "alias": "V2 ServiceHub access and DXL/API performance",
+        "scope": "public",
+        "stereotype": "ArchiMate_Constraint",
+        "isRoot": "false",
+        "isLeaf": "false",
+        "isAbstract": "false",
+        "isActive": "false"
+      },
+      "project": {
+        "author": "SeryZ",
+        "version": "1.0",
+        "phase": "1.0",
+        "created": "2026-07-03 08:12:15",
+        "modified": "2026-11-01 15:29:05",
+        "complexity": "1",
+        "status": "Proposed"
+      },
+      "documentation": {},
+      "tags": [],
+      "xrefs": "<xrefs xmlns:xmi=\"http://schema.omg.org/spec/XMI/2.1\" xmlns:uml=\"http://schema.omg.org/spec/UML/2.1\" xmlns:GML=\"http://www.sparxsystems.com/profiles/GML/1.0\" xmlns:thecustomprofile=\"http://www.sparxsystems.com/profiles/thecustomprofile/1.0\" xmlns:BPMN1.1=\"http://www.sparxsystems.com/profiles/BPMN1.1/1.5\" xmlns:StandardProfileL2=\"http://www.omg.org/spec/UML/20110701/StandardProfileL2.xmi\" xmlns:EAUML=\"http://www.sparxsystems.com/profiles/EAUML/1.0\" xmlns:sysml=\"http://www.omg.org/spec/SysML/20080501/SysML-profile\" xmlns:ArchiMate3=\"http://www.sparxsystems.com/profiles/ArchiMate3/1.0\" xmlns:DFD=\"http://www.sparxsystems.com/profiles/DFD/1.1\" xmlns:DMN1.1=\"http://www.sparxsystems.com/profiles/DMN1.1/1.0\" xmlns:BPMN2.0=\"http://www.sparxsystems.com/profiles/BPMN2.0/1.5\" value=\"$XREFPROP=$XID={497C497B-38F6-415d-8F40-F8B2AEE44BD3}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=ArchiMate_Constraint;FQName=ArchiMate3::ArchiMate_Constraint;@ENDSTEREO;$DES;$CLT={213C4D3B-E083-43c1-B676-5AA96D557C0A}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={91E4951C-3B24-4515-A3D3-2B31EC59721D}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=_HideUmlLinks@ENDNAME;@TYPE=string@ENDTYPE;@VALU=True@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;@PROP=@NAME=_defaultDiagramType@ENDNAME;@TYPE=string@ENDTYPE;@VALU=ArchiMate3::Motivation@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={213C4D3B-E083-43c1-B676-5AA96D557C0A}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;\"/>\n\t\t\t\t",
+      "path": "//90_Sandbox/Zdeněk Šerý sandbox/01_07_2026_ServiceHub_Atlas_CZ_PR25_0837/90.1 Business layer/VFCZ/Constraints/AD-08"
+    },
+    {
+      "id": "EAID_54049EB3_4F48_4a2c_9D6F_5D8106D1DDEE",
+      "name": "ASS-01",
+      "type": "uml:Class",
+      "model": {
+        "package": "EAPK_7019D9CF_1DDC_436b_A2CA_6FB8F8F0563E",
+        "tpos": "0",
+        "ea_localid": "18600",
+        "ea_eleType": "element"
+      },
+      "properties": {
+        "documentation": "User access to ServiceHub is possible only via Vodafone Identity / VFID. Successful VFID authentication is mandatory for ServiceHub interaction.",
+        "isSpecification": "false",
+        "sType": "Class",
+        "nType": "0",
+        "alias": "Identity & Access",
+        "scope": "public",
+        "stereotype": "ArchiMate_Constraint",
+        "isRoot": "false",
+        "isLeaf": "false",
+        "isAbstract": "false",
+        "isActive": "false"
+      },
+      "project": {
+        "author": "SeryZ",
+        "version": "1.0",
+        "phase": "1.0",
+        "created": "2026-07-02 16:21:54",
+        "modified": "2026-11-01 15:29:05",
+        "complexity": "1",
+        "status": "Proposed"
+      },
+      "documentation": {},
+      "tags": [],
+      "xrefs": "<xrefs xmlns:xmi=\"http://schema.omg.org/spec/XMI/2.1\" xmlns:uml=\"http://schema.omg.org/spec/UML/2.1\" xmlns:GML=\"http://www.sparxsystems.com/profiles/GML/1.0\" xmlns:thecustomprofile=\"http://www.sparxsystems.com/profiles/thecustomprofile/1.0\" xmlns:BPMN1.1=\"http://www.sparxsystems.com/profiles/BPMN1.1/1.5\" xmlns:StandardProfileL2=\"http://www.omg.org/spec/UML/20110701/StandardProfileL2.xmi\" xmlns:EAUML=\"http://www.sparxsystems.com/profiles/EAUML/1.0\" xmlns:sysml=\"http://www.omg.org/spec/SysML/20080501/SysML-profile\" xmlns:ArchiMate3=\"http://www.sparxsystems.com/profiles/ArchiMate3/1.0\" xmlns:DFD=\"http://www.sparxsystems.com/profiles/DFD/1.1\" xmlns:DMN1.1=\"http://www.sparxsystems.com/profiles/DMN1.1/1.0\" xmlns:BPMN2.0=\"http://www.sparxsystems.com/profiles/BPMN2.0/1.5\" value=\"$XREFPROP=$XID={8F3FA708-F825-45d2-9D6C-415CE1978B7A}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=ArchiMate_Constraint;FQName=ArchiMate3::ArchiMate_Constraint;@ENDSTEREO;$DES;$CLT={54049EB3-4F48-4a2c-9D6F-5D8106D1DDEE}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={A5A5CAB9-AD3A-4997-B6DC-50B662993F2A}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=_HideUmlLinks@ENDNAME;@TYPE=string@ENDTYPE;@VALU=True@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;@PROP=@NAME=_defaultDiagramType@ENDNAME;@TYPE=string@ENDTYPE;@VALU=ArchiMate3::Motivation@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={54049EB3-4F48-4a2c-9D6F-5D8106D1DDEE}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;\"/>\n\t\t\t\t",
+      "path": "//90_Sandbox/Zdeněk Šerý sandbox/01_07_2026_ServiceHub_Atlas_CZ_PR25_0837/90.1 Business layer/VFCZ/Constraints/ASS-01"
+    },
+    {
+      "id": "EAID_F420E1FD_774E_4dda_BD0E_621B9E93D607",
+      "name": "ASS-02",
+      "type": "uml:Class",
+      "model": {
+        "package": "EAPK_7019D9CF_1DDC_436b_A2CA_6FB8F8F0563E",
+        "tpos": "0",
+        "ea_localid": "18601",
+        "ea_eleType": "element"
+      },
+      "properties": {
+        "documentation": "ServiceHub does not manage its own roles or permissions. Authorization is context-based and derived from upstream systems separately for each Customer Account. ServiceHub must not inherit access automatically across different customer entities.",
+        "isSpecification": "false",
+        "sType": "Class",
+        "nType": "0",
+        "alias": "Authorization",
+        "scope": "public",
+        "stereotype": "ArchiMate_Constraint",
+        "isRoot": "false",
+        "isLeaf": "false",
+        "isAbstract": "false",
+        "isActive": "false"
+      },
+      "project": {
+        "author": "SeryZ",
+        "version": "1.0",
+        "phase": "1.0",
+        "created": "2026-07-02 16:21:54",
+        "modified": "2026-11-01 15:29:05",
+        "complexity": "1",
+        "status": "Proposed"
+      },
+      "documentation": {},
+      "tags": [],
+      "xrefs": "<xrefs xmlns:xmi=\"http://schema.omg.org/spec/XMI/2.1\" xmlns:uml=\"http://schema.omg.org/spec/UML/2.1\" xmlns:GML=\"http://www.sparxsystems.com/profiles/GML/1.0\" xmlns:thecustomprofile=\"http://www.sparxsystems.com/profiles/thecustomprofile/1.0\" xmlns:BPMN1.1=\"http://www.sparxsystems.com/profiles/BPMN1.1/1.5\" xmlns:StandardProfileL2=\"http://www.omg.org/spec/UML/20110701/StandardProfileL2.xmi\" xmlns:EAUML=\"http://www.sparxsystems.com/profiles/EAUML/1.0\" xmlns:sysml=\"http://www.omg.org/spec/SysML/20080501/SysML-profile\" xmlns:ArchiMate3=\"http://www.sparxsystems.com/profiles/ArchiMate3/1.0\" xmlns:DFD=\"http://www.sparxsystems.com/profiles/DFD/1.1\" xmlns:DMN1.1=\"http://www.sparxsystems.com/profiles/DMN1.1/1.0\" xmlns:BPMN2.0=\"http://www.sparxsystems.com/profiles/BPMN2.0/1.5\" value=\"$XREFPROP=$XID={3ADF6F9A-52E3-4940-8662-6EDCF582020F}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=ArchiMate_Constraint;FQName=ArchiMate3::ArchiMate_Constraint;@ENDSTEREO;$DES;$CLT={F420E1FD-774E-4dda-BD0E-621B9E93D607}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={83790512-FF55-498c-A663-565891572A83}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=_HideUmlLinks@ENDNAME;@TYPE=string@ENDTYPE;@VALU=True@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;@PROP=@NAME=_defaultDiagramType@ENDNAME;@TYPE=string@ENDTYPE;@VALU=ArchiMate3::Motivation@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={F420E1FD-774E-4dda-BD0E-621B9E93D607}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;\"/>\n\t\t\t\t",
+      "path": "//90_Sandbox/Zdeněk Šerý sandbox/01_07_2026_ServiceHub_Atlas_CZ_PR25_0837/90.1 Business layer/VFCZ/Constraints/ASS-02"
+    },
+    {
+      "id": "EAID_C6A84687_EFF5_4c33_815C_D3264CD2AC74",
+      "name": "ASS-03",
+      "type": "uml:Class",
+      "model": {
+        "package": "EAPK_7019D9CF_1DDC_436b_A2CA_6FB8F8F0563E",
+        "tpos": "0",
+        "ea_localid": "18602",
+        "ea_eleType": "element"
+      },
+      "properties": {
+        "documentation": "A single VFID may be linked to multiple CRM customers and a CRM customer may map to multiple Marketplace companies. Customer Account context must be selected or resolved before ServiceHub exposes service-specific data. Company selection is not a generic ServiceHub MVP capability; MVP behaviour must be limited to the supported eligible context and must prevent cross-customer data exposure.",
+        "isSpecification": "false",
+        "sType": "Class",
+        "nType": "0",
+        "alias": "Customer / Company Context",
+        "scope": "public",
+        "stereotype": "ArchiMate_Constraint",
+        "isRoot": "false",
+        "isLeaf": "false",
+        "isAbstract": "false",
+        "isActive": "false"
+      },
+      "project": {
+        "author": "SeryZ",
+        "version": "1.0",
+        "phase": "1.0",
+        "created": "2026-07-02 16:21:55",
+        "modified": "2026-11-01 15:29:05",
+        "complexity": "1",
+        "status": "Proposed"
+      },
+      "documentation": {},
+      "tags": [],
+      "xrefs": "<xrefs xmlns:xmi=\"http://schema.omg.org/spec/XMI/2.1\" xmlns:uml=\"http://schema.omg.org/spec/UML/2.1\" xmlns:GML=\"http://www.sparxsystems.com/profiles/GML/1.0\" xmlns:thecustomprofile=\"http://www.sparxsystems.com/profiles/thecustomprofile/1.0\" xmlns:BPMN1.1=\"http://www.sparxsystems.com/profiles/BPMN1.1/1.5\" xmlns:StandardProfileL2=\"http://www.omg.org/spec/UML/20110701/StandardProfileL2.xmi\" xmlns:EAUML=\"http://www.sparxsystems.com/profiles/EAUML/1.0\" xmlns:sysml=\"http://www.omg.org/spec/SysML/20080501/SysML-profile\" xmlns:ArchiMate3=\"http://www.sparxsystems.com/profiles/ArchiMate3/1.0\" xmlns:DFD=\"http://www.sparxsystems.com/profiles/DFD/1.1\" xmlns:DMN1.1=\"http://www.sparxsystems.com/profiles/DMN1.1/1.0\" xmlns:BPMN2.0=\"http://www.sparxsystems.com/profiles/BPMN2.0/1.5\" value=\"$XREFPROP=$XID={8A3F1D62-3030-4bf2-95DC-A778CE2172ED}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=ArchiMate_Constraint;FQName=ArchiMate3::ArchiMate_Constraint;@ENDSTEREO;$DES;$CLT={C6A84687-EFF5-4c33-815C-D3264CD2AC74}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={F2400D76-C8D6-4594-A76B-15239A240938}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=_HideUmlLinks@ENDNAME;@TYPE=string@ENDTYPE;@VALU=True@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;@PROP=@NAME=_defaultDiagramType@ENDNAME;@TYPE=string@ENDTYPE;@VALU=ArchiMate3::Motivation@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={C6A84687-EFF5-4c33-815C-D3264CD2AC74}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;\"/>\n\t\t\t\t",
+      "path": "//90_Sandbox/Zdeněk Šerý sandbox/01_07_2026_ServiceHub_Atlas_CZ_PR25_0837/90.1 Business layer/VFCZ/Constraints/ASS-03"
+    },
+    {
+      "id": "EAID_79308F9E_73A4_460d_9FCD_2FAE178FA9CF",
+      "name": "ASS-04",
+      "type": "uml:Class",
+      "model": {
+        "package": "EAPK_7019D9CF_1DDC_436b_A2CA_6FB8F8F0563E",
+        "tpos": "0",
+        "ea_localid": "18603",
+        "ea_eleType": "element"
+      },
+      "properties": {
+        "documentation": "Marketplace is the source of truth for Atlas subscriptions, product status and company-product relationships.",
+        "isSpecification": "false",
+        "sType": "Class",
+        "nType": "0",
+        "alias": "Subscription Source",
+        "scope": "public",
+        "stereotype": "ArchiMate_Constraint",
+        "isRoot": "false",
+        "isLeaf": "false",
+        "isAbstract": "false",
+        "isActive": "false"
+      },
+      "project": {
+        "author": "SeryZ",
+        "version": "1.0",
+        "phase": "1.0",
+        "created": "2026-07-02 16:21:56",
+        "modified": "2026-11-01 15:29:05",
+        "complexity": "1",
+        "status": "Proposed"
+      },
+      "documentation": {},
+      "tags": [],
+      "xrefs": "<xrefs xmlns:xmi=\"http://schema.omg.org/spec/XMI/2.1\" xmlns:uml=\"http://schema.omg.org/spec/UML/2.1\" xmlns:GML=\"http://www.sparxsystems.com/profiles/GML/1.0\" xmlns:thecustomprofile=\"http://www.sparxsystems.com/profiles/thecustomprofile/1.0\" xmlns:BPMN1.1=\"http://www.sparxsystems.com/profiles/BPMN1.1/1.5\" xmlns:StandardProfileL2=\"http://www.omg.org/spec/UML/20110701/StandardProfileL2.xmi\" xmlns:EAUML=\"http://www.sparxsystems.com/profiles/EAUML/1.0\" xmlns:sysml=\"http://www.omg.org/spec/SysML/20080501/SysML-profile\" xmlns:ArchiMate3=\"http://www.sparxsystems.com/profiles/ArchiMate3/1.0\" xmlns:DFD=\"http://www.sparxsystems.com/profiles/DFD/1.1\" xmlns:DMN1.1=\"http://www.sparxsystems.com/profiles/DMN1.1/1.0\" xmlns:BPMN2.0=\"http://www.sparxsystems.com/profiles/BPMN2.0/1.5\" value=\"$XREFPROP=$XID={45C3629D-5BF2-4b1e-96CD-857C70A1F96B}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=ArchiMate_Constraint;FQName=ArchiMate3::ArchiMate_Constraint;@ENDSTEREO;$DES;$CLT={79308F9E-73A4-460d-9FCD-2FAE178FA9CF}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={83EADC0B-4042-47c3-8FFB-79D00234CBF8}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=_HideUmlLinks@ENDNAME;@TYPE=string@ENDTYPE;@VALU=True@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;@PROP=@NAME=_defaultDiagramType@ENDNAME;@TYPE=string@ENDTYPE;@VALU=ArchiMate3::Motivation@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={79308F9E-73A4-460d-9FCD-2FAE178FA9CF}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;\"/>\n\t\t\t\t",
+      "path": "//90_Sandbox/Zdeněk Šerý sandbox/01_07_2026_ServiceHub_Atlas_CZ_PR25_0837/90.1 Business layer/VFCZ/Constraints/ASS-04"
+    },
+    {
+      "id": "EAID_10F9868A_BA19_4482_B11C_A9FD5AF60822",
+      "name": "ASS-05",
+      "type": "uml:Class",
+      "model": {
+        "package": "EAPK_7019D9CF_1DDC_436b_A2CA_6FB8F8F0563E",
+        "tpos": "0",
+        "ea_localid": "18604",
+        "ea_eleType": "element"
+      },
+      "properties": {
+        "documentation": "SNOW EVE is the ticketing system for Atlas-relevant support cases. Atlas terminology refers to the customer support item as a case; lifecycle handling is managed in SNOW EVE.",
+        "isSpecification": "false",
+        "sType": "Class",
+        "nType": "0",
+        "alias": "Ticketing",
+        "scope": "public",
+        "stereotype": "ArchiMate_Constraint",
+        "isRoot": "false",
+        "isLeaf": "false",
+        "isAbstract": "false",
+        "isActive": "false"
+      },
+      "project": {
+        "author": "SeryZ",
+        "version": "1.0",
+        "phase": "1.0",
+        "created": "2026-07-02 16:21:56",
+        "modified": "2026-11-01 15:29:05",
+        "complexity": "1",
+        "status": "Proposed"
+      },
+      "documentation": {},
+      "tags": [],
+      "xrefs": "<xrefs xmlns:xmi=\"http://schema.omg.org/spec/XMI/2.1\" xmlns:uml=\"http://schema.omg.org/spec/UML/2.1\" xmlns:GML=\"http://www.sparxsystems.com/profiles/GML/1.0\" xmlns:thecustomprofile=\"http://www.sparxsystems.com/profiles/thecustomprofile/1.0\" xmlns:BPMN1.1=\"http://www.sparxsystems.com/profiles/BPMN1.1/1.5\" xmlns:StandardProfileL2=\"http://www.omg.org/spec/UML/20110701/StandardProfileL2.xmi\" xmlns:EAUML=\"http://www.sparxsystems.com/profiles/EAUML/1.0\" xmlns:sysml=\"http://www.omg.org/spec/SysML/20080501/SysML-profile\" xmlns:ArchiMate3=\"http://www.sparxsystems.com/profiles/ArchiMate3/1.0\" xmlns:DFD=\"http://www.sparxsystems.com/profiles/DFD/1.1\" xmlns:DMN1.1=\"http://www.sparxsystems.com/profiles/DMN1.1/1.0\" xmlns:BPMN2.0=\"http://www.sparxsystems.com/profiles/BPMN2.0/1.5\" value=\"$XREFPROP=$XID={2B736B3D-F845-4256-BA59-D5E49C09C886}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=ArchiMate_Constraint;FQName=ArchiMate3::ArchiMate_Constraint;@ENDSTEREO;$DES;$CLT={10F9868A-BA19-4482-B11C-A9FD5AF60822}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={1123D640-132A-4146-88D2-3FD9B7E990BE}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=_HideUmlLinks@ENDNAME;@TYPE=string@ENDTYPE;@VALU=True@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;@PROP=@NAME=_defaultDiagramType@ENDNAME;@TYPE=string@ENDTYPE;@VALU=ArchiMate3::Motivation@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={10F9868A-BA19-4482-B11C-A9FD5AF60822}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;\"/>\n\t\t\t\t",
+      "path": "//90_Sandbox/Zdeněk Šerý sandbox/01_07_2026_ServiceHub_Atlas_CZ_PR25_0837/90.1 Business layer/VFCZ/Constraints/ASS-05"
+    },
+    {
+      "id": "EAID_A3A663F0_D721_49ec_AB79_45E58A028178",
+      "name": "ASS-06",
+      "type": "uml:Class",
+      "model": {
+        "package": "EAPK_7019D9CF_1DDC_436b_A2CA_6FB8F8F0563E",
+        "tpos": "0",
+        "ea_localid": "18605",
+        "ea_eleType": "element"
+      },
+      "properties": {
+        "documentation": "ServiceHub may be accessed from ONSC, WSC or direct URL. Direct URL is a technical entry point, not a standalone access model.",
+        "isSpecification": "false",
+        "sType": "Class",
+        "nType": "0",
+        "alias": "Channels",
+        "scope": "public",
+        "stereotype": "ArchiMate_Constraint",
+        "isRoot": "false",
+        "isLeaf": "false",
+        "isAbstract": "false",
+        "isActive": "false"
+      },
+      "project": {
+        "author": "SeryZ",
+        "version": "1.0",
+        "phase": "1.0",
+        "created": "2026-07-02 16:21:57",
+        "modified": "2026-11-01 15:29:05",
+        "complexity": "1",
+        "status": "Proposed"
+      },
+      "documentation": {},
+      "tags": [],
+      "xrefs": "<xrefs xmlns:xmi=\"http://schema.omg.org/spec/XMI/2.1\" xmlns:uml=\"http://schema.omg.org/spec/UML/2.1\" xmlns:GML=\"http://www.sparxsystems.com/profiles/GML/1.0\" xmlns:thecustomprofile=\"http://www.sparxsystems.com/profiles/thecustomprofile/1.0\" xmlns:BPMN1.1=\"http://www.sparxsystems.com/profiles/BPMN1.1/1.5\" xmlns:StandardProfileL2=\"http://www.omg.org/spec/UML/20110701/StandardProfileL2.xmi\" xmlns:EAUML=\"http://www.sparxsystems.com/profiles/EAUML/1.0\" xmlns:sysml=\"http://www.omg.org/spec/SysML/20080501/SysML-profile\" xmlns:ArchiMate3=\"http://www.sparxsystems.com/profiles/ArchiMate3/1.0\" xmlns:DFD=\"http://www.sparxsystems.com/profiles/DFD/1.1\" xmlns:DMN1.1=\"http://www.sparxsystems.com/profiles/DMN1.1/1.0\" xmlns:BPMN2.0=\"http://www.sparxsystems.com/profiles/BPMN2.0/1.5\" value=\"$XREFPROP=$XID={9E2AB6E5-949A-4d59-93BC-7CE65CF8EA77}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=ArchiMate_Constraint;FQName=ArchiMate3::ArchiMate_Constraint;@ENDSTEREO;$DES;$CLT={A3A663F0-D721-49ec-AB79-45E58A028178}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={A7E4F08A-CBB7-4686-8D34-A02C9AA9CB75}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=_HideUmlLinks@ENDNAME;@TYPE=string@ENDTYPE;@VALU=True@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;@PROP=@NAME=_defaultDiagramType@ENDNAME;@TYPE=string@ENDTYPE;@VALU=ArchiMate3::Motivation@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={A3A663F0-D721-49ec-AB79-45E58A028178}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;\"/>\n\t\t\t\t",
+      "path": "//90_Sandbox/Zdeněk Šerý sandbox/01_07_2026_ServiceHub_Atlas_CZ_PR25_0837/90.1 Business layer/VFCZ/Constraints/ASS-06"
+    },
+    {
+      "id": "EAID_15F4EF2A_14D5_4bca_BA70_DEE9A8FFC46B",
+      "name": "ASS-07",
+      "type": "uml:Class",
+      "model": {
+        "package": "EAPK_7019D9CF_1DDC_436b_A2CA_6FB8F8F0563E",
+        "tpos": "0",
+        "ea_localid": "18606",
+        "ea_eleType": "element"
+      },
+      "properties": {
+        "documentation": "MVP has no ServiceHub-owned role-based access control. Access and functional enablement are derived from upstream roles, Customer Account mapping, active Atlas subscription in Marketplace and SNOW EVE user presence. ServiceHub must dynamically adapt behaviour when upstream role information, Customer Account mapping, Marketplace subscription status or SNOW EVE availability changes.",
+        "isSpecification": "false",
+        "sType": "Class",
+        "nType": "0",
+        "alias": "MVP Permissions",
+        "scope": "public",
+        "stereotype": "ArchiMate_Constraint",
+        "isRoot": "false",
+        "isLeaf": "false",
+        "isAbstract": "false",
+        "isActive": "false"
+      },
+      "project": {
+        "author": "SeryZ",
+        "version": "1.0",
+        "phase": "1.0",
+        "created": "2026-07-02 16:21:57",
+        "modified": "2026-11-01 15:29:05",
+        "complexity": "1",
+        "status": "Proposed"
+      },
+      "documentation": {},
+      "tags": [],
+      "xrefs": "<xrefs xmlns:xmi=\"http://schema.omg.org/spec/XMI/2.1\" xmlns:uml=\"http://schema.omg.org/spec/UML/2.1\" xmlns:GML=\"http://www.sparxsystems.com/profiles/GML/1.0\" xmlns:thecustomprofile=\"http://www.sparxsystems.com/profiles/thecustomprofile/1.0\" xmlns:BPMN1.1=\"http://www.sparxsystems.com/profiles/BPMN1.1/1.5\" xmlns:StandardProfileL2=\"http://www.omg.org/spec/UML/20110701/StandardProfileL2.xmi\" xmlns:EAUML=\"http://www.sparxsystems.com/profiles/EAUML/1.0\" xmlns:sysml=\"http://www.omg.org/spec/SysML/20080501/SysML-profile\" xmlns:ArchiMate3=\"http://www.sparxsystems.com/profiles/ArchiMate3/1.0\" xmlns:DFD=\"http://www.sparxsystems.com/profiles/DFD/1.1\" xmlns:DMN1.1=\"http://www.sparxsystems.com/profiles/DMN1.1/1.0\" xmlns:BPMN2.0=\"http://www.sparxsystems.com/profiles/BPMN2.0/1.5\" value=\"$XREFPROP=$XID={ACC9E3B5-AEA6-4ea6-B71C-C28DF58AB435}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=ArchiMate_Constraint;FQName=ArchiMate3::ArchiMate_Constraint;@ENDSTEREO;$DES;$CLT={15F4EF2A-14D5-4bca-BA70-DEE9A8FFC46B}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={B59A3D5C-A6B5-449a-BECE-8EA2D29AC609}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=_HideUmlLinks@ENDNAME;@TYPE=string@ENDTYPE;@VALU=True@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;@PROP=@NAME=_defaultDiagramType@ENDNAME;@TYPE=string@ENDTYPE;@VALU=ArchiMate3::Motivation@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={15F4EF2A-14D5-4bca-BA70-DEE9A8FFC46B}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;\"/>\n\t\t\t\t",
+      "path": "//90_Sandbox/Zdeněk Šerý sandbox/01_07_2026_ServiceHub_Atlas_CZ_PR25_0837/90.1 Business layer/VFCZ/Constraints/ASS-07"
+    },
+    {
+      "id": "EAID_B457C5A2_0E9C_42e5_B3FE_81E303DB9520",
+      "name": "ASS-08",
+      "type": "uml:Class",
+      "model": {
+        "package": "EAPK_7019D9CF_1DDC_436b_A2CA_6FB8F8F0563E",
+        "tpos": "0",
+        "ea_localid": "18607",
+        "ea_eleType": "element"
+      },
+      "properties": {
+        "documentation": "Before first Atlas activation for a V4 customer, VFID / WSC existence and at least one administrator must be validated as a manual business / provisioning check unless a later detailed design explicitly confirms automated system-to-system validation or blocking. This validation does not by itself confirm automatic V4 customer/admin creation in SNOW.",
+        "isSpecification": "false",
+        "sType": "Class",
+        "nType": "0",
+        "alias": "V4 SNOW prerequisites",
+        "scope": "public",
+        "stereotype": "ArchiMate_Constraint",
+        "isRoot": "false",
+        "isLeaf": "false",
+        "isAbstract": "false",
+        "isActive": "false"
+      },
+      "project": {
+        "author": "SeryZ",
+        "version": "1.0",
+        "phase": "1.0",
+        "created": "2026-07-02 16:21:58",
+        "modified": "2026-11-01 15:29:05",
+        "complexity": "1",
+        "status": "Proposed"
+      },
+      "documentation": {},
+      "tags": [],
+      "xrefs": "<xrefs xmlns:xmi=\"http://schema.omg.org/spec/XMI/2.1\" xmlns:uml=\"http://schema.omg.org/spec/UML/2.1\" xmlns:GML=\"http://www.sparxsystems.com/profiles/GML/1.0\" xmlns:thecustomprofile=\"http://www.sparxsystems.com/profiles/thecustomprofile/1.0\" xmlns:BPMN1.1=\"http://www.sparxsystems.com/profiles/BPMN1.1/1.5\" xmlns:StandardProfileL2=\"http://www.omg.org/spec/UML/20110701/StandardProfileL2.xmi\" xmlns:EAUML=\"http://www.sparxsystems.com/profiles/EAUML/1.0\" xmlns:sysml=\"http://www.omg.org/spec/SysML/20080501/SysML-profile\" xmlns:ArchiMate3=\"http://www.sparxsystems.com/profiles/ArchiMate3/1.0\" xmlns:DFD=\"http://www.sparxsystems.com/profiles/DFD/1.1\" xmlns:DMN1.1=\"http://www.sparxsystems.com/profiles/DMN1.1/1.0\" xmlns:BPMN2.0=\"http://www.sparxsystems.com/profiles/BPMN2.0/1.5\" value=\"$XREFPROP=$XID={88A00A5F-765F-43f9-8F5E-DBBD977A94C1}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=ArchiMate_Constraint;FQName=ArchiMate3::ArchiMate_Constraint;@ENDSTEREO;$DES;$CLT={B457C5A2-0E9C-42e5-B3FE-81E303DB9520}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={54A91C1D-4FB6-47fb-8B6F-0147D461D186}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=_HideUmlLinks@ENDNAME;@TYPE=string@ENDTYPE;@VALU=True@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;@PROP=@NAME=_defaultDiagramType@ENDNAME;@TYPE=string@ENDTYPE;@VALU=ArchiMate3::Motivation@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={B457C5A2-0E9C-42e5-B3FE-81E303DB9520}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;\"/>\n\t\t\t\t",
+      "path": "//90_Sandbox/Zdeněk Šerý sandbox/01_07_2026_ServiceHub_Atlas_CZ_PR25_0837/90.1 Business layer/VFCZ/Constraints/ASS-08"
+    },
+    {
+      "id": "EAID_F0523E6E_D1D2_4c7f_A356_7946B384377F",
+      "name": "ASS-09",
+      "type": "uml:Class",
+      "model": {
+        "package": "EAPK_7019D9CF_1DDC_436b_A2CA_6FB8F8F0563E",
+        "tpos": "0",
+        "ea_localid": "18608",
+        "ea_eleType": "element"
+      },
+      "properties": {
+        "documentation": "V4 customer administrators may change during lifecycle by add, remove or change action. The target solution must define how those administrator lifecycle changes are reflected in SNOW.",
+        "isSpecification": "false",
+        "sType": "Class",
+        "nType": "0",
+        "alias": "Admin lifecycle",
+        "scope": "public",
+        "stereotype": "ArchiMate_Constraint",
+        "isRoot": "false",
+        "isLeaf": "false",
+        "isAbstract": "false",
+        "isActive": "false"
+      },
+      "project": {
+        "author": "SeryZ",
+        "version": "1.0",
+        "phase": "1.0",
+        "created": "2026-07-02 16:21:58",
+        "modified": "2026-11-01 15:29:05",
+        "complexity": "1",
+        "status": "Proposed"
+      },
+      "documentation": {},
+      "tags": [],
+      "xrefs": "<xrefs xmlns:xmi=\"http://schema.omg.org/spec/XMI/2.1\" xmlns:uml=\"http://schema.omg.org/spec/UML/2.1\" xmlns:GML=\"http://www.sparxsystems.com/profiles/GML/1.0\" xmlns:thecustomprofile=\"http://www.sparxsystems.com/profiles/thecustomprofile/1.0\" xmlns:BPMN1.1=\"http://www.sparxsystems.com/profiles/BPMN1.1/1.5\" xmlns:StandardProfileL2=\"http://www.omg.org/spec/UML/20110701/StandardProfileL2.xmi\" xmlns:EAUML=\"http://www.sparxsystems.com/profiles/EAUML/1.0\" xmlns:sysml=\"http://www.omg.org/spec/SysML/20080501/SysML-profile\" xmlns:ArchiMate3=\"http://www.sparxsystems.com/profiles/ArchiMate3/1.0\" xmlns:DFD=\"http://www.sparxsystems.com/profiles/DFD/1.1\" xmlns:DMN1.1=\"http://www.sparxsystems.com/profiles/DMN1.1/1.0\" xmlns:BPMN2.0=\"http://www.sparxsystems.com/profiles/BPMN2.0/1.5\" value=\"$XREFPROP=$XID={DF065063-00E0-4cf7-B34F-4DB98CC33BB4}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=ArchiMate_Constraint;FQName=ArchiMate3::ArchiMate_Constraint;@ENDSTEREO;$DES;$CLT={F0523E6E-D1D2-4c7f-A356-7946B384377F}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={426EA57A-3AAC-4ff0-8312-3E61428AA30F}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=_HideUmlLinks@ENDNAME;@TYPE=string@ENDTYPE;@VALU=True@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;@PROP=@NAME=_defaultDiagramType@ENDNAME;@TYPE=string@ENDTYPE;@VALU=ArchiMate3::Motivation@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={F0523E6E-D1D2-4c7f-A356-7946B384377F}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;\"/>\n\t\t\t\t",
+      "path": "//90_Sandbox/Zdeněk Šerý sandbox/01_07_2026_ServiceHub_Atlas_CZ_PR25_0837/90.1 Business layer/VFCZ/Constraints/ASS-09"
+    },
+    {
+      "id": "EAID_CF970416_8ACB_42d7_BC89_7A46583EAA12",
+      "name": "LIM-01",
+      "type": "uml:Class",
+      "model": {
+        "package": "EAPK_7019D9CF_1DDC_436b_A2CA_6FB8F8F0563E",
+        "tpos": "0",
+        "ea_localid": "18609",
+        "ea_eleType": "element"
+      },
+      "properties": {
+        "documentation": "V4 customer and administrator representation in SNOW is not yet confirmed as an implemented SNOW EVE scope item. The currently described Atlas-filtered customer/admin lifecycle model is one target option. A second decision option exists: full V4 Business customer/admin population in SNOW without filtering by active Atlas product. This alternative has data volume, lifecycle, privacy and active/passive status implications and must be explicitly decided.",
+        "isSpecification": "false",
+        "sType": "Class",
+        "nType": "0",
+        "alias": "SNOW EVE V4 coverage",
+        "scope": "public",
+        "stereotype": "ArchiMate_Constraint",
+        "isRoot": "false",
+        "isLeaf": "false",
+        "isAbstract": "false",
+        "isActive": "false"
+      },
+      "project": {
+        "author": "SeryZ",
+        "version": "1.0",
+        "phase": "1.0",
+        "created": "2026-07-02 16:21:59",
+        "modified": "2026-11-01 15:29:05",
+        "complexity": "1",
+        "status": "Proposed"
+      },
+      "documentation": {},
+      "tags": [],
+      "xrefs": "<xrefs xmlns:xmi=\"http://schema.omg.org/spec/XMI/2.1\" xmlns:uml=\"http://schema.omg.org/spec/UML/2.1\" xmlns:GML=\"http://www.sparxsystems.com/profiles/GML/1.0\" xmlns:thecustomprofile=\"http://www.sparxsystems.com/profiles/thecustomprofile/1.0\" xmlns:BPMN1.1=\"http://www.sparxsystems.com/profiles/BPMN1.1/1.5\" xmlns:StandardProfileL2=\"http://www.omg.org/spec/UML/20110701/StandardProfileL2.xmi\" xmlns:EAUML=\"http://www.sparxsystems.com/profiles/EAUML/1.0\" xmlns:sysml=\"http://www.omg.org/spec/SysML/20080501/SysML-profile\" xmlns:ArchiMate3=\"http://www.sparxsystems.com/profiles/ArchiMate3/1.0\" xmlns:DFD=\"http://www.sparxsystems.com/profiles/DFD/1.1\" xmlns:DMN1.1=\"http://www.sparxsystems.com/profiles/DMN1.1/1.0\" xmlns:BPMN2.0=\"http://www.sparxsystems.com/profiles/BPMN2.0/1.5\" value=\"$XREFPROP=$XID={FC6B13BE-E250-42bd-AD02-C43D327903C8}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=ArchiMate_Constraint;FQName=ArchiMate3::ArchiMate_Constraint;@ENDSTEREO;$DES;$CLT={CF970416-8ACB-42d7-BC89-7A46583EAA12}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={0FFC3B3A-92B1-4e82-80B3-22934B758919}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=_HideUmlLinks@ENDNAME;@TYPE=string@ENDTYPE;@VALU=True@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;@PROP=@NAME=_defaultDiagramType@ENDNAME;@TYPE=string@ENDTYPE;@VALU=ArchiMate3::Motivation@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={CF970416-8ACB-42d7-BC89-7A46583EAA12}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;\"/>\n\t\t\t\t",
+      "path": "//90_Sandbox/Zdeněk Šerý sandbox/01_07_2026_ServiceHub_Atlas_CZ_PR25_0837/90.1 Business layer/VFCZ/Constraints/LIM-01"
+    }
+  ],
+  "nonSreqRealizationTargets": [
+    {
+      "id": "EAID_79402BF1_669A_41ec_9713_E4D8C1D78EDD",
+      "name": "OREQ-CARE-01: Czech care / IVR process must include managed services support option. Email / Central Inbox, if used, is treated as a fallback / supplementary assisted support channel according to the operating model, not as an architecture component.",
+      "type": "uml:Requirement",
+      "model": {
+        "package": "EAPK_A1915C21_C7C2_42bd_8627_45066CBA8B11",
+        "tpos": "0",
+        "ea_localid": "18773",
+        "ea_eleType": "element"
+      },
+      "properties": {
+        "documentation": "Czech care / IVR process must include managed services support option. Email / Central Inbox, if used, is treated as a fallback / supplementary assisted support channel according to the operating model, not as an architecture component.",
+        "isSpecification": "false",
+        "sType": "Requirement",
+        "nType": "0",
+        "scope": "public",
+        "stereotype": "ArchiMate_Requirement"
+      },
+      "project": {
+        "author": "SeryZ",
+        "version": "1.0",
+        "phase": "1.0",
+        "created": "2026-07-17 12:34:45",
+        "modified": "2026-11-01 15:29:06",
+        "complexity": "1",
+        "status": "Proposed",
+        "difficulty": "Medium",
+        "priority": "Medium"
+      },
+      "documentation": {},
+      "tags": [],
+      "xrefs": "<xrefs xmlns:xmi=\"http://schema.omg.org/spec/XMI/2.1\" xmlns:uml=\"http://schema.omg.org/spec/UML/2.1\" xmlns:GML=\"http://www.sparxsystems.com/profiles/GML/1.0\" xmlns:thecustomprofile=\"http://www.sparxsystems.com/profiles/thecustomprofile/1.0\" xmlns:BPMN1.1=\"http://www.sparxsystems.com/profiles/BPMN1.1/1.5\" xmlns:StandardProfileL2=\"http://www.omg.org/spec/UML/20110701/StandardProfileL2.xmi\" xmlns:EAUML=\"http://www.sparxsystems.com/profiles/EAUML/1.0\" xmlns:sysml=\"http://www.omg.org/spec/SysML/20080501/SysML-profile\" xmlns:ArchiMate3=\"http://www.sparxsystems.com/profiles/ArchiMate3/1.0\" xmlns:DFD=\"http://www.sparxsystems.com/profiles/DFD/1.1\" xmlns:DMN1.1=\"http://www.sparxsystems.com/profiles/DMN1.1/1.0\" xmlns:BPMN2.0=\"http://www.sparxsystems.com/profiles/BPMN2.0/1.5\" value=\"$XREFPROP=$XID={137D7F53-E6E3-4206-8AEB-409E164B3480}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=ArchiMate_Requirement;FQName=ArchiMate3::ArchiMate_Requirement;@ENDSTEREO;$DES;$CLT={79402BF1-669A-41ec-9713-E4D8C1D78EDD}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={50B083B2-7CA7-49ed-95B1-48F48B4F3B6D}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=_HideUmlLinks@ENDNAME;@TYPE=string@ENDTYPE;@VALU=True@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;@PROP=@NAME=_defaultDiagramType@ENDNAME;@TYPE=string@ENDTYPE;@VALU=ArchiMate3::Motivation@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={79402BF1-669A-41ec-9713-E4D8C1D78EDD}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;\"/>\n\t\t\t\t",
+      "path": "//90_Sandbox/Zdeněk Šerý sandbox/01_07_2026_ServiceHub_Atlas_CZ_PR25_0837/90.1 Business layer/VFCZ/OREQs/OREQ-CARE-01: Czech care / IVR process must include managed services support option. Email / Central Inbox, if used, is treated as a fallback / supplementary assisted support channel according to the operating model, not as an architecture component."
+    },
+    {
+      "id": "EAID_79402BF1_669A_41ec_9713_E4D8C1D78EDD",
+      "name": "OREQ-CARE-01: Czech care / IVR process must include managed services support option. Email / Central Inbox, if used, is treated as a fallback / supplementary assisted support channel according to the operating model, not as an architecture component.",
+      "type": "uml:Requirement",
+      "model": {
+        "package": "EAPK_A1915C21_C7C2_42bd_8627_45066CBA8B11",
+        "tpos": "0",
+        "ea_localid": "18773",
+        "ea_eleType": "element"
+      },
+      "properties": {
+        "documentation": "Czech care / IVR process must include managed services support option. Email / Central Inbox, if used, is treated as a fallback / supplementary assisted support channel according to the operating model, not as an architecture component.",
+        "isSpecification": "false",
+        "sType": "Requirement",
+        "nType": "0",
+        "scope": "public",
+        "stereotype": "ArchiMate_Requirement"
+      },
+      "project": {
+        "author": "SeryZ",
+        "version": "1.0",
+        "phase": "1.0",
+        "created": "2026-07-17 12:34:45",
+        "modified": "2026-11-01 15:29:06",
+        "complexity": "1",
+        "status": "Proposed",
+        "difficulty": "Medium",
+        "priority": "Medium"
+      },
+      "documentation": {},
+      "tags": [],
+      "xrefs": "<xrefs xmlns:xmi=\"http://schema.omg.org/spec/XMI/2.1\" xmlns:uml=\"http://schema.omg.org/spec/UML/2.1\" xmlns:GML=\"http://www.sparxsystems.com/profiles/GML/1.0\" xmlns:thecustomprofile=\"http://www.sparxsystems.com/profiles/thecustomprofile/1.0\" xmlns:BPMN1.1=\"http://www.sparxsystems.com/profiles/BPMN1.1/1.5\" xmlns:StandardProfileL2=\"http://www.omg.org/spec/UML/20110701/StandardProfileL2.xmi\" xmlns:EAUML=\"http://www.sparxsystems.com/profiles/EAUML/1.0\" xmlns:sysml=\"http://www.omg.org/spec/SysML/20080501/SysML-profile\" xmlns:ArchiMate3=\"http://www.sparxsystems.com/profiles/ArchiMate3/1.0\" xmlns:DFD=\"http://www.sparxsystems.com/profiles/DFD/1.1\" xmlns:DMN1.1=\"http://www.sparxsystems.com/profiles/DMN1.1/1.0\" xmlns:BPMN2.0=\"http://www.sparxsystems.com/profiles/BPMN2.0/1.5\" value=\"$XREFPROP=$XID={137D7F53-E6E3-4206-8AEB-409E164B3480}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=ArchiMate_Requirement;FQName=ArchiMate3::ArchiMate_Requirement;@ENDSTEREO;$DES;$CLT={79402BF1-669A-41ec-9713-E4D8C1D78EDD}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={50B083B2-7CA7-49ed-95B1-48F48B4F3B6D}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=_HideUmlLinks@ENDNAME;@TYPE=string@ENDTYPE;@VALU=True@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;@PROP=@NAME=_defaultDiagramType@ENDNAME;@TYPE=string@ENDTYPE;@VALU=ArchiMate3::Motivation@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={79402BF1-669A-41ec-9713-E4D8C1D78EDD}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;\"/>\n\t\t\t\t",
+      "path": "//90_Sandbox/Zdeněk Šerý sandbox/01_07_2026_ServiceHub_Atlas_CZ_PR25_0837/90.1 Business layer/VFCZ/OREQs/OREQ-CARE-01: Czech care / IVR process must include managed services support option. Email / Central Inbox, if used, is treated as a fallback / supplementary assisted support channel according to the operating model, not as an architecture component."
+    }
+  ]
+}

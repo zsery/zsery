@@ -11,7 +11,7 @@ if(wb.worksheets.items.length!==14)throw new Error('Expected 14 sheets');
 for(const [name,changes]of Object.entries(plan.operations))for(const [ref,value]of Object.entries(changes)){
  if(wb.worksheets.getItem(name).getRange(ref).values[0][0]!==value)throw new Error(`Reimport mismatch ${name}!${ref}`);cells++;
 }
-for(const [name,range,slug]of [['Cover','A13:B19','final-cover'],['Revize MVP','A20:C22','final-identity'],['Business a FREQ','Q185:S188','final-primary-support']]){
+for(const [name,range,slug]of [['FREQ mapping','K54:M54','final-manual-combined'],['FREQ mapping','K160:M160','final-manual-lifecycle']]){
  const blob=await wb.render({sheetName:name,range,scale:1,format:'png'});
  await fs.writeFile(`${dir}/${slug}.png`,new Uint8Array(await blob.arrayBuffer()));
 }

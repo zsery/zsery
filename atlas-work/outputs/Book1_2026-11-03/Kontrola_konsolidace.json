@@ -1,7 +1,7 @@
 {
   "meaningfulIdentityCells": 23,
   "excludedEamRecalculationValues": 608,
-  "changedCells": 4289,
+  "changedCells": 4663,
   "changedSheets": [
     "Functionalities",
     "Interfaces",
@@ -20,7 +20,7 @@
     "extended_text": 2
   },
   "output": "C:\\Users\\zsery\\Documents\\Codex\\2026-10-31\\jse\\outputs\\Book1_2026-11-03\\Book1_Atlas_konsolidovany_2026-11-03.xlsx",
-  "sha256": "930e32aa0c83c46940208c250cb282dc0efaffdd533add7b7b2796499952998f",
+  "sha256": "10998f6652bcea8f0bdc357cd092663bed5334d21bf9db0255470a969fc786a2",
   "sheets": [
     "Cover",
     "Postup revize",
@@ -37,7 +37,7 @@
     "TA139Arch",
     "Revize MVP"
   ],
-  "preservedUnchangedCells": 30928,
+  "preservedUnchangedCells": 30554,
   "newAuthoredCells": 779,
   "originalFormulasPreserved": 1878,
   "nativeTablePartsPreserved": 7,
@@ -52,6 +52,8 @@
     "reviewedOriginalEaFreqRows": 159,
     "traceabilityRowsAdded": 26,
     "exactTextMappedBook1Rows": 188,
+    "manuallyReviewedBook1Rows": 31,
+    "totalReviewedBook1MappingRows": 219,
     "scopeStates": {
       "SAMOSTATNÝ MARKETING SCOPE": 37,
       "MINIMUM POTVRZENO – DETAIL VALIDACE OTEVŘEN": 12,
@@ -74,7 +76,7 @@
   "artifactReimport": {
     "reimportedFinalWorkbook": true,
     "sheets": 14,
-    "verifiedAuthoredCells": 4289,
+    "verifiedAuthoredCells": 4663,
     "nativeExcelRecalculation": false
   }
 }

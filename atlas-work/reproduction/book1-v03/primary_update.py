@@ -139,6 +139,31 @@ for i in range(2,221):
   if sr.get('K'+str(j))==str(i) and sr.get('A'+str(j))==fm.get('A'+str(i)) and sr.get('B'+str(j))==fm.get('F'+str(i)):
    append('SREQ Aplikační role','W'+str(j),f'Nové primární ověření FREQ mapping!{i}: {state}. FREQ/SREQ sémantická vazba není tímto schválena.',why)
 
+exact_mapped=list(mapped)
+manual_groups=[
+ ([41,48],'SAMOSTATNÝ MARKETING SCOPE','Historická validace lead formuláře a jeho chybové zprávy patří do samostatného marketingového briefu. Nové CZ MVP nepřebírá tyto UI detaily jako Atlas FR.','VBU Digital Marketing & Communication','Starší Requirements Functional_Requirements ř.4; BRD scope'),
+ ([50,139],'HISTORICKÝ NFR – MITIGACE NEPOTVRZENA','V2 user-info/customer-context výkonové omezení je historický technický vstup. Nové UC005 potvrzuje DXL data po autentizaci, nikoli konkrétní výkonový limit či implementovanou mitigaci. Vyžaduje aktuální měření a kontrakt.','VFCZ DXL/identity; VFG SH','UC005; historický NFR-01; MVP IAM-02/03'),
+ ([54],'SDRUŽENÝ POŽADAVEK – ROZDĚLIT SCOPE','Minimum company identifier a ruční data readiness zůstává v MVP (ONB-01/03). Část požadující automatické získání zákaznických dat ze Siebelu je mimo MVP do opětovného potvrzení. Zachovat původní sdružený text; nerozhodovat celý řádek jediným ano/ne. CA/BA/CRM ID/company UUID nezaměňovat.','VFCZ data readiness; auto retrieval mimo MVP','MVP ONB-01/03; UC002 A3'),
+ ([123,185,186],'VFG SERVICE VISIBILITY – DETAIL OTEVŘEN','UC006 vyhodnocuje pouze managed Atlas a Marketplace data aktivního autorizovaného CRM ID. Oddělit no-Atlas, nedostupná data a zákaz zobrazení jiného CRM ID. Historické ostatní produkty a přesná UI hlášení nejsou tímto potvrzeny.','VFG SH; VFCZ Marketplace vstupy','UC006/P05; MVP SVI-01'),
+ ([129,130],'VFG TICKET VISIBILITY – OPRÁVNĚNÍ OTEVŘENA','UC010 potvrzuje seznam/detail Atlas requestů pro aktivní autorizované CRM ID. Přesná pravidla viditelnosti podle autora ticketu a SNOW role vyžadují kontrakt; netvrdit automaticky přístup ke všem ticketům zákazníka.','VFG SH/SNOW; VFCZ vstupy','UC010/P06; MVP Support Management'),
+ ([142,143,144,145],'CHANNEL ROUNDTRIP NEPOTVRZEN PRO MVP','Původní identifikace původu, uchování kanálu a návrat do odpovídajícího místa portálu nejsou potvrzeny standalone URL MVP. Bez potvrzení požadavek nepřenášet do CZ implementace.','VFG navigace; CZ portálová integrace mimo MVP','BRD scope; UC005; MVP CHM-02'),
+ ([159],'V4 USER IDENTITA – MANUÁLNÍ ONBOARDING MVP','VFID sub a odpovídající WSC user jsou vždy 1:1; email není párovací klíč. Přesné předání identity do SNOW a ticket oprávnění vyžadují kontrakt. V4 customer/admin onboarding zůstává manuální MVP.','VFCZ user vstupy; VFG SH/SNOW','UC005/007/010/012; výslovná pravidla uživatele'),
+ ([160,161,162,167,168],'LIFECYCLE CÍL – AUTOMATIZACE MIMO POTVRZENÍ','Historický NFR-03 požaduje V4 admin lifecycle a zdrojové události/informace. MVP podle uživatele používá manuální customer/admin onboarding do SNOW. Automatický event/API synchronizační mechanismus tím není schválen; oddělit cílový lifecycle od nynějšího postupu.','VFCZ identity vstupy; VFG SNOW; manuální provoz MVP','Historický NFR-03; UC002/012; pravidlo uživatele manuální V4'),
+ ([175,176],'LIFECYCLE VÝSLEDEK – EVENT KONTRAKT OTEVŘEN','UC002 končí přijetím orderu; UC006 čte Marketplace Atlas data a UC012 provádí managed onboarding. Potřebný aktuální subscription stav neprokazuje konkrétní event delivery, schema, pořadí ani automatický V4 onboarding.','VFG Marketplace/SH/SNOW; VFCZ data readiness','UC002/006/012; MVP ONB-05/SVI-01'),
+ ([177,210,211,212],'MIMO MVP – PORTÁLOVÝ HANDOVER','Sdružená portálová navigace nebo předání customer context z ONSC/WSC do SH není součást standalone MVP. UC005 používá DXL dostupné user/role/CRM vztahy po VFID autentizaci; nejde o portálový handover.','Mimo CZ MVP portálovou integraci; VFCZ DXL vstupy zůstávají','BRD scope; UC005/P04; MVP CHM-02/IAM-03'),
+ ([213,214],'NAHRADIT AKTUÁLNÍ VOLBOU KONTEXTU','UC005 automaticky aktivuje právě jedno dostupné CRM ID i při více dostupných ID a následně umožní selector. Historické větvení podle počtu kontextů ani direct selector journey není současný potvrzený postup. Priorita automatické volby zůstává neuvedena.','VFG SH selector; VFCZ DXL dostupné CRM ID','UC005/P04; MVP IAM-03'),
+ ([215,217],'GROUP UI DETAIL NEPOTVRZEN','Dedicated SH URL je potvrzena. Přesný deep-link error page nebo navigace produktové informační stránky nejsou novým CZ UC atomicky potvrzeny. Vyžadují Group UX/acceptance podklad.','VFG SH UX; CZ acceptance po potvrzení','UC005/006; MVP CHM-02/03'),
+ ([216],'ZPŘESNIT ELIGIBILITY OUTCOMES','Oddělit generic obsah při chybějící eligible roli/CRM ID (UC005) od no-Atlas výsledku a nedostupnosti Marketplace dat (UC006). Historický redirect na produktovou informační stránku není aktuálním UC automaticky potvrzen.','VFG SH UX/authorization; CZ role/data vstupy','UC005/006; MVP IAM-02/03 a SVI-01')]
+manual_rows=[]
+for rows,state,current,owner,source in manual_groups:
+ for i in rows:
+  assert i not in mapped and fm.get('C'+str(i)),('Unexpected manual review row',i)
+  for col,value in [('K',state),('L',current),('M',owner)]:put('FREQ mapping',col+str(i),value,why)
+  append('FREQ mapping','N'+str(i),prov+source,why)
+  append('FREQ mapping','O'+str(i),'3.11. samostatné obsahové posouzení původního sdruženého/odlišného textu. Žádné ztotožnění EA GUID ani schválení SREQ vazby; původní ID a text zachovány.',why)
+  manual_rows.append(i);mapped.append(i)
+assert len(exact_mapped)==188 and len(manual_rows)==31 and set(mapped)==set(range(2,221))
+
 for j in range(2,221):
  rawrow=sr.get('K'+str(j),'')
  if not rawrow.isdigit() or int(rawrow) not in mapped:continue
@@ -195,5 +220,5 @@ put('Revize MVP','B24','Primární CZ BRD, UC001–012, TR 26 řádků a MVP se�
 put('Revize MVP','C24','Interní verze není datum knihovny. Starší Requirements jsou Draft a mají duplicitní IAM ID. Schválená atomická FR baseline není doložena.',why)
 put('Revize MVP','B25','Business a FREQ obsahuje pracovní capability/UC návaznosti v R:S a 26 přímých záznamů TR na ř.167–192.',why)
 put('Revize MVP','C25','K:L:M přímé EA vazby a GUID zůstaly zachovány. Pracovní přiřazení neprokazuje existenci nových EA vztahů.',why)
-primary_summary={'reviewedOriginalEaFreqRows':len(classified),'traceabilityRowsAdded':26,'exactTextMappedBook1Rows':len(mapped),'scopeStates':dict(collections.Counter(x['state'] for x in classified))}
-(HERE/'primary-classification.json').write_text(json.dumps({'summary':primary_summary,'eaRows':classified,'mappingRows':mapped,'traceability':entries},ensure_ascii=False,indent=2),encoding='utf8')
+primary_summary={'reviewedOriginalEaFreqRows':len(classified),'traceabilityRowsAdded':26,'exactTextMappedBook1Rows':len(exact_mapped),'manuallyReviewedBook1Rows':len(manual_rows),'totalReviewedBook1MappingRows':len(mapped),'scopeStates':dict(collections.Counter(x['state'] for x in classified))}
+(HERE/'primary-classification.json').write_text(json.dumps({'summary':primary_summary,'eaRows':classified,'mappingRows':sorted(mapped),'exactTextMappingRows':exact_mapped,'manualReviewRows':sorted(manual_rows),'traceability':entries},ensure_ascii=False,indent=2),encoding='utf8')

@@ -4,7 +4,7 @@ Stav k 3. 11. 2026. Pro pokračování na jiném PC nejprve otevřít [Předán�
 
 ## Nové podklady pro navázání
 
-- [AKTUÁLNÍ Book1 v03](outputs/Book1_2026-11-03/Book1_Atlas_konsolidovany_2026-11-03.xlsx) a [stav revize a kontrol](outputs/Book1_2026-11-03/Stav_Book1_2026-11-03.md). Po primárním ověření 3.11.: 159 EA FREQ pracovně klasifikováno, 26 business návazností z TR přepsáno, 188 původních mapovacích řádků aktualizováno přes přesný text. Schválení atomických FR, EA a SO zůstávají otevřené.
+- [AKTUÁLNÍ Book1 v03](outputs/Book1_2026-11-03/Book1_Atlas_konsolidovany_2026-11-03.xlsx) a [stav revize a kontrol](outputs/Book1_2026-11-03/Stav_Book1_2026-11-03.md). Po primárním ověření 3.11.: 159 EA FREQ pracovně klasifikováno, 26 business návazností z TR přepsáno, 219 mapovacích řádků pracovně posouzeno (188 přes text, 31 samostatně). Schválení atomických FR, EA a SO zůstávají otevřené.
 - [Přímé ověření CZ BRD, UC, MVP a Traceability 3.11.](outputs/Overeni_zdroju_VDI_2026-11-03.md). Metadata verzí, obsah UC001–012, řádkový přepis TR, rozdíly staršího Draftu a hranice skutečného čtení.
 - [Předání práce a instrukce](PREDANI_2026-11-03.md).
 - [SharePoint průzkum z 2. 11. a opravená pravidla VFID USER](notes/atlas-sharepoint-review-2026-11-02.md), převzato z větve `codex/atlas-sharepoint-review`, commit `c58e2b922916b6004973ce1dcb303b97fc123925`.
@@ -37,3 +37,5 @@ Nejnovější analýza Martina Dostála → soulad se závazným MVP → FREQ/ca
 Původní `Book1.xlsx` a `Atlas.7z` v kořeni repozitáře tato dodávka nemění. Technické mezisoubory a lokální složka `work/`, na které odkazují některé poznámky, nejsou součástí této dodávky. Soubor `SHA256SUMS.txt` uvádí kontrolní součty uložených výstupů.
 
 Podklady jsou uloženy na větvi `codex/atlas-stav-2026-11-01`, protože stávající workflow na `main` spouští nasazení do OpenShiftu. Tato dodávka je uložení dokumentace a pracovních výstupů.
+
+- [Kontrola business vrstvy EA a návazností](outputs/ea-revize/EA_business_revize_2026-11-03.md) a [crosswalk 21 původních UC s GUID](outputs/ea-revize/EA_UC_obsahovy_crosswalk_2026-11-03.csv). Nové UC číslování není totožná identita. XMI a SO zatím nezměněny.
