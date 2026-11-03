@@ -130,7 +130,8 @@ for i in range(2,221):
    if sr.get('A'+str(j))==fm.get('A'+str(i)) and sr.get('B'+str(j))==fm.get('F'+str(i)):
     append('SREQ Aplikační role','W'+str(j),note,'Propagace známého konfliktu pouze při shodě aplikace a SREQ.')
 
-result={'operations':ops,'reasons':reasons,'identityCells':[(c['sheet'],c['cell']) for c in meaning],
+exec(compile((HERE/'primary_update.py').read_text(encoding='utf8'),str(HERE/'primary_update.py'),'exec'))
+result={'operations':ops,'reasons':reasons,'primaryReview':primary_summary,'identityCells':[(c['sheet'],c['cell']) for c in meaning],
  'crosswalk':cross,'summary':{'meaningfulIdentityCells':len(meaning),'excludedEamRecalculationValues':sum(c['sheet']=='EAM App' for c in delta),'changedCells':sum(map(len,ops.values())),'changedSheets':list(ops),'businessTextMatches':dict(collections.Counter(c['state'] for c in cross))}}
 (HERE/'changes.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf8')
 print(json.dumps(result['summary'],ensure_ascii=False,indent=2))

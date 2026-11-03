@@ -49,8 +49,10 @@ def colnum(ref):
  n=0
  for x in re.match('[A-Z]+',ref)[0]:n=n*26+ord(x)-64
  return n
-row_heights={'Cover':set(range(13,20)),'Postup revize':set(range(35,48)),'Revize MVP':set(range(20,27)),
+row_heights={'Cover':set(range(13,20)),'Postup revize':set(range(35,57)),'Revize MVP':set(range(20,27)),
  'Functionalities':{315},'Interfaces':{4,12,17,18},'FREQ mapping':{49},'SREQ Aplikační role':{49}}
+for name in ['Business a FREQ','EA SREQ','Functionalities','FREQ mapping','SREQ Aplikační role','Interfaces']:
+ row_heights.setdefault(name,set()).update(int(re.search(r'\d+',ref)[0]) for ref in plan['operations'].get(name,{}) if int(re.search(r'\d+',ref)[0])>1)
 for name,changes in plan['operations'].items():
  o=xml(base,bm[name]);a=xml(author,am[name]);data=o.find(q('sheetData'))
  rows={int(r.get('r')):r for r in data};arows={int(r.get('r')):r for r in a.find(q('sheetData'))}
@@ -76,6 +78,13 @@ for name,changes in plan['operations'].items():
   label='';n=maxcol
   while n:n,rem=divmod(n-1,26);label=chr(65+rem)+label
   dim.set('ref',f'A1:{label}{maxrow}')
+ if name=='Business a FREQ':
+  cols=o.find(q('cols'));acol=a.find(q('cols'))
+  for col in acol:
+   if int(col.get('min'))>=18 and int(col.get('max'))<=19:
+    n=copy.deepcopy(col)
+    if n.get('style') is not None:n.set('style',str(int(n.get('style'))+style_offset))
+    cols.append(n)
  save(bm[name],o)
 outdir=ROOT/'outputs/Book1_2026-11-03';outdir.mkdir(exist_ok=True)
 out=outdir/'Book1_Atlas_konsolidovany_2026-11-03.xlsx'
@@ -107,9 +116,14 @@ for name,p in bm.items():
   else:actual=c.find(q('v')).text if c.find(q('v')) is not None else ''
   assert actual==expected,('Authored value mismatch',name,ref)
  # Preserve filter/validation/table state and all original hidden row/column attributes.
- meta_a=[E.tostring(child) for child in a if E.QName(child).localname not in ['sheetData','dimension']]
- meta_b=[E.tostring(child) for child in b if E.QName(child).localname not in ['sheetData','dimension']]
+ excluded=['sheetData','dimension']+(['cols'] if name=='Business a FREQ' else [])
+ meta_a=[E.tostring(child) for child in a if E.QName(child).localname not in excluded]
+ meta_b=[E.tostring(child) for child in b if E.QName(child).localname not in excluded]
  assert meta_a==meta_b,('Changed sheet metadata',name)
+ if name=='Business a FREQ':
+  oldcols=list(a.find(q('cols')));newcols=list(b.find(q('cols')))
+  assert [E.tostring(x) for x in newcols[:len(oldcols)]]==[E.tostring(x) for x in oldcols]
+  assert newcols[len(oldcols):] and all(int(x.get('min'))>=18 and int(x.get('max'))<=19 for x in newcols[len(oldcols):])
  for row in a.find(q('sheetData')):
   ri=int(row.get('r'));after=b.find(q('sheetData')+'/'+q('row')+"[@r='"+str(ri)+"']")
   for k,v in row.attrib.items():

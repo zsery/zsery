@@ -4,7 +4,8 @@ Stav k 3. 11. 2026. Pro pokračování na jiném PC nejprve otevřít [Předán�
 
 ## Nové podklady pro navázání
 
-- [AKTUÁLNÍ Book1 v03](outputs/Book1_2026-11-03/Book1_Atlas_konsolidovany_2026-11-03.xlsx) a [přesný stav opravy a kontrol](outputs/Book1_2026-11-03/Stav_Book1_2026-11-03.md). Sloučení dvou starších revizí je dokončené; úplná business baseline, EA a SO zůstávají nedokončené.
+- [AKTUÁLNÍ Book1 v03](outputs/Book1_2026-11-03/Book1_Atlas_konsolidovany_2026-11-03.xlsx) a [stav revize a kontrol](outputs/Book1_2026-11-03/Stav_Book1_2026-11-03.md). Po primárním ověření 3.11.: 159 EA FREQ pracovně klasifikováno, 26 business návazností z TR přepsáno, 188 původních mapovacích řádků aktualizováno přes přesný text. Schválení atomických FR, EA a SO zůstávají otevřené.
+- [Přímé ověření CZ BRD, UC, MVP a Traceability 3.11.](outputs/Overeni_zdroju_VDI_2026-11-03.md). Metadata verzí, obsah UC001–012, řádkový přepis TR, rozdíly staršího Draftu a hranice skutečného čtení.
 - [Předání práce a instrukce](PREDANI_2026-11-03.md).
 - [SharePoint průzkum z 2. 11. a opravená pravidla VFID USER](notes/atlas-sharepoint-review-2026-11-02.md), převzato z větve `codex/atlas-sharepoint-review`, commit `c58e2b922916b6004973ce1dcb303b97fc123925`.
 - [Historický Book1 s pravidly identity z 2. 11.](outputs/Book1_Solution_2026-11-02/Book1_Atlas_MVP_revize_2026-11-02.xlsx). Vznikl ze starší první revize a postrádá tři listy v02 a externí link part. Jeho věcné změny jsou již sloučené do aktuální v03; nepoužívat jej jako základ další práce.

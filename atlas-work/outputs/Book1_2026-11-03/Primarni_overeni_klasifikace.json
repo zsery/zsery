@@ -1,0 +1,1725 @@
+{
+  "summary": {
+    "reviewedOriginalEaFreqRows": 159,
+    "traceabilityRowsAdded": 26,
+    "exactTextMappedBook1Rows": 188,
+    "scopeStates": {
+      "SAMOSTATNÝ MARKETING SCOPE": 37,
+      "MINIMUM POTVRZENO – DETAIL VALIDACE OTEVŘEN": 12,
+      "MIMO MVP – PORTÁLOVÁ INTEGRACE": 11,
+      "POTVRZENÝ MVP VÝSLEDEK – VFG ZÁVISLOST": 2,
+      "DETAIL NEPOTVRZEN PRO MVP": 2,
+      "ZPŘESNIT ELIGIBILITY PODLE UC": 4,
+      "POTVRZENÝ CÍL – ZPŘESNIT CZ VSTUPY": 7,
+      "ROLE DETAIL NEPOTVRZEN NOVÝM UC": 8,
+      "POTVRZENÝ CONTEXT CÍL – ZPŘESNIT TEXT": 14,
+      "VFG ZÁVISLOST – ODDĚLIT UC006": 10,
+      "VFG SUPPORT ZÁVISLOST – API DETAIL OTEVŘEN": 12,
+      "AUTO SIEBEL RETRIEVAL/POPULATION MIMO MVP": 15,
+      "NAHRADIT EMAILOVOU VALIDACI POSTUPEM UC002": 8,
+      "POTVRZENÝ CÍL – DETAIL IMPLEMENTACE OTEVŘEN": 5,
+      "GROUP ONBOARDING ZÁVISLOST – PAYLOAD OTEVŘEN": 5,
+      "LOKÁLNÍ PRODUCT ENABLEMENT – DETAIL OTEVŘEN": 7
+    }
+  },
+  "eaRows": [
+    {
+      "row": 2,
+      "guid": "EAID_E9C6A24C_EC6C_4429_8950_B620C85E6D84",
+      "id": "-REQ-MKT-15",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 3,
+      "guid": "EAID_FCBD9B13_AB22_4c0a_BA01_93693C7A45B6",
+      "id": "-REQ-ONB-01",
+      "state": "MINIMUM POTVRZENO – DETAIL VALIDACE OTEVŘEN",
+      "capability": "Service Onboarding / SUBCAP-ONB-01 Marketplace Company Identifier Readiness",
+      "useCases": "UC002/P02; UC003/P03 – tematické"
+    },
+    {
+      "row": 4,
+      "guid": "EAID_097275CE_EEB8_4690_B8F5_D5E814D494C6",
+      "id": "F-REQ-CHM-01",
+      "state": "MIMO MVP – PORTÁLOVÁ INTEGRACE",
+      "capability": "Channel & Entry Management / SUBCAP-CHM-02 Entry Points and Navigation",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 5,
+      "guid": "EAID_049D705D_30BB_4b00_9410_9FC6278EFE4D",
+      "id": "F-REQ-CHM-02",
+      "state": "MIMO MVP – PORTÁLOVÁ INTEGRACE",
+      "capability": "Channel & Entry Management / SUBCAP-CHM-02 Entry Points and Navigation",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 6,
+      "guid": "EAID_A7461C30_8BB8_4db3_AC1F_CF377C96AA70",
+      "id": "F-REQ-CHM-03",
+      "state": "MIMO MVP – PORTÁLOVÁ INTEGRACE",
+      "capability": "Channel & Entry Management / SUBCAP-CHM-02 Entry Points and Navigation",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 7,
+      "guid": "EAID_28610252_DEDA_47b3_821E_E6E20A6506D8",
+      "id": "F-REQ-CHM-04",
+      "state": "MIMO MVP – PORTÁLOVÁ INTEGRACE",
+      "capability": "Channel & Entry Management / SUBCAP-CHM-02 Entry Points and Navigation",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 8,
+      "guid": "EAID_23B54604_CCC9_48f0_A248_6DDE6B997236",
+      "id": "F-REQ-CHM-05",
+      "state": "POTVRZENÝ MVP VÝSLEDEK – VFG ZÁVISLOST",
+      "capability": "Channel & Entry Management / SUBCAP-CHM-02 Entry Points and Navigation",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 9,
+      "guid": "EAID_6228B7F3_A2D2_4df6_8300_AFE63C7016E3",
+      "id": "F-REQ-CHM-06",
+      "state": "POTVRZENÝ MVP VÝSLEDEK – VFG ZÁVISLOST",
+      "capability": "Channel & Entry Management / SUBCAP-CHM-02 Entry Points and Navigation",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 10,
+      "guid": "EAID_E7D5A845_7655_4830_9AF1_254734A925D9",
+      "id": "F-REQ-CHM-07",
+      "state": "MIMO MVP – PORTÁLOVÁ INTEGRACE",
+      "capability": "Channel & Entry Management / SUBCAP-CHM-02 Entry Points and Navigation",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 11,
+      "guid": "EAID_C24A5F55_ADBB_46f9_8CAB_F00A9D74346F",
+      "id": "F-REQ-CHM-08",
+      "state": "MIMO MVP – PORTÁLOVÁ INTEGRACE",
+      "capability": "Channel & Entry Management / SUBCAP-CHM-02 Entry Points and Navigation",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 12,
+      "guid": "EAID_22EC64D4_A98C_4098_9FCE_31F29775D520",
+      "id": "F-REQ-CHM-09",
+      "state": "DETAIL NEPOTVRZEN PRO MVP",
+      "capability": "Channel & Entry Management / SUBCAP-CHM-02 Entry Points and Navigation",
+      "useCases": "UC005 / P04 – pouze tematické přiřazení"
+    },
+    {
+      "row": 13,
+      "guid": "EAID_241B2C23_6CED_40a1_AF22_32F59B26C14D",
+      "id": "F-REQ-CHM-10",
+      "state": "DETAIL NEPOTVRZEN PRO MVP",
+      "capability": "Channel & Entry Management / SUBCAP-CHM-02 Entry Points and Navigation",
+      "useCases": "UC005 / P04 – pouze tematické přiřazení"
+    },
+    {
+      "row": 14,
+      "guid": "EAID_8904339A_AFEF_45a2_A4B3_ACA266E58687",
+      "id": "F-REQ-CHM-11",
+      "state": "MIMO MVP – PORTÁLOVÁ INTEGRACE",
+      "capability": "Channel & Entry Management / SUBCAP-CHM-02 Entry Points and Navigation",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 15,
+      "guid": "EAID_BEAC8639_2517_4f5d_8031_B96BD0C55CDC",
+      "id": "F-REQ-CHM-12",
+      "state": "MIMO MVP – PORTÁLOVÁ INTEGRACE",
+      "capability": "Channel & Entry Management / SUBCAP-CHM-02 Entry Points and Navigation",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 16,
+      "guid": "EAID_CE3A52C5_3F35_49c6_9113_4DD0BE9A53B0",
+      "id": "F-REQ-CHM-13",
+      "state": "MIMO MVP – PORTÁLOVÁ INTEGRACE",
+      "capability": "Channel & Entry Management / SUBCAP-CHM-02 Entry Points and Navigation",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 17,
+      "guid": "EAID_3C3226FF_F59B_4172_959E_D533CFA39864",
+      "id": "F-REQ-CHM-14",
+      "state": "MIMO MVP – PORTÁLOVÁ INTEGRACE",
+      "capability": "Channel & Entry Management / SUBCAP-CHM-02 Entry Points and Navigation",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 18,
+      "guid": "EAID_7E29DADE_E181_48ce_8023_8EC7CCC42E18",
+      "id": "F-REQ-CHM-15",
+      "state": "MIMO MVP – PORTÁLOVÁ INTEGRACE",
+      "capability": "Channel & Entry Management / SUBCAP-CHM-02 Entry Points and Navigation",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 19,
+      "guid": "EAID_69FE0804_4C08_4bc2_AD33_C6EE71A49E7E",
+      "id": "F-REQ-CHM-16",
+      "state": "ZPŘESNIT ELIGIBILITY PODLE UC",
+      "capability": "Channel & Entry Management / SUBCAP-CHM-03 Eligibility Input Readiness",
+      "useCases": "UC005/P04 a UC006/P05"
+    },
+    {
+      "row": 20,
+      "guid": "EAID_3ECD5CF1_DCE4_4560_AC2C_0C5F88E8C94B",
+      "id": "F-REQ-CHM-17",
+      "state": "ZPŘESNIT ELIGIBILITY PODLE UC",
+      "capability": "Channel & Entry Management / SUBCAP-CHM-03 Eligibility Input Readiness",
+      "useCases": "UC005/P04 a UC006/P05"
+    },
+    {
+      "row": 21,
+      "guid": "EAID_93E1626B_77F7_4abf_86AF_B9C8BF52D96D",
+      "id": "F-REQ-CHM-18",
+      "state": "ZPŘESNIT ELIGIBILITY PODLE UC",
+      "capability": "Channel & Entry Management / SUBCAP-CHM-03 Eligibility Input Readiness",
+      "useCases": "UC005/P04 a UC006/P05"
+    },
+    {
+      "row": 22,
+      "guid": "EAID_70259761_2A55_4d0d_8C2B_2F38DBFB0AF8",
+      "id": "F-REQ-CHM-19",
+      "state": "ZPŘESNIT ELIGIBILITY PODLE UC",
+      "capability": "Channel & Entry Management / SUBCAP-CHM-03 Eligibility Input Readiness",
+      "useCases": "UC005/P04 a UC006/P05"
+    },
+    {
+      "row": 23,
+      "guid": "EAID_9F9BED4F_FCE5_497b_9C7B_214B0A54C81A",
+      "id": "F-REQ-IAM-01",
+      "state": "POTVRZENÝ CÍL – ZPŘESNIT CZ VSTUPY",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 24,
+      "guid": "EAID_4C7667B8_1117_4b91_9CA8_2BDBE41026AA",
+      "id": "F-REQ-IAM-02",
+      "state": "POTVRZENÝ CÍL – ZPŘESNIT CZ VSTUPY",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 25,
+      "guid": "EAID_5F27C42C_15F6_4075_8F38_9FC50404B884",
+      "id": "F-REQ-IAM-03",
+      "state": "POTVRZENÝ CÍL – ZPŘESNIT CZ VSTUPY",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 26,
+      "guid": "EAID_AF81AEB2_E88B_4080_AEAE_8645645B5C78",
+      "id": "F-REQ-IAM-04",
+      "state": "POTVRZENÝ CÍL – ZPŘESNIT CZ VSTUPY",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 27,
+      "guid": "EAID_A11FB0F8_1085_45a7_9B9E_5C1F4B029A80",
+      "id": "F-REQ-IAM-05",
+      "state": "POTVRZENÝ CÍL – ZPŘESNIT CZ VSTUPY",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 28,
+      "guid": "EAID_96E15147_F324_4f71_904C_7BD4EADA6C46",
+      "id": "F-REQ-IAM-06",
+      "state": "POTVRZENÝ CÍL – ZPŘESNIT CZ VSTUPY",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 29,
+      "guid": "EAID_BF791363_078D_4f0a_91DB_2C81F239527B",
+      "id": "F-REQ-IAM-07",
+      "state": "POTVRZENÝ CÍL – ZPŘESNIT CZ VSTUPY",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 30,
+      "guid": "EAID_DFDD915C_3983_420f_90DB_6CE5ECEFE665",
+      "id": "F-REQ-IAM-08",
+      "state": "ROLE DETAIL NEPOTVRZEN NOVÝM UC",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 31,
+      "guid": "EAID_D303DFFB_7739_4da3_9B3F_C570D5DDEEA2",
+      "id": "F-REQ-IAM-09",
+      "state": "ROLE DETAIL NEPOTVRZEN NOVÝM UC",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 32,
+      "guid": "EAID_7DB089DF_6694_4b15_9047_48CEDB6167B6",
+      "id": "F-REQ-IAM-10",
+      "state": "ROLE DETAIL NEPOTVRZEN NOVÝM UC",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 33,
+      "guid": "EAID_56DE68BF_73E8_4180_9505_658BC59CEC8B",
+      "id": "F-REQ-IAM-11",
+      "state": "ROLE DETAIL NEPOTVRZEN NOVÝM UC",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 34,
+      "guid": "EAID_17991EBB_06A9_4d35_945D_DFC146E9B6BE",
+      "id": "F-REQ-IAM-12",
+      "state": "ROLE DETAIL NEPOTVRZEN NOVÝM UC",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 35,
+      "guid": "EAID_FF41287B_4DCB_4ea8_99E9_93FA888355A8",
+      "id": "F-REQ-IAM-13",
+      "state": "ROLE DETAIL NEPOTVRZEN NOVÝM UC",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 36,
+      "guid": "EAID_292ECEDA_D5D7_45dc_A402_F0A12AB939D1",
+      "id": "F-REQ-IAM-14",
+      "state": "ROLE DETAIL NEPOTVRZEN NOVÝM UC",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 37,
+      "guid": "EAID_5F86F922_B3D4_4c8e_86D8_86B00A16C59F",
+      "id": "F-REQ-IAM-15",
+      "state": "ROLE DETAIL NEPOTVRZEN NOVÝM UC",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC005 / P04"
+    },
+    {
+      "row": 38,
+      "guid": "EAID_8C69163F_92C6_4029_9469_75AC16B04B85",
+      "id": "F-REQ-IAM-16",
+      "state": "POTVRZENÝ CONTEXT CÍL – ZPŘESNIT TEXT",
+      "capability": "Identity & Access Management / SUBCAP-IAM-03 Customer Context Input Readiness",
+      "useCases": "UC005/P04, UC006/P05"
+    },
+    {
+      "row": 39,
+      "guid": "EAID_7E374076_D761_456f_AD24_1FC3245C0939",
+      "id": "F-REQ-IAM-17",
+      "state": "POTVRZENÝ CONTEXT CÍL – ZPŘESNIT TEXT",
+      "capability": "Identity & Access Management / SUBCAP-IAM-03 Customer Context Input Readiness",
+      "useCases": "UC005/P04, UC006/P05"
+    },
+    {
+      "row": 40,
+      "guid": "EAID_2956DCAC_9023_4ed8_8807_9428BAA6D7C8",
+      "id": "F-REQ-IAM-18",
+      "state": "POTVRZENÝ CONTEXT CÍL – ZPŘESNIT TEXT",
+      "capability": "Identity & Access Management / SUBCAP-IAM-03 Customer Context Input Readiness",
+      "useCases": "UC005/P04, UC006/P05"
+    },
+    {
+      "row": 41,
+      "guid": "EAID_F98ED8B6_D810_4fb3_9585_63C39229B494",
+      "id": "F-REQ-IAM-19",
+      "state": "POTVRZENÝ CONTEXT CÍL – ZPŘESNIT TEXT",
+      "capability": "Identity & Access Management / SUBCAP-IAM-03 Customer Context Input Readiness",
+      "useCases": "UC005/P04, UC006/P05"
+    },
+    {
+      "row": 42,
+      "guid": "EAID_BE66CC27_D9C9_41b0_8CF9_7DC4D591EB1E",
+      "id": "F-REQ-IAM-20",
+      "state": "POTVRZENÝ CONTEXT CÍL – ZPŘESNIT TEXT",
+      "capability": "Identity & Access Management / SUBCAP-IAM-03 Customer Context Input Readiness",
+      "useCases": "UC005/P04, UC006/P05"
+    },
+    {
+      "row": 43,
+      "guid": "EAID_8A54BFFF_0377_4155_B312_B3436A255A8D",
+      "id": "F-REQ-IAM-21",
+      "state": "POTVRZENÝ CONTEXT CÍL – ZPŘESNIT TEXT",
+      "capability": "Identity & Access Management / SUBCAP-IAM-03 Customer Context Input Readiness",
+      "useCases": "UC005/P04, UC006/P05"
+    },
+    {
+      "row": 44,
+      "guid": "EAID_3D3A2B95_E833_4adc_8CBA_921168F3DA09",
+      "id": "F-REQ-IAM-22",
+      "state": "POTVRZENÝ CONTEXT CÍL – ZPŘESNIT TEXT",
+      "capability": "Identity & Access Management / SUBCAP-IAM-03 Customer Context Input Readiness",
+      "useCases": "UC005/P04, UC006/P05"
+    },
+    {
+      "row": 45,
+      "guid": "EAID_8E5DDC59_1B19_494c_A1C4_0BA6BB5209B7",
+      "id": "F-REQ-IAM-23",
+      "state": "POTVRZENÝ CONTEXT CÍL – ZPŘESNIT TEXT",
+      "capability": "Identity & Access Management / SUBCAP-IAM-03 Customer Context Input Readiness",
+      "useCases": "UC005/P04, UC006/P05"
+    },
+    {
+      "row": 46,
+      "guid": "EAID_B4E0F18C_3036_47ac_B706_66A2ED0D760E",
+      "id": "F-REQ-IAM-24",
+      "state": "POTVRZENÝ CONTEXT CÍL – ZPŘESNIT TEXT",
+      "capability": "Identity & Access Management / SUBCAP-IAM-03 Customer Context Input Readiness",
+      "useCases": "UC005/P04, UC006/P05"
+    },
+    {
+      "row": 47,
+      "guid": "EAID_1C236DF9_537B_4c6c_AE2F_4EBED2E8F1A6",
+      "id": "F-REQ-IAM-25",
+      "state": "POTVRZENÝ CONTEXT CÍL – ZPŘESNIT TEXT",
+      "capability": "Identity & Access Management / SUBCAP-IAM-03 Customer Context Input Readiness",
+      "useCases": "UC005/P04, UC006/P05"
+    },
+    {
+      "row": 48,
+      "guid": "EAID_79C4DB13_72AB_45d9_9C55_0E559FFFF624",
+      "id": "F-REQ-IAM-26",
+      "state": "POTVRZENÝ CONTEXT CÍL – ZPŘESNIT TEXT",
+      "capability": "Identity & Access Management / SUBCAP-IAM-03 Customer Context Input Readiness",
+      "useCases": "UC005/P04, UC006/P05"
+    },
+    {
+      "row": 49,
+      "guid": "EAID_664FBC37_A331_4568_B152_271044834BD6",
+      "id": "F-REQ-IAM-27",
+      "state": "POTVRZENÝ CONTEXT CÍL – ZPŘESNIT TEXT",
+      "capability": "Identity & Access Management / SUBCAP-IAM-03 Customer Context Input Readiness",
+      "useCases": "UC005/P04, UC006/P05"
+    },
+    {
+      "row": 50,
+      "guid": "EAID_1DEB8340_A5F7_4b7b_BD8B_24E50DF3D846",
+      "id": "F-REQ-IAM-28",
+      "state": "POTVRZENÝ CONTEXT CÍL – ZPŘESNIT TEXT",
+      "capability": "Identity & Access Management / SUBCAP-IAM-03 Customer Context Input Readiness",
+      "useCases": "UC005/P04, UC006/P05"
+    },
+    {
+      "row": 51,
+      "guid": "EAID_17D46FFA_66A0_4c49_A0C2_C23CDE21489A",
+      "id": "F-REQ-IAM-29",
+      "state": "POTVRZENÝ CONTEXT CÍL – ZPŘESNIT TEXT",
+      "capability": "Identity & Access Management / SUBCAP-IAM-03 Customer Context Input Readiness",
+      "useCases": "UC005/P04, UC006/P05"
+    },
+    {
+      "row": 52,
+      "guid": "EAID_432E2932_D729_4419_A3AB_F020A197ED6E",
+      "id": "F-REQ-IAM-30",
+      "state": "VFG ZÁVISLOST – ODDĚLIT UC006",
+      "capability": "Service Visibility / SUBCAP-SVI-01 Atlas Service Data Availability",
+      "useCases": "UC006 / P05"
+    },
+    {
+      "row": 53,
+      "guid": "EAID_53B7BD8F_AEBB_43c2_8555_723F7B521A54",
+      "id": "F-REQ-IAM-31",
+      "state": "VFG ZÁVISLOST – ODDĚLIT UC006",
+      "capability": "Service Visibility / SUBCAP-SVI-01 Atlas Service Data Availability",
+      "useCases": "UC006 / P05"
+    },
+    {
+      "row": 54,
+      "guid": "EAID_F80E110D_3F19_4865_BE35_531704FEEFEB",
+      "id": "F-REQ-IAM-32",
+      "state": "VFG ZÁVISLOST – ODDĚLIT UC006",
+      "capability": "Service Visibility / SUBCAP-SVI-01 Atlas Service Data Availability",
+      "useCases": "UC006 / P05"
+    },
+    {
+      "row": 55,
+      "guid": "EAID_7F4234D7_D20F_4ae8_BBF1_0CF4E7BCAA9A",
+      "id": "F-REQ-IAM-33",
+      "state": "VFG ZÁVISLOST – ODDĚLIT UC006",
+      "capability": "Service Visibility / SUBCAP-SVI-01 Atlas Service Data Availability",
+      "useCases": "UC006 / P05"
+    },
+    {
+      "row": 56,
+      "guid": "EAID_D537C87F_6742_4c16_984E_1D2EFA6D245B",
+      "id": "F-REQ-IAM-34",
+      "state": "VFG ZÁVISLOST – ODDĚLIT UC006",
+      "capability": "Service Visibility / SUBCAP-SVI-01 Atlas Service Data Availability",
+      "useCases": "UC006 / P05"
+    },
+    {
+      "row": 57,
+      "guid": "EAID_1F0E9717_F4BC_4470_BC7F_7183E060ED6E",
+      "id": "F-REQ-IAM-35",
+      "state": "VFG ZÁVISLOST – ODDĚLIT UC006",
+      "capability": "Service Visibility / SUBCAP-SVI-01 Atlas Service Data Availability",
+      "useCases": "UC006 / P05"
+    },
+    {
+      "row": 58,
+      "guid": "EAID_27EFF697_1E4D_462d_AD1D_364A505BFA1D",
+      "id": "F-REQ-IAM-36",
+      "state": "VFG ZÁVISLOST – ODDĚLIT UC006",
+      "capability": "Service Visibility / SUBCAP-SVI-01 Atlas Service Data Availability",
+      "useCases": "UC006 / P05"
+    },
+    {
+      "row": 59,
+      "guid": "EAID_1B7E6FD0_E1C2_4eb2_80AF_9D99EF1867A9",
+      "id": "F-REQ-IAM-37",
+      "state": "VFG ZÁVISLOST – ODDĚLIT UC006",
+      "capability": "Service Visibility / SUBCAP-SVI-01 Atlas Service Data Availability",
+      "useCases": "UC006 / P05"
+    },
+    {
+      "row": 60,
+      "guid": "EAID_57D2049D_E513_40c4_9549_375D025054CF",
+      "id": "F-REQ-IAM-38",
+      "state": "VFG ZÁVISLOST – ODDĚLIT UC006",
+      "capability": "Service Visibility / SUBCAP-SVI-01 Atlas Service Data Availability",
+      "useCases": "UC006 / P05"
+    },
+    {
+      "row": 61,
+      "guid": "EAID_BB38CD5D_9EDA_49aa_B74D_0C549A18494E",
+      "id": "F-REQ-IAM-39",
+      "state": "VFG ZÁVISLOST – ODDĚLIT UC006",
+      "capability": "Service Visibility / SUBCAP-SVI-01 Atlas Service Data Availability",
+      "useCases": "UC006 / P05"
+    },
+    {
+      "row": 62,
+      "guid": "EAID_7DEBF1E7_49F6_483d_9A30_526007065B78",
+      "id": "F-REQ-IAM-40",
+      "state": "VFG SUPPORT ZÁVISLOST – API DETAIL OTEVŘEN",
+      "capability": "Support Management / Support Request Visibility a Support Request Update; IAM-03 vstupy",
+      "useCases": "UC007, UC010, UC011 / P06"
+    },
+    {
+      "row": 63,
+      "guid": "EAID_BBF8CECD_9F65_4365_83D8_D76E02563E3F",
+      "id": "F-REQ-IAM-41",
+      "state": "VFG SUPPORT ZÁVISLOST – API DETAIL OTEVŘEN",
+      "capability": "Support Management / Support Request Visibility a Support Request Update; IAM-03 vstupy",
+      "useCases": "UC007, UC010, UC011 / P06"
+    },
+    {
+      "row": 64,
+      "guid": "EAID_0DCE8EA5_C86E_4ca1_A98F_DF8AB435805F",
+      "id": "F-REQ-IAM-42",
+      "state": "VFG SUPPORT ZÁVISLOST – API DETAIL OTEVŘEN",
+      "capability": "Support Management / Support Request Visibility a Support Request Update; IAM-03 vstupy",
+      "useCases": "UC007, UC010, UC011 / P06"
+    },
+    {
+      "row": 65,
+      "guid": "EAID_C99034F2_E0E5_4978_A87E_35E580B28725",
+      "id": "F-REQ-IAM-43",
+      "state": "VFG SUPPORT ZÁVISLOST – API DETAIL OTEVŘEN",
+      "capability": "Support Management / Support Request Visibility a Support Request Update; IAM-03 vstupy",
+      "useCases": "UC007, UC010, UC011 / P06"
+    },
+    {
+      "row": 66,
+      "guid": "EAID_0B7F844E_83BD_4e9c_A3DA_26418F25D6E2",
+      "id": "F-REQ-IAM-44",
+      "state": "VFG SUPPORT ZÁVISLOST – API DETAIL OTEVŘEN",
+      "capability": "Support Management / Support Request Visibility a Support Request Update; IAM-03 vstupy",
+      "useCases": "UC007, UC010, UC011 / P06"
+    },
+    {
+      "row": 67,
+      "guid": "EAID_3D68A995_42D0_4da1_9D80_9E70E909AE2B",
+      "id": "F-REQ-IAM-45",
+      "state": "VFG SUPPORT ZÁVISLOST – API DETAIL OTEVŘEN",
+      "capability": "Support Management / Support Request Visibility a Support Request Update; IAM-03 vstupy",
+      "useCases": "UC007, UC010, UC011 / P06"
+    },
+    {
+      "row": 68,
+      "guid": "EAID_B2FC27D6_6444_4f7c_8593_00C4CDE9A696",
+      "id": "F-REQ-IAM-46",
+      "state": "VFG SUPPORT ZÁVISLOST – API DETAIL OTEVŘEN",
+      "capability": "Support Management / Support Request Visibility a Support Request Update; IAM-03 vstupy",
+      "useCases": "UC007, UC010, UC011 / P06"
+    },
+    {
+      "row": 69,
+      "guid": "EAID_A1A7D21F_7FCB_44e4_8F31_0EE85258E9DC",
+      "id": "F-REQ-IAM-47",
+      "state": "VFG SUPPORT ZÁVISLOST – API DETAIL OTEVŘEN",
+      "capability": "Support Management / Support Request Visibility a Support Request Update; IAM-03 vstupy",
+      "useCases": "UC007, UC010, UC011 / P06"
+    },
+    {
+      "row": 70,
+      "guid": "EAID_FDA4EB38_A3F7_4987_9338_F9E23ADD8246",
+      "id": "F-REQ-IAM-48",
+      "state": "VFG SUPPORT ZÁVISLOST – API DETAIL OTEVŘEN",
+      "capability": "Support Management / Support Request Visibility a Support Request Update; IAM-03 vstupy",
+      "useCases": "UC007, UC010, UC011 / P06"
+    },
+    {
+      "row": 71,
+      "guid": "EAID_4D0E1E9F_FAA0_4a53_9861_80CA3ECF72CC",
+      "id": "F-REQ-IAM-49",
+      "state": "VFG SUPPORT ZÁVISLOST – API DETAIL OTEVŘEN",
+      "capability": "Support Management / Support Request Visibility a Support Request Update; IAM-03 vstupy",
+      "useCases": "UC007, UC010, UC011 / P06"
+    },
+    {
+      "row": 72,
+      "guid": "EAID_84AA974B_57EB_4c59_BADE_54D61B8DFDA6",
+      "id": "F-REQ-IAM-50",
+      "state": "VFG SUPPORT ZÁVISLOST – API DETAIL OTEVŘEN",
+      "capability": "Support Management / Support Request Visibility a Support Request Update; IAM-03 vstupy",
+      "useCases": "UC007, UC010, UC011 / P06"
+    },
+    {
+      "row": 73,
+      "guid": "EAID_46EBC2AE_1769_4679_A19A_F467143B9A82",
+      "id": "F-REQ-IAM-51",
+      "state": "VFG SUPPORT ZÁVISLOST – API DETAIL OTEVŘEN",
+      "capability": "Support Management / Support Request Visibility a Support Request Update; IAM-03 vstupy",
+      "useCases": "UC007, UC010, UC011 / P06"
+    },
+    {
+      "row": 74,
+      "guid": "EAID_851233D6_36EF_44c6_BF36_69994F18B8C9",
+      "id": "F-REQ-MKT-01",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 75,
+      "guid": "EAID_71B521FF_7A4B_413e_B581_F8EC0CAC1FA1",
+      "id": "F-REQ-MKT-02",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 76,
+      "guid": "EAID_745B9FA6_C755_4690_9B39_FCE7DD7D9653",
+      "id": "F-REQ-MKT-03",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 77,
+      "guid": "EAID_4C2C573A_FD51_4f4f_AE9A_76B37CF787CC",
+      "id": "F-REQ-MKT-04",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 78,
+      "guid": "EAID_C4633A72_53B5_4fef_8642_5C4B57234235",
+      "id": "F-REQ-MKT-05",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 79,
+      "guid": "EAID_435A1800_E618_44e3_89DB_F7B3D3AA2D24",
+      "id": "F-REQ-MKT-06",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 80,
+      "guid": "EAID_CF67B242_76B0_480a_9A26_DC2E850091C8",
+      "id": "F-REQ-MKT-07",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 81,
+      "guid": "EAID_81AB0506_878B_497f_9B8A_BF69AF544313",
+      "id": "F-REQ-MKT-08",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 82,
+      "guid": "EAID_9FC856C4_1A76_4548_B554_9B756A8C9686",
+      "id": "F-REQ-MKT-09",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 83,
+      "guid": "EAID_66A0DD96_2C78_40d5_865B_A751E1FF4A51",
+      "id": "F-REQ-MKT-10",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 84,
+      "guid": "EAID_A65D6218_5301_4e2e_A5B6_BE29F1028FD1",
+      "id": "F-REQ-MKT-11",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 85,
+      "guid": "EAID_873CBD37_53E0_48d0_B254_551A4F176FC0",
+      "id": "F-REQ-MKT-12",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 86,
+      "guid": "EAID_ACBA87DA_3CDE_4738_A6EF_A5799DCED04C",
+      "id": "F-REQ-MKT-13",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 87,
+      "guid": "EAID_B83B8ECA_223A_4cdf_95F5_CFC45BFA6FCD",
+      "id": "F-REQ-MKT-14",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 88,
+      "guid": "EAID_80F59BF8_BD8B_428b_BE8C_0380323F7A68",
+      "id": "F-REQ-MKT-16",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 89,
+      "guid": "EAID_C680BE04_88FB_4f11_8D47_01FF5FB8D60D",
+      "id": "F-REQ-MKT-17",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 90,
+      "guid": "EAID_CD04932D_E30D_4e23_9CCC_0218245F91CC",
+      "id": "F-REQ-MKT-18",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 91,
+      "guid": "EAID_BFC412F7_C3FB_4d2b_BAE0_7A2722729B7F",
+      "id": "F-REQ-MKT-19",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 92,
+      "guid": "EAID_C34B6CD8_5072_4f19_8671_FDACCD0F381B",
+      "id": "F-REQ-MKT-20",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 93,
+      "guid": "EAID_97B72F3B_00BE_49a4_864E_14ACE4FE4DF5",
+      "id": "F-REQ-MKT-21",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 94,
+      "guid": "EAID_7BD451C3_67E4_43e7_8705_7F192E636B62",
+      "id": "F-REQ-MKT-22",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 95,
+      "guid": "EAID_A7423800_8E59_4ed2_A246_1E80DC3D8A14",
+      "id": "F-REQ-MKT-23",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 96,
+      "guid": "EAID_A0AE9148_9A39_4499_B499_59D335C0F2D5",
+      "id": "F-REQ-MKT-24",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 97,
+      "guid": "EAID_FB5C9CAF_8EFD_496a_AC5F_4DEE5A5F8E22",
+      "id": "F-REQ-MKT-25",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 98,
+      "guid": "EAID_54F0C4D9_7805_43b7_8124_9D3832C52EF4",
+      "id": "F-REQ-MKT-26",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 99,
+      "guid": "EAID_48144C03_B266_4054_882B_F7A56D1146AE",
+      "id": "F-REQ-MKT-27",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 100,
+      "guid": "EAID_BCEA6E99_8992_4531_A4E6_D1AB24077A36",
+      "id": "F-REQ-MKT-28",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 101,
+      "guid": "EAID_EC68C040_99B8_4869_BF4E_A914559B0A02",
+      "id": "F-REQ-MKT-29",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 102,
+      "guid": "EAID_28993630_59E2_4e8e_A6FF_5362E95A7CA9",
+      "id": "F-REQ-MKT-30",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 103,
+      "guid": "EAID_3D9DDABB_C36C_4c7b_BA6C_E47F21489004",
+      "id": "F-REQ-MKT-31",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 104,
+      "guid": "EAID_CE50EF86_4DD0_4c91_A9DD_6E0639DC5A43",
+      "id": "F-REQ-MKT-32",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 105,
+      "guid": "EAID_A5637802_9ED1_4ab9_8B98_F1D5C55CC54D",
+      "id": "F-REQ-MKT-33",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 106,
+      "guid": "EAID_E34FC6B9_C13F_4923_B025_71D698A6C246",
+      "id": "F-REQ-MKT-34",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 107,
+      "guid": "EAID_D8555DBA_DF4A_461c_865C_874D8814D871",
+      "id": "F-REQ-MKT-35",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 108,
+      "guid": "EAID_5FE3CB7E_B9AD_43a5_BB34_D91D97447210",
+      "id": "F-REQ-MKT-36",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 109,
+      "guid": "EAID_54CAF57C_54CD_43c7_9D89_663BEA38FD17",
+      "id": "F-REQ-MKT-37",
+      "state": "SAMOSTATNÝ MARKETING SCOPE",
+      "capability": "Marketing & Lead Management — historický samostatný scope",
+      "useCases": "Žádná potvrzená UC vazba této CZ baseline"
+    },
+    {
+      "row": 110,
+      "guid": "EAID_EF713DBE_516F_4812_9F40_A26C077A68C5",
+      "id": "F-REQ-ONB-02",
+      "state": "MINIMUM POTVRZENO – DETAIL VALIDACE OTEVŘEN",
+      "capability": "Service Onboarding / SUBCAP-ONB-01 Marketplace Company Identifier Readiness",
+      "useCases": "UC002/P02; UC003/P03 – tematické"
+    },
+    {
+      "row": 111,
+      "guid": "EAID_A0881FC3_439F_4aec_9867_723BAAFF1557",
+      "id": "F-REQ-ONB-03",
+      "state": "MINIMUM POTVRZENO – DETAIL VALIDACE OTEVŘEN",
+      "capability": "Service Onboarding / SUBCAP-ONB-01 Marketplace Company Identifier Readiness",
+      "useCases": "UC002/P02; UC003/P03 – tematické"
+    },
+    {
+      "row": 112,
+      "guid": "EAID_098450DD_54C9_46fe_9489_19834819C610",
+      "id": "F-REQ-ONB-04",
+      "state": "MINIMUM POTVRZENO – DETAIL VALIDACE OTEVŘEN",
+      "capability": "Service Onboarding / SUBCAP-ONB-01 Marketplace Company Identifier Readiness",
+      "useCases": "UC002/P02; UC003/P03 – tematické"
+    },
+    {
+      "row": 113,
+      "guid": "EAID_F05EE0C4_DED3_4b6d_ADC3_06C4AF262E39",
+      "id": "F-REQ-ONB-05",
+      "state": "MINIMUM POTVRZENO – DETAIL VALIDACE OTEVŘEN",
+      "capability": "Service Onboarding / SUBCAP-ONB-01 Marketplace Company Identifier Readiness",
+      "useCases": "UC002/P02; UC003/P03 – tematické"
+    },
+    {
+      "row": 114,
+      "guid": "EAID_96E2E873_D277_44ae_93FE_BA4C5D752E63",
+      "id": "F-REQ-ONB-06",
+      "state": "MINIMUM POTVRZENO – DETAIL VALIDACE OTEVŘEN",
+      "capability": "Service Onboarding / SUBCAP-ONB-01 Marketplace Company Identifier Readiness",
+      "useCases": "UC002/P02; UC003/P03 – tematické"
+    },
+    {
+      "row": 115,
+      "guid": "EAID_0F8FACCA_E7AF_40bd_A4C1_92EF6339A239",
+      "id": "F-REQ-ONB-07",
+      "state": "MINIMUM POTVRZENO – DETAIL VALIDACE OTEVŘEN",
+      "capability": "Service Onboarding / SUBCAP-ONB-01 Marketplace Company Identifier Readiness",
+      "useCases": "UC002/P02; UC003/P03 – tematické"
+    },
+    {
+      "row": 116,
+      "guid": "EAID_5439800C_1FF3_4b85_A760_70A37EC5680D",
+      "id": "F-REQ-ONB-08",
+      "state": "MINIMUM POTVRZENO – DETAIL VALIDACE OTEVŘEN",
+      "capability": "Service Onboarding / SUBCAP-ONB-01 Marketplace Company Identifier Readiness",
+      "useCases": "UC002/P02; UC003/P03 – tematické"
+    },
+    {
+      "row": 117,
+      "guid": "EAID_D9B48A96_F50E_4c19_A30F_CCA2CD3FB6E1",
+      "id": "F-REQ-ONB-09",
+      "state": "MINIMUM POTVRZENO – DETAIL VALIDACE OTEVŘEN",
+      "capability": "Service Onboarding / SUBCAP-ONB-01 Marketplace Company Identifier Readiness",
+      "useCases": "UC002/P02; UC003/P03 – tematické"
+    },
+    {
+      "row": 118,
+      "guid": "EAID_DEBD6860_8B50_4d75_9182_03D5A199D55F",
+      "id": "F-REQ-ONB-10",
+      "state": "MINIMUM POTVRZENO – DETAIL VALIDACE OTEVŘEN",
+      "capability": "Service Onboarding / SUBCAP-ONB-01 Marketplace Company Identifier Readiness",
+      "useCases": "UC002/P02; UC003/P03 – tematické"
+    },
+    {
+      "row": 119,
+      "guid": "EAID_EA0362AA_95C1_4bdb_BF8B_38F16825D14D",
+      "id": "F-REQ-ONB-11",
+      "state": "MINIMUM POTVRZENO – DETAIL VALIDACE OTEVŘEN",
+      "capability": "Service Onboarding / SUBCAP-ONB-01 Marketplace Company Identifier Readiness",
+      "useCases": "UC002/P02; UC003/P03 – tematické"
+    },
+    {
+      "row": 120,
+      "guid": "EAID_2FEE70FD_8BE6_4c3a_B2D7_5F60FDB8A7E4",
+      "id": "F-REQ-ONB-12",
+      "state": "MINIMUM POTVRZENO – DETAIL VALIDACE OTEVŘEN",
+      "capability": "Service Onboarding / SUBCAP-ONB-01 Marketplace Company Identifier Readiness",
+      "useCases": "UC002/P02; UC003/P03 – tematické"
+    },
+    {
+      "row": 121,
+      "guid": "EAID_D33C9536_E580_46bc_AFCC_12BCD6E31E58",
+      "id": "F-REQ-ONB-13",
+      "state": "AUTO SIEBEL RETRIEVAL/POPULATION MIMO MVP",
+      "capability": "Service Onboarding / SUBCAP-ONB-03 Marketplace Company Data Readiness; EXC-02 Data Consistency",
+      "useCases": "UC002/P02; UC003/P03"
+    },
+    {
+      "row": 122,
+      "guid": "EAID_43E1200F_BF0E_4242_AABD_D46F1BF221FE",
+      "id": "F-REQ-ONB-14",
+      "state": "AUTO SIEBEL RETRIEVAL/POPULATION MIMO MVP",
+      "capability": "Service Onboarding / SUBCAP-ONB-03 Marketplace Company Data Readiness; EXC-02 Data Consistency",
+      "useCases": "UC002/P02; UC003/P03"
+    },
+    {
+      "row": 123,
+      "guid": "EAID_072F54E9_32FE_41f1_AF88_4C9B0748CBE6",
+      "id": "F-REQ-ONB-15",
+      "state": "AUTO SIEBEL RETRIEVAL/POPULATION MIMO MVP",
+      "capability": "Service Onboarding / SUBCAP-ONB-03 Marketplace Company Data Readiness; EXC-02 Data Consistency",
+      "useCases": "UC002/P02; UC003/P03"
+    },
+    {
+      "row": 124,
+      "guid": "EAID_683F7811_EB61_4d53_9F02_B11F61A9F575",
+      "id": "F-REQ-ONB-16",
+      "state": "AUTO SIEBEL RETRIEVAL/POPULATION MIMO MVP",
+      "capability": "Service Onboarding / SUBCAP-ONB-03 Marketplace Company Data Readiness; EXC-02 Data Consistency",
+      "useCases": "UC002/P02; UC003/P03"
+    },
+    {
+      "row": 125,
+      "guid": "EAID_2A7537F3_36F1_4164_B984_856EC9B6341E",
+      "id": "F-REQ-ONB-17",
+      "state": "AUTO SIEBEL RETRIEVAL/POPULATION MIMO MVP",
+      "capability": "Service Onboarding / SUBCAP-ONB-03 Marketplace Company Data Readiness; EXC-02 Data Consistency",
+      "useCases": "UC002/P02; UC003/P03"
+    },
+    {
+      "row": 126,
+      "guid": "EAID_5B0B61D7_7333_42d9_9BD1_E3CE3CB8989C",
+      "id": "F-REQ-ONB-18",
+      "state": "AUTO SIEBEL RETRIEVAL/POPULATION MIMO MVP",
+      "capability": "Service Onboarding / SUBCAP-ONB-03 Marketplace Company Data Readiness; EXC-02 Data Consistency",
+      "useCases": "UC002/P02; UC003/P03"
+    },
+    {
+      "row": 127,
+      "guid": "EAID_E17AA2DE_E9E4_4c1e_8390_00E11E3B0791",
+      "id": "F-REQ-ONB-19",
+      "state": "AUTO SIEBEL RETRIEVAL/POPULATION MIMO MVP",
+      "capability": "Service Onboarding / SUBCAP-ONB-03 Marketplace Company Data Readiness; EXC-02 Data Consistency",
+      "useCases": "UC002/P02; UC003/P03"
+    },
+    {
+      "row": 128,
+      "guid": "EAID_089A980B_71DC_4d04_B2F9_00F72DEDE714",
+      "id": "F-REQ-ONB-20",
+      "state": "AUTO SIEBEL RETRIEVAL/POPULATION MIMO MVP",
+      "capability": "Service Onboarding / SUBCAP-ONB-03 Marketplace Company Data Readiness; EXC-02 Data Consistency",
+      "useCases": "UC002/P02; UC003/P03"
+    },
+    {
+      "row": 129,
+      "guid": "EAID_08ED6644_D63B_4bb9_8397_B01467F3556B",
+      "id": "F-REQ-ONB-21",
+      "state": "AUTO SIEBEL RETRIEVAL/POPULATION MIMO MVP",
+      "capability": "Service Onboarding / SUBCAP-ONB-03 Marketplace Company Data Readiness; EXC-02 Data Consistency",
+      "useCases": "UC002/P02; UC003/P03"
+    },
+    {
+      "row": 130,
+      "guid": "EAID_A23B5DA5_A2F7_40d3_8988_C59AF7D283D4",
+      "id": "F-REQ-ONB-22",
+      "state": "AUTO SIEBEL RETRIEVAL/POPULATION MIMO MVP",
+      "capability": "Service Onboarding / SUBCAP-ONB-03 Marketplace Company Data Readiness; EXC-02 Data Consistency",
+      "useCases": "UC002/P02; UC003/P03"
+    },
+    {
+      "row": 131,
+      "guid": "EAID_60B029A2_9771_4068_9B91_5C02F9008ECA",
+      "id": "F-REQ-ONB-23",
+      "state": "AUTO SIEBEL RETRIEVAL/POPULATION MIMO MVP",
+      "capability": "Service Onboarding / SUBCAP-ONB-03 Marketplace Company Data Readiness; EXC-02 Data Consistency",
+      "useCases": "UC002/P02; UC003/P03"
+    },
+    {
+      "row": 132,
+      "guid": "EAID_0FD01174_530B_46c8_9907_536C4FDC42AB",
+      "id": "F-REQ-ONB-24",
+      "state": "AUTO SIEBEL RETRIEVAL/POPULATION MIMO MVP",
+      "capability": "Service Onboarding / SUBCAP-ONB-03 Marketplace Company Data Readiness; EXC-02 Data Consistency",
+      "useCases": "UC002/P02; UC003/P03"
+    },
+    {
+      "row": 133,
+      "guid": "EAID_E4948A68_7830_4d73_AACF_3D42A012DFCD",
+      "id": "F-REQ-ONB-25",
+      "state": "AUTO SIEBEL RETRIEVAL/POPULATION MIMO MVP",
+      "capability": "Service Onboarding / SUBCAP-ONB-03 Marketplace Company Data Readiness; EXC-02 Data Consistency",
+      "useCases": "UC002/P02; UC003/P03"
+    },
+    {
+      "row": 134,
+      "guid": "EAID_5D2C7A38_9D62_4bcf_B240_EBC7139A6714",
+      "id": "F-REQ-ONB-26",
+      "state": "AUTO SIEBEL RETRIEVAL/POPULATION MIMO MVP",
+      "capability": "Service Onboarding / SUBCAP-ONB-03 Marketplace Company Data Readiness; EXC-02 Data Consistency",
+      "useCases": "UC002/P02; UC003/P03"
+    },
+    {
+      "row": 135,
+      "guid": "EAID_406EA781_78B0_4917_BEA0_1BDCA2BBEB3A",
+      "id": "F-REQ-ONB-27",
+      "state": "AUTO SIEBEL RETRIEVAL/POPULATION MIMO MVP",
+      "capability": "Service Onboarding / SUBCAP-ONB-03 Marketplace Company Data Readiness; EXC-02 Data Consistency",
+      "useCases": "UC002/P02; UC003/P03"
+    },
+    {
+      "row": 136,
+      "guid": "EAID_F755A395_90B3_498e_A8CE_27243E24FBEE",
+      "id": "F-REQ-ONB-28",
+      "state": "NAHRADIT EMAILOVOU VALIDACI POSTUPEM UC002",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC002 / P02"
+    },
+    {
+      "row": 137,
+      "guid": "EAID_CA301627_B848_4f6d_84C8_C088795724BC",
+      "id": "F-REQ-ONB-29",
+      "state": "NAHRADIT EMAILOVOU VALIDACI POSTUPEM UC002",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC002 / P02"
+    },
+    {
+      "row": 138,
+      "guid": "EAID_68D84F8F_577F_4fda_B90F_023BC5D466ED",
+      "id": "F-REQ-ONB-30",
+      "state": "NAHRADIT EMAILOVOU VALIDACI POSTUPEM UC002",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC002 / P02"
+    },
+    {
+      "row": 139,
+      "guid": "EAID_34CC873C_D50A_4536_AB6D_003DD6C20D82",
+      "id": "F-REQ-ONB-31",
+      "state": "NAHRADIT EMAILOVOU VALIDACI POSTUPEM UC002",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC002 / P02"
+    },
+    {
+      "row": 140,
+      "guid": "EAID_AC32C1AA_3064_45b2_9D45_3EA52F1E1FE5",
+      "id": "F-REQ-ONB-32",
+      "state": "NAHRADIT EMAILOVOU VALIDACI POSTUPEM UC002",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC002 / P02"
+    },
+    {
+      "row": 141,
+      "guid": "EAID_62C9F3C7_8AC8_4744_85CE_BA3774F67624",
+      "id": "F-REQ-ONB-33",
+      "state": "NAHRADIT EMAILOVOU VALIDACI POSTUPEM UC002",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC002 / P02"
+    },
+    {
+      "row": 142,
+      "guid": "EAID_C48905FB_B78C_483a_8610_487580968A74",
+      "id": "F-REQ-ONB-34",
+      "state": "NAHRADIT EMAILOVOU VALIDACI POSTUPEM UC002",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC002 / P02"
+    },
+    {
+      "row": 143,
+      "guid": "EAID_86A818E8_342D_4381_8A46_072738645D0F",
+      "id": "F-REQ-ONB-35",
+      "state": "NAHRADIT EMAILOVOU VALIDACI POSTUPEM UC002",
+      "capability": "Identity & Access Management / SUBCAP-IAM-02 Authorization Input Readiness",
+      "useCases": "UC002 / P02"
+    },
+    {
+      "row": 144,
+      "guid": "EAID_B3E1C2BC_4109_4f94_847D_693BA3497EEE",
+      "id": "F-REQ-ONB-36",
+      "state": "POTVRZENÝ CÍL – DETAIL IMPLEMENTACE OTEVŘEN",
+      "capability": "Service Onboarding / SUBCAP-ONB-05 Atlas Subscription Readiness",
+      "useCases": "UC002/P02; UC003/P03"
+    },
+    {
+      "row": 145,
+      "guid": "EAID_55D32B6F_D562_402a_A7AA_448231CBAAE3",
+      "id": "F-REQ-ONB-37",
+      "state": "POTVRZENÝ CÍL – DETAIL IMPLEMENTACE OTEVŘEN",
+      "capability": "Service Onboarding / SUBCAP-ONB-05 Atlas Subscription Readiness",
+      "useCases": "UC002/P02; UC003/P03"
+    },
+    {
+      "row": 146,
+      "guid": "EAID_60706A5F_C212_40bb_A17A_F8CB9FBA3655",
+      "id": "F-REQ-ONB-38",
+      "state": "POTVRZENÝ CÍL – DETAIL IMPLEMENTACE OTEVŘEN",
+      "capability": "Service Onboarding / SUBCAP-ONB-05 Atlas Subscription Readiness",
+      "useCases": "UC002/P02; UC003/P03"
+    },
+    {
+      "row": 147,
+      "guid": "EAID_88930F1D_5D29_47e5_B1F5_16C9CFC0F6DF",
+      "id": "F-REQ-ONB-39",
+      "state": "POTVRZENÝ CÍL – DETAIL IMPLEMENTACE OTEVŘEN",
+      "capability": "Service Onboarding / SUBCAP-ONB-05 Atlas Subscription Readiness",
+      "useCases": "UC002/P02; UC003/P03"
+    },
+    {
+      "row": 148,
+      "guid": "EAID_2AACAEBC_49F5_45dc_BC67_45F700653158",
+      "id": "F-REQ-ONB-40",
+      "state": "POTVRZENÝ CÍL – DETAIL IMPLEMENTACE OTEVŘEN",
+      "capability": "Service Onboarding / SUBCAP-ONB-05 Atlas Subscription Readiness",
+      "useCases": "UC002/P02; UC003/P03"
+    },
+    {
+      "row": 149,
+      "guid": "EAID_C17A2FF9_F1D6_457b_BE6F_D2598919C92E",
+      "id": "F-REQ-ONB-41",
+      "state": "GROUP ONBOARDING ZÁVISLOST – PAYLOAD OTEVŘEN",
+      "capability": "Service Onboarding / Managed Service Onboarding (TR bez nového SUBCAP ID)",
+      "useCases": "UC012 / P10"
+    },
+    {
+      "row": 150,
+      "guid": "EAID_F228EA98_C364_44c0_B249_AC2FED5142E4",
+      "id": "F-REQ-ONB-42",
+      "state": "GROUP ONBOARDING ZÁVISLOST – PAYLOAD OTEVŘEN",
+      "capability": "Service Onboarding / Managed Service Onboarding (TR bez nového SUBCAP ID)",
+      "useCases": "UC012 / P10"
+    },
+    {
+      "row": 151,
+      "guid": "EAID_EF680527_2E33_44cd_9A70_7498B799C142",
+      "id": "F-REQ-ONB-43",
+      "state": "GROUP ONBOARDING ZÁVISLOST – PAYLOAD OTEVŘEN",
+      "capability": "Service Onboarding / Managed Service Onboarding (TR bez nového SUBCAP ID)",
+      "useCases": "UC012 / P10"
+    },
+    {
+      "row": 152,
+      "guid": "EAID_288FDB8E_201B_43ec_A995_BFBD650B9DE5",
+      "id": "F-REQ-ONB-44",
+      "state": "GROUP ONBOARDING ZÁVISLOST – PAYLOAD OTEVŘEN",
+      "capability": "Service Onboarding / Managed Service Onboarding (TR bez nového SUBCAP ID)",
+      "useCases": "UC012 / P10"
+    },
+    {
+      "row": 153,
+      "guid": "EAID_D231DAA6_95B3_4e44_BAB5_89377EF82D23",
+      "id": "F-REQ-ONB-45",
+      "state": "GROUP ONBOARDING ZÁVISLOST – PAYLOAD OTEVŘEN",
+      "capability": "Service Onboarding / Managed Service Onboarding (TR bez nového SUBCAP ID)",
+      "useCases": "UC012 / P10"
+    },
+    {
+      "row": 154,
+      "guid": "EAID_5475EA1F_2A1A_48ad_B5E5_B782110DF43E",
+      "id": "F-REQ-PPM-01",
+      "state": "LOKÁLNÍ PRODUCT ENABLEMENT – DETAIL OTEVŘEN",
+      "capability": "Product & Pricing Management / SUBCAP-PPM-01 Product Definition",
+      "useCases": "UC001/P01; UC003/P03"
+    },
+    {
+      "row": 155,
+      "guid": "EAID_14396034_97CD_4e43_B7F2_332ECCCCA73F",
+      "id": "F-REQ-PPM-02",
+      "state": "LOKÁLNÍ PRODUCT ENABLEMENT – DETAIL OTEVŘEN",
+      "capability": "Product & Pricing Management / SUBCAP-PPM-01 Product Definition",
+      "useCases": "UC001/P01; UC003/P03"
+    },
+    {
+      "row": 156,
+      "guid": "EAID_D35E3CA8_E512_484d_9262_5147E115FFEB",
+      "id": "F-REQ-PPM-03",
+      "state": "LOKÁLNÍ PRODUCT ENABLEMENT – DETAIL OTEVŘEN",
+      "capability": "Product & Pricing Management / SUBCAP-PPM-01 Product Definition",
+      "useCases": "UC001/P01; UC003/P03"
+    },
+    {
+      "row": 157,
+      "guid": "EAID_0FDED048_7615_4c6a_830F_5E79E876CA3A",
+      "id": "F-REQ-PPM-04",
+      "state": "LOKÁLNÍ PRODUCT ENABLEMENT – DETAIL OTEVŘEN",
+      "capability": "Product & Pricing Management / SUBCAP-PPM-01 Product Definition",
+      "useCases": "UC001/P01; UC003/P03"
+    },
+    {
+      "row": 158,
+      "guid": "EAID_160673A4_27D3_443f_B508_F36365798A97",
+      "id": "F-REQ-PPM-05",
+      "state": "LOKÁLNÍ PRODUCT ENABLEMENT – DETAIL OTEVŘEN",
+      "capability": "Product & Pricing Management / SUBCAP-PPM-01 Product Definition",
+      "useCases": "UC001/P01; UC003/P03"
+    },
+    {
+      "row": 159,
+      "guid": "EAID_67AEBDA8_E0B7_4f9c_AA81_BA6A52D8A3C5",
+      "id": "F-REQ-PPM-06",
+      "state": "LOKÁLNÍ PRODUCT ENABLEMENT – DETAIL OTEVŘEN",
+      "capability": "Product & Pricing Management / SUBCAP-PPM-01 Product Definition",
+      "useCases": "UC001/P01; UC003/P03"
+    },
+    {
+      "row": 160,
+      "guid": "EAID_632E1B5F_D939_4836_BBF7_8F995FDA1C8C",
+      "id": "F-REQ-PPM-07",
+      "state": "LOKÁLNÍ PRODUCT ENABLEMENT – DETAIL OTEVŘEN",
+      "capability": "Product & Pricing Management / SUBCAP-PPM-01 Product Definition",
+      "useCases": "UC001/P01; UC003/P03"
+    }
+  ],
+  "mappingRows": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    49,
+    51,
+    52,
+    53,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    124,
+    125,
+    126,
+    127,
+    128,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    140,
+    141,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    163,
+    164,
+    165,
+    166,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209,
+    218,
+    219,
+    220
+  ],
+  "traceability": [
+    [
+      "CJ01",
+      "UC001",
+      "P01 Atlas Sales & Contracting",
+      "Sell",
+      "Product & Pricing Management",
+      "Product Definition",
+      "PPM-01"
+    ],
+    [
+      "CJ01",
+      "UC001",
+      "P01 Atlas Sales & Contracting",
+      "Sell",
+      "Product & Pricing Management",
+      "Commercial Offer Enablement",
+      "PPM-02"
+    ],
+    [
+      "CJ01",
+      "UC001",
+      "P01 Atlas Sales & Contracting",
+      "Sell",
+      "Product & Pricing Management",
+      "Contract Agreement",
+      "PPM-03"
+    ],
+    [
+      "CJ01",
+      "UC001",
+      "P01 Atlas Sales & Contracting",
+      "Sell",
+      "Product & Pricing Management",
+      "Terms & Conditions",
+      "PPM-04"
+    ],
+    [
+      "CJ01",
+      "UC001",
+      "P01 Atlas Sales & Contracting",
+      "Sell",
+      "Product & Pricing Management",
+      "Customer Technical Specification",
+      "PPM-05"
+    ],
+    [
+      "CJ01",
+      "UC002",
+      "P02 First Atlas Order & Enablement",
+      "Build",
+      "Service Onboarding",
+      "Marketplace Company Identifier Readiness",
+      "ONB-01"
+    ],
+    [
+      "CJ01",
+      "UC002",
+      "P02 First Atlas Order & Enablement",
+      "Build",
+      "Service Onboarding",
+      "Marketplace Company Data Readiness",
+      "ONB-03"
+    ],
+    [
+      "CJ01",
+      "UC002",
+      "P02 First Atlas Order & Enablement",
+      "Build",
+      "Service Onboarding",
+      "Atlas Subscription Readiness",
+      "ONB-05"
+    ],
+    [
+      "CJ01",
+      "UC012",
+      "P10 Atlas Managed Service Onboarding",
+      "Build",
+      "Service Onboarding",
+      "Managed Service Onboarding",
+      ""
+    ],
+    [
+      "CJ02",
+      "UC003",
+      "P03 M365 to Atlas Upgrade",
+      "Sell",
+      "Product & Pricing Management",
+      "Product Definition",
+      "PPM-01"
+    ],
+    [
+      "CJ02",
+      "UC003",
+      "P03 M365 to Atlas Upgrade",
+      "Build",
+      "Service Onboarding",
+      "Atlas Subscription Readiness",
+      "ONB-05"
+    ],
+    [
+      "CJ02",
+      "UC003",
+      "P03 M365 to Atlas Upgrade",
+      "Run",
+      "Exception Handling",
+      "Data Consistency",
+      "EXC-02"
+    ],
+    [
+      "CJ03",
+      "UC005",
+      "P04 Service Hub Access",
+      "Build",
+      "Channel & Entry Management",
+      "Entry Points and Navigation",
+      "CHM-02"
+    ],
+    [
+      "CJ03",
+      "UC005",
+      "P04 Service Hub Access",
+      "Build",
+      "Identity & Access Management",
+      "Authorization Input Readiness",
+      "IAM-02"
+    ],
+    [
+      "CJ03",
+      "UC005",
+      "P04 Service Hub Access",
+      "Build",
+      "Identity & Access Management",
+      "Customer Context Input Readiness",
+      "IAM-03"
+    ],
+    [
+      "CJ03",
+      "UC006",
+      "P05 Atlas Service Visibility",
+      "Run",
+      "Service Visibility",
+      "Atlas Service Data Availability",
+      "SVI-01"
+    ],
+    [
+      "CJ04",
+      "UC007",
+      "P06 Digital Support Request",
+      "Run",
+      "Support Management",
+      "Channel Handling",
+      "SUP-02"
+    ],
+    [
+      "CJ04",
+      "UC007",
+      "P06 Digital Support Request",
+      "Run",
+      "Support Management",
+      "Routing & Forwarding",
+      "SUP-03"
+    ],
+    [
+      "CJ04",
+      "UC008",
+      "P07 Assisted Support",
+      "Run",
+      "Support Management",
+      "Assisted Support",
+      "SUP-04"
+    ],
+    [
+      "CJ04",
+      "UC008",
+      "P07 Assisted Support",
+      "Run",
+      "Exception Handling",
+      "Escalation Handling",
+      "EXC-04"
+    ],
+    [
+      "CJ04",
+      "UC010",
+      "P06 Digital Support Request Management",
+      "Run",
+      "Support Management",
+      "Support Request Visibility",
+      ""
+    ],
+    [
+      "CJ04",
+      "UC011",
+      "P06 Digital Support Request Management",
+      "Run",
+      "Support Management",
+      "Support Request Update",
+      ""
+    ],
+    [
+      "CJ05",
+      "UC004",
+      "P08 Atlas to M365 Downgrade",
+      "Run",
+      "Service Offboarding",
+      "Termination Handling",
+      "OFF-01"
+    ],
+    [
+      "CJ05",
+      "UC004",
+      "P08 Atlas to M365 Downgrade",
+      "Run",
+      "Exception Handling",
+      "Escalation Handling",
+      "EXC-04"
+    ],
+    [
+      "CJ06",
+      "UC009",
+      "P09 Atlas Service Termination",
+      "Run",
+      "Service Offboarding",
+      "Termination Handling",
+      "OFF-01"
+    ],
+    [
+      "CJ06",
+      "UC009",
+      "P09 Atlas Service Termination",
+      "Run",
+      "Exception Handling",
+      "Escalation Handling",
+      "EXC-04"
+    ]
+  ]
+}

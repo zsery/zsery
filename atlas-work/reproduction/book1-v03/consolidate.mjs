@@ -7,17 +7,29 @@ const dir='work/book1-consolidation';
 const plan=JSON.parse(await fs.readFile(`${dir}/changes.json`,'utf8'));
 const wb=await SpreadsheetFile.importXlsx(await FileBlob.load('outputs/book1-v02/Book1_Atlas_pracovni_v02_2026-11-01.xlsx'));
 console.log('Imported v02, sheets:',wb.worksheets.items.length);
-for(const [name,start,end,lastCol,styleRow] of [['Postup revize',35,47,'D',34],['Revize MVP',20,26,'C',19]]){
+for(const [name,start,end,lastCol,styleRow] of [['Postup revize',35,56,'D',34],['Revize MVP',20,26,'C',19],['Business a FREQ',167,192,'Q',166]]){
  const s=wb.worksheets.getItem(name);
  for(let r=start;r<=end;r++)s.getRange(`A${r}:${lastCol}${r}`).copyFrom(s.getRange(`A${styleRow}:${lastCol}${styleRow}`),'all');
  s.getRange(`A${start}:${lastCol}${end}`).format.wrapText=true;
  s.getRange(`A${start}:${lastCol}${end}`).format.verticalAlignment='top';
  s.getRange(`A${start}:${lastCol}${end}`).format.rowHeight=105;
 }
+const bs=wb.worksheets.getItem('Business a FREQ');
+bs.getRange('R1').copyFrom(bs.getRange('O1'),'all');
+bs.getRange('S1').copyFrom(bs.getRange('O1'),'all');
+for(let r=2;r<=192;r++)for(const col of ['R','S'])bs.getRange(`${col}${r}`).copyFrom(bs.getRange(`O${Math.min(r,166)}`),'all');
+bs.getRange('R:S').format.columnWidth=65;
+bs.getRange('R1:S192').format.wrapText=true;
+bs.getRange('R1:S192').format.verticalAlignment='top';
 for(const [name,changes] of Object.entries(plan.operations)){
  const s=wb.worksheets.getItem(name);
  for(const [ref,value] of Object.entries(changes))s.getRange(ref).values=[[value]];
  console.log('Updated',name,Object.keys(changes).length);
+}
+for(const [name,changes]of Object.entries(plan.operations)){
+ const rows=[...new Set(Object.keys(changes).map(ref=>Number(ref.match(/\d+/)[0])))].filter(r=>r>1);
+ if(['Business a FREQ','EA SREQ','Functionalities','FREQ mapping','SREQ Aplikační role','Interfaces'].includes(name))
+  for(const r of rows)wb.worksheets.getItem(name).getRange(`A${r}`).format.rowHeight=225;
 }
 wb.worksheets.getItem('Cover').getRange('A13:B19').format.rowHeight=80;
 wb.worksheets.getItem('Cover').getRange('A13:B19').format.wrapText=true;
@@ -26,9 +38,9 @@ wb.worksheets.getItem('Revize MVP').getRange('A20:A26').format.fill='#174A70';
 wb.worksheets.getItem('Revize MVP').getRange('A20:A26').format.font.color='#FFFFFF';
 wb.worksheets.getItem('Revize MVP').getRange('A20:A26').format.font.bold=true;
 for(const [name,row,end] of [['Functionalities',315,'L'],['FREQ mapping',49,'W'],['SREQ Aplikační role',49,'W']]){
- wb.worksheets.getItem(name).getRange(`A${row}:${end}${row}`).format.rowHeight=150;
+ wb.worksheets.getItem(name).getRange(`A${row}:${end}${row}`).format.rowHeight=225;
 }
-for(const row of [4,12,17,18])wb.worksheets.getItem('Interfaces').getRange(`A${row}:K${row}`).format.rowHeight=150;
+for(const row of [4,12,17,18])wb.worksheets.getItem('Interfaces').getRange(`A${row}:K${row}`).format.rowHeight=225;
 await wb.recalculate();
 for(const [name,changes] of Object.entries(plan.operations)){
  const s=wb.worksheets.getItem(name);
@@ -46,7 +58,11 @@ for(const [name,range,slug] of [
  ['Business a FREQ','P9:Q11','text-conflicts'],['EA SREQ','I22:L22','ea-identity'],
  ['Revize MVP','A20:C26','revision'],['Interfaces','I4:K4','interface'],
  ['FREQ mapping','K49:N49','freq-identity'],['SREQ Aplikační role','L49:N49','sreq-identity'],
- ['Functionalities','J315:L315','function-identity']]){
+ ['Functionalities','J315:L315','function-identity'],
+ ['Business a FREQ','Q167:S170','primary-traceability'],
+ ['Business a FREQ','I121:J123','primary-siebel-scope'],
+ ['Postup revize','A48:D50','primary-source-controls'],
+ ['SREQ Aplikační role','L49:O49','primary-sreq-scope']]){
  const png=await wb.render({sheetName:name,range,scale:1,format:'png'});
  await fs.writeFile(`${dir}/${slug}.png`,new Uint8Array(await png.arrayBuffer()));
  console.log('Rendered',slug);

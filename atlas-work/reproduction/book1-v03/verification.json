@@ -1,7 +1,7 @@
 {
   "meaningfulIdentityCells": 23,
   "excludedEamRecalculationValues": 608,
-  "changedCells": 702,
+  "changedCells": 4289,
   "changedSheets": [
     "Functionalities",
     "Interfaces",
@@ -20,7 +20,7 @@
     "extended_text": 2
   },
   "output": "C:\\Users\\zsery\\Documents\\Codex\\2026-10-31\\jse\\outputs\\Book1_2026-11-03\\Book1_Atlas_konsolidovany_2026-11-03.xlsx",
-  "sha256": "ecbeb0354899de6891c7062c08ae02112db70a9d94bfeb551bd817ca4e6462dd",
+  "sha256": "930e32aa0c83c46940208c250cb282dc0efaffdd533add7b7b2796499952998f",
   "sheets": [
     "Cover",
     "Postup revize",
@@ -37,8 +37,8 @@
     "TA139Arch",
     "Revize MVP"
   ],
-  "preservedUnchangedCells": 33809,
-  "newAuthoredCells": 73,
+  "preservedUnchangedCells": 30928,
+  "newAuthoredCells": 779,
   "originalFormulasPreserved": 1878,
   "nativeTablePartsPreserved": 7,
   "externalLinkPartsPreserved": 2,

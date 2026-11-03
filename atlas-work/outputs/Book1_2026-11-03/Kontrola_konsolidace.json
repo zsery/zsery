@@ -1,7 +1,7 @@
 {
   "meaningfulIdentityCells": 23,
   "excludedEamRecalculationValues": 608,
-  "changedCells": 702,
+  "changedCells": 4289,
   "changedSheets": [
     "Functionalities",
     "Interfaces",
@@ -20,7 +20,7 @@
     "extended_text": 2
   },
   "output": "C:\\Users\\zsery\\Documents\\Codex\\2026-10-31\\jse\\outputs\\Book1_2026-11-03\\Book1_Atlas_konsolidovany_2026-11-03.xlsx",
-  "sha256": "ecbeb0354899de6891c7062c08ae02112db70a9d94bfeb551bd817ca4e6462dd",
+  "sha256": "930e32aa0c83c46940208c250cb282dc0efaffdd533add7b7b2796499952998f",
   "sheets": [
     "Cover",
     "Postup revize",
@@ -37,8 +37,8 @@
     "TA139Arch",
     "Revize MVP"
   ],
-  "preservedUnchangedCells": 33809,
-  "newAuthoredCells": 73,
+  "preservedUnchangedCells": 30928,
+  "newAuthoredCells": 779,
   "originalFormulasPreserved": 1878,
   "nativeTablePartsPreserved": 7,
   "externalLinkPartsPreserved": 2,
@@ -48,10 +48,33 @@
   ],
   "unintendedChanges": 0,
   "nativeExcelRecalculation": "Not performed; no new formulas added; existing formula text/cache preserved byte-for-byte.",
+  "primaryReview": {
+    "reviewedOriginalEaFreqRows": 159,
+    "traceabilityRowsAdded": 26,
+    "exactTextMappedBook1Rows": 188,
+    "scopeStates": {
+      "SAMOSTATNÝ MARKETING SCOPE": 37,
+      "MINIMUM POTVRZENO – DETAIL VALIDACE OTEVŘEN": 12,
+      "MIMO MVP – PORTÁLOVÁ INTEGRACE": 11,
+      "POTVRZENÝ MVP VÝSLEDEK – VFG ZÁVISLOST": 2,
+      "DETAIL NEPOTVRZEN PRO MVP": 2,
+      "ZPŘESNIT ELIGIBILITY PODLE UC": 4,
+      "POTVRZENÝ CÍL – ZPŘESNIT CZ VSTUPY": 7,
+      "ROLE DETAIL NEPOTVRZEN NOVÝM UC": 8,
+      "POTVRZENÝ CONTEXT CÍL – ZPŘESNIT TEXT": 14,
+      "VFG ZÁVISLOST – ODDĚLIT UC006": 10,
+      "VFG SUPPORT ZÁVISLOST – API DETAIL OTEVŘEN": 12,
+      "AUTO SIEBEL RETRIEVAL/POPULATION MIMO MVP": 15,
+      "NAHRADIT EMAILOVOU VALIDACI POSTUPEM UC002": 8,
+      "POTVRZENÝ CÍL – DETAIL IMPLEMENTACE OTEVŘEN": 5,
+      "GROUP ONBOARDING ZÁVISLOST – PAYLOAD OTEVŘEN": 5,
+      "LOKÁLNÍ PRODUCT ENABLEMENT – DETAIL OTEVŘEN": 7
+    }
+  },
   "artifactReimport": {
     "reimportedFinalWorkbook": true,
     "sheets": 14,
-    "verifiedAuthoredCells": 702,
+    "verifiedAuthoredCells": 4289,
     "nativeExcelRecalculation": false
   }
 }
