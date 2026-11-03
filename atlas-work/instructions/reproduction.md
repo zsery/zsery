@@ -1,5 +1,11 @@
 # Spuštění práce samostatným agentem
 
+## Copilot ve VDI — závazné pravidlo uživatele
+
+Ve VDI používej Copilot jako první volbu všude, kde je dostupný a použitelný pro zadaný úkol. Teams Copilot používej pro dohledání napříč SharePointem, Teams, e-maily a přepisy schůzek; Copilot ve Wordu a Excelu pro rozbor otevřených podkladů. Používej i další dostupné panely Copilotu. Před rozsáhlým ručním procházením ověř dostupnost Copilotu a zadej cílený dotaz. Vyžaduj odkazy a verze podkladů a závěry ověřuj proti primárním zdrojům. Běžnému Copilotu nepřisuzuj přístup do Confluence; specializovaného agenta použij jen podle jeho ověřeného přístupu.
+
+Platí zákaz změn zdrojových dat ve VDI: zadávání dotazů do Copilotu je povoleno, ale nepoužívej Apply/Insert/Edit ani jiné provedení změn do zdrojových dokumentů, sešitů či dat. Výjimku má pouze výslovně povolená projektová složka OneDrive AI. Při překážce zaznamenej konkrétní omezení a pokračuj jinou povolenou cestou. Běžně zadatelný dotaz nepřenášej na uživatele.
+
 Začni `../AGENT_PROMPT.md`. Získání dat: veřejné HTTPS čtení repozitáře zsery/zsery, větev codex/atlas-stav-2026-11-01. Zápis: vlastní GitHub autorizace agenta. Žádný přenos identity nebo přístupových údajů jiného agenta není podmínkou čtení.
 
 Ověřený Book1 a jeho builder jsou v outputs/Book1_2026-11-03 a reproduction/book1-v03. Tři nespuštěné DXL změny jsou v pending/book1-dxl-update. Nezaměň je za hotový XLSX. Pro obnovu pracovního layoutu slouží tools/restore_workspace.py; vyžaduje nový prázdný cíl mimo checkout a podporuje --dry-run. Skript neprovádí builder ani API operace.
