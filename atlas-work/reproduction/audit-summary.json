@@ -1,0 +1,14 @@
+{
+  "elements": 18536,
+  "connectors": 14898,
+  "diagrams": 664,
+  "projectElements": 2093,
+  "projectDiagrams": 55,
+  "book1Rows": 219,
+  "book1RowsSreqFound": 87,
+  "book1RowsSreqNotFound": 132,
+  "distinctProjectSreqIDs": 110,
+  "projectApplicationFunctions": 228,
+  "repeatedFunctionNames": 110,
+  "directFreqSreqLinksForBookRows": 0
+}

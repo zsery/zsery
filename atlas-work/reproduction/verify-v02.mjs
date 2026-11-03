@@ -1,0 +1,10 @@
+import fs from 'node:fs/promises';import {createRequire} from 'node:module';import {pathToFileURL} from 'node:url';
+const req=createRequire('C:/Users/zsery/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/package.json');const {FileBlob,SpreadsheetFile}=await import(pathToFileURL(req.resolve('@oai/artifact-tool')).href);
+const w=await SpreadsheetFile.importXlsx(await FileBlob.load('outputs/book1-v02/Book1_Atlas_pracovni_v02_2026-11-01.xlsx'));
+const business=w.worksheets.getItem('Business a FREQ').getRange('A2:Q166').values,sreq=w.worksheets.getItem('EA SREQ').getRange('A2:L112').values,mapping=w.worksheets.getItem('FREQ mapping').getRange('Q2:W220').values;
+const report={sheets:w.worksheets.items.map(s=>s.name),businessRows:business.length,ucInputs:business.filter(r=>String(r[1]).startsWith('UC005')).length,eaSreqElements:sreq.length,mappedRows:mapping.filter(r=>r[1]).length,unmappedRows:mapping.filter(r=>!r[1]).length,errors:[]};
+for(const name of ['Postup revize','Business a FREQ','EA SREQ']){const v=w.worksheets.getItem(name).getUsedRange().values;for(let i=0;i<v.length;i++)for(let j=0;j<v[i].length;j++)if(typeof v[i][j]==='string'&&/^#(REF!|VALUE!|DIV\/0!|NAME\?)/.test(v[i][j]))report.errors.push([name,i+1,j+1,v[i][j]]);}
+if(report.sheets.length!==14||report.businessRows!==165||report.eaSreqElements!==111||report.mappedRows!==87||report.errors.length)throw Error(JSON.stringify(report));
+await fs.writeFile('work/book1/v02-final-check.json',JSON.stringify(report,null,2));
+const png=await w.render({sheetName:'Postup revize',range:'A13:D16',scale:1,format:'png'});await fs.writeFile('work/book1/v02-final.png',new Uint8Array(await png.arrayBuffer()));console.log(JSON.stringify(report));
+for(const [name,range,file] of [['Functionalities','K110:L111','v02-functions-final'],['Interfaces','I47:K49','v02-interfaces-final']]){const p=await w.render({sheetName:name,range,scale:1,format:'png'});await fs.writeFile('work/book1/'+file+'.png',new Uint8Array(await p.arrayBuffer()));}

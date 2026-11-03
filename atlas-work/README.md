@@ -1,6 +1,15 @@
 # ServiceHub + Atlas CZ — pracovní podklady
 
-Stav k 1. 11. 2026. Tato složka obsahuje dosud vytvořené pracovní výstupy. Nejprve otevřít [Stav práce](outputs/Stav_prace_2026-11-01.md), pak [aktuální Book1 v02](outputs/book1-v02/Book1_Atlas_pracovni_v02_2026-11-01.xlsx).
+Stav k 3. 11. 2026. Pro pokračování na jiném PC nejprve otevřít [Předání práce](PREDANI_2026-11-03.md). Obsahuje instrukce uživatele, známé zdroje, větve GitHubu, omezení dosavadního průzkumu a přesný nedokončený stav. Původní [stav z 1. 11.](outputs/Stav_prace_2026-11-01.md) je historický podklad.
+
+## Nové podklady pro navázání
+
+- [Předání práce a instrukce](PREDANI_2026-11-03.md).
+- [SharePoint průzkum z 2. 11. a opravená pravidla VFID USER](notes/atlas-sharepoint-review-2026-11-02.md), převzato z větve `codex/atlas-sharepoint-review`, commit `c58e2b922916b6004973ce1dcb303b97fc123925`.
+- [Book1 s pravidly identity z 2. 11.](outputs/Book1_Solution_2026-11-02/Book1_Atlas_MVP_revize_2026-11-02.xlsx). Pozor: vznikl ze starší první revize a postrádá tři nové listy v02 a externí link part. Nepřepisovat jím v02; nejprve kontrolovaně sloučit změny.
+- [Přenositelná pravidla explicitního scope](instructions/follow-explicit-scope.md).
+- [Analýza pádu Outlooku](outputs/outlook-crash-analysis-20261102.md). Příčina není definitivně určena a oprava není hotová; dump není v repozitáři.
+- `reproduction/`: vybrané původní skripty a kontrolní výsledky pro dohledání změn. Obsahují lokální cesty; před spuštěním ověřit. Neobsahují deploy key.
 
 ## Aktuální práce
 
@@ -17,7 +26,7 @@ Stav k 1. 11. 2026. Tato složka obsahuje dosud vytvořené pracovní výstupy. 
 - [OneDrive podklady](outputs/onedrive-servicehub-pruzkum.md).
 - [Průzkum dokumentace](outputs/servicehub-pruzkum-podkladu.md).
 
-Další poznámky v `outputs/` zachovávají historii průzkumu. Mohou obsahovat později překonané závěry; pro současný stav mají přednost Stav práce a Book1 v02. Složka `outputs/book1-revize/` obsahuje předchozí revizi, nikoli aktuální sešit. Copilot odpovědi a jejich rozbory nejsou kanonickým zdrojem požadavků; evidované opravy a omezení je nutné respektovat.
+Další poznámky v `outputs/` zachovávají historii průzkumu. Mohou obsahovat později překonané závěry; pro současný stav má přednost Předání práce z 3. 11. Rozšířeným základem zůstává Book1 v02; pravidla přidaná do oddělené revize z 2. 11. je třeba do něj sloučit. Složka `outputs/book1-revize/` obsahuje starší revizi. Copilot odpovědi a jejich rozbory nejsou kanonickým zdrojem požadavků; evidované opravy a omezení je nutné respektovat.
 
 ## Dohodnutý postup
 

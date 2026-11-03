@@ -1,0 +1,24 @@
+{
+  "sheets": [
+    "Cover",
+    "Postup revize",
+    "Business a FREQ",
+    "EA SREQ",
+    "_Enums",
+    "Functionalities",
+    "Interfaces",
+    "FREQ mapping",
+    "EAM App",
+    "Siebel EA Export",
+    "SREQ Aplikační role",
+    "Sheet1",
+    "TA139Arch",
+    "Revize MVP"
+  ],
+  "businessRows": 165,
+  "ucInputs": 6,
+  "eaSreqElements": 111,
+  "mappedRows": 87,
+  "unmappedRows": 132,
+  "errors": []
+}
