@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0h98v2f" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.47.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.9.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0h98v2f" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.52.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.9.0">
   <bpmn:collaboration id="Collaboration_0wootj7">
     <bpmn:participant id="Participant_1ej3tac" name="Vodafone" processRef="Process_0vwoll5" />
     <bpmn:textAnnotation id="TextAnnotation_0dqvkiy">
@@ -40,10 +40,7 @@ pwd: password1</bpmn:text>
         "role": "owner",
         "assetCategory": "MassMarket",
         "relatedAsset": [
-          {
-            "id": "CRM_ID_001",
-            "entityType": "customer"
-          }
+          { "id": "CRM_ID_001", "entityType": "customer" }
         ]
       },
       {
@@ -54,10 +51,7 @@ pwd: password1</bpmn:text>
         "role": "owner",
         "assetCategory": "MassMarket",
         "relatedAsset": [
-          {
-            "id": "CRM_ID_001",
-            "entityType": "customer"
-          }
+          { "id": "CRM_ID_001", "entityType": "customer" }
         ]
       },
       {
@@ -75,10 +69,7 @@ pwd: password1</bpmn:text>
         "role": "admin",
         "assetCategory": "MassMarket",
         "relatedAsset": [
-          {
-            "id": "CRM_ID_002",
-            "entityType": "customer"
-          }
+          { "id": "CRM_ID_002", "entityType": "customer" }
         ]
       },
       {
@@ -89,10 +80,38 @@ pwd: password1</bpmn:text>
         "role": "admin",
         "assetCategory": "MassMarket",
         "relatedAsset": [
-          {
-            "id": "CRM_ID_002",
-            "entityType": "customer"
-          }
+          { "id": "CRM_ID_002", "entityType": "customer" }
+        ]
+      },
+      {
+        "@type": "UserAssetExtended",
+        "id": "CRM_ID_003",
+        "entityType": "customer",
+        "role": "owner",
+        "assetCategory": "MassMarket",
+        "relatedAsset": [
+          { "id": "CRM_ID_001", "entityType": "customer" }
+        ]
+      },
+      {
+        "@type": "UserAssetExtended",
+        "id": "CRM_ID_004",
+        "entityType": "customer",
+        "role": "admin",
+        "assetCategory": "MassMarket",
+        "relatedAsset": [
+          { "id": "CRM_ID_002", "entityType": "customer" }
+        ]
+      },
+      {
+        "@type": "UserAssetExtended",
+        "id": "BA_005",
+        "entityType": "account",
+        "assetType": "billingAccount",
+        "role": "admin",
+        "assetCategory": "MassMarket",
+        "relatedAsset": [
+          { "id": "CRM_ID_004", "entityType": "customer" }
         ]
       }
     ]
@@ -119,16 +138,37 @@ pwd: password1</bpmn:text>
     <bpmn:textAnnotation id="TextAnnotation_1t9y8ym">
       <bpmn:text>[
   {
-    "CRM_ID": "CRM_ID_001",
-    "id": "ac96fc31-b8b7-42f2-9776-cbb1a1b9cead",
-    "sub": "ac96fc31-b8b7-42f2-9776-cbb1a1b9cead",
-    "email": "my@vodafone.com"
-  },
-  {
-    "CRM_ID": "CRM_ID_002",
-    "id": "ac96fc31-b8b7-42f2-9776-cbb1a1b9cead",
-    "sub": "ac96fc31-b8b7-42f2-9776-cbb1a1b9cead",
-    "email": "my@vodafone.com"
+    "id": "ac96fc31-b8b7-42f2-9776-cbb1a1b9cead",
+    "status": "ACTIVE",
+    "email": "my@vodafone.com",
+    "userAssets": [
+      {
+        "id": "CRM_ID_001",
+        "entityType": "customer",
+        "role": "owner",
+      },
+      {
+        "id": "CRM_ID_002",
+        "entityType": "customer",
+        "role": "admin",
+      },
+      {
+        "id": "CRM_ID_003",
+        "entityType": "customer",
+        "role": "owner",
+        "relatedAsset": [
+          { "id": "CRM_ID_001", "entityType": "customer" }
+        ]
+      },
+      {
+        "id": "CRM_ID_004",
+        "entityType": "customer",
+        "role": "admin",
+        "relatedAsset": [
+          { "id": "CRM_ID_002", "entityType": "customer" }
+        ]
+      }
+    ]
   }
 ]</bpmn:text>
     </bpmn:textAnnotation>
@@ -137,6 +177,30 @@ pwd: password1</bpmn:text>
     <bpmn:association id="Association_0251c04" associationDirection="None" sourceRef="Activity_057zvvc" targetRef="TextAnnotation_1t9y8ym" />
     <bpmn:association id="Association_08ul675" associationDirection="None" sourceRef="Activity_0c1if5t" targetRef="TextAnnotation_14d3xw5" />
     <bpmn:association id="Association_1ua9pzq" associationDirection="None" sourceRef="Activity_02df28p" targetRef="TextAnnotation_0e42rx2" />
+    <bpmn:textAnnotation id="TextAnnotation_150ca98">
+      <bpmn:text>[
+  {
+    "id": "CRM_ID_001",
+    "entityType": "customer",
+  }
+]</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1w0rekj" associationDirection="None" sourceRef="Activity_1mrfzrw" targetRef="TextAnnotation_150ca98" />
+    <bpmn:textAnnotation id="TextAnnotation_1vl5h3c">
+      <bpmn:text>[
+  {
+    "id": "ac96fc31-b8b7-42f2-9776-cbb1a1b9cead",
+    "status": "ACTIVE",
+    "email": "my@vodafone.com",
+      {
+        "id": "CRM_ID_001",
+        "entityType": "customer",
+        "role": "owner",
+      }
+  }
+]</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_06fgsbr" associationDirection="None" sourceRef="Activity_0hjgxmq" targetRef="TextAnnotation_1vl5h3c" />
   </bpmn:collaboration>
   <bpmn:process id="Process_0vwoll5" isExecutable="true">
     <bpmn:laneSet id="LaneSet_1n686co">
@@ -205,11 +269,11 @@ pwd: password1</bpmn:text>
       <bpmn:outgoing>Flow_0bm3v8i</bpmn:outgoing>
       <bpmn:outgoing>Flow_1xpw02l</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:serviceTask id="Activity_1mrfzrw" name="ServiceHub Call DXL TMF637">
+    <bpmn:serviceTask id="Activity_1mrfzrw" name="ServiceHub Call DXL TMF637 to Marketplace">
       <bpmn:incoming>Flow_0bm3v8i</bpmn:incoming>
       <bpmn:outgoing>Flow_15hff5o</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:serviceTask id="Activity_0hjgxmq" name="ServcvieHub Cal  DXL TMF621">
+    <bpmn:serviceTask id="Activity_0hjgxmq" name="ServcvieHub Cal  DXL TMF621 to GSNOW">
       <bpmn:incoming>Flow_1xpw02l</bpmn:incoming>
       <bpmn:outgoing>Flow_17f26x9</bpmn:outgoing>
     </bpmn:serviceTask>
@@ -239,12 +303,12 @@ pwd: password1</bpmn:text>
         <dc:Bounds x="212" y="180" width="1208" height="390" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_12rjwco_di" bpmnElement="Lane_12rjwco" isHorizontal="true">
-        <dc:Bounds x="242" y="180" width="1178" height="125" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_00yc9pc_di" bpmnElement="Lane_00yc9pc" isHorizontal="true">
         <dc:Bounds x="242" y="305" width="1178" height="265" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_12rjwco_di" bpmnElement="Lane_12rjwco" isHorizontal="true">
+        <dc:Bounds x="242" y="180" width="1178" height="125" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="StartEvent_1">
@@ -378,44 +442,60 @@ pwd: password1</bpmn:text>
         <di:waypoint x="1370" y="470" />
         <di:waypoint x="1370" y="258" />
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0251c04_di" bpmnElement="Association_0251c04">
+        <di:waypoint x="1070" y="400" />
+        <di:waypoint x="989" y="590" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_06fgsbr_di" bpmnElement="Association_06fgsbr">
+        <di:waypoint x="1280" y="510" />
+        <di:waypoint x="1280" y="600" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1w0rekj_di" bpmnElement="Association_1w0rekj">
+        <di:waypoint x="1279" y="320" />
+        <di:waypoint x="1273" y="160" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="TextAnnotation_0dqvkiy_di" bpmnElement="TextAnnotation_0dqvkiy">
+        <dc:Bounds x="280" y="120" width="149.99485172981878" height="39.993478857770455" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_18i1pyr_di" bpmnElement="TextAnnotation_18i1pyr" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="470" y="80" width="470" height="90" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_14d3xw5_di" bpmnElement="TextAnnotation_14d3xw5" bioc:stroke="#0d4372" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#0d4372">
+        <dc:Bounds x="580" y="600" width="389.1518571495805" height="1497" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0e42rx2_di" bpmnElement="TextAnnotation_0e42rx2" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="160" y="595" width="389.9986271279517" height="229.99897034596376" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_167zool_di" bpmnElement="Association_167zool">
+        <di:waypoint x="641" y="210" />
+        <di:waypoint x="602" y="170" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Association_0dy2pvk_di" bpmnElement="Association_0dy2pvk">
         <di:waypoint x="363" y="320" />
         <di:waypoint x="334" y="160" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_08ul675_di" bpmnElement="Association_08ul675">
+        <di:waypoint x="724" y="400" />
+        <di:waypoint x="646" y="600" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Association_1ua9pzq_di" bpmnElement="Association_1ua9pzq">
         <di:waypoint x="560" y="387" />
         <di:waypoint x="170" y="595" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Association_167zool_di" bpmnElement="Association_167zool">
-        <di:waypoint x="641" y="210" />
-        <di:waypoint x="602" y="170" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Association_08ul675_di" bpmnElement="Association_08ul675">
-        <di:waypoint x="722" y="400" />
-        <di:waypoint x="632" y="600" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Association_0251c04_di" bpmnElement="Association_0251c04">
-        <di:waypoint x="1077" y="400" />
-        <di:waypoint x="1061" y="600" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="TextAnnotation_18i1pyr_di" bpmnElement="TextAnnotation_18i1pyr" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
-        <dc:Bounds x="470" y="80" width="470" height="90" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="TextAnnotation_0dqvkiy_di" bpmnElement="TextAnnotation_0dqvkiy">
-        <dc:Bounds x="280" y="120" width="149.99485172981878" height="39.993478857770455" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="TextAnnotation_1t9y8ym_di" bpmnElement="TextAnnotation_1t9y8ym">
-        <dc:Bounds x="1010" y="600" width="329.99553816584296" height="219.99416529379462" />
+        <dc:Bounds x="900" y="590" width="336.8832560291389" height="518" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="TextAnnotation_14d3xw5_di" bpmnElement="TextAnnotation_14d3xw5" bioc:stroke="#0d4372" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#0d4372">
-        <dc:Bounds x="580" y="600" width="379.99382207578253" height="1221.3069741900056" />
+      <bpmndi:BPMNShape id="TextAnnotation_1vl5h3c_di" bpmnElement="TextAnnotation_1vl5h3c">
+        <dc:Bounds x="1230" y="600" width="290" height="187" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="TextAnnotation_0e42rx2_di" bpmnElement="TextAnnotation_0e42rx2" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
-        <dc:Bounds x="160" y="595" width="389.9986271279517" height="229.99897034596376" />
+      <bpmndi:BPMNShape id="TextAnnotation_150ca98_di" bpmnElement="TextAnnotation_150ca98">
+        <dc:Bounds x="1220" y="60" width="171" height="100" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
