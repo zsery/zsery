@@ -58,7 +58,7 @@ SHA-256: `2888fc4e7a78fcd25b8ed32ec745f6d0530753b0f40bc4937706fafe30fb0e90`.
 
 Dříve pending DXL poznatky jsou nově promítnuty do XLSX: 60 změn proti předchozímu kanonickému souboru v šesti listech, reimport a vizuální QA dokončeny, vzorce/cache a nativní části zachovány. Viz outputs/Book1_2026-11-03/DXL_doplneni_2026-11-03.md, Kontrola_DXL_doplneni.json a Zmeny_DXL_bunek.csv. Původní konsolidační evidence 4663 změn je historická. Pending README popisuje provedení; neopakovat doplnění naslepo. Reprodukce cílené delty je v reproduction/book1-dxl.
 
-Atlas.xml a Word SO nejsou aktualizované. Úplný průzkum všech Group podsložek není dokončen. TMF691 čtecí text prošel do konce bez diagramů; TMF629 má přečtené vybrané GET a celé OLC/V2 mapping části. Board čtení pokračuje od začátku In scope. Živý VDI stav vždy znovu zjisti.
+Atlas.xml a Word SO nejsou aktualizované. Úplný průzkum všech Group podsložek není dokončen. TMF691 čtecí text prošel do konce bez diagramů; TMF629 má přečtené vybrané GET a celé OLC/V2 mapping části. Board reader byl dočten přes In scope a Out of scope k nadpisu Rizika (viz outputs/Board_pokracovani_2026-11-04.md). Aktuální Teams Copilot průzkum a cílené ověření přepisu MVP Assessment z 2.11. jsou v outputs/Copilot_MVP_Assessment_2026-11-04.md; oddělují Copilot vodítka a primární výroky. Živý VDI stav vždy znovu zjisti.
 
 ### Závazná pravidla
 
