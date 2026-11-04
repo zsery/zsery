@@ -62,6 +62,8 @@ Atlas.xml a Word SO nejsou aktualizované. Úplný průzkum všech Group podslo�
 
 ### Závazná pravidla
 
+Pracovní rozpad UC005–UC011 z 4.11. je v `outputs/UC_atomicke_podminky_2026-11-04/UC_review.md` a `Kontrolni_matice.json`: 30 podmínek, 41 existujících FREQ kandidátů s původními GUID, 77 existujících mapovacích řádků, deset podmínek bez přímého protějšku v porovnávané sadě. Jde o návrh pro review, nikoli schválení nebo nové EA vztahy. Dřívější překážka scrollu je vyřešená tažením posuvníku. Živý stav vždy znovu pozorovat.
+
 Uživatel je solution architect VFCZ. Směr práce: závazný Architecture Board MVP → nejnovější analýza Martina Dostála v CZ local folder → FREQ/capabilities/business procesy → aplikační vrstva/SREQ → EA → vlastní SO. Group závislost není automaticky požadavek na VFCZ implementaci.
 
 VDI pouze čti. Neměň, nevytvářej ani nemaž zdrojová data. Povoleno zadávání do vyhledávání; úzce vymezená projektová OneDrive AI složka je výjimka, nikoli všeobecné oprávnění. DOCX otevři explicitně v Immersive Readeru, XLSX v Preview. Neobcházej blokování schránky z VDI ven. Neautomatizuj přihlašovací dialogy. Před ovládáním čti vlastní dostupný computer-use skill. Nečti Outlook accessibility tree.
