@@ -1,5 +1,16 @@
 # Pokračování práce Atlas / ServiceHub VFCZ
 
+## Nejnovější pokračování 4 listopadu večer
+
+Aktuální OneDrive Documents/Projects/ServiceHub/Atlas/Book1.xlsx byl zkontrolován po práci Copilotu; není nahrazen starší lokální revizí. Přesné FREQ mapping!F4:F5 = SREQ-CRM-04 / SREQ-CRM-03 potvrzují, že starý CRM-03/04 mapping konflikt už Copilot opravil. Aktuální ř.109 ale stále má allow v C109, deny v J109 a SHODA v D109; Copilot potvrdil rozpor. Žádná zdrojová VDI data nebyla upravena.
+
+Vznikla skutečná dílčí pracovní XML revize osmi documentation polí, se zachováním všech ostatních bajtů, GUIDů, konektorů a diagramů. Výstup a původní/nové texty: outputs/EA_SO_2026-11-04/. XML SHA-256 fb0cfe908c40bf58928d5b8a837760bce19304d9293d1f331377183a268a21a6. Není to dokončená architektonická baseline ani ověřený nativní import EA.
+
+Primárně otevřen email RE: ServiceHub - DXL, 15.10.2026 16:35: SH BFF předá IDaaS token jako subject_token přes APIX do AuthX; validace přes IDaaS /oidc/introspect; vrátí se DXL token. TMF691 CRM_ID a TMF629 customer name jsou oddělené. Přesný verzovaný kontrakt a produkční oprávnění zůstávají otevřené. Nalezen 74stránkový TMF621 SNOW Integration PDF; čtený rozsah a meze použitelnosti jsou v ServiceHub_pokracovani_2026-11-04.md. Neoznačovat jej automaticky za Atlas kontrakt.
+
+Změnové kapitoly SO jsou hotové jako textový obsah .md pro zapracování do původního SO. DOCX vizuální QA blokuje chybějící soffice.exe; neověřený DOCX není vydaný. Native EA import/diagram QA, úplná aktuální traceability, role rozhodnutí, uzavření kontraktů a plná editace původního SO zůstávají nedokončené. Předchozí tvrzení o zcela nezměněném Atlas.xml je historické: původní export zůstává nezměněný, ale nová dílčí pracovní kopie nyní existuje.
+
+
 ## Copilot ve VDI — závazné pravidlo uživatele
 
 Ve VDI používej Copilot jako první volbu všude, kde je dostupný a použitelný pro zadaný úkol. Teams Copilot používej pro dohledání napříč SharePointem, Teams, e-maily a přepisy schůzek; Copilot ve Wordu a Excelu pro rozbor otevřených podkladů. Používej i další dostupné panely Copilotu. Před rozsáhlým ručním procházením ověř dostupnost Copilotu a zadej cílený dotaz. Vyžaduj odkazy a verze podkladů a závěry ověřuj proti primárním zdrojům. Detailní informace jsou v Confluence. Pro jejich vyhledávání v Teams používej konkrétního specializovaného agenta **Confluence Agent**, nikoli běžný Teams Copilot. Confluence čti přes tohoto agenta nebo přímo přes URL stránek. Pro přímý přístup přes URL musí být aktivní přihlášení účtem uživatele; ověř přihlášení a pokud chybí nebo vypršelo, dej uživateli vědět a požádej ho o ruční přihlášení. Přihlašovací dialogy neautomatizuj a nevyžaduj heslo do chatu. U výsledků Confluence Agentu vyžaduj URL primární stránky a dostupné údaje o verzi či datu; detail, který agent nevrátí, ověř přímým čtením stránky po přihlášení. Výsledek agenta není dokladem úplného průzkumu všech stránek a podsložek.
