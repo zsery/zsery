@@ -64,4 +64,8 @@ Obsah změnových kapitol SO je uložen samostatně v ServiceHub_SO_zmenove_kapi
 
 DOCX byl vytvořen jako pracovní mezikrok, ale render_docx.py selhal, protože na dostupné cestě není soffice.exe. Po kontrole runtime a troubleshootingu nebyl nalezen zabalený LibreOffice; vizuální QA neproběhlo. Neověřený DOCX zůstal ve work a není finálním výstupem.
 
-Zbývá úplná obsahová kontrola všech aktuálních vazeb, role rozhodnutí, specifické schválené SNOW/token kontrakty, dokončení vztahů a scénářů EA, nativní EA import/diagram QA, zapracování do původního SO a Word QA, a GitHub synchronizace. Tyto části nejsou označené za hotové.
+Zbývá úplná obsahová kontrola všech aktuálních vazeb, role rozhodnutí, specifické schválené SNOW/token kontrakty, dokončení vztahů a scénářů EA, nativní EA import/diagram QA a zapracování do původního SO včetně Word QA. Tyto části nejsou označené za hotové.
+
+## GitHub synchronizace
+
+Po udělení síťového oprávnění bylo obnoveno spojení a použit existující repo-specific SSH wrapper s již připraveným klíčem a pinned known_hosts. Dílčí revize včetně archivu XML, manifestu, SO textu, tohoto záznamu a aktualizovaného předání je uložena ve větvi codex/atlas-stav-2026-11-01 repozitáře zsery/zsery. Po zápisu byly porovnány lokální HEAD a vzdálené SHA. Main nebyl změněn.
