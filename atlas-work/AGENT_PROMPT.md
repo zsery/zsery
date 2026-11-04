@@ -64,6 +64,8 @@ Atlas.xml a Word SO nejsou aktualizované. Úplný průzkum všech Group podslo�
 
 Pracovní rozpad UC005–UC011 z 4.11. je v `outputs/UC_atomicke_podminky_2026-11-04/UC_review.md` a `Kontrolni_matice.json`: 30 podmínek, 41 existujících FREQ kandidátů s původními GUID, 77 existujících mapovacích řádků, deset podmínek bez přímého protějšku v porovnávané sadě. Jde o návrh pro review, nikoli schválení nebo nové EA vztahy. Dřívější překážka scrollu je vyřešená tažením posuvníku. Živý stav vždy znovu pozorovat.
 
+Následně je obsahově posouzeno všech 219 řádků FREQ mapping: `outputs/UC_atomicke_podminky_2026-11-04/SREQ_vsechny_radky.md` a `SREQ_kontrola_vsech_219_radku.json`. Zachované texty/GUID, konkrétní konflikty CRM-03/04, CRM-09/10, SH-07 a aplikační owner ID-07. Nejde o AS-IS implementační audit nebo approval. Confluence Agent našel SnowConnector návrh PR25_0749, pageId 254750255; přímá stránka vyžaduje ruční přihlášení uživatele. Přesný stav a osobní skill v `outputs/Confluence_SNOW_voditka_2026-11-04.md`. Žádost o ruční přihlášení je otevřená; neautomatizovat login.
+
 Uživatel je solution architect VFCZ. Směr práce: závazný Architecture Board MVP → nejnovější analýza Martina Dostála v CZ local folder → FREQ/capabilities/business procesy → aplikační vrstva/SREQ → EA → vlastní SO. Group závislost není automaticky požadavek na VFCZ implementaci.
 
 VDI pouze čti. Neměň, nevytvářej ani nemaž zdrojová data. Povoleno zadávání do vyhledávání; úzce vymezená projektová OneDrive AI složka je výjimka, nikoli všeobecné oprávnění. DOCX otevři explicitně v Immersive Readeru, XLSX v Preview. Neobcházej blokování schránky z VDI ven. Neautomatizuj přihlašovací dialogy. Před ovládáním čti vlastní dostupný computer-use skill. Nečti Outlook accessibility tree.
