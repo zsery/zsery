@@ -12,6 +12,10 @@ Platí zákaz změn zdrojových dat ve VDI: zadávání dotazů do Copilotu je p
 
 # Atlas / ServiceHub VFCZ
 
+## Výslovné upřesnění uživatele, 4. 11. 2026
+
+Při práci s daty na OneDrive, SharePointu, v Outlooku a Teams nejprve použij Copilot. Preferuj Teams Copilot; pro otevřený dokument či sešit použij dostupný Copilot ve Wordu nebo Excelu, případně Outlook Copilot. Před přímým průzkumem zadej cílený dotaz a vyžádej odkazy na primární zdroje a dostupné verze. Toto pravidlo platí i pro krátké pokračování čtení. Ověření citovaných primárních zdrojů následuje po tomto kroku. Pro Confluence použij specializovaný Confluence Agent nebo autorizované přímé URL dle pravidel výše. Nedostupnost konkrétního Copilotu musí být skutečně ověřená; nevymýšlej výjimku podle délky práce. Zdrojová data pouze čti, nepoužívej Apply/Insert/Edit.
+
 Read `atlas-work/AGENT_PROMPT.md` for the complete task instructions, repository access, evidence and exact incomplete state. Read the source notes it references. Use your own GitHub authorization for writes. Public repository reads use HTTPS. Do not assume access credentials or runtime paths from any other agent.
 
 Follow only the user-authorized scope and necessary supporting steps. Never invent sources, API contracts, identifiers, approvals or completion. Keep facts, user decisions and working interpretations distinct. Preserve existing EA GUIDs and source text. Same historical IDs do not prove semantic identity.
