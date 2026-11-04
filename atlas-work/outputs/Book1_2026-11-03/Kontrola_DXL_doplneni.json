@@ -1,0 +1,48 @@
+{
+  "changedCells": 60,
+  "changedSheets": [
+    "Functionalities",
+    "Interfaces",
+    "FREQ mapping",
+    "SREQ Aplikační role",
+    "Postup revize",
+    "Business a FREQ"
+  ],
+  "sourceSha256": "10998f6652bcea8f0bdc357cd092663bed5334d21bf9db0255470a969fc786a2",
+  "output": "C:\\Users\\zsery2\\Documents\\Codex\\2026-11-03\\pokra-uj-v-pr-ci-atlas\\work\\atlas-dxl\\outputs\\Book1_2026-11-03\\Book1_Atlas_konsolidovany_2026-11-03.xlsx",
+  "sha256": "2888fc4e7a78fcd25b8ed32ec745f6d0530753b0f40bc4937706fafe30fb0e90",
+  "sheets": [
+    "Cover",
+    "Postup revize",
+    "Business a FREQ",
+    "EA SREQ",
+    "_Enums",
+    "Functionalities",
+    "Interfaces",
+    "FREQ mapping",
+    "EAM App",
+    "Siebel EA Export",
+    "SREQ Aplikační role",
+    "Sheet1",
+    "TA139Arch",
+    "Revize MVP"
+  ],
+  "preservedUnchangedCells": 35161,
+  "newAuthoredCells": 4,
+  "originalFormulasPreserved": 1878,
+  "nativeTablePartsPreserved": 7,
+  "externalLinkPartsPreserved": 2,
+  "unchangedPackageParts": 38,
+  "preExistingFormulaErrors": [
+    "EAM App!F459: #VALUE!"
+  ],
+  "unintendedChanges": 0,
+  "nativeExcelRecalculation": "Not performed; no new formulas added; existing formula text/cache preserved byte-for-byte.",
+  "artifactReimport": {
+    "reimportedFinalWorkbook": true,
+    "sheets": 14,
+    "verifiedAuthoredCells": 60,
+    "nativeExcelRecalculation": false
+  },
+  "visualQa": "Changed visible ranges reviewed; hidden catalogue rows reviewed in disposable unhidden copies. Delivered hidden states preserved."
+}

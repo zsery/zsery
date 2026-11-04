@@ -53,10 +53,10 @@ Sluč přiložený skill do vlastního adresáře skills podle svého skill-crea
 ### Ověřený stav
 
 Kanonický Book1: `atlas-work/outputs/Book1_2026-11-03/Book1_Atlas_konsolidovany_2026-11-03.xlsx`.
-SHA-256: `10998f6652bcea8f0bdc357cd092663bed5334d21bf9db0255470a969fc786a2`.
+SHA-256: `2888fc4e7a78fcd25b8ed32ec745f6d0530753b0f40bc4937706fafe30fb0e90`.
 14 listů, 219 pracovně posouzených mapovacích řádků; 188 přes text, 31 samostatně. 159 EA FREQ, 6 UC005 analytických vstupů a 26 business traceability záznamů. 4663 ověřených změn, 1878 vzorců/cache zachováno. Toto není schválení atomické FR baseline ani všech SREQ vazeb.
 
-Tři skripty v pending/book1-dxl-update nejsou spuštěné; nové TMF poznatky nejsou promítnuty do uvedeného XLSX. Reproduction obsahuje ověřený builder odděleně. Zkontroluj pending diff, vytvoř plán, proveď authoring podle spreadsheet skillu, zachování nativních částí, reimport a vizuální kontrolu; aktualizuj hash a stav až po ověření.
+Dříve pending DXL poznatky jsou nově promítnuty do XLSX: 60 změn proti předchozímu kanonickému souboru v šesti listech, reimport a vizuální QA dokončeny, vzorce/cache a nativní části zachovány. Viz outputs/Book1_2026-11-03/DXL_doplneni_2026-11-03.md, Kontrola_DXL_doplneni.json a Zmeny_DXL_bunek.csv. Původní konsolidační evidence 4663 změn je historická. Pending README popisuje provedení; neopakovat doplnění naslepo. Reprodukce cílené delty je v reproduction/book1-dxl.
 
 Atlas.xml a Word SO nejsou aktualizované. Úplný průzkum všech Group podsložek není dokončen. TMF691 čtecí text prošel do konce bez diagramů; TMF629 má přečtené vybrané GET a celé OLC/V2 mapping části. Board čtení pokračuje od začátku In scope. Živý VDI stav vždy znovu zjisti.
 
