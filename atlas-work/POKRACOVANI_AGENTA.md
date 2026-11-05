@@ -2,6 +2,12 @@
 
 Toto je aktuální prováděcí předání. Určuje následující práci; časové zápisy ve STATE_2026-11-05.md slouží jako historie a evidence. Starší pokyny vytvářet audit, považovat lokální 14listý Book1 za aktuální nebo importovat do připojeného EA jsou překonané.
 
+## Než začne nová instance
+
+Připrav si checkout sám, nepřenášej tuto práci na uživatele. Pokud nemáš vlastní připravenou GitHub autorizaci pro zápis, vygeneruj vyhrazený SSH klíč bez přepsání existujících klíčů; veřejný klíč dej uživateli k autorizaci a soukromý uchovej pouze lokálně. Po autorizaci ověř přístup. Veřejné čtení repozitáře funguje bez klíče; nepotvrzuje zápis. Nespouštěj další agenty na základě otázky či připomínky uživatele. Pokračuj úsporně od doložených výsledků, neopakuj hotové kroky a neoznačuj návrhy nebo rozpracované změny za hotové.
+
+EA prohlížej/exportuj výhradně v `Zdeněk Šerý sandbox / 01_07_2026_ServiceHub_Atlas_CZ_PR25_0837` a podsložkách, ostatní obsah repository není v rozsahu. Zdrojové EA pouze čti. Confluence je v browseru VDI; pokud vyžaduje login, požádej uživatele o ruční přihlášení. Dostupnost konektoru není podmínkou použití browseru.
+
 ## Co má agent dodat
 
 Dokončený plný Solution Overview odpovídající potvrzenému MVP a navazující pracovní modelové podklady se zachovanými EA GUID. Zachovat správnou práci Copilota v aktuálním Book1. Připojené EA repository DEV-MODEL-MAIN zůstává beze změn: uživatel dovolil pouze čtení a export. Modelové změny připravovat pouze odděleně od zdrojového repository, v povolených pracovních souborech. Samostatný audit není požadovaný výstup.
