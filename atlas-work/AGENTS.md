@@ -1,5 +1,7 @@
 # Atlas / ServiceHub VFCZ
 
+Konkrétní pokračování dalšího agenta: [POKRACOVANI_AGENTA.md](POKRACOVANI_AGENTA.md). Začni zde; další práci řídí tento aktuální postup a nejnovější uživatelské pokyny, nikoli překonané historické další kroky.
+
 ## Aktuální checkpoint 5. 11. 2026
 
 Pokyny ke zdrojům, přihlášení a průběžnému GitHub ukládání: instructions/skills/follow-explicit-scope/SKILL.md, sekce Přenos práce a zdroje. Nejnovější stav: STATE_2026-11-05.md. Starší časové zápisy níže jsou historie, nikoli současné potvrzení dokončení.

@@ -1,5 +1,9 @@
 # Pokračování práce Atlas / ServiceHub VFCZ
 
+## Aktuální prováděcí předání
+
+Začni souborem [POKRACOVANI_AGENTA.md](POKRACOVANI_AGENTA.md). Obsahuje konkrétní pořadí práce, vstupy, požadované výstupy a podmínky dokončení. Má přednost před překonanými časovými zápisy níže, zejména starým kanonickým 14listým Book1, auditními kroky a plánem importu do připojeného EA. EA je nyní dostupné výhradně pro čtení/export.
+
 ## Aktuální checkpoint 5. 11. 2026
 
 Pokyny ke zdrojům, přihlášení a průběžnému GitHub ukládání: instructions/skills/follow-explicit-scope/SKILL.md, sekce Přenos práce a zdroje. Nejnovější stav: STATE_2026-11-05.md. Starší časové zápisy níže jsou historie, nikoli současné potvrzení dokončení.
