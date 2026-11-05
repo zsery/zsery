@@ -1,0 +1,1705 @@
+{
+  "source_sha256": "dcc42289f422c120105d791725bb27549238cc8c106812ac1ad36582c1a3861c",
+  "historical_workbook_sha256": "2888fc4e7a78fcd25b8ed32ec745f6d0530753b0f40bc4937706fafe30fb0e90",
+  "scope": "All 30 recorded UC005-UC011 conditions against exact original EA GUIDs. This is a graph inventory, not confirmation of the current seven-sheet OneDrive workbook or implementation.",
+  "conditions": 30,
+  "candidate_occurrences": 65,
+  "unique_candidate_guids": 41,
+  "missing_candidate_guids": [],
+  "candidates_with_no_connectors": 41,
+  "rules": [
+    {
+      "review_row": 1,
+      "uc": "UC005",
+      "rule": "Při neúspěšném VFID přihlášení ukončit přístupový tok před získáváním customer/role dat z DXL.",
+      "proposed_acceptance": "Neúspěšné přihlášení nevytvoří přihlášený přístup ani následný požadavek na customer/role data.",
+      "gap": "Doplnit výslovné pořadí kroků k IAM-02; přesný token kontrakt zůstává otevřený.",
+      "candidates": [
+        {
+          "id": "F-REQ-IAM-01",
+          "guid": "EAID_9F9BED4F_FCE5_497b_9C7B_214B0A54C81A",
+          "source_text": "Service Hub must authenticate users via Vodafone Identity (VFID) before granting access.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-01: Service Hub must authenticate users via Vodafone Identity (VFID) before granting access.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-02",
+          "guid": "EAID_4C7667B8_1117_4b91_9CA8_2BDBE41026AA",
+          "source_text": "Service Hub must reject access when VFID authentication fails.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-02: Service Hub must reject access when VFID authentication fails.",
+          "incident_connectors": []
+        }
+      ],
+      "historical_mapping_rows": [
+        {
+          "sheet": "FREQ mapping",
+          "row": 147,
+          "freq_text": "F-REQ-IAM-01",
+          "sreq": "SREQ-SH-55",
+          "ea_guid": ""
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 148,
+          "freq_text": "F-REQ-IAM-02",
+          "sreq": "SREQ-SH-56",
+          "ea_guid": ""
+        }
+      ],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 2,
+      "uc": "UC005",
+      "rule": "Pro zákaznický obsah použít role, vztahy a CRM ID získané přes DXL.",
+      "proposed_acceptance": "Oprávnění se vyhodnotí pro konkrétní identitu a aktivní CRM kontext.",
+      "gap": "Upstream ONSC/WSC data nejsou portálový handover. Oddělit VFID sub, lokální user a CRM kontext.",
+      "candidates": [
+        {
+          "id": "F-REQ-IAM-06",
+          "guid": "EAID_96E15147_F324_4f71_904C_7BD4EADA6C46",
+          "source_text": "Service Hub must evaluate authorization using upstream role data and customer context provided by selfcare systems.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-06: Service Hub must evaluate authorization using upstream role data and customer context provided by selfcare systems.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-07",
+          "guid": "EAID_BF791363_078D_4f0a_91DB_2C81F239527B",
+          "source_text": "Service Hub authorization must use upstream role and permission data as the source for access evaluation.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-07: Service Hub authorization must use upstream role and permission data as the source for access evaluation.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-20",
+          "guid": "EAID_BE66CC27_D9C9_41b0_8CF9_7DC4D591EB1E",
+          "source_text": "Service Hub must apply access restrictions derived from upstream role data.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-20: Service Hub must apply access restrictions derived from upstream role data.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-21",
+          "guid": "EAID_8A54BFFF_0377_4155_B312_B3436A255A8D",
+          "source_text": "Service Hub must retrieve identity data from VFID and map it to the customer context used by local systems.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-21: Service Hub must retrieve identity data from VFID and map it to the customer context used by local systems.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-22",
+          "guid": "EAID_3D3A2B95_E833_4adc_8CBA_921168F3DA09",
+          "source_text": "Service Hub must resolve access context using upstream data from ONSC, WSC, CRM and Marketplace.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-22: Service Hub must resolve access context using upstream data from ONSC, WSC, CRM and Marketplace.",
+          "incident_connectors": []
+        }
+      ],
+      "historical_mapping_rows": [
+        {
+          "sheet": "FREQ mapping",
+          "row": 2,
+          "freq_text": "F-REQ-IAM-21",
+          "sreq": "SREQ-CRM-01",
+          "ea_guid": "EAID_F14B7722_526F_43ce_B880_4FE80DEB0C10"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 22,
+          "freq_text": "F-REQ-IAM-21",
+          "sreq": "SREQ-CRM-25",
+          "ea_guid": ""
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 23,
+          "freq_text": "F-REQ-IAM-22",
+          "sreq": "SREQ-CRM-26",
+          "ea_guid": ""
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 49,
+          "freq_text": "F-REQ-IAM-21",
+          "sreq": "SREQ-ID-06",
+          "ea_guid": "EAID_8281621D_E1D0_4d85_A17F_2083FD3E12F3"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 51,
+          "freq_text": "F-REQ-IAM-22",
+          "sreq": "SREQ-ID-19",
+          "ea_guid": ""
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 52,
+          "freq_text": "F-REQ-IAM-21",
+          "sreq": "SREQ-MKP-01",
+          "ea_guid": "EAID_3C24ABF7_BF8F_4a6b_A098_D60F12CD7BB0"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 96,
+          "freq_text": "F-REQ-IAM-21",
+          "sreq": "SREQ-PORTAL-02",
+          "ea_guid": "EAID_A100AED4_4B23_469f_B460_84D45E010D2E"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 103,
+          "freq_text": "F-REQ-IAM-06",
+          "sreq": "SREQ-SH-01",
+          "ea_guid": "EAID_B7079C17_F6BE_4c88_B4D7_728D2BE97CE1"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 104,
+          "freq_text": "F-REQ-IAM-07",
+          "sreq": "SREQ-SH-02",
+          "ea_guid": "EAID_EE89CC46_6F49_4c96_A4D0_56D24276FA2B"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 117,
+          "freq_text": "F-REQ-IAM-20",
+          "sreq": "SREQ-SH-15",
+          "ea_guid": "EAID_768E2D07_5C79_43bc_9F9B_55CFE6EA1073"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 152,
+          "freq_text": "F-REQ-IAM-21",
+          "sreq": "SREQ-SH-60",
+          "ea_guid": ""
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 153,
+          "freq_text": "F-REQ-IAM-22",
+          "sreq": "SREQ-SH-61",
+          "ea_guid": ""
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 166,
+          "freq_text": "F-REQ-IAM-21",
+          "sreq": "SREQ-ID-07",
+          "ea_guid": "EAID_94649FF3_077F_40c7_A722_AA7E5292AA7F"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 169,
+          "freq_text": "F-REQ-IAM-21",
+          "sreq": "SREQ-ID-14",
+          "ea_guid": ""
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 170,
+          "freq_text": "F-REQ-IAM-22",
+          "sreq": "SREQ-ID-15",
+          "ea_guid": ""
+        }
+      ],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 3,
+      "uc": "UC005",
+      "rule": "Zákaznický obsah zpřístupnit jen pro příslušnou administrativní roli a dostupné CRM ID.",
+      "proposed_acceptance": "Bez příslušné role zobrazit obecný obsah bez aktivního zákaznického kontextu.",
+      "gap": "Přesný povolený seznam V2/V4 rolí není novou UC baseline uzavřen. Historické názvy v IAM-08–15 nejsou automaticky schválené.",
+      "candidates": [
+        {
+          "id": "F-REQ-IAM-08",
+          "guid": "EAID_DFDD915C_3983_420f_90DB_6CE5ECEFE665",
+          "source_text": "Service Hub must deny access to V4 users with role End User.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-08: Service Hub must deny access to V4 users with role End User.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-09",
+          "guid": "EAID_D303DFFB_7739_4da3_9B3F_C570D5DDEEA2",
+          "source_text": "Service Hub must deny access to V4 users with role Billing Account User.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-09: Service Hub must deny access to V4 users with role Billing Account User.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-10",
+          "guid": "EAID_7DB089DF_6694_4b15_9047_48CEDB6167B6",
+          "source_text": "Service Hub must allow access to V4 users with role Administrator.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-10: Service Hub must allow access to V4 users with role Administrator.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-11",
+          "guid": "EAID_56DE68BF_73E8_4180_9505_658BC59CEC8B",
+          "source_text": "Service Hub must deny access to V2 users with role End User.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-11: Service Hub must deny access to V2 users with role End User.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-12",
+          "guid": "EAID_17991EBB_06A9_4d35_945D_DFC146E9B6BE",
+          "source_text": "Service Hub must allow access to V2 users with role End User Admin.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-12: Service Hub must allow access to V2 users with role End User Admin.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-13",
+          "guid": "EAID_FF41287B_4DCB_4ea8_99E9_93FA888355A8",
+          "source_text": "Service Hub must allow access to V2 users with role Group Administrator.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-13: Service Hub must allow access to V2 users with role Group Administrator.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-14",
+          "guid": "EAID_292ECEDA_D5D7_45dc_A402_F0A12AB939D1",
+          "source_text": "Service Hub must allow access to V2 users with role Administrator.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-14: Service Hub must allow access to V2 users with role Administrator.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-15",
+          "guid": "EAID_5F86F922_B3D4_4c8e_86D8_86B00A16C59F",
+          "source_text": "Service Hub must allow access to V2 users with role Association Administrator.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-15: Service Hub must allow access to V2 users with role Association Administrator.",
+          "incident_connectors": []
+        }
+      ],
+      "historical_mapping_rows": [
+        {
+          "sheet": "FREQ mapping",
+          "row": 105,
+          "freq_text": "F-REQ-IAM-08",
+          "sreq": "SREQ-SH-03",
+          "ea_guid": "EAID_A18B21BB_6D45_42b1_8C43_F1706848B08B"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 106,
+          "freq_text": "F-REQ-IAM-09",
+          "sreq": "SREQ-SH-04",
+          "ea_guid": "EAID_5DAFC297_CDF2_4144_B868_E60D2ED9025C"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 107,
+          "freq_text": "F-REQ-IAM-10",
+          "sreq": "SREQ-SH-05",
+          "ea_guid": "EAID_FF38459F_3235_4f7a_80E7_E54E7AC48A7D"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 108,
+          "freq_text": "F-REQ-IAM-11",
+          "sreq": "SREQ-SH-06",
+          "ea_guid": "EAID_C03CC18B_4E2E_4834_8097_DDA284949273"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 109,
+          "freq_text": "F-REQ-IAM-12",
+          "sreq": "SREQ-SH-07",
+          "ea_guid": "EAID_2AD6393E_362F_43b4_A075_875D6EDEE47A"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 110,
+          "freq_text": "F-REQ-IAM-13",
+          "sreq": "SREQ-SH-08",
+          "ea_guid": "EAID_1F7B9C7F_D232_4642_BA2F_2C3DD760A7AB"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 111,
+          "freq_text": "F-REQ-IAM-14",
+          "sreq": "SREQ-SH-09",
+          "ea_guid": "EAID_DEA5CB81_3459_4e9d_89FA_910F2FA7ABE9"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 112,
+          "freq_text": "F-REQ-IAM-15",
+          "sreq": "SREQ-SH-10",
+          "ea_guid": "EAID_C09156E2_5427_41c2_B185_929D7C6FED5B"
+        }
+      ],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 4,
+      "uc": "UC005",
+      "rule": "Automaticky zvolit jedno dostupné CRM ID.",
+      "proposed_acceptance": "Po vstupu je aktivní právě jedno oprávněné CRM ID i při více dostupných.",
+      "gap": "IAM-29 nevykládat jako povinnou ruční volbu před každým prvním vstupem. Priorita automatické volby není doložena.",
+      "candidates": [
+        {
+          "id": "F-REQ-IAM-26",
+          "guid": "EAID_79C4DB13_72AB_45d9_9C55_0E559FFFF624",
+          "source_text": "Service Hub must use only the resolved or actively selected customer context for content retrieval and user actions.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-26: Service Hub must use only the resolved or actively selected customer context for content retrieval and user actions.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-27",
+          "guid": "EAID_664FBC37_A331_4568_B152_271044834BD6",
+          "source_text": "Service Hub must allow the user to select a Customer Account when multiple Customer Accounts are associated with the user identity.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-27: Service Hub must allow the user to select a Customer Account when multiple Customer Accounts are associated with the user identity.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-29",
+          "guid": "EAID_17D46FFA_66A0_4c49_A0C2_C23CDE21489A",
+          "source_text": "Service Hub must require Customer Account selection before enabling service-specific functionality when multiple Customer Accounts are available.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-29: Service Hub must require Customer Account selection before enabling service-specific functionality when multiple Customer Accounts are available.",
+          "incident_connectors": []
+        }
+      ],
+      "historical_mapping_rows": [
+        {
+          "sheet": "FREQ mapping",
+          "row": 118,
+          "freq_text": "F-REQ-IAM-26",
+          "sreq": "SREQ-SH-16",
+          "ea_guid": "EAID_E32C9D65_41FE_4d8b_9B79_3268865FBC76"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 119,
+          "freq_text": "F-REQ-IAM-27",
+          "sreq": "SREQ-SH-17",
+          "ea_guid": "EAID_76092A06_0AE5_4de7_A2E8_F3A9549124A1"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 121,
+          "freq_text": "F-REQ-IAM-29",
+          "sreq": "SREQ-SH-19",
+          "ea_guid": "EAID_95281A6F_6848_491d_B9E7_6EFF827AE2FB"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 178,
+          "freq_text": "F-REQ-IAM-26",
+          "sreq": "SREQ-CRM-05",
+          "ea_guid": "EAID_A22DF00A_5DC3_4302_94A3_821173D9D718"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 179,
+          "freq_text": "F-REQ-IAM-27",
+          "sreq": "SREQ-CRM-06",
+          "ea_guid": "EAID_63866D4D_EE66_4c7e_9E2B_2BDA02A8CE9F"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 181,
+          "freq_text": "F-REQ-IAM-29",
+          "sreq": "SREQ-CRM-08",
+          "ea_guid": "EAID_22A3652F_8224_4283_99AD_92DB22A6A6A3"
+        }
+      ],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 5,
+      "uc": "UC005",
+      "rule": "Umožnit následné přepnutí mezi dostupnými CRM ID.",
+      "proposed_acceptance": "Přepnutí nahradí obsah a dostupné akce podle nového aktivního kontextu.",
+      "gap": "Upřesnit refresh a session pravidla bez zavedení favorites/default konfigurace nebo portálové propagace.",
+      "candidates": [
+        {
+          "id": "F-REQ-IAM-27",
+          "guid": "EAID_664FBC37_A331_4568_B152_271044834BD6",
+          "source_text": "Service Hub must allow the user to select a Customer Account when multiple Customer Accounts are associated with the user identity.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-27: Service Hub must allow the user to select a Customer Account when multiple Customer Accounts are associated with the user identity.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-28",
+          "guid": "EAID_1DEB8340_A5F7_4b7b_BD8B_24E50DF3D846",
+          "source_text": "Service Hub service functions must use only the resolved or actively selected Customer Account as execution context.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-28: Service Hub service functions must use only the resolved or actively selected Customer Account as execution context.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-51",
+          "guid": "EAID_46EBC2AE_1769_4679_A19A_F467143B9A82",
+          "source_text": "Service Hub must update visible content and available actions when identity, role, customer context or subscription status changes.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-51: Service Hub must update visible content and available actions when identity, role, customer context or subscription status changes.",
+          "incident_connectors": []
+        }
+      ],
+      "historical_mapping_rows": [
+        {
+          "sheet": "FREQ mapping",
+          "row": 119,
+          "freq_text": "F-REQ-IAM-27",
+          "sreq": "SREQ-SH-17",
+          "ea_guid": "EAID_76092A06_0AE5_4de7_A2E8_F3A9549124A1"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 120,
+          "freq_text": "F-REQ-IAM-28",
+          "sreq": "SREQ-SH-18",
+          "ea_guid": "EAID_882FA916_5B2D_4da1_9188_01FD0102AF14"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 137,
+          "freq_text": "F-REQ-IAM-51",
+          "sreq": "SREQ-SH-35",
+          "ea_guid": "EAID_DDF58897_EEF9_4691_8A43_A56CF99576B0"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 179,
+          "freq_text": "F-REQ-IAM-27",
+          "sreq": "SREQ-CRM-06",
+          "ea_guid": "EAID_63866D4D_EE66_4c7e_9E2B_2BDA02A8CE9F"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 180,
+          "freq_text": "F-REQ-IAM-28",
+          "sreq": "SREQ-CRM-07",
+          "ea_guid": "EAID_1850B9D7_7BB6_4ade_BBDE_27918720F5A0"
+        }
+      ],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 6,
+      "uc": "UC005",
+      "rule": "Neaktivovat CRM ID, které už není dostupné, a obnovit selector.",
+      "proposed_acceptance": "Ztracený vztah neumožní použít nedostupný kontext.",
+      "gap": "Plné chování není atomicky vyjádřeno v uvedených FREQ. Holding target není ověřený AS-IS payload.",
+      "candidates": [
+        {
+          "id": "F-REQ-IAM-23",
+          "guid": "EAID_8E5DDC59_1B19_494c_A1C4_0BA6BB5209B7",
+          "source_text": "Service Hub must identify all customer entities linked to the user identity.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-23: Service Hub must identify all customer entities linked to the user identity.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-24",
+          "guid": "EAID_B4E0F18C_3036_47ac_B706_66A2ED0D760E",
+          "source_text": "Service Hub must keep data, permissions and actions separate across unrelated customer entities.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-24: Service Hub must keep data, permissions and actions separate across unrelated customer entities.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-25",
+          "guid": "EAID_1C236DF9_537B_4c6c_AE2F_4EBED2E8F1A6",
+          "source_text": "Service Hub must evaluate context-aware access for customer entities associated with the user identity, including child Customer Accounts, holdings and associations.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-25: Service Hub must evaluate context-aware access for customer entities associated with the user identity, including child Customer Accounts, holdings and associations.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-27",
+          "guid": "EAID_664FBC37_A331_4568_B152_271044834BD6",
+          "source_text": "Service Hub must allow the user to select a Customer Account when multiple Customer Accounts are associated with the user identity.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-27: Service Hub must allow the user to select a Customer Account when multiple Customer Accounts are associated with the user identity.",
+          "incident_connectors": []
+        }
+      ],
+      "historical_mapping_rows": [
+        {
+          "sheet": "FREQ mapping",
+          "row": 3,
+          "freq_text": "F-REQ-IAM-23",
+          "sreq": "SREQ-CRM-02",
+          "ea_guid": "EAID_6119E4AB_04ED_4021_BCBD_D97D92777E3A"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 4,
+          "freq_text": "F-REQ-IAM-25",
+          "sreq": "SREQ-CRM-03",
+          "ea_guid": "EAID_B29907A2_5D0C_4308_9300_EC771777E513"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 5,
+          "freq_text": "F-REQ-IAM-24",
+          "sreq": "SREQ-CRM-04",
+          "ea_guid": "EAID_1958D137_B5E0_4656_A47A_F6E00EE88156"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 24,
+          "freq_text": "F-REQ-IAM-23",
+          "sreq": "SREQ-CRM-27",
+          "ea_guid": ""
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 25,
+          "freq_text": "F-REQ-IAM-24",
+          "sreq": "SREQ-CRM-28",
+          "ea_guid": ""
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 26,
+          "freq_text": "F-REQ-IAM-25",
+          "sreq": "SREQ-CRM-29",
+          "ea_guid": ""
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 119,
+          "freq_text": "F-REQ-IAM-27",
+          "sreq": "SREQ-SH-17",
+          "ea_guid": "EAID_76092A06_0AE5_4de7_A2E8_F3A9549124A1"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 154,
+          "freq_text": "F-REQ-IAM-23",
+          "sreq": "SREQ-SH-62",
+          "ea_guid": ""
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 155,
+          "freq_text": "F-REQ-IAM-24",
+          "sreq": "SREQ-SH-63",
+          "ea_guid": ""
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 156,
+          "freq_text": "F-REQ-IAM-25",
+          "sreq": "SREQ-SH-64",
+          "ea_guid": ""
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 171,
+          "freq_text": "F-REQ-IAM-23",
+          "sreq": "SREQ-ID-16",
+          "ea_guid": ""
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 172,
+          "freq_text": "F-REQ-IAM-24",
+          "sreq": "SREQ-ID-17",
+          "ea_guid": ""
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 173,
+          "freq_text": "F-REQ-IAM-25",
+          "sreq": "SREQ-ID-18",
+          "ea_guid": ""
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 179,
+          "freq_text": "F-REQ-IAM-27",
+          "sreq": "SREQ-CRM-06",
+          "ea_guid": "EAID_63866D4D_EE66_4c7e_9E2B_2BDA02A8CE9F"
+        }
+      ],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 7,
+      "uc": "UC005",
+      "rule": "Bez CRM ID nebo při nedostupných DXL datech nezobrazit zákaznicky specifický obsah.",
+      "proposed_acceptance": "Nedostupný DXL výsledek neotevře zákaznická data.",
+      "gap": "Rozlišit chybějící vztah od technické chyby; konkrétní timeouty a chybové kódy neurčeny.",
+      "candidates": [
+        {
+          "id": "F-REQ-IAM-06",
+          "guid": "EAID_96E15147_F324_4f71_904C_7BD4EADA6C46",
+          "source_text": "Service Hub must evaluate authorization using upstream role data and customer context provided by selfcare systems.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-06: Service Hub must evaluate authorization using upstream role data and customer context provided by selfcare systems.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-18",
+          "guid": "EAID_2956DCAC_9023_4ed8_8807_9428BAA6D7C8",
+          "source_text": "Service Hub must display only data associated with the resolved customer context.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-18: Service Hub must display only data associated with the resolved customer context.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-19",
+          "guid": "EAID_F98ED8B6_D810_4fb3_9585_63C39229B494",
+          "source_text": "Service Hub must allow only actions permitted for the resolved customer context.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-19: Service Hub must allow only actions permitted for the resolved customer context.",
+          "incident_connectors": []
+        }
+      ],
+      "historical_mapping_rows": [
+        {
+          "sheet": "FREQ mapping",
+          "row": 103,
+          "freq_text": "F-REQ-IAM-06",
+          "sreq": "SREQ-SH-01",
+          "ea_guid": "EAID_B7079C17_F6BE_4c88_B4D7_728D2BE97CE1"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 115,
+          "freq_text": "F-REQ-IAM-18",
+          "sreq": "SREQ-SH-13",
+          "ea_guid": "EAID_6122B515_C801_41cc_9FF7_24BE0AC2083E"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 116,
+          "freq_text": "F-REQ-IAM-19",
+          "sreq": "SREQ-SH-14",
+          "ea_guid": "EAID_06AD6AB2_32BA_499a_9DEB_3E705C665FDF"
+        }
+      ],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 8,
+      "uc": "UC006",
+      "rule": "Načítat Marketplace data pro aktivní CRM ID z UC005.",
+      "proposed_acceptance": "Služba z jiného zákaznického kontextu se nezobrazí.",
+      "gap": "Potřebný převod CRM ID na Marketplace company a konkrétní datová pole zůstávají k potvrzení.",
+      "candidates": [
+        {
+          "id": "F-REQ-IAM-30",
+          "guid": "EAID_432E2932_D729_4419_A3AB_F020A197ED6E",
+          "source_text": "Service Hub must evaluate Atlas and other Service Hub-related subscription status in Marketplace for the resolved customer context before enabling service-specific functionality.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-30: Service Hub must evaluate Atlas and other Service Hub-related subscription status in Marketplace for the resolved customer context before enabling service-specific functionality.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-33",
+          "guid": "EAID_7F4234D7_D20F_4ae8_BBF1_0CF4E7BCAA9A",
+          "source_text": "Service Hub must verify the existence of Marketplace product data before displaying Atlas or other Service Hub-related services.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-33: Service Hub must verify the existence of Marketplace product data before displaying Atlas or other Service Hub-related services.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-34",
+          "guid": "EAID_D537C87F_6742_4c16_984E_1D2EFA6D245B",
+          "source_text": "Service Hub must display Atlas service content when the resolved customer context has an active Atlas subscription.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-34: Service Hub must display Atlas service content when the resolved customer context has an active Atlas subscription.",
+          "incident_connectors": []
+        }
+      ],
+      "historical_mapping_rows": [
+        {
+          "sheet": "FREQ mapping",
+          "row": 93,
+          "freq_text": "F-REQ-IAM-30",
+          "sreq": "SREQ-MKP-50",
+          "ea_guid": ""
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 123,
+          "freq_text": "F-REQ-IAM-30; F-REQ-IAM-32; F-REQ-IAM-33",
+          "sreq": "SREQ-SH-21",
+          "ea_guid": "EAID_1859CE4E_B666_48cc_8AD2_8A2A9946F2CB"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 124,
+          "freq_text": "F-REQ-IAM-34",
+          "sreq": "SREQ-SH-22",
+          "ea_guid": "EAID_3C8DC64E_CC64_466e_AEC6_D30236B7A96E"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 183,
+          "freq_text": "F-REQ-IAM-33",
+          "sreq": "SREQ-MKP-05",
+          "ea_guid": "EAID_89413CED_7020_44af_8A74_60AE6C01B540"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 184,
+          "freq_text": "F-REQ-IAM-30",
+          "sreq": "SREQ-MKP-02",
+          "ea_guid": "EAID_3991AA84_A7B2_46d0_ABB3_463EFCD3BB08"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 185,
+          "freq_text": "F-REQ-IAM-34; F-REQ-IAM-35; F-REQ-IAM-36; F-REQ-IAM-37; F-REQ-IAM-38",
+          "sreq": "SREQ-MKP-06",
+          "ea_guid": "EAID_965799F5_E944_45d8_8B39_9A203A35FABE"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 186,
+          "freq_text": "F-REQ-IAM-34; F-REQ-IAM-35; F-REQ-IAM-36; F-REQ-IAM-37; F-REQ-IAM-38",
+          "sreq": "SREQ-MKP-07",
+          "ea_guid": "EAID_94300D21_875E_4cd3_967D_573422CC0E42"
+        }
+      ],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 9,
+      "uc": "UC006",
+      "rule": "V MVP zobrazovat Atlas managed services, skrýt non-managed a další managed produkty.",
+      "proposed_acceptance": "Ostatní produkt neotevře Atlas obsah jen proto, že existuje Marketplace subscription.",
+      "gap": "Zúžit historické and other Service Hub-related subscription; nešířit jím MVP na další služby.",
+      "candidates": [
+        {
+          "id": "F-REQ-IAM-30",
+          "guid": "EAID_432E2932_D729_4419_A3AB_F020A197ED6E",
+          "source_text": "Service Hub must evaluate Atlas and other Service Hub-related subscription status in Marketplace for the resolved customer context before enabling service-specific functionality.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-30: Service Hub must evaluate Atlas and other Service Hub-related subscription status in Marketplace for the resolved customer context before enabling service-specific functionality.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-31",
+          "guid": "EAID_53B7BD8F_AEBB_43c2_8555_723F7B521A54",
+          "source_text": "Service Hub must enable service-specific functionality only when the resolved customer context has an active Atlas and other Service Hub-related subscription in Marketplace.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-31: Service Hub must enable service-specific functionality only when the resolved customer context has an active Atlas and other Service Hub-related subscription in Marketplace.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-32",
+          "guid": "EAID_F80E110D_3F19_4865_BE35_531704FEEFEB",
+          "source_text": "Service Hub must not enable service-specific functionality when the resolved customer context has no active Atlas or other Service Hub-related subscription in Marketplace.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-32: Service Hub must not enable service-specific functionality when the resolved customer context has no active Atlas or other Service Hub-related subscription in Marketplace.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-34",
+          "guid": "EAID_D537C87F_6742_4c16_984E_1D2EFA6D245B",
+          "source_text": "Service Hub must display Atlas service content when the resolved customer context has an active Atlas subscription.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-34: Service Hub must display Atlas service content when the resolved customer context has an active Atlas subscription.",
+          "incident_connectors": []
+        }
+      ],
+      "historical_mapping_rows": [
+        {
+          "sheet": "FREQ mapping",
+          "row": 53,
+          "freq_text": "F-REQ-IAM-31",
+          "sreq": "SREQ-MKP-03",
+          "ea_guid": "EAID_8846B5BD_D1E5_467b_8310_EDF00929B6BF"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 93,
+          "freq_text": "F-REQ-IAM-30",
+          "sreq": "SREQ-MKP-50",
+          "ea_guid": ""
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 94,
+          "freq_text": "F-REQ-IAM-32",
+          "sreq": "SREQ-MKP-51",
+          "ea_guid": ""
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 122,
+          "freq_text": "F-REQ-IAM-31",
+          "sreq": "SREQ-SH-20",
+          "ea_guid": "EAID_7F8E849C_340D_461e_B2DF_3BB6B0281BEE"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 123,
+          "freq_text": "F-REQ-IAM-30; F-REQ-IAM-32; F-REQ-IAM-33",
+          "sreq": "SREQ-SH-21",
+          "ea_guid": "EAID_1859CE4E_B666_48cc_8AD2_8A2A9946F2CB"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 124,
+          "freq_text": "F-REQ-IAM-34",
+          "sreq": "SREQ-SH-22",
+          "ea_guid": "EAID_3C8DC64E_CC64_466e_AEC6_D30236B7A96E"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 182,
+          "freq_text": "F-REQ-IAM-32",
+          "sreq": "SREQ-MKP-04",
+          "ea_guid": "EAID_F01DE31F_98B1_4cc8_9F6D_E1D4B75EBCB1"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 184,
+          "freq_text": "F-REQ-IAM-30",
+          "sreq": "SREQ-MKP-02",
+          "ea_guid": "EAID_3991AA84_A7B2_46d0_ABB3_463EFCD3BB08"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 185,
+          "freq_text": "F-REQ-IAM-34; F-REQ-IAM-35; F-REQ-IAM-36; F-REQ-IAM-37; F-REQ-IAM-38",
+          "sreq": "SREQ-MKP-06",
+          "ea_guid": "EAID_965799F5_E944_45d8_8B39_9A203A35FABE"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 186,
+          "freq_text": "F-REQ-IAM-34; F-REQ-IAM-35; F-REQ-IAM-36; F-REQ-IAM-37; F-REQ-IAM-38",
+          "sreq": "SREQ-MKP-07",
+          "ea_guid": "EAID_94300D21_875E_4cd3_967D_573422CC0E42"
+        }
+      ],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 10,
+      "uc": "UC006",
+      "rule": "Rozlišit žádnou dostupnou službu od nedostupnosti Marketplace dat.",
+      "proposed_acceptance": "Chyba Marketplace se nepředstaví jako úspěšně ověřený prázdný seznam.",
+      "gap": "Přesná UX znění, viditelné subscription stavy a cache pravidla nejsou uzavřené.",
+      "candidates": [
+        {
+          "id": "F-REQ-IAM-35",
+          "guid": "EAID_1F0E9717_F4BC_4470_BC7F_7183E060ED6E",
+          "source_text": "Service Hub must display the defined no-product page or message when the resolved customer context has no active Atlas subscription.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-35: Service Hub must display the defined no-product page or message when the resolved customer context has no active Atlas subscription.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-36",
+          "guid": "EAID_27EFF697_1E4D_462d_AD1D_364A505BFA1D",
+          "source_text": "Service Hub must display the defined empty state when no services are available for the resolved customer context.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-36: Service Hub must display the defined empty state when no services are available for the resolved customer context.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-37",
+          "guid": "EAID_1B7E6FD0_E1C2_4eb2_80AF_9D99EF1867A9",
+          "source_text": "Service Hub must display the defined error state when Marketplace data is unavailable.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-37: Service Hub must display the defined error state when Marketplace data is unavailable.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-38",
+          "guid": "EAID_57D2049D_E513_40c4_9549_375D025054CF",
+          "source_text": "Service Hub must display clear user messaging for the no-product state, empty state and error state.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-38: Service Hub must display clear user messaging for the no-product state, empty state and error state.",
+          "incident_connectors": []
+        }
+      ],
+      "historical_mapping_rows": [
+        {
+          "sheet": "FREQ mapping",
+          "row": 125,
+          "freq_text": "F-REQ-IAM-35",
+          "sreq": "SREQ-SH-23",
+          "ea_guid": "EAID_2C74791F_312A_459c_8E43_D9871404AA58"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 126,
+          "freq_text": "F-REQ-IAM-36",
+          "sreq": "SREQ-SH-24",
+          "ea_guid": "EAID_6ADCBAC3_D4A6_4ea8_B0E7_9DDC38615D1D"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 127,
+          "freq_text": "F-REQ-IAM-37",
+          "sreq": "SREQ-SH-25",
+          "ea_guid": "EAID_18DDCD4F_CF65_4cf7_AE6A_C680EAB4A305"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 128,
+          "freq_text": "F-REQ-IAM-38",
+          "sreq": "SREQ-SH-26",
+          "ea_guid": "EAID_3C908F07_6B9D_4b50_B96E_20184516A6D7"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 185,
+          "freq_text": "F-REQ-IAM-34; F-REQ-IAM-35; F-REQ-IAM-36; F-REQ-IAM-37; F-REQ-IAM-38",
+          "sreq": "SREQ-MKP-06",
+          "ea_guid": "EAID_965799F5_E944_45d8_8B39_9A203A35FABE"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 186,
+          "freq_text": "F-REQ-IAM-34; F-REQ-IAM-35; F-REQ-IAM-36; F-REQ-IAM-37; F-REQ-IAM-38",
+          "sreq": "SREQ-MKP-07",
+          "ea_guid": "EAID_94300D21_875E_4cd3_967D_573422CC0E42"
+        }
+      ],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 11,
+      "uc": "UC006",
+      "rule": "Po změně kontextu znovu vyhodnotit službová data pro nový kontext.",
+      "proposed_acceptance": "Starý zákaznický obsah nenahradí ověření nového CRM ID.",
+      "gap": "Doplnit návaznost UC005–006, technický refresh kontrakt neurčen.",
+      "candidates": [
+        {
+          "id": "F-REQ-IAM-26",
+          "guid": "EAID_79C4DB13_72AB_45d9_9C55_0E559FFFF624",
+          "source_text": "Service Hub must use only the resolved or actively selected customer context for content retrieval and user actions.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-26: Service Hub must use only the resolved or actively selected customer context for content retrieval and user actions.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-28",
+          "guid": "EAID_1DEB8340_A5F7_4b7b_BD8B_24E50DF3D846",
+          "source_text": "Service Hub service functions must use only the resolved or actively selected Customer Account as execution context.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-28: Service Hub service functions must use only the resolved or actively selected Customer Account as execution context.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-51",
+          "guid": "EAID_46EBC2AE_1769_4679_A19A_F467143B9A82",
+          "source_text": "Service Hub must update visible content and available actions when identity, role, customer context or subscription status changes.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-51: Service Hub must update visible content and available actions when identity, role, customer context or subscription status changes.",
+          "incident_connectors": []
+        }
+      ],
+      "historical_mapping_rows": [
+        {
+          "sheet": "FREQ mapping",
+          "row": 118,
+          "freq_text": "F-REQ-IAM-26",
+          "sreq": "SREQ-SH-16",
+          "ea_guid": "EAID_E32C9D65_41FE_4d8b_9B79_3268865FBC76"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 120,
+          "freq_text": "F-REQ-IAM-28",
+          "sreq": "SREQ-SH-18",
+          "ea_guid": "EAID_882FA916_5B2D_4da1_9188_01FD0102AF14"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 137,
+          "freq_text": "F-REQ-IAM-51",
+          "sreq": "SREQ-SH-35",
+          "ea_guid": "EAID_DDF58897_EEF9_4691_8A43_A56CF99576B0"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 178,
+          "freq_text": "F-REQ-IAM-26",
+          "sreq": "SREQ-CRM-05",
+          "ea_guid": "EAID_A22DF00A_5DC3_4302_94A3_821173D9D718"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 180,
+          "freq_text": "F-REQ-IAM-28",
+          "sreq": "SREQ-CRM-07",
+          "ea_guid": "EAID_1850B9D7_7BB6_4ade_BBDE_27918720F5A0"
+        }
+      ],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 12,
+      "uc": "UC007",
+      "rule": "Vytvoření support requestu zpřístupnit oprávněnému uživateli s Atlas službou v aktivním kontextu.",
+      "proposed_acceptance": "Nesplněné oprávnění nevede k vytvoření ticketu.",
+      "gap": "SNOW user/company scope a manuální V4 onboarding posoudit zvlášť od obecného přístupu do SH.",
+      "candidates": [
+        {
+          "id": "F-REQ-IAM-19",
+          "guid": "EAID_F98ED8B6_D810_4fb3_9585_63C39229B494",
+          "source_text": "Service Hub must allow only actions permitted for the resolved customer context.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-19: Service Hub must allow only actions permitted for the resolved customer context.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-43",
+          "guid": "EAID_C99034F2_E0E5_4978_A87E_35E580B28725",
+          "source_text": "Service Hub must create tickets under the identity of the current authenticated user.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-43: Service Hub must create tickets under the identity of the current authenticated user.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-44",
+          "guid": "EAID_0B7F844E_83BD_4e9c_A3DA_26418F25D6E2",
+          "source_text": "Service Hub must prevent ticket creation when the current user is not onboarded in SNOW EVE.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-44: Service Hub must prevent ticket creation when the current user is not onboarded in SNOW EVE.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-46",
+          "guid": "EAID_B2FC27D6_6444_4f7c_8593_00C4CDE9A696",
+          "source_text": "Service Hub must restrict ticket-related functionality when the current user is not onboarded in SNOW EVE.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-46: Service Hub must restrict ticket-related functionality when the current user is not onboarded in SNOW EVE.",
+          "incident_connectors": []
+        }
+      ],
+      "historical_mapping_rows": [
+        {
+          "sheet": "FREQ mapping",
+          "row": 116,
+          "freq_text": "F-REQ-IAM-19",
+          "sreq": "SREQ-SH-14",
+          "ea_guid": "EAID_06AD6AB2_32BA_499a_9DEB_3E705C665FDF"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 131,
+          "freq_text": "F-REQ-IAM-43",
+          "sreq": "SREQ-SH-29",
+          "ea_guid": "EAID_0361826C_A77C_4499_9EB0_6454D04EED89"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 132,
+          "freq_text": "F-REQ-IAM-44",
+          "sreq": "SREQ-SH-30",
+          "ea_guid": "EAID_9FFC339B_49C1_423e_828B_9217773347E0"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 134,
+          "freq_text": "F-REQ-IAM-46",
+          "sreq": "SREQ-SH-32",
+          "ea_guid": "EAID_E918E029_929D_4882_BFE4_6A17FB6D1C6A"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 190,
+          "freq_text": "F-REQ-IAM-43",
+          "sreq": "SREQ-SNOW-04",
+          "ea_guid": "EAID_FE7E3216_5C55_4975_9140_B1F8A8BBB852"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 191,
+          "freq_text": "F-REQ-IAM-44",
+          "sreq": "SREQ-SNOW-05",
+          "ea_guid": "EAID_8E935340_B78C_4f83_9B70_C654EC02CF3B"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 193,
+          "freq_text": "F-REQ-IAM-46",
+          "sreq": "SREQ-SNOW-07",
+          "ea_guid": "EAID_04064D27_7572_4e0f_BF86_F1B3BC4A9DCD"
+        }
+      ],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 13,
+      "uc": "UC007",
+      "rule": "Před odesláním validovat povinné vstupy.",
+      "proposed_acceptance": "Neplatný povinný vstup se neodešle do SNOW.",
+      "gap": "Přesný seznam mandatory/optional polí ani validace není potvrzen; nelze doplnit odhadem.",
+      "candidates": [],
+      "historical_mapping_rows": [],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 14,
+      "uc": "UC007",
+      "rule": "Úspěšné vytvoření potvrdit až po potvrzení SNOW.",
+      "proposed_acceptance": "Odmítnuté nebo nepotvrzené vytvoření se neprezentuje jako úspěch.",
+      "gap": "Chybí atomické vyjádření v porovnávané sadě FREQ. Payload, assignment a routing vyžadují kontrakt.",
+      "candidates": [],
+      "historical_mapping_rows": [],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 15,
+      "uc": "UC007",
+      "rule": "Při změně CRM kontextu před odesláním nepoužít starý kontext.",
+      "proposed_acceptance": "Rozpracovaný požadavek nelze vytvořit pod neaktuálním CRM kontextem.",
+      "gap": "Obecný IAM-51 neuzavírá detail submit chování; nezavádět automatické přenesení formuláře.",
+      "candidates": [
+        {
+          "id": "F-REQ-IAM-26",
+          "guid": "EAID_79C4DB13_72AB_45d9_9C55_0E559FFFF624",
+          "source_text": "Service Hub must use only the resolved or actively selected customer context for content retrieval and user actions.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-26: Service Hub must use only the resolved or actively selected customer context for content retrieval and user actions.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-28",
+          "guid": "EAID_1DEB8340_A5F7_4b7b_BD8B_24E50DF3D846",
+          "source_text": "Service Hub service functions must use only the resolved or actively selected Customer Account as execution context.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-28: Service Hub service functions must use only the resolved or actively selected Customer Account as execution context.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-51",
+          "guid": "EAID_46EBC2AE_1769_4679_A19A_F467143B9A82",
+          "source_text": "Service Hub must update visible content and available actions when identity, role, customer context or subscription status changes.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-51: Service Hub must update visible content and available actions when identity, role, customer context or subscription status changes.",
+          "incident_connectors": []
+        }
+      ],
+      "historical_mapping_rows": [
+        {
+          "sheet": "FREQ mapping",
+          "row": 118,
+          "freq_text": "F-REQ-IAM-26",
+          "sreq": "SREQ-SH-16",
+          "ea_guid": "EAID_E32C9D65_41FE_4d8b_9B79_3268865FBC76"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 120,
+          "freq_text": "F-REQ-IAM-28",
+          "sreq": "SREQ-SH-18",
+          "ea_guid": "EAID_882FA916_5B2D_4da1_9188_01FD0102AF14"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 137,
+          "freq_text": "F-REQ-IAM-51",
+          "sreq": "SREQ-SH-35",
+          "ea_guid": "EAID_DDF58897_EEF9_4691_8A43_A56CF99576B0"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 178,
+          "freq_text": "F-REQ-IAM-26",
+          "sreq": "SREQ-CRM-05",
+          "ea_guid": "EAID_A22DF00A_5DC3_4302_94A3_821173D9D718"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 180,
+          "freq_text": "F-REQ-IAM-28",
+          "sreq": "SREQ-CRM-07",
+          "ea_guid": "EAID_1850B9D7_7BB6_4ade_BBDE_27918720F5A0"
+        }
+      ],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 16,
+      "uc": "UC008",
+      "rule": "Lokální BCS/LME telefonickou cestu použít jen pro whitelisted V2 zákazníka.",
+      "proposed_acceptance": "V4 zákazník není směrován touto lokální asistovanou cestou.",
+      "gap": "Potřebný provozní whitelist, jeho správa a ověření nejsou uzavřeným kontraktem.",
+      "candidates": [],
+      "historical_mapping_rows": [],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 17,
+      "uc": "UC008",
+      "rule": "LME identifikuje zákazníka a kontext a zaznamená výsledek v SNOW.",
+      "proposed_acceptance": "Výsledek asistované podpory zůstane přiřazen správnému zákazníkovi.",
+      "gap": "BCS je kanál a LME lidská role; neodvozovat z UC nový aplikační systém.",
+      "candidates": [],
+      "historical_mapping_rows": [],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 18,
+      "uc": "UC008",
+      "rule": "Pokud nelze vyřešit lokálně, předat či eskalovat dle provozního modelu.",
+      "proposed_acceptance": "Eskalace se nevykáže jako vyřešený zákaznický požadavek.",
+      "gap": "Přesné resolver skupiny, routing a fallback při nedostupnosti nejsou potvrzené.",
+      "candidates": [],
+      "historical_mapping_rows": [],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 19,
+      "uc": "UC009",
+      "rule": "Plné ukončení zahájit pro správného zákazníka a subscription cestou Frontline/Siebel do ICT Hub/Provisioning.",
+      "proposed_acceptance": "Identifikace předchází ukončení; SH se neprohlásí za nový prodejní či termination vstup.",
+      "gap": "Chybí atomický FREQ pro tuto hranici procesu v porovnávané sadě.",
+      "candidates": [],
+      "historical_mapping_rows": [],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 20,
+      "uc": "UC009",
+      "rule": "Následné ukončení vést přes Marketplace a SNOW/MSO.",
+      "proposed_acceptance": "Nepotvrzené předání se neprezentuje jako dokončené ukončení.",
+      "gap": "Detailní payload, routing, efektivní datum a zotavení při selhání nejsou uzavřené.",
+      "candidates": [],
+      "historical_mapping_rows": [],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 21,
+      "uc": "UC009",
+      "rule": "Zachovat subscription mimo vymezený termination scope.",
+      "proposed_acceptance": "Ukončení Atlas nezpůsobí ukončení nesouvisející subscription.",
+      "gap": "Downgrade se zachováním M365 patří do UC004; neslučovat jej s plným ukončením UC009.",
+      "candidates": [],
+      "historical_mapping_rows": [],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 22,
+      "uc": "UC010",
+      "rule": "Získávat ze SNOW support requesty odpovídající aktivnímu oprávněnému CRM kontextu.",
+      "proposed_acceptance": "Seznam neobsahuje požadavek jiného kontextu.",
+      "gap": "IAM-41 all tickets ani IAM-42 not current user nepovažovat za potvrzení rozsahu všech druhů SNOW ticketů.",
+      "candidates": [
+        {
+          "id": "F-REQ-IAM-40",
+          "guid": "EAID_7DEBF1E7_49F6_483d_9A30_526007065B78",
+          "source_text": "Service Hub must retrieve ticket data from SNOW EVE using the resolved customer context.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-40: Service Hub must retrieve ticket data from SNOW EVE using the resolved customer context.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-41",
+          "guid": "EAID_BBF8CECD_9F65_4365_83D8_D76E02563E3F",
+          "source_text": "Service Hub must display all tickets associated with the resolved customer context to authorized users onboarded for that context.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-41: Service Hub must display all tickets associated with the resolved customer context to authorized users onboarded for that context.",
+          "incident_connectors": []
+        }
+      ],
+      "historical_mapping_rows": [
+        {
+          "sheet": "FREQ mapping",
+          "row": 129,
+          "freq_text": "F-REQ-IAM-40; F-REQ-IAM-42",
+          "sreq": "SREQ-SH-27",
+          "ea_guid": "EAID_FE272973_7566_46a8_AADE_A85366B4B5C0"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 130,
+          "freq_text": "F-REQ-IAM-41; F-REQ-IAM-42",
+          "sreq": "SREQ-SH-28",
+          "ea_guid": "EAID_07D11AA8_6B1A_404e_9582_23E6A80DE330"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 187,
+          "freq_text": "F-REQ-IAM-40",
+          "sreq": "SREQ-SNOW-01",
+          "ea_guid": "EAID_2FFBD304_E8D0_431a_9689_1B362A811B10"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 188,
+          "freq_text": "F-REQ-IAM-41",
+          "sreq": "SREQ-SNOW-02",
+          "ea_guid": "EAID_29A2D08B_99E8_4096_99C9_B7225C240194"
+        }
+      ],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 23,
+      "uc": "UC010",
+      "rule": "Umožnit načtení detailu a aktuálního stavu přístupného požadavku.",
+      "proposed_acceptance": "Požadavek mimo oprávněný kontext nelze otevřít v detailu.",
+      "gap": "Přesná pole, status mapping, sorting/filtering a pagination nejsou potvrzené.",
+      "candidates": [
+        {
+          "id": "F-REQ-IAM-40",
+          "guid": "EAID_7DEBF1E7_49F6_483d_9A30_526007065B78",
+          "source_text": "Service Hub must retrieve ticket data from SNOW EVE using the resolved customer context.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-40: Service Hub must retrieve ticket data from SNOW EVE using the resolved customer context.",
+          "incident_connectors": []
+        }
+      ],
+      "historical_mapping_rows": [
+        {
+          "sheet": "FREQ mapping",
+          "row": 129,
+          "freq_text": "F-REQ-IAM-40; F-REQ-IAM-42",
+          "sreq": "SREQ-SH-27",
+          "ea_guid": "EAID_FE272973_7566_46a8_AADE_A85366B4B5C0"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 187,
+          "freq_text": "F-REQ-IAM-40",
+          "sreq": "SREQ-SNOW-01",
+          "ea_guid": "EAID_2FFBD304_E8D0_431a_9689_1B362A811B10"
+        }
+      ],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 24,
+      "uc": "UC010",
+      "rule": "Při přepnutí CRM ID nahradit seznam i detail odpovídajícím kontextem.",
+      "proposed_acceptance": "Po přepnutí z A na B nezůstane obsah A jako obsah B.",
+      "gap": "Obecnou dynamickou aktualizaci rozpadnout na seznam/detail; časové a cache pravidlo otevřené.",
+      "candidates": [
+        {
+          "id": "F-REQ-IAM-26",
+          "guid": "EAID_79C4DB13_72AB_45d9_9C55_0E559FFFF624",
+          "source_text": "Service Hub must use only the resolved or actively selected customer context for content retrieval and user actions.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-26: Service Hub must use only the resolved or actively selected customer context for content retrieval and user actions.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-28",
+          "guid": "EAID_1DEB8340_A5F7_4b7b_BD8B_24E50DF3D846",
+          "source_text": "Service Hub service functions must use only the resolved or actively selected Customer Account as execution context.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-28: Service Hub service functions must use only the resolved or actively selected Customer Account as execution context.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-51",
+          "guid": "EAID_46EBC2AE_1769_4679_A19A_F467143B9A82",
+          "source_text": "Service Hub must update visible content and available actions when identity, role, customer context or subscription status changes.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-51: Service Hub must update visible content and available actions when identity, role, customer context or subscription status changes.",
+          "incident_connectors": []
+        }
+      ],
+      "historical_mapping_rows": [
+        {
+          "sheet": "FREQ mapping",
+          "row": 118,
+          "freq_text": "F-REQ-IAM-26",
+          "sreq": "SREQ-SH-16",
+          "ea_guid": "EAID_E32C9D65_41FE_4d8b_9B79_3268865FBC76"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 120,
+          "freq_text": "F-REQ-IAM-28",
+          "sreq": "SREQ-SH-18",
+          "ea_guid": "EAID_882FA916_5B2D_4da1_9188_01FD0102AF14"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 137,
+          "freq_text": "F-REQ-IAM-51",
+          "sreq": "SREQ-SH-35",
+          "ea_guid": "EAID_DDF58897_EEF9_4691_8A43_A56CF99576B0"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 178,
+          "freq_text": "F-REQ-IAM-26",
+          "sreq": "SREQ-CRM-05",
+          "ea_guid": "EAID_A22DF00A_5DC3_4302_94A3_821173D9D718"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 180,
+          "freq_text": "F-REQ-IAM-28",
+          "sreq": "SREQ-CRM-07",
+          "ea_guid": "EAID_1850B9D7_7BB6_4ade_BBDE_27918720F5A0"
+        }
+      ],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 25,
+      "uc": "UC010",
+      "rule": "Prázdný seznam odlišit od nedostupného SNOW výsledku.",
+      "proposed_acceptance": "Nedostupnost se neprezentuje jako ověřená absence požadavků.",
+      "gap": "Konkrétní UX a retry politika neověřena.",
+      "candidates": [
+        {
+          "id": "F-REQ-IAM-49",
+          "guid": "EAID_4D0E1E9F_FAA0_4a53_9861_80CA3ECF72CC",
+          "source_text": "Service Hub must disable ticket-related functionality when SNOW EVE data is unavailable.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-49: Service Hub must disable ticket-related functionality when SNOW EVE data is unavailable.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-50",
+          "guid": "EAID_84AA974B_57EB_4c59_BADE_54D61B8DFDA6",
+          "source_text": "Service Hub must display the defined degraded state when SNOW EVE data is unavailable.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-50: Service Hub must display the defined degraded state when SNOW EVE data is unavailable.",
+          "incident_connectors": []
+        }
+      ],
+      "historical_mapping_rows": [
+        {
+          "sheet": "FREQ mapping",
+          "row": 135,
+          "freq_text": "F-REQ-IAM-49",
+          "sreq": "SREQ-SH-33",
+          "ea_guid": "EAID_3FB5637E_A24C_464a_B360_BDAD1F301198"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 136,
+          "freq_text": "F-REQ-IAM-50",
+          "sreq": "SREQ-SH-34",
+          "ea_guid": "EAID_1FD646A3_5E84_44b0_A87E_2F75713BA03B"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 194,
+          "freq_text": "F-REQ-IAM-49",
+          "sreq": "SREQ-SNOW-10",
+          "ea_guid": "EAID_C8253063_F372_49f0_841A_0D26E39883A4"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 195,
+          "freq_text": "F-REQ-IAM-50",
+          "sreq": "SREQ-SNOW-11",
+          "ea_guid": "EAID_15103CFF_819A_4703_A389_23521F7D9B21"
+        }
+      ],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 26,
+      "uc": "UC011",
+      "rule": "Změnu povolit pouze pro přístupný požadavek aktivního CRM kontextu.",
+      "proposed_acceptance": "Požadavek cizího kontextu nelze změnit.",
+      "gap": "Nezaměnit oprávněný company scope za pouhé porovnání emailu.",
+      "candidates": [
+        {
+          "id": "F-REQ-IAM-18",
+          "guid": "EAID_2956DCAC_9023_4ed8_8807_9428BAA6D7C8",
+          "source_text": "Service Hub must display only data associated with the resolved customer context.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-18: Service Hub must display only data associated with the resolved customer context.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-19",
+          "guid": "EAID_F98ED8B6_D810_4fb3_9585_63C39229B494",
+          "source_text": "Service Hub must allow only actions permitted for the resolved customer context.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-19: Service Hub must allow only actions permitted for the resolved customer context.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-26",
+          "guid": "EAID_79C4DB13_72AB_45d9_9C55_0E559FFFF624",
+          "source_text": "Service Hub must use only the resolved or actively selected customer context for content retrieval and user actions.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-26: Service Hub must use only the resolved or actively selected customer context for content retrieval and user actions.",
+          "incident_connectors": []
+        }
+      ],
+      "historical_mapping_rows": [
+        {
+          "sheet": "FREQ mapping",
+          "row": 115,
+          "freq_text": "F-REQ-IAM-18",
+          "sreq": "SREQ-SH-13",
+          "ea_guid": "EAID_6122B515_C801_41cc_9FF7_24BE0AC2083E"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 116,
+          "freq_text": "F-REQ-IAM-19",
+          "sreq": "SREQ-SH-14",
+          "ea_guid": "EAID_06AD6AB2_32BA_499a_9DEB_3E705C665FDF"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 118,
+          "freq_text": "F-REQ-IAM-26",
+          "sreq": "SREQ-SH-16",
+          "ea_guid": "EAID_E32C9D65_41FE_4d8b_9B79_3268865FBC76"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 178,
+          "freq_text": "F-REQ-IAM-26",
+          "sreq": "SREQ-CRM-05",
+          "ea_guid": "EAID_A22DF00A_5DC3_4302_94A3_821173D9D718"
+        }
+      ],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 27,
+      "uc": "UC011",
+      "rule": "Získat aktuální stav a oprávnění k operaci ze SNOW.",
+      "proposed_acceptance": "SH nabízí jen operace povolené pro aktuální stav a oprávnění.",
+      "gap": "Povolené operace, pole, komentáře, attachments a status transitions nejsou specifikované.",
+      "candidates": [
+        {
+          "id": "F-REQ-IAM-19",
+          "guid": "EAID_F98ED8B6_D810_4fb3_9585_63C39229B494",
+          "source_text": "Service Hub must allow only actions permitted for the resolved customer context.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-19: Service Hub must allow only actions permitted for the resolved customer context.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-51",
+          "guid": "EAID_46EBC2AE_1769_4679_A19A_F467143B9A82",
+          "source_text": "Service Hub must update visible content and available actions when identity, role, customer context or subscription status changes.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-51: Service Hub must update visible content and available actions when identity, role, customer context or subscription status changes.",
+          "incident_connectors": []
+        }
+      ],
+      "historical_mapping_rows": [
+        {
+          "sheet": "FREQ mapping",
+          "row": 116,
+          "freq_text": "F-REQ-IAM-19",
+          "sreq": "SREQ-SH-14",
+          "ea_guid": "EAID_06AD6AB2_32BA_499a_9DEB_3E705C665FDF"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 137,
+          "freq_text": "F-REQ-IAM-51",
+          "sreq": "SREQ-SH-35",
+          "ea_guid": "EAID_DDF58897_EEF9_4691_8A43_A56CF99576B0"
+        }
+      ],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 28,
+      "uc": "UC011",
+      "rule": "Validovat změnu a neodesílat neplatnou či nepovolenou operaci.",
+      "proposed_acceptance": "Neplatná změna nedorazí jako update do SNOW.",
+      "gap": "Chybí konkrétní atomický FREQ a potvrzená validační pravidla.",
+      "candidates": [],
+      "historical_mapping_rows": [],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 29,
+      "uc": "UC011",
+      "rule": "Úspěch změny zobrazit až po potvrzení SNOW.",
+      "proposed_acceptance": "Odmítnutá či nepotvrzená změna se nevykáže jako úspěšná.",
+      "gap": "Chybí atomický FREQ. Technické kódy, retry a souběh změn nejsou uzavřené.",
+      "candidates": [],
+      "historical_mapping_rows": [],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    },
+    {
+      "review_row": 30,
+      "uc": "UC011",
+      "rule": "Při změně CRM kontextu nebo stavu znovu vyhodnotit oprávnění a operace.",
+      "proposed_acceptance": "Zastaralá oprávnění ani starý kontext nezaloží update.",
+      "gap": "IAM-51 je širší obecný požadavek; doplnit konkrétní aktualizační scénář.",
+      "candidates": [
+        {
+          "id": "F-REQ-IAM-26",
+          "guid": "EAID_79C4DB13_72AB_45d9_9C55_0E559FFFF624",
+          "source_text": "Service Hub must use only the resolved or actively selected customer context for content retrieval and user actions.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-26: Service Hub must use only the resolved or actively selected customer context for content retrieval and user actions.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-28",
+          "guid": "EAID_1DEB8340_A5F7_4b7b_BD8B_24E50DF3D846",
+          "source_text": "Service Hub service functions must use only the resolved or actively selected Customer Account as execution context.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-28: Service Hub service functions must use only the resolved or actively selected Customer Account as execution context.",
+          "incident_connectors": []
+        },
+        {
+          "id": "F-REQ-IAM-51",
+          "guid": "EAID_46EBC2AE_1769_4679_A19A_F467143B9A82",
+          "source_text": "Service Hub must update visible content and available actions when identity, role, customer context or subscription status changes.",
+          "exists_in_xml": true,
+          "xml_name": "F-REQ-IAM-51: Service Hub must update visible content and available actions when identity, role, customer context or subscription status changes.",
+          "incident_connectors": []
+        }
+      ],
+      "historical_mapping_rows": [
+        {
+          "sheet": "FREQ mapping",
+          "row": 118,
+          "freq_text": "F-REQ-IAM-26",
+          "sreq": "SREQ-SH-16",
+          "ea_guid": "EAID_E32C9D65_41FE_4d8b_9B79_3268865FBC76"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 120,
+          "freq_text": "F-REQ-IAM-28",
+          "sreq": "SREQ-SH-18",
+          "ea_guid": "EAID_882FA916_5B2D_4da1_9188_01FD0102AF14"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 137,
+          "freq_text": "F-REQ-IAM-51",
+          "sreq": "SREQ-SH-35",
+          "ea_guid": "EAID_DDF58897_EEF9_4691_8A43_A56CF99576B0"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 178,
+          "freq_text": "F-REQ-IAM-26",
+          "sreq": "SREQ-CRM-05",
+          "ea_guid": "EAID_A22DF00A_5DC3_4302_94A3_821173D9D718"
+        },
+        {
+          "sheet": "FREQ mapping",
+          "row": 180,
+          "freq_text": "F-REQ-IAM-28",
+          "sreq": "SREQ-CRM-07",
+          "ea_guid": "EAID_1850B9D7_7BB6_4ade_BBDE_27918720F5A0"
+        }
+      ],
+      "assessment": "Existing source candidates only; no semantic approval or new model links. Current Book1 rows must not be inferred from historical mapping rows."
+    }
+  ]
+}

@@ -25,3 +25,16 @@ VDI is read-only: no create/edit/delete of source data. Authorized search input 
 VFID sub maps 1:1 to the corresponding ONSC/WSC USER. Email is not the identity key. TMF691 target holding parent-child is separate. V4 SNOW customer/admin onboarding is manual MVP. Automatic Siebel retrieval/prefill is excluded until reconfirmed; minimum Marketplace data readiness remains. SH/CZ DXL token negotiation is part of MVP; do not infer the full Atlas contract from a generic SSO example. Class inheritance does not require instances; do not change CustomerContext generalizations without semantic evidence.
 
 Continue substantive work, keep commentary concise, save progress to the specified GitHub branch, and verify remote SHA after writes. Keep validated Book1 separate from unexecuted pending scripts. Do not call the full task complete while required work remains. User instructions and platform restrictions take precedence.
+
+
+## Přenos práce a zdroje – výslovné pokyny 5. 11. 2026
+
+Technické informace, integrační kontrakty a jejich parametry ověřuj v Confluence. Použij přímou autorizovanou stránku nebo agenta v Teams s názvem **Confluence** (v dřívějším UI Confluence Agent). Vyžádej primární URL a dostupnou verzi či datum. Běžný Copilot není náhradou technické specifikace v Confluence. Pro ostatní vyhledávání, analýzu a práci s dokumenty/sešity používej Copilot. Rozlišuj návrh z emailu, technický kontrakt a potvrzení nasazení.
+
+Pokud Confluence přístup chybí nebo vyprší, požádej uživatele o ruční přihlášení. Přihlášení neautomatizuj a nežádej heslo. Pokračuj nezávislou povolenou prací; technické mezery nevyplňuj odhadem.
+
+Průběžně ukládej na GitHub také vlastní přenosné skills, mezistav, rozhodnutí, zdrojové odkazy, výstupy a reprodukční skripty. Udělej checkpoint po věcném milníku, před předáním a před ukončením práce; pushni pracovní větev a porovnej lokální a vzdálené SHA. Při nedostupné síti uchovej lokální checkpoint a výslovně uveď, že push není potvrzený. Main neměň. Nepřenášej přístupové údaje, SSH klíče, cookies ani přihlášené relace.
+
+Předání musí odlišovat hotové a ověřené změny, rozpracované soubory a skutečné překážky, uvést další konkrétní krok a umístění pracovních kopií v OneDrive. Samotné zadání Copilotu není dokončení; ověř jeho výsledek. Zachovej jeho už provedené správné změny.
+
+Uživatel výslovně zvolil zachování původního render_docx.py. Nepovažuj dřívější číselnou volbu 1 za platný souhlas s nahrazením rendereru Microsoft Wordem; konečné potvrzení bylo „Zachovej původní renderer“.

@@ -1,0 +1,66 @@
+﻿uc,condition,freq,guid,exists_in_xml,incident_connectors,source_text
+UC005,1,F-REQ-IAM-01,EAID_9F9BED4F_FCE5_497b_9C7B_214B0A54C81A,True,0,Service Hub must authenticate users via Vodafone Identity (VFID) before granting access.
+UC005,1,F-REQ-IAM-02,EAID_4C7667B8_1117_4b91_9CA8_2BDBE41026AA,True,0,Service Hub must reject access when VFID authentication fails.
+UC005,2,F-REQ-IAM-06,EAID_96E15147_F324_4f71_904C_7BD4EADA6C46,True,0,Service Hub must evaluate authorization using upstream role data and customer context provided by selfcare systems.
+UC005,2,F-REQ-IAM-07,EAID_BF791363_078D_4f0a_91DB_2C81F239527B,True,0,Service Hub authorization must use upstream role and permission data as the source for access evaluation.
+UC005,2,F-REQ-IAM-20,EAID_BE66CC27_D9C9_41b0_8CF9_7DC4D591EB1E,True,0,Service Hub must apply access restrictions derived from upstream role data.
+UC005,2,F-REQ-IAM-21,EAID_8A54BFFF_0377_4155_B312_B3436A255A8D,True,0,Service Hub must retrieve identity data from VFID and map it to the customer context used by local systems.
+UC005,2,F-REQ-IAM-22,EAID_3D3A2B95_E833_4adc_8CBA_921168F3DA09,True,0,"Service Hub must resolve access context using upstream data from ONSC, WSC, CRM and Marketplace."
+UC005,3,F-REQ-IAM-08,EAID_DFDD915C_3983_420f_90DB_6CE5ECEFE665,True,0,Service Hub must deny access to V4 users with role End User.
+UC005,3,F-REQ-IAM-09,EAID_D303DFFB_7739_4da3_9B3F_C570D5DDEEA2,True,0,Service Hub must deny access to V4 users with role Billing Account User.
+UC005,3,F-REQ-IAM-10,EAID_7DB089DF_6694_4b15_9047_48CEDB6167B6,True,0,Service Hub must allow access to V4 users with role Administrator.
+UC005,3,F-REQ-IAM-11,EAID_56DE68BF_73E8_4180_9505_658BC59CEC8B,True,0,Service Hub must deny access to V2 users with role End User.
+UC005,3,F-REQ-IAM-12,EAID_17991EBB_06A9_4d35_945D_DFC146E9B6BE,True,0,Service Hub must allow access to V2 users with role End User Admin.
+UC005,3,F-REQ-IAM-13,EAID_FF41287B_4DCB_4ea8_99E9_93FA888355A8,True,0,Service Hub must allow access to V2 users with role Group Administrator.
+UC005,3,F-REQ-IAM-14,EAID_292ECEDA_D5D7_45dc_A402_F0A12AB939D1,True,0,Service Hub must allow access to V2 users with role Administrator.
+UC005,3,F-REQ-IAM-15,EAID_5F86F922_B3D4_4c8e_86D8_86B00A16C59F,True,0,Service Hub must allow access to V2 users with role Association Administrator.
+UC005,4,F-REQ-IAM-26,EAID_79C4DB13_72AB_45d9_9C55_0E559FFFF624,True,0,Service Hub must use only the resolved or actively selected customer context for content retrieval and user actions.
+UC005,4,F-REQ-IAM-27,EAID_664FBC37_A331_4568_B152_271044834BD6,True,0,Service Hub must allow the user to select a Customer Account when multiple Customer Accounts are associated with the user identity.
+UC005,4,F-REQ-IAM-29,EAID_17D46FFA_66A0_4c49_A0C2_C23CDE21489A,True,0,Service Hub must require Customer Account selection before enabling service-specific functionality when multiple Customer Accounts are available.
+UC005,5,F-REQ-IAM-27,EAID_664FBC37_A331_4568_B152_271044834BD6,True,0,Service Hub must allow the user to select a Customer Account when multiple Customer Accounts are associated with the user identity.
+UC005,5,F-REQ-IAM-28,EAID_1DEB8340_A5F7_4b7b_BD8B_24E50DF3D846,True,0,Service Hub service functions must use only the resolved or actively selected Customer Account as execution context.
+UC005,5,F-REQ-IAM-51,EAID_46EBC2AE_1769_4679_A19A_F467143B9A82,True,0,"Service Hub must update visible content and available actions when identity, role, customer context or subscription status changes."
+UC005,6,F-REQ-IAM-23,EAID_8E5DDC59_1B19_494c_A1C4_0BA6BB5209B7,True,0,Service Hub must identify all customer entities linked to the user identity.
+UC005,6,F-REQ-IAM-24,EAID_B4E0F18C_3036_47ac_B706_66A2ED0D760E,True,0,"Service Hub must keep data, permissions and actions separate across unrelated customer entities."
+UC005,6,F-REQ-IAM-25,EAID_1C236DF9_537B_4c6c_AE2F_4EBED2E8F1A6,True,0,"Service Hub must evaluate context-aware access for customer entities associated with the user identity, including child Customer Accounts, holdings and associations."
+UC005,6,F-REQ-IAM-27,EAID_664FBC37_A331_4568_B152_271044834BD6,True,0,Service Hub must allow the user to select a Customer Account when multiple Customer Accounts are associated with the user identity.
+UC005,7,F-REQ-IAM-06,EAID_96E15147_F324_4f71_904C_7BD4EADA6C46,True,0,Service Hub must evaluate authorization using upstream role data and customer context provided by selfcare systems.
+UC005,7,F-REQ-IAM-18,EAID_2956DCAC_9023_4ed8_8807_9428BAA6D7C8,True,0,Service Hub must display only data associated with the resolved customer context.
+UC005,7,F-REQ-IAM-19,EAID_F98ED8B6_D810_4fb3_9585_63C39229B494,True,0,Service Hub must allow only actions permitted for the resolved customer context.
+UC006,8,F-REQ-IAM-30,EAID_432E2932_D729_4419_A3AB_F020A197ED6E,True,0,Service Hub must evaluate Atlas and other Service Hub-related subscription status in Marketplace for the resolved customer context before enabling service-specific functionality.
+UC006,8,F-REQ-IAM-33,EAID_7F4234D7_D20F_4ae8_BBF1_0CF4E7BCAA9A,True,0,Service Hub must verify the existence of Marketplace product data before displaying Atlas or other Service Hub-related services.
+UC006,8,F-REQ-IAM-34,EAID_D537C87F_6742_4c16_984E_1D2EFA6D245B,True,0,Service Hub must display Atlas service content when the resolved customer context has an active Atlas subscription.
+UC006,9,F-REQ-IAM-30,EAID_432E2932_D729_4419_A3AB_F020A197ED6E,True,0,Service Hub must evaluate Atlas and other Service Hub-related subscription status in Marketplace for the resolved customer context before enabling service-specific functionality.
+UC006,9,F-REQ-IAM-31,EAID_53B7BD8F_AEBB_43c2_8555_723F7B521A54,True,0,Service Hub must enable service-specific functionality only when the resolved customer context has an active Atlas and other Service Hub-related subscription in Marketplace.
+UC006,9,F-REQ-IAM-32,EAID_F80E110D_3F19_4865_BE35_531704FEEFEB,True,0,Service Hub must not enable service-specific functionality when the resolved customer context has no active Atlas or other Service Hub-related subscription in Marketplace.
+UC006,9,F-REQ-IAM-34,EAID_D537C87F_6742_4c16_984E_1D2EFA6D245B,True,0,Service Hub must display Atlas service content when the resolved customer context has an active Atlas subscription.
+UC006,10,F-REQ-IAM-35,EAID_1F0E9717_F4BC_4470_BC7F_7183E060ED6E,True,0,Service Hub must display the defined no-product page or message when the resolved customer context has no active Atlas subscription.
+UC006,10,F-REQ-IAM-36,EAID_27EFF697_1E4D_462d_AD1D_364A505BFA1D,True,0,Service Hub must display the defined empty state when no services are available for the resolved customer context.
+UC006,10,F-REQ-IAM-37,EAID_1B7E6FD0_E1C2_4eb2_80AF_9D99EF1867A9,True,0,Service Hub must display the defined error state when Marketplace data is unavailable.
+UC006,10,F-REQ-IAM-38,EAID_57D2049D_E513_40c4_9549_375D025054CF,True,0,"Service Hub must display clear user messaging for the no-product state, empty state and error state."
+UC006,11,F-REQ-IAM-26,EAID_79C4DB13_72AB_45d9_9C55_0E559FFFF624,True,0,Service Hub must use only the resolved or actively selected customer context for content retrieval and user actions.
+UC006,11,F-REQ-IAM-28,EAID_1DEB8340_A5F7_4b7b_BD8B_24E50DF3D846,True,0,Service Hub service functions must use only the resolved or actively selected Customer Account as execution context.
+UC006,11,F-REQ-IAM-51,EAID_46EBC2AE_1769_4679_A19A_F467143B9A82,True,0,"Service Hub must update visible content and available actions when identity, role, customer context or subscription status changes."
+UC007,12,F-REQ-IAM-19,EAID_F98ED8B6_D810_4fb3_9585_63C39229B494,True,0,Service Hub must allow only actions permitted for the resolved customer context.
+UC007,12,F-REQ-IAM-43,EAID_C99034F2_E0E5_4978_A87E_35E580B28725,True,0,Service Hub must create tickets under the identity of the current authenticated user.
+UC007,12,F-REQ-IAM-44,EAID_0B7F844E_83BD_4e9c_A3DA_26418F25D6E2,True,0,Service Hub must prevent ticket creation when the current user is not onboarded in SNOW EVE.
+UC007,12,F-REQ-IAM-46,EAID_B2FC27D6_6444_4f7c_8593_00C4CDE9A696,True,0,Service Hub must restrict ticket-related functionality when the current user is not onboarded in SNOW EVE.
+UC007,15,F-REQ-IAM-26,EAID_79C4DB13_72AB_45d9_9C55_0E559FFFF624,True,0,Service Hub must use only the resolved or actively selected customer context for content retrieval and user actions.
+UC007,15,F-REQ-IAM-28,EAID_1DEB8340_A5F7_4b7b_BD8B_24E50DF3D846,True,0,Service Hub service functions must use only the resolved or actively selected Customer Account as execution context.
+UC007,15,F-REQ-IAM-51,EAID_46EBC2AE_1769_4679_A19A_F467143B9A82,True,0,"Service Hub must update visible content and available actions when identity, role, customer context or subscription status changes."
+UC010,22,F-REQ-IAM-40,EAID_7DEBF1E7_49F6_483d_9A30_526007065B78,True,0,Service Hub must retrieve ticket data from SNOW EVE using the resolved customer context.
+UC010,22,F-REQ-IAM-41,EAID_BBF8CECD_9F65_4365_83D8_D76E02563E3F,True,0,Service Hub must display all tickets associated with the resolved customer context to authorized users onboarded for that context.
+UC010,23,F-REQ-IAM-40,EAID_7DEBF1E7_49F6_483d_9A30_526007065B78,True,0,Service Hub must retrieve ticket data from SNOW EVE using the resolved customer context.
+UC010,24,F-REQ-IAM-26,EAID_79C4DB13_72AB_45d9_9C55_0E559FFFF624,True,0,Service Hub must use only the resolved or actively selected customer context for content retrieval and user actions.
+UC010,24,F-REQ-IAM-28,EAID_1DEB8340_A5F7_4b7b_BD8B_24E50DF3D846,True,0,Service Hub service functions must use only the resolved or actively selected Customer Account as execution context.
+UC010,24,F-REQ-IAM-51,EAID_46EBC2AE_1769_4679_A19A_F467143B9A82,True,0,"Service Hub must update visible content and available actions when identity, role, customer context or subscription status changes."
+UC010,25,F-REQ-IAM-49,EAID_4D0E1E9F_FAA0_4a53_9861_80CA3ECF72CC,True,0,Service Hub must disable ticket-related functionality when SNOW EVE data is unavailable.
+UC010,25,F-REQ-IAM-50,EAID_84AA974B_57EB_4c59_BADE_54D61B8DFDA6,True,0,Service Hub must display the defined degraded state when SNOW EVE data is unavailable.
+UC011,26,F-REQ-IAM-18,EAID_2956DCAC_9023_4ed8_8807_9428BAA6D7C8,True,0,Service Hub must display only data associated with the resolved customer context.
+UC011,26,F-REQ-IAM-19,EAID_F98ED8B6_D810_4fb3_9585_63C39229B494,True,0,Service Hub must allow only actions permitted for the resolved customer context.
+UC011,26,F-REQ-IAM-26,EAID_79C4DB13_72AB_45d9_9C55_0E559FFFF624,True,0,Service Hub must use only the resolved or actively selected customer context for content retrieval and user actions.
+UC011,27,F-REQ-IAM-19,EAID_F98ED8B6_D810_4fb3_9585_63C39229B494,True,0,Service Hub must allow only actions permitted for the resolved customer context.
+UC011,27,F-REQ-IAM-51,EAID_46EBC2AE_1769_4679_A19A_F467143B9A82,True,0,"Service Hub must update visible content and available actions when identity, role, customer context or subscription status changes."
+UC011,30,F-REQ-IAM-26,EAID_79C4DB13_72AB_45d9_9C55_0E559FFFF624,True,0,Service Hub must use only the resolved or actively selected customer context for content retrieval and user actions.
+UC011,30,F-REQ-IAM-28,EAID_1DEB8340_A5F7_4b7b_BD8B_24E50DF3D846,True,0,Service Hub service functions must use only the resolved or actively selected Customer Account as execution context.
+UC011,30,F-REQ-IAM-51,EAID_46EBC2AE_1769_4679_A19A_F467143B9A82,True,0,"Service Hub must update visible content and available actions when identity, role, customer context or subscription status changes."

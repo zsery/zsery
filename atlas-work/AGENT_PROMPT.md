@@ -1,5 +1,10 @@
 # Pokračování práce Atlas / ServiceHub VFCZ
 
+## Aktuální checkpoint 5. 11. 2026
+
+Pokyny ke zdrojům, přihlášení a průběžnému GitHub ukládání: instructions/skills/follow-explicit-scope/SKILL.md, sekce Přenos práce a zdroje. Nejnovější stav: STATE_2026-11-05.md. Starší časové zápisy níže jsou historie, nikoli současné potvrzení dokončení.
+
+
 ## Nejnovější pokračování 4 listopadu večer
 
 Aktuální OneDrive Documents/Projects/ServiceHub/Atlas/Book1.xlsx byl zkontrolován po práci Copilotu; není nahrazen starší lokální revizí. Přesné FREQ mapping!F4:F5 = SREQ-CRM-04 / SREQ-CRM-03 potvrzují, že starý CRM-03/04 mapping konflikt už Copilot opravil. Aktuální ř.109 ale stále má allow v C109, deny v J109 a SHODA v D109; Copilot potvrdil rozpor. Žádná zdrojová VDI data nebyla upravena.

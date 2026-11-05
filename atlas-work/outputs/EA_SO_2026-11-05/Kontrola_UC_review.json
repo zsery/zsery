@@ -1,0 +1,599 @@
+{
+  "status": "Proposed analytical review layer, not approved requirements or native EA import validation",
+  "source_sha256": "fb0cfe908c40bf58928d5b8a837760bce19304d9293d1f331377183a268a21a6",
+  "output_sha256": "14f47b8a48f00668e8534a98057b19699265254e8f5ce157160031152ae28fc6",
+  "new_review_package": "EAPK_4B3A923D_44FE_5FBC_ADD5_BD37410B8A60",
+  "new_review_artifacts": 30,
+  "new_candidate_trace_dependencies": 65,
+  "new_review_diagrams": 7,
+  "all_input_bytes_recoverable_by_removing_added_blocks": true,
+  "all_original_connectors_and_diagrams_unchanged": true,
+  "native_EA_import_verified": false,
+  "links": [
+    {
+      "connector_guid": "EAID_8DEBD026_B5DB_5AF8_84B1_F292A1FBF1AC",
+      "review_artifact_guid": "EAID_0F917629_77F0_5C0D_8F6A_27D86623DCCA",
+      "uc": "UC005",
+      "condition": 1,
+      "candidate_freq_id": "F-REQ-IAM-01",
+      "candidate_freq_guid": "EAID_9F9BED4F_FCE5_497b_9C7B_214B0A54C81A",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_D9CCBC85_5E48_5895_B3DF_19F060CF69A1",
+      "review_artifact_guid": "EAID_0F917629_77F0_5C0D_8F6A_27D86623DCCA",
+      "uc": "UC005",
+      "condition": 1,
+      "candidate_freq_id": "F-REQ-IAM-02",
+      "candidate_freq_guid": "EAID_4C7667B8_1117_4b91_9CA8_2BDBE41026AA",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_4216B5E9_59B4_54CA_8084_8BBBA4294F65",
+      "review_artifact_guid": "EAID_5EBDA6A2_0A88_5C53_B0F2_BAF2BD593775",
+      "uc": "UC005",
+      "condition": 2,
+      "candidate_freq_id": "F-REQ-IAM-06",
+      "candidate_freq_guid": "EAID_96E15147_F324_4f71_904C_7BD4EADA6C46",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_2B811871_6DD8_5573_B6D5_E7197B81CFC7",
+      "review_artifact_guid": "EAID_5EBDA6A2_0A88_5C53_B0F2_BAF2BD593775",
+      "uc": "UC005",
+      "condition": 2,
+      "candidate_freq_id": "F-REQ-IAM-07",
+      "candidate_freq_guid": "EAID_BF791363_078D_4f0a_91DB_2C81F239527B",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_8A25585C_39A9_5169_9011_44FE94BBD3D2",
+      "review_artifact_guid": "EAID_5EBDA6A2_0A88_5C53_B0F2_BAF2BD593775",
+      "uc": "UC005",
+      "condition": 2,
+      "candidate_freq_id": "F-REQ-IAM-20",
+      "candidate_freq_guid": "EAID_BE66CC27_D9C9_41b0_8CF9_7DC4D591EB1E",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_CEBE2349_08E8_5AAE_AD09_9D3903A1A14C",
+      "review_artifact_guid": "EAID_5EBDA6A2_0A88_5C53_B0F2_BAF2BD593775",
+      "uc": "UC005",
+      "condition": 2,
+      "candidate_freq_id": "F-REQ-IAM-21",
+      "candidate_freq_guid": "EAID_8A54BFFF_0377_4155_B312_B3436A255A8D",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_F0EDC403_F84B_52CA_885E_56DE05092E9A",
+      "review_artifact_guid": "EAID_5EBDA6A2_0A88_5C53_B0F2_BAF2BD593775",
+      "uc": "UC005",
+      "condition": 2,
+      "candidate_freq_id": "F-REQ-IAM-22",
+      "candidate_freq_guid": "EAID_3D3A2B95_E833_4adc_8CBA_921168F3DA09",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_718E8317_2085_5290_B439_36BDA3D39448",
+      "review_artifact_guid": "EAID_D88F22F1_35AE_55A5_AC03_5D971E98D65C",
+      "uc": "UC005",
+      "condition": 3,
+      "candidate_freq_id": "F-REQ-IAM-08",
+      "candidate_freq_guid": "EAID_DFDD915C_3983_420f_90DB_6CE5ECEFE665",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_79FC8B44_5A9C_5C40_88DF_15D54F41B42C",
+      "review_artifact_guid": "EAID_D88F22F1_35AE_55A5_AC03_5D971E98D65C",
+      "uc": "UC005",
+      "condition": 3,
+      "candidate_freq_id": "F-REQ-IAM-09",
+      "candidate_freq_guid": "EAID_D303DFFB_7739_4da3_9B3F_C570D5DDEEA2",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_1396B418_AD27_55BF_9830_8C042BE2B9DB",
+      "review_artifact_guid": "EAID_D88F22F1_35AE_55A5_AC03_5D971E98D65C",
+      "uc": "UC005",
+      "condition": 3,
+      "candidate_freq_id": "F-REQ-IAM-10",
+      "candidate_freq_guid": "EAID_7DB089DF_6694_4b15_9047_48CEDB6167B6",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_C8BBC0E1_AE2C_58BB_8ED6_9CBC90FCF7CB",
+      "review_artifact_guid": "EAID_D88F22F1_35AE_55A5_AC03_5D971E98D65C",
+      "uc": "UC005",
+      "condition": 3,
+      "candidate_freq_id": "F-REQ-IAM-11",
+      "candidate_freq_guid": "EAID_56DE68BF_73E8_4180_9505_658BC59CEC8B",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_3F25238E_47EF_50A5_B896_3EC152BD7F2C",
+      "review_artifact_guid": "EAID_D88F22F1_35AE_55A5_AC03_5D971E98D65C",
+      "uc": "UC005",
+      "condition": 3,
+      "candidate_freq_id": "F-REQ-IAM-12",
+      "candidate_freq_guid": "EAID_17991EBB_06A9_4d35_945D_DFC146E9B6BE",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_417C51C8_FB80_5D7D_A260_DBBB0F77370D",
+      "review_artifact_guid": "EAID_D88F22F1_35AE_55A5_AC03_5D971E98D65C",
+      "uc": "UC005",
+      "condition": 3,
+      "candidate_freq_id": "F-REQ-IAM-13",
+      "candidate_freq_guid": "EAID_FF41287B_4DCB_4ea8_99E9_93FA888355A8",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_5AFEE9BB_5A37_51EF_89A8_DAFE6EFAAB4F",
+      "review_artifact_guid": "EAID_D88F22F1_35AE_55A5_AC03_5D971E98D65C",
+      "uc": "UC005",
+      "condition": 3,
+      "candidate_freq_id": "F-REQ-IAM-14",
+      "candidate_freq_guid": "EAID_292ECEDA_D5D7_45dc_A402_F0A12AB939D1",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_2BBA2BB8_AD34_5CF8_A337_0318E537F1C4",
+      "review_artifact_guid": "EAID_D88F22F1_35AE_55A5_AC03_5D971E98D65C",
+      "uc": "UC005",
+      "condition": 3,
+      "candidate_freq_id": "F-REQ-IAM-15",
+      "candidate_freq_guid": "EAID_5F86F922_B3D4_4c8e_86D8_86B00A16C59F",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_3E54315A_1ACD_5BC5_91BF_2F7ECDEF21D4",
+      "review_artifact_guid": "EAID_54B87C8A_C15F_534C_BF07_0747FBB3C415",
+      "uc": "UC005",
+      "condition": 4,
+      "candidate_freq_id": "F-REQ-IAM-26",
+      "candidate_freq_guid": "EAID_79C4DB13_72AB_45d9_9C55_0E559FFFF624",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_40D6CCA4_0350_5288_A32C_0D8187CE24BC",
+      "review_artifact_guid": "EAID_54B87C8A_C15F_534C_BF07_0747FBB3C415",
+      "uc": "UC005",
+      "condition": 4,
+      "candidate_freq_id": "F-REQ-IAM-27",
+      "candidate_freq_guid": "EAID_664FBC37_A331_4568_B152_271044834BD6",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_B01B4082_5A9F_5A31_AF0C_72E3609F2ECA",
+      "review_artifact_guid": "EAID_54B87C8A_C15F_534C_BF07_0747FBB3C415",
+      "uc": "UC005",
+      "condition": 4,
+      "candidate_freq_id": "F-REQ-IAM-29",
+      "candidate_freq_guid": "EAID_17D46FFA_66A0_4c49_A0C2_C23CDE21489A",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_8583B8F5_1D30_5137_A7ED_FD433211A207",
+      "review_artifact_guid": "EAID_229CA84F_2FB3_5E68_BC25_729DD5FDCE63",
+      "uc": "UC005",
+      "condition": 5,
+      "candidate_freq_id": "F-REQ-IAM-27",
+      "candidate_freq_guid": "EAID_664FBC37_A331_4568_B152_271044834BD6",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_CD67F9BB_D827_5B45_B116_5D05EC44FDE4",
+      "review_artifact_guid": "EAID_229CA84F_2FB3_5E68_BC25_729DD5FDCE63",
+      "uc": "UC005",
+      "condition": 5,
+      "candidate_freq_id": "F-REQ-IAM-28",
+      "candidate_freq_guid": "EAID_1DEB8340_A5F7_4b7b_BD8B_24E50DF3D846",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_C79A656B_7BA4_5703_84EF_8E35A4869590",
+      "review_artifact_guid": "EAID_229CA84F_2FB3_5E68_BC25_729DD5FDCE63",
+      "uc": "UC005",
+      "condition": 5,
+      "candidate_freq_id": "F-REQ-IAM-51",
+      "candidate_freq_guid": "EAID_46EBC2AE_1769_4679_A19A_F467143B9A82",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_CFA8C46C_7525_5E8D_8220_B71F7770E3E5",
+      "review_artifact_guid": "EAID_7A048353_E9A7_5454_BB85_32359D44261B",
+      "uc": "UC005",
+      "condition": 6,
+      "candidate_freq_id": "F-REQ-IAM-23",
+      "candidate_freq_guid": "EAID_8E5DDC59_1B19_494c_A1C4_0BA6BB5209B7",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_6E310A62_6403_582C_9AA7_54F3FAAECBC9",
+      "review_artifact_guid": "EAID_7A048353_E9A7_5454_BB85_32359D44261B",
+      "uc": "UC005",
+      "condition": 6,
+      "candidate_freq_id": "F-REQ-IAM-24",
+      "candidate_freq_guid": "EAID_B4E0F18C_3036_47ac_B706_66A2ED0D760E",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_9BAA03CC_A0E8_5FB9_B325_9EBCF7F02E57",
+      "review_artifact_guid": "EAID_7A048353_E9A7_5454_BB85_32359D44261B",
+      "uc": "UC005",
+      "condition": 6,
+      "candidate_freq_id": "F-REQ-IAM-25",
+      "candidate_freq_guid": "EAID_1C236DF9_537B_4c6c_AE2F_4EBED2E8F1A6",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_AFF1492A_8B9A_5130_BF32_A94845784161",
+      "review_artifact_guid": "EAID_7A048353_E9A7_5454_BB85_32359D44261B",
+      "uc": "UC005",
+      "condition": 6,
+      "candidate_freq_id": "F-REQ-IAM-27",
+      "candidate_freq_guid": "EAID_664FBC37_A331_4568_B152_271044834BD6",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_737A36C7_F72A_55A7_BB24_254F6AF47E26",
+      "review_artifact_guid": "EAID_650BBF1E_2ACE_5DA6_8E1B_E6973FB39E8C",
+      "uc": "UC005",
+      "condition": 7,
+      "candidate_freq_id": "F-REQ-IAM-06",
+      "candidate_freq_guid": "EAID_96E15147_F324_4f71_904C_7BD4EADA6C46",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_575F891F_821D_5780_96A1_84AAC522EAF9",
+      "review_artifact_guid": "EAID_650BBF1E_2ACE_5DA6_8E1B_E6973FB39E8C",
+      "uc": "UC005",
+      "condition": 7,
+      "candidate_freq_id": "F-REQ-IAM-18",
+      "candidate_freq_guid": "EAID_2956DCAC_9023_4ed8_8807_9428BAA6D7C8",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_694E998B_4CB7_5AAB_93A1_54FB1833F24E",
+      "review_artifact_guid": "EAID_650BBF1E_2ACE_5DA6_8E1B_E6973FB39E8C",
+      "uc": "UC005",
+      "condition": 7,
+      "candidate_freq_id": "F-REQ-IAM-19",
+      "candidate_freq_guid": "EAID_F98ED8B6_D810_4fb3_9585_63C39229B494",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_B2E6A032_3078_5C0A_A481_149F198B3667",
+      "review_artifact_guid": "EAID_E5C8B282_BBB6_5572_AEC7_65ED19A34378",
+      "uc": "UC006",
+      "condition": 8,
+      "candidate_freq_id": "F-REQ-IAM-30",
+      "candidate_freq_guid": "EAID_432E2932_D729_4419_A3AB_F020A197ED6E",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_0ED7FB38_9550_573D_A6E4_E24628B8DF8F",
+      "review_artifact_guid": "EAID_E5C8B282_BBB6_5572_AEC7_65ED19A34378",
+      "uc": "UC006",
+      "condition": 8,
+      "candidate_freq_id": "F-REQ-IAM-33",
+      "candidate_freq_guid": "EAID_7F4234D7_D20F_4ae8_BBF1_0CF4E7BCAA9A",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_5CE38F87_96D7_5C8A_932F_4228E4171559",
+      "review_artifact_guid": "EAID_E5C8B282_BBB6_5572_AEC7_65ED19A34378",
+      "uc": "UC006",
+      "condition": 8,
+      "candidate_freq_id": "F-REQ-IAM-34",
+      "candidate_freq_guid": "EAID_D537C87F_6742_4c16_984E_1D2EFA6D245B",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_73C4095D_3DEE_57C0_9E76_F2CE65F0F42A",
+      "review_artifact_guid": "EAID_5B7661D0_B72F_5151_96E8_4FC1C917F100",
+      "uc": "UC006",
+      "condition": 9,
+      "candidate_freq_id": "F-REQ-IAM-30",
+      "candidate_freq_guid": "EAID_432E2932_D729_4419_A3AB_F020A197ED6E",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_E753BC14_94E4_5103_B2D4_F6102E957482",
+      "review_artifact_guid": "EAID_5B7661D0_B72F_5151_96E8_4FC1C917F100",
+      "uc": "UC006",
+      "condition": 9,
+      "candidate_freq_id": "F-REQ-IAM-31",
+      "candidate_freq_guid": "EAID_53B7BD8F_AEBB_43c2_8555_723F7B521A54",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_9C330A88_A00A_52EA_8B67_EFFD92FB3474",
+      "review_artifact_guid": "EAID_5B7661D0_B72F_5151_96E8_4FC1C917F100",
+      "uc": "UC006",
+      "condition": 9,
+      "candidate_freq_id": "F-REQ-IAM-32",
+      "candidate_freq_guid": "EAID_F80E110D_3F19_4865_BE35_531704FEEFEB",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_3FC0F020_CFFA_5E49_A640_3B15EFCD93DD",
+      "review_artifact_guid": "EAID_5B7661D0_B72F_5151_96E8_4FC1C917F100",
+      "uc": "UC006",
+      "condition": 9,
+      "candidate_freq_id": "F-REQ-IAM-34",
+      "candidate_freq_guid": "EAID_D537C87F_6742_4c16_984E_1D2EFA6D245B",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_8E2EB863_7728_5555_8FC8_6D42AED11960",
+      "review_artifact_guid": "EAID_E8D4A05A_A812_5375_BF91_2955C32EECE1",
+      "uc": "UC006",
+      "condition": 10,
+      "candidate_freq_id": "F-REQ-IAM-35",
+      "candidate_freq_guid": "EAID_1F0E9717_F4BC_4470_BC7F_7183E060ED6E",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_F1C6DF36_2590_5E4D_992F_D2E2F1FA6887",
+      "review_artifact_guid": "EAID_E8D4A05A_A812_5375_BF91_2955C32EECE1",
+      "uc": "UC006",
+      "condition": 10,
+      "candidate_freq_id": "F-REQ-IAM-36",
+      "candidate_freq_guid": "EAID_27EFF697_1E4D_462d_AD1D_364A505BFA1D",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_FA800C7A_5C74_5456_BB08_C990FD62F283",
+      "review_artifact_guid": "EAID_E8D4A05A_A812_5375_BF91_2955C32EECE1",
+      "uc": "UC006",
+      "condition": 10,
+      "candidate_freq_id": "F-REQ-IAM-37",
+      "candidate_freq_guid": "EAID_1B7E6FD0_E1C2_4eb2_80AF_9D99EF1867A9",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_E2D59C50_25F4_595A_A49F_B06547B4482B",
+      "review_artifact_guid": "EAID_E8D4A05A_A812_5375_BF91_2955C32EECE1",
+      "uc": "UC006",
+      "condition": 10,
+      "candidate_freq_id": "F-REQ-IAM-38",
+      "candidate_freq_guid": "EAID_57D2049D_E513_40c4_9549_375D025054CF",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_69A33F41_C688_50AA_8049_59258005781A",
+      "review_artifact_guid": "EAID_ABCFD882_2330_5366_B3CA_AEB1888E7A18",
+      "uc": "UC006",
+      "condition": 11,
+      "candidate_freq_id": "F-REQ-IAM-26",
+      "candidate_freq_guid": "EAID_79C4DB13_72AB_45d9_9C55_0E559FFFF624",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_99A3C926_CAAB_5B01_BE8F_18C997515161",
+      "review_artifact_guid": "EAID_ABCFD882_2330_5366_B3CA_AEB1888E7A18",
+      "uc": "UC006",
+      "condition": 11,
+      "candidate_freq_id": "F-REQ-IAM-28",
+      "candidate_freq_guid": "EAID_1DEB8340_A5F7_4b7b_BD8B_24E50DF3D846",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_36F918DB_5D69_5963_B165_20000A467599",
+      "review_artifact_guid": "EAID_ABCFD882_2330_5366_B3CA_AEB1888E7A18",
+      "uc": "UC006",
+      "condition": 11,
+      "candidate_freq_id": "F-REQ-IAM-51",
+      "candidate_freq_guid": "EAID_46EBC2AE_1769_4679_A19A_F467143B9A82",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_2EFB9E34_9177_5A37_92ED_41F2BE03430D",
+      "review_artifact_guid": "EAID_A58D2B97_32F9_5B62_AEFC_321F0DFD1182",
+      "uc": "UC007",
+      "condition": 12,
+      "candidate_freq_id": "F-REQ-IAM-19",
+      "candidate_freq_guid": "EAID_F98ED8B6_D810_4fb3_9585_63C39229B494",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_F051D4A2_A7E8_548A_AE0C_EC548B283495",
+      "review_artifact_guid": "EAID_A58D2B97_32F9_5B62_AEFC_321F0DFD1182",
+      "uc": "UC007",
+      "condition": 12,
+      "candidate_freq_id": "F-REQ-IAM-43",
+      "candidate_freq_guid": "EAID_C99034F2_E0E5_4978_A87E_35E580B28725",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_19DBA562_D676_5AD8_923C_4ECFA8075CFA",
+      "review_artifact_guid": "EAID_A58D2B97_32F9_5B62_AEFC_321F0DFD1182",
+      "uc": "UC007",
+      "condition": 12,
+      "candidate_freq_id": "F-REQ-IAM-44",
+      "candidate_freq_guid": "EAID_0B7F844E_83BD_4e9c_A3DA_26418F25D6E2",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_E357C12F_9416_52B3_A6E0_9772ABCEFAA7",
+      "review_artifact_guid": "EAID_A58D2B97_32F9_5B62_AEFC_321F0DFD1182",
+      "uc": "UC007",
+      "condition": 12,
+      "candidate_freq_id": "F-REQ-IAM-46",
+      "candidate_freq_guid": "EAID_B2FC27D6_6444_4f7c_8593_00C4CDE9A696",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_B1311305_CC56_557E_9884_86048C0A80A4",
+      "review_artifact_guid": "EAID_49A6F792_D846_55DA_B968_7849837F7914",
+      "uc": "UC007",
+      "condition": 15,
+      "candidate_freq_id": "F-REQ-IAM-26",
+      "candidate_freq_guid": "EAID_79C4DB13_72AB_45d9_9C55_0E559FFFF624",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_1E2955D5_07A8_588F_AE6F_B2623742782B",
+      "review_artifact_guid": "EAID_49A6F792_D846_55DA_B968_7849837F7914",
+      "uc": "UC007",
+      "condition": 15,
+      "candidate_freq_id": "F-REQ-IAM-28",
+      "candidate_freq_guid": "EAID_1DEB8340_A5F7_4b7b_BD8B_24E50DF3D846",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_A410F5C2_B83F_549D_9714_20A7F40406F0",
+      "review_artifact_guid": "EAID_49A6F792_D846_55DA_B968_7849837F7914",
+      "uc": "UC007",
+      "condition": 15,
+      "candidate_freq_id": "F-REQ-IAM-51",
+      "candidate_freq_guid": "EAID_46EBC2AE_1769_4679_A19A_F467143B9A82",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_A94456D2_E73E_5F48_9291_C2DD1DF5BF43",
+      "review_artifact_guid": "EAID_94D87F24_BC9C_5741_BAEC_1D59573B4BCB",
+      "uc": "UC010",
+      "condition": 22,
+      "candidate_freq_id": "F-REQ-IAM-40",
+      "candidate_freq_guid": "EAID_7DEBF1E7_49F6_483d_9A30_526007065B78",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_4DDA37A7_B54B_5907_A0F7_0420B6176061",
+      "review_artifact_guid": "EAID_94D87F24_BC9C_5741_BAEC_1D59573B4BCB",
+      "uc": "UC010",
+      "condition": 22,
+      "candidate_freq_id": "F-REQ-IAM-41",
+      "candidate_freq_guid": "EAID_BBF8CECD_9F65_4365_83D8_D76E02563E3F",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_C2755CBA_68F9_5A9A_86C0_DE48B6EA31C0",
+      "review_artifact_guid": "EAID_564A9890_81A8_52DC_9470_3775621D0FAC",
+      "uc": "UC010",
+      "condition": 23,
+      "candidate_freq_id": "F-REQ-IAM-40",
+      "candidate_freq_guid": "EAID_7DEBF1E7_49F6_483d_9A30_526007065B78",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_6810A24B_4E47_5219_965A_3B3D7D1C7908",
+      "review_artifact_guid": "EAID_AFE00972_A4AF_5531_BD55_31F389250C9D",
+      "uc": "UC010",
+      "condition": 24,
+      "candidate_freq_id": "F-REQ-IAM-26",
+      "candidate_freq_guid": "EAID_79C4DB13_72AB_45d9_9C55_0E559FFFF624",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_961E58A2_95F5_5DFE_A29A_2ED7B92CE601",
+      "review_artifact_guid": "EAID_AFE00972_A4AF_5531_BD55_31F389250C9D",
+      "uc": "UC010",
+      "condition": 24,
+      "candidate_freq_id": "F-REQ-IAM-28",
+      "candidate_freq_guid": "EAID_1DEB8340_A5F7_4b7b_BD8B_24E50DF3D846",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_27D3D66B_221C_591E_A2F6_43A8343F1B3A",
+      "review_artifact_guid": "EAID_AFE00972_A4AF_5531_BD55_31F389250C9D",
+      "uc": "UC010",
+      "condition": 24,
+      "candidate_freq_id": "F-REQ-IAM-51",
+      "candidate_freq_guid": "EAID_46EBC2AE_1769_4679_A19A_F467143B9A82",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_5754722D_3297_5322_BACC_BEAA2DCAAA22",
+      "review_artifact_guid": "EAID_FCEA05F8_E31C_54F9_8779_9351B0BBBEEC",
+      "uc": "UC010",
+      "condition": 25,
+      "candidate_freq_id": "F-REQ-IAM-49",
+      "candidate_freq_guid": "EAID_4D0E1E9F_FAA0_4a53_9861_80CA3ECF72CC",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_73511FF6_DD0B_5488_8EEB_CDB39F1E0CD1",
+      "review_artifact_guid": "EAID_FCEA05F8_E31C_54F9_8779_9351B0BBBEEC",
+      "uc": "UC010",
+      "condition": 25,
+      "candidate_freq_id": "F-REQ-IAM-50",
+      "candidate_freq_guid": "EAID_84AA974B_57EB_4c59_BADE_54D61B8DFDA6",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_72EE461B_7F61_5476_8D20_3D65552DDC76",
+      "review_artifact_guid": "EAID_F1072CE3_8637_5863_B42C_4966B76D257D",
+      "uc": "UC011",
+      "condition": 26,
+      "candidate_freq_id": "F-REQ-IAM-18",
+      "candidate_freq_guid": "EAID_2956DCAC_9023_4ed8_8807_9428BAA6D7C8",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_FA2366A1_C4C6_5A8A_97BC_D544135ED72A",
+      "review_artifact_guid": "EAID_F1072CE3_8637_5863_B42C_4966B76D257D",
+      "uc": "UC011",
+      "condition": 26,
+      "candidate_freq_id": "F-REQ-IAM-19",
+      "candidate_freq_guid": "EAID_F98ED8B6_D810_4fb3_9585_63C39229B494",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_9935774A_2A48_55E7_8005_61C7A5450EE7",
+      "review_artifact_guid": "EAID_F1072CE3_8637_5863_B42C_4966B76D257D",
+      "uc": "UC011",
+      "condition": 26,
+      "candidate_freq_id": "F-REQ-IAM-26",
+      "candidate_freq_guid": "EAID_79C4DB13_72AB_45d9_9C55_0E559FFFF624",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_CD89EF93_1662_5CFF_B7B3_2E0ACE4859AD",
+      "review_artifact_guid": "EAID_1A97F501_E72F_5E41_9D28_44DF19CF282A",
+      "uc": "UC011",
+      "condition": 27,
+      "candidate_freq_id": "F-REQ-IAM-19",
+      "candidate_freq_guid": "EAID_F98ED8B6_D810_4fb3_9585_63C39229B494",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_8EBEA721_D5C2_5C02_AC2F_D160EF98CD32",
+      "review_artifact_guid": "EAID_1A97F501_E72F_5E41_9D28_44DF19CF282A",
+      "uc": "UC011",
+      "condition": 27,
+      "candidate_freq_id": "F-REQ-IAM-51",
+      "candidate_freq_guid": "EAID_46EBC2AE_1769_4679_A19A_F467143B9A82",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_FC7E6134_A87A_53CB_9EFB_D04DF0929A00",
+      "review_artifact_guid": "EAID_E215D288_39A6_5E1B_888D_AF4444DDDAAE",
+      "uc": "UC011",
+      "condition": 30,
+      "candidate_freq_id": "F-REQ-IAM-26",
+      "candidate_freq_guid": "EAID_79C4DB13_72AB_45d9_9C55_0E559FFFF624",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_FDD4E268_DA67_50CE_A71C_2F8D3EBF40E0",
+      "review_artifact_guid": "EAID_E215D288_39A6_5E1B_888D_AF4444DDDAAE",
+      "uc": "UC011",
+      "condition": 30,
+      "candidate_freq_id": "F-REQ-IAM-28",
+      "candidate_freq_guid": "EAID_1DEB8340_A5F7_4b7b_BD8B_24E50DF3D846",
+      "relationship": "candidate trace only"
+    },
+    {
+      "connector_guid": "EAID_72FE5434_D438_5A52_A239_D000E5A442B0",
+      "review_artifact_guid": "EAID_E215D288_39A6_5E1B_888D_AF4444DDDAAE",
+      "uc": "UC011",
+      "condition": 30,
+      "candidate_freq_id": "F-REQ-IAM-51",
+      "candidate_freq_guid": "EAID_46EBC2AE_1769_4679_A19A_F467143B9A82",
+      "relationship": "candidate trace only"
+    }
+  ]
+}
