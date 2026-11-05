@@ -1,9 +1,9 @@
 from docx import Document
 from docx.oxml.ns import qn
 from pathlib import Path
-d=Document('work/ServiceHub_SO_zmenove_kapitoly_neoverene.docx')
+d=Document('work/ServiceHub_SO_zmenove_kapitoly_2026-11-05.docx')
 lines=['# ServiceHub Atlas CZ změnové kapitoly Solution Overview','',
-'Stav: obsah připravený pro zapracování do původního SO; nejde o úplnou náhradu zdrojového dokumentu. DOCX nebyl vizuálně ověřen, protože dostupnému rendereru chybí LibreOffice.','']
+'Stav: změnové kapitoly pro zapracování do plného SO, nikoli náhrada celého dokumentu. DOCX byl vykreslen původním render_docx.py přes LibreOffice a všechny čtyři stránky byly vizuálně zkontrolované.','']
 for node in d.element.body:
     if node.tag==qn('w:p'):
         text=''.join(node.itertext())
@@ -23,4 +23,4 @@ for node in d.element.body:
             if i==0:lines.append('| '+' | '.join(['---']*len(vals))+' |')
         lines.append('')
 text='\n'.join(lines).replace('pět dokumentačních polí AD-05, ASS-06, AD-07, ASS-03 a upřesnění SREQ-ID-07','osm dokumentačních polí AD-02, AD-05, AD-07, AD-08, ASS-03, ASS-06, ASS-07 a SREQ-ID-07')
-Path('outputs/ServiceHub_SO_zmenove_kapitoly_2026-11-04.md').write_text(text,encoding='utf-8')
+Path('outputs/ServiceHub_SO_zmenove_kapitoly_2026-11-05.md').write_text(text,encoding='utf-8')

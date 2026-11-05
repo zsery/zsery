@@ -1,0 +1,12 @@
+{
+  "document": "ServiceHub_SO_zmenove_kapitoly_2026-11-05.docx",
+  "sha256": "7b8cc8e9e8a5f05c2afd7cefca5d2823ed9e2277ac5f3a6f1c71785db8e9bca0",
+  "renderer": "Original documents skill render_docx.py, unchanged",
+  "backend": "LibreOffice 26.8.2 x64, extracted locally from official MSI without executing installer actions",
+  "backend_msi_sha256": "ff4b911403b67ee9e6249f820f9782c44bb32c94fdaa45b0da53a8e419e5307a",
+  "pages": 4,
+  "all_pages_visually_inspected": true,
+  "visual_result": "No clipping, overlapping text, truncated tables or missing glyphs observed",
+  "scope": "Change chapters only; not the full 32-page SO in OneDrive",
+  "date": "2026-11-05"
+}

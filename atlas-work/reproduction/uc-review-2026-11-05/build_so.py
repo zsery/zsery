@@ -51,7 +51,7 @@ def page():d.add_page_break()
 
 d.add_paragraph('ServiceHub Atlas CZ',style='Title')
 d.add_paragraph('Změnové kapitoly Solution Overview',style='Subtitle')
-p('4. listopadu 2026 | Scope MVP a integrační odpovědnosti')
+p('5. listopadu 2026 | Scope MVP a integrační odpovědnosti | Změnové kapitoly pro review')
 h('Introducing')
 p('Aktuální MVP používá samostatný ServiceHub přes vlastní URL, autentizaci Vodafone ID a lokální autorizaci s VFCZ DXL. V4 customer a user/admin onboarding do SNOW probíhá interním manuálním postupem. Tato aktualizace sjednocuje rozsah, odpovědnosti a doloženou část tokenového toku pro revizi Solution Overview.')
 p('Závazným rozsahem je uživatelem určený dokument Atlas CZ Launch – Architecture Board Confirmation of Phased Implementation Approach. Aktuální Book1 slouží pro traceability a odlišení aplikační schopnosti od prokázané implementační změny. Existence funkce v katalogu ani absence detailu v UC sama neurčuje novou změnu nebo odstranění schopnosti.')
@@ -76,7 +76,9 @@ steps=[
 'Pro UserInfo je v přečtené specifikaci TMF691 doložena hlavička Authorization: Bearer a scope TMF691_FEDERATED_IDENTITY_ALL. Přidělení konkrétnímu Atlas klientovi se musí ověřit samostatně.'
 ]
 for x in steps:d.add_paragraph(x,style='List Number')
-p('Přesná URL token exchange endpointu, grant a úplné parametry, client authentication, audience, vydávané claims, expirace, refresh, chyby a produkční oprávnění zůstávají k doložení. Nonce/state z referenčního VFCZ diagramu se nesmí automaticky prezentovat jako existující chování SH nebo nový požadavek na DXL.')
+p('Confluence TS – AuthX – authx-ts, část 3.2.1, primárně přečtená 5. listopadu 2026 (stránka naposledy změněna 4. června 2026), potvrzuje POST /OAuth2TokenExchangeGrant/v2/token. Pro volání přes APIX musí API key mít scopes OAUTH2_TOKEN_EXCHANGE_GRANT a TMF691_FEDERATED_IDENTITY_ALL. Request používá Accept: application/json a Content-Type: application/x-www-form-urlencoded; grant_type=urn:ietf:params:oauth:grant-type:token-exchange a subject_token_type=urn:vodafone:params:oauth:token-type:vodafone_id. Vedle subject_token je povinný subject_token_iss určující prostředí VFID, které token vydalo. Jde o platformní kontrakt, nikoli potvrzení konkrétní konfigurace Atlas klienta.')
+p('Odpověď zahrnuje DXL access token a TMF691-kompatibilní user_info s oprávněnými assets. Ty jsou také vložené v tokenu; token opravňuje pouze k assets uvedeným v odpovědi. Příklad uvádí Bearer a pole expirace/refresh, neprokazuje pevné produkční životnosti ani přidělení oprávnění SH. URL prostředí, konfigurace klienta, úplný security/error kontrakt a skutečné nasazení Atlas zůstávají k ověření. Nonce/state z referenčního diagramu není tímto potvrzeno jako existující chování SH.')
+p('Primární technický zdroj: https://confluence-agile.oskarmobil.cz/display/DCP/TS+-+AuthX+-+authx-ts, část 3.2.1.')
 sub('Identita a zákaznický kontext')
 p('VFID sub odpovídá právě jednomu příslušnému ONSC/WSC userovi. Email je atribut a neslouží jako stabilní párovací klíč. Jeden uživatel může mít více oprávněných customer kontextů; to je jiný vztah než user identity a cílová TMF691 holding parent–child relace.')
 p('UC005 vyžaduje automatickou volbu jednoho dostupného CRM ID a následné přepínání mezi dostupnými kontexty. Priorita počáteční volby není doložená. Chybějící role nebo CRM ID vede k obecnému obsahu; ztráta aktuálního CRM ID vyžaduje obnovu selectoru bez přepnutí na nedostupný kontext.')
@@ -97,12 +99,12 @@ p('Samostatný SnowConnector návrh PR25_0749 popisuje middleware, provisioning 
 
 page();h('Other Requirements')
 p('Datové kontrakty musí rozlišovat VFID sub, lokální user ID, platformu V2/V4, Siebel CA, V2 MSCRM GUID, BA/wallet a Marketplace company UUID. Názvy CRM ID nebo customer samy neopravňují tyto identifikátory sloučit. Konkrétní cleansing a reconciliation postup, žádný/více matchů a řešení existujících nesouhlasících vazeb zůstávají samostatnou součástí návrhu.')
-p('Pracovní XML revize mění pět dokumentačních polí AD-05, ASS-06, AD-07, ASS-03 a upřesnění SREQ-ID-07. Zachovává GUIDy a všechny konektory a diagramy. Původní znění je uloženo v kontrolním manifestu. Revize dokumentace modelu neprokazuje nasazení aplikací ani schválení baseline.')
+p('Základní pracovní XML revize mění osm dokumentačních polí AD-02, AD-05, AD-07, AD-08, ASS-03, ASS-06, ASS-07 a SREQ-ID-07. Navazující oddělená review vrstva přidává 30 analytických Artifact uzlů, 65 candidate trace vazeb a sedm review diagramů. Původní GUIDy, texty, konektory a diagramy zůstávají zachované; původní a nové znění dokumentace je v manifestu. Candidate trace není realization ani schválení požadavku. Nativní import a vizuální QA v EA dosud nejsou potvrzené.')
 h('Open Points')
 table(['Bod','Podmínka uzavření'],[
-('DXL token exchange','Verzovaný request/response kontrakt, URL prostředí, client auth, scopes, expiry/refresh a chyby; potvrdit konkrétní SH klient.'),
+('DXL token exchange','Platformní endpoint, grant a povinné parametry jsou doložené v Confluence 3.2.1. Potvrdit konkrétní SH klient, URL prostředí, client auth, přidělená oprávnění, životnosti a error/refresh chování.'),
 ('SNOW ticket integrace','Ověřit platformu a trasu, create/read/update operace, required fields, user/company identifikaci, status transitions a oprávnění.'),
-('Role a holding','Potvrdit Atlas eligible role enum a holding parent–child payload; historický allow/deny rozpor SH-07 neřešit podle samotného ID.'),
+('Role a holding','Potvrdit Atlas eligible role enum a holding parent–child payload. AI kopie Book1 ř.109 už označuje allow/deny konflikt; oprava klasifikace nenahrazuje business rozhodnutí o roli.'),
 ('Traceability a model','Dokončit křížovou kontrolu FREQ mapping, funkcí a původních EA konektorů. Ověřit XML import a vizuální podobu dotčených diagramů.'),
 ('V4 provozní proces','Doložit provozní vlastnictví, přesný manuální postup a relevantní privacy/security podmínky. Neoznačovat budoucí automatizaci za hotové MVP.')
 ],[1.54,5.36])
@@ -112,5 +114,5 @@ p('Závazný Board scope určený uživatelem; přímé čtení UC a DXL specifi
 d.core_properties.title='ServiceHub Atlas CZ změnové kapitoly Solution Overview'
 d.core_properties.subject='MVP scope, integration responsibilities and verified token-flow evidence'
 d.core_properties.author=''
-dest=Path('outputs/ServiceHub_SO_zmenove_kapitoly_2026-11-04.docx');d.save(dest)
+dest=Path('work/ServiceHub_SO_zmenove_kapitoly_2026-11-05.docx');d.save(dest)
 print(dest)
