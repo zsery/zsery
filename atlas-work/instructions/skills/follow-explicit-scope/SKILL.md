@@ -12,6 +12,10 @@ Platí zákaz změn zdrojových dat ve VDI: zadávání dotazů do Copilotu je p
 
 # Atlas / ServiceHub VFCZ
 
+## Upřesnění rozsahu 5. 11. 2026
+
+Uživatel výslovně odmítl samostatný audit. Původní úkol je zkontrolovat aktuální Book1 po práci Copilota a dokončit navazující EA a vlastní SO. Nevytvářej ani nerozšiřuj další auditní listy, reporty nebo analytické review balíky jako náhradu dokončení. Existující správnou práci Copilota zachovej. Již vytvořené auditní artefakty nejsou požadovaným finálním výstupem; jejich historie nesmí řídit další úkoly. Potřebné cílené ověření konkrétní změny prováděj jako součást jejího dokončení.
+
 ## Výslovné upřesnění uživatele, 4. 11. 2026
 
 Při práci s daty na OneDrive, SharePointu, v Outlooku a Teams nejprve použij Copilot. Preferuj Teams Copilot; pro otevřený dokument či sešit použij dostupný Copilot ve Wordu nebo Excelu, případně Outlook Copilot. Před přímým průzkumem zadej cílený dotaz a vyžádej odkazy na primární zdroje a dostupné verze. Toto pravidlo platí i pro krátké pokračování čtení. Ověření citovaných primárních zdrojů následuje po tomto kroku. Pro Confluence použij specializovaný Confluence Agent nebo autorizované přímé URL dle pravidel výše. Nedostupnost konkrétního Copilotu musí být skutečně ověřená; nevymýšlej výjimku podle délky práce. Zdrojová data pouze čti, nepoužívej Apply/Insert/Edit.
