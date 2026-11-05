@@ -14,6 +14,8 @@ Platí zákaz změn zdrojových dat ve VDI: zadávání dotazů do Copilotu je p
 
 ## Upřesnění rozsahu 5. 11. 2026
 
+Business procesy v EA podle výslovného upozornění uživatele nemusejí být správné: používej je pouze orientačně, nikoli jako závazný zdroj požadavků nebo správného chování. Aplikační vrstva a UML entity jsou nedokončené a pouze předběžně přibližně správné. Zachovej existující GUID a ber je jako pracovní základ; jejich obsah a vztahy ověřuj proti Board MVP, aktuálním UC a technickým specifikacím Confluence. Samotná přítomnost v EA nepotvrzuje správnost ani úplnost.
+
 Uživatel následně otevřel Sparx Enterprise Architect ve VDI se svým repository a výslovně povolil prohlížení a případný export, ale zakázal cokoli měnit nebo mazat. Připojené repository DEV-MODEL-MAIN je pouze zdroj ke čtení. Neprováděj import, úpravy elementů/vazeb/diagramů, mazání ani ukládání modelových změn. Exportuj pouze do nového pracovního souboru; zachovej původní model. Tento novější zákaz má přednost před dřívějším plánem dokončovat změny přímo v nativním EA.
 
 Uživatel výslovně odmítl samostatný audit. Původní úkol je zkontrolovat aktuální Book1 po práci Copilota a dokončit navazující EA a vlastní SO. Nevytvářej ani nerozšiřuj další auditní listy, reporty nebo analytické review balíky jako náhradu dokončení. Existující správnou práci Copilota zachovej. Již vytvořené auditní artefakty nejsou požadovaným finálním výstupem; jejich historie nesmí řídit další úkoly. Potřebné cílené ověření konkrétní změny prováděj jako součást jejího dokončení.
