@@ -8,6 +8,8 @@ Dokončený plný Solution Overview odpovídající potvrzenému MVP a navazují
 
 ## 1. Navázat na aktuální relaci a ověřit export
 
+Aktualizace po skutečném spuštění dalšího agenta: VDI již odemčené; export přímo ověřen jako dokončený, ATLASLIVE.xml 19,0 MB, modified 5.11.2026 18:59. Tento krok znovu neprovádět; zbývá povolený přenos a hash/export v GitHubu. Podrobnosti ve STATE.
+
 - Poslední pozorování VDI: zamčené Windows. Nejprve znovu pozorovat stav. Pokud zůstává zamčené, požádat o ruční odemčení; neautomatizovat přihlášení. Mezitím lze pracovat s uloženými podklady.
 - EA už je dostupné, znovu nevyžadovat jeho instalaci nebo cestu. Projekt: Zdeněk Šerý sandbox / 01_07_2026_ServiceHub_Atlas_CZ_PR25_0837.
 - Byl spuštěn export celého tohoto balíku do OneDrive Documents/Projects/ServiceHub/AI/ATLASLIVE.xml, formát XMI 2.1. Dokončení nebylo pozorováno. Ověřit dokončení v dialogu EA, existenci a nenulovou velikost souboru. Při chybě opakovat do nového názvu, nepřepisovat existující soubor.
@@ -17,6 +19,8 @@ Dokončený plný Solution Overview odpovídající potvrzenému MVP a navazují
 Výsledek kroku: potvrzený aktuální export nebo konkrétní chyba, žádná změna zdrojového modelu.
 
 ## 2. Dokončit skutečný plný SO
+
+Aktualizace po pokračování agenta: AuthX podtržítka a scopes doplněné a přímo ověřené v IF01/SREQ-ID-10, Done a Saved. Plný SO nyní 9983 slov, web35stran. Neopakovat stejné doplnění; pokračovat zbývajícími kapitolami a získáním souboru pro původní renderer. Starší počet níže je historie.
 
 - Otevřít Documents/Projects/ServiceHub/AI/Solution_Overview_ServiceHub_Revised_MVP_2026-11-04.docx. Poslední ověřený stav: Saved, 34 stran, 9897 slov. WordWeb Copilot provedl 151 editací a desktop Copilot dalších 11. Počet změn není důkaz správnosti celého dokumentu.
 - Přes Word Copilot provést cílenou kontrolu zbývajících rozporů a konkrétní opravy přímo v této pracovní kopii. Nevytvářet další auditní zprávu. Výsledek číst a ověřit v konkrétních kapitolách, neuzavírat práci pouze podle odpovědi Copilota.
