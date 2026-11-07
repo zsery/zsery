@@ -2,6 +2,9 @@
 
 Toto je aktuální prováděcí předání. Určuje následující práci; časové zápisy ve STATE_2026-11-05.md slouží jako historie a evidence. Starší pokyny vytvářet audit, považovat lokální 14listý Book1 za aktuální nebo importovat do připojeného EA jsou překonané.
 
+## Nová instance 7. 11. 2026
+
+Aktuální pokračování této instance je v [STATE_2026-11-07.md](STATE_2026-11-07.md). GitHub autorizace i skutečný push jsou ověřené, VDI odemčené, Confluence po ručním přihlášení dostupné. Pokračuj od tohoto novějšího stavu; níže uvedená věcná pravidla zůstávají platná. Plný SO ani ATLASLIVE.xml tím nejsou prohlášeny za dokončené nebo přenesené.
 ## Než začne nová instance
 
 Připrav si checkout sám, nepřenášej tuto práci na uživatele. Pokud nemáš vlastní připravenou GitHub autorizaci pro zápis, vygeneruj vyhrazený SSH klíč bez přepsání existujících klíčů; veřejný klíč dej uživateli k autorizaci a soukromý uchovej pouze lokálně. Po autorizaci ověř přístup. Veřejné čtení repozitáře funguje bez klíče; nepotvrzuje zápis. Nespouštěj další agenty na základě otázky či připomínky uživatele. Pokračuj úsporně od doložených výsledků, neopakuj hotové kroky a neoznačuj návrhy nebo rozpracované změny za hotové.
@@ -69,3 +72,4 @@ Výsledek kroku: plný obsahově a vizuálně ověřený SO, nikoli jen čtyřst
 - Finální předání musí obsahovat odkazy na skutečný plný SO a modelové pracovní soubory, provedené ověření a jen zbývající konkrétní otevřené rozhodnutí/omezení. Dokončení nelze tvrdit na základě samotného zadání Copilotu, změnových kapitol nebo zahájeného exportu.
 
 Podrobnější evidence: STATE_2026-11-05.md. Trvalá pravidla: instructions/skills/follow-explicit-scope/SKILL.md. Starší stav číst cíleně podle potřeby, neopakovat celou již provedenou práci.
+
